@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="This is a test page for i18n support.\n">
-<title>关于</title>
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="代理 1. 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 2. 检验 1 2 3 echo %http_proxy% echo %https_proxy% echo %all_proxy% 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n1 New-Item -ItemType Directory -Path &#34;...&#34; -Force 2. cmd 1 mkdir &#34;path\\to\\dir&#34; 创建空文件 1 type nul &gt; &#34;C:\\example\\deep\\path\\myfile.txt&#34; 查看当前目录内容 1. 所有 1 dir 2. 按属性筛选 1 /a: -d 排除目录（directories），只显示文件 d 只显示目录（不含文件） 3. 递归 1 /s 4. 简洁模式 1 /b 5. 排序 1 /o: n (name)、d(date) 加 - ：逆序 6. 支持正则表达式 树状图 1 tree ">
+<title>基础CMD命令</title>
 
-<link rel='canonical' href='http://localhost:1313/zh-cn/%E5%85%B3%E4%BA%8E/'>
+<link rel='canonical' href='https://windovec.github.io/p/%E5%9F%BA%E7%A1%80cmd%E5%91%BD%E4%BB%A4/'>
 
-<link rel="stylesheet" href="/scss/style.min.b0e76e98cdd4f7082d1fc36f7af7e0843a81201db2197c03ca426751dc923735.css"><meta property='og:title' content="关于">
-<meta property='og:description' content="This is a test page for i18n support.\n">
-<meta property='og:url' content='http://localhost:1313/zh-cn/%E5%85%B3%E4%BA%8E/'>
+<link rel="stylesheet" href="/scss/style.min.b0e76e98cdd4f7082d1fc36f7af7e0843a81201db2197c03ca426751dc923735.css"><meta property='og:title' content="基础CMD命令">
+<meta property='og:description' content="代理 1. 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 2. 检验 1 2 3 echo %http_proxy% echo %https_proxy% echo %all_proxy% 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n1 New-Item -ItemType Directory -Path &#34;...&#34; -Force 2. cmd 1 mkdir &#34;path\\to\\dir&#34; 创建空文件 1 type nul &gt; &#34;C:\\example\\deep\\path\\myfile.txt&#34; 查看当前目录内容 1. 所有 1 dir 2. 按属性筛选 1 /a: -d 排除目录（directories），只显示文件 d 只显示目录（不含文件） 3. 递归 1 /s 4. 简洁模式 1 /b 5. 排序 1 /o: n (name)、d(date) 加 - ：逆序 6. 支持正则表达式 树状图 1 tree ">
+<meta property='og:url' content='https://windovec.github.io/p/%E5%9F%BA%E7%A1%80cmd%E5%91%BD%E4%BB%A4/'>
 <meta property='og:site_name' content='WindoveC&#39;s page'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' />
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="This is a test page for i18n support.\n">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-22T22:18:59&#43;08:00'/><meta property='article:modified_time' content='2025-12-22T22:18:59&#43;08:00'/>
+<meta name="twitter:title" content="基础CMD命令">
+<meta name="twitter:description" content="代理 1. 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 2. 检验 1 2 3 echo %http_proxy% echo %https_proxy% echo %all_proxy% 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n1 New-Item -ItemType Directory -Path &#34;...&#34; -Force 2. cmd 1 mkdir &#34;path\\to\\dir&#34; 创建空文件 1 type nul &gt; &#34;C:\\example\\deep\\path\\myfile.txt&#34; 查看当前目录内容 1. 所有 1 dir 2. 按属性筛选 1 /a: -d 排除目录（directories），只显示文件 d 只显示目录（不含文件） 3. 递归 1 /s 4. 简洁模式 1 /b 5. 排序 1 /o: n (name)、d(date) 加 - ：逆序 6. 支持正则表达式 树状图 1 tree ">
     </head>
     <body class="
     article-page
@@ -50,7 +50,7 @@
         
             
             <figure class="site-avatar">
-                <a href="/zh-cn/">
+                <a href="/">
                 
                     
                     
@@ -69,7 +69,7 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/zh-cn">WindoveC&#39;s page</a></h1>
+            <h1 class="site-name"><a href="/">WindoveC&#39;s page</a></h1>
             <h2 class="site-description">自我救赎</h2>
         </div>
     </header><ol class="menu-social">
@@ -119,7 +119,7 @@
         
         
         <li >
-            <a href='/zh-cn/' >
+            <a href='/' >
                 
                 
                 
@@ -138,8 +138,8 @@
         </li>
         
         
-        <li  class='current' >
-            <a href='/zh-cn/%E5%85%B3%E4%BA%8E/' >
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
                 
                 
                 
@@ -153,6 +153,64 @@
 
                 
                 <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
             </a>
         </li>
         
@@ -173,9 +231,9 @@
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="http://localhost:1313/zh-cn/" selected>简体中文</option>
+                                    <option value="https://windovec.github.io/" selected>简体中文</option>
                                 
-                                    <option value="http://localhost:1313/" >English</option>
+                                    <option value="https://windovec.github.io/en/" >English</option>
                                 
                             </select>
                         </li>
@@ -208,7 +266,50 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#代理">代理</a></li>
+            <li><a href="#补全目录">补全目录</a></li>
+            <li><a href="#创建空文件">创建空文件</a></li>
+            <li><a href="#查看当前目录内容">查看当前目录内容</a></li>
+            <li><a href="#树状图">树状图</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -219,7 +320,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/zh-cn/%E5%85%B3%E4%BA%8E/">关于</a>
+            <a href="/p/%E5%9F%BA%E7%A1%80cmd%E5%91%BD%E4%BB%A4/">基础CMD命令</a>
         </h2>
     
         
@@ -230,6 +331,19 @@
     
     
     <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime='2025-12-22T22:18:59&#43;08:00'>Dec 22, 2025</time>
+            </div>
         
 
         
@@ -251,25 +365,6 @@
     
 
     
-        <footer class="article-translations">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-            <div>
-                
-                    <a href="http://localhost:1313/about/" class="link">English</a>
-                
-            </div>
-        </footer>
-    
 </div>
 
 </header>
@@ -277,8 +372,135 @@
     <section class="article-content">
     
     
-    <p>This is a test page for i18n support.</p>
-
+    <h4 id="代理">代理
+</h4><h5 id="1-设置环境变量">1. 设置环境变量
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">set http_proxy=http://127.0.0.1:7897
+</span></span><span class="line"><span class="cl">set https_proxy=http://127.0.0.1:7897
+</span></span><span class="line"><span class="cl">set all_proxy=socks5://127.0.0.1:7897
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="2-检验">2. 检验
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">echo %http_proxy%
+</span></span><span class="line"><span class="cl">echo %https_proxy%
+</span></span><span class="line"><span class="cl">echo %all_proxy%
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="补全目录">补全目录
+</h4><h5 id="1-powershell">1. powershell
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdir -p &#34;path\to\dir&#34; #绝对路径相对路径都可以
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>或</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">New-Item -ItemType Directory -Path &#34;...&#34; -Force
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="2-cmd">2. cmd
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdir &#34;path\to\dir&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="创建空文件">创建空文件
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">type nul &gt; &#34;C:\example\deep\path\myfile.txt&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="查看当前目录内容">查看当前目录内容
+</h4><h5 id="1-所有">1. 所有
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dir
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="2-按属性筛选">2. 按属性筛选
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/a:
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>-d 排除目录（directories），只显示文件
+d 只显示目录（不含文件）</li>
+</ul>
+<h5 id="3-递归">3. 递归
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/s
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="4-简洁模式">4. 简洁模式
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/b
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="5-排序">5. 排序
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/o:
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>n</strong> (name)、<strong>d</strong>(date)</li>
+<li>加 <strong>-</strong> ：逆序</li>
+</ul>
+<h5 id="6-支持正则表达式">6. 支持正则表达式
+</h5><h4 id="树状图">树状图
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">tree
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -454,7 +676,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.b492677f7606f5df56cbe9cfbee0b8bb3c0ceca424f111ed72d6bae8b1a05087.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
