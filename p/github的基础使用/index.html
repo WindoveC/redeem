@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="代理 1. 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 2. 检验 1 2 3 echo %http_proxy% echo %https_proxy% echo %all_proxy% 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n1 New-Item -ItemType Directory -Path &#34;...&#34; -Force 2. cmd 1 mkdir &#34;path\\to\\dir&#34; 创建空文件 1 type nul &gt; &#34;C:\\example\\deep\\path\\myfile.txt&#34; 查看当前目录内容 1. 所有 1 dir 2. 按属性筛选 1 /a: -d 排除目录（directories），只显示文件 d 只显示目录（不含文件） 3. 递归 1 /s 4. 简洁模式 1 /b 5. 排序 1 /o: n (name)、d(date) 加 - ：逆序 6. 支持正则表达式 树状图 1 tree ">
-<title>基础CMD命令</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="初始化仓库 ">
+<title>Github的基础使用</title>
 
-<link rel='canonical' href='https://windovec.github.io/p/%E5%9F%BA%E7%A1%80cmd%E5%91%BD%E4%BB%A4/'>
+<link rel='canonical' href='https://windovec.github.io/p/github%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/'>
 
-<link rel="stylesheet" href="/scss/style.min.b0e76e98cdd4f7082d1fc36f7af7e0843a81201db2197c03ca426751dc923735.css"><meta property='og:title' content="基础CMD命令">
-<meta property='og:description' content="代理 1. 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 2. 检验 1 2 3 echo %http_proxy% echo %https_proxy% echo %all_proxy% 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n1 New-Item -ItemType Directory -Path &#34;...&#34; -Force 2. cmd 1 mkdir &#34;path\\to\\dir&#34; 创建空文件 1 type nul &gt; &#34;C:\\example\\deep\\path\\myfile.txt&#34; 查看当前目录内容 1. 所有 1 dir 2. 按属性筛选 1 /a: -d 排除目录（directories），只显示文件 d 只显示目录（不含文件） 3. 递归 1 /s 4. 简洁模式 1 /b 5. 排序 1 /o: n (name)、d(date) 加 - ：逆序 6. 支持正则表达式 树状图 1 tree ">
-<meta property='og:url' content='https://windovec.github.io/p/%E5%9F%BA%E7%A1%80cmd%E5%91%BD%E4%BB%A4/'>
+<link rel="stylesheet" href="/scss/style.min.b0e76e98cdd4f7082d1fc36f7af7e0843a81201db2197c03ca426751dc923735.css"><meta property='og:title' content="Github的基础使用">
+<meta property='og:description' content="初始化仓库 ">
+<meta property='og:url' content='https://windovec.github.io/p/github%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/'>
 <meta property='og:site_name' content='WindoveC&#39;s page'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-22T22:18:59&#43;08:00'/><meta property='article:modified_time' content='2025-12-22T22:18:59&#43;08:00'/>
-<meta name="twitter:title" content="基础CMD命令">
-<meta name="twitter:description" content="代理 1. 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 2. 检验 1 2 3 echo %http_proxy% echo %https_proxy% echo %all_proxy% 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n1 New-Item -ItemType Directory -Path &#34;...&#34; -Force 2. cmd 1 mkdir &#34;path\\to\\dir&#34; 创建空文件 1 type nul &gt; &#34;C:\\example\\deep\\path\\myfile.txt&#34; 查看当前目录内容 1. 所有 1 dir 2. 按属性筛选 1 /a: -d 排除目录（directories），只显示文件 d 只显示目录（不含文件） 3. 递归 1 /s 4. 简洁模式 1 /b 5. 排序 1 /o: n (name)、d(date) 加 - ：逆序 6. 支持正则表达式 树状图 1 tree ">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-22T23:24:37&#43;08:00'/><meta property='article:modified_time' content='2025-12-22T23:24:37&#43;08:00'/>
+<meta name="twitter:title" content="Github的基础使用">
+<meta name="twitter:description" content="初始化仓库 ">
     </head>
     <body class="
     article-page
@@ -292,11 +292,7 @@
       <ol>
         <li>
           <ol>
-            <li><a href="#代理">代理</a></li>
-            <li><a href="#补全目录">补全目录</a></li>
-            <li><a href="#创建空文件">创建空文件</a></li>
-            <li><a href="#查看当前目录内容">查看当前目录内容</a></li>
-            <li><a href="#树状图">树状图</a></li>
+            <li><a href="#初始化仓库">初始化仓库</a></li>
           </ol>
         </li>
       </ol>
@@ -320,7 +316,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E5%9F%BA%E7%A1%80cmd%E5%91%BD%E4%BB%A4/">基础CMD命令</a>
+            <a href="/p/github%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">Github的基础使用</a>
         </h2>
     
         
@@ -342,7 +338,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published" datetime='2025-12-22T22:18:59&#43;08:00'>Dec 22, 2025</time>
+                <time class="article-time--published" datetime='2025-12-22T23:24:37&#43;08:00'>Dec 22, 2025</time>
             </div>
         
 
@@ -372,133 +368,12 @@
     <section class="article-content">
     
     
-    <h4 id="代理">代理
-</h4><h5 id="1-设置环境变量">1. 设置环境变量
-</h5><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">set http_proxy=http://127.0.0.1:7897
-</span></span><span class="line"><span class="cl">set https_proxy=http://127.0.0.1:7897
-</span></span><span class="line"><span class="cl">set all_proxy=socks5://127.0.0.1:7897
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h5 id="2-检验">2. 检验
-</h5><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">echo %http_proxy%
-</span></span><span class="line"><span class="cl">echo %https_proxy%
-</span></span><span class="line"><span class="cl">echo %all_proxy%
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="补全目录">补全目录
-</h4><h5 id="1-powershell">1. powershell
-</h5><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdir -p &#34;path\to\dir&#34; #绝对路径相对路径都可以
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>或</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">New-Item -ItemType Directory -Path &#34;...&#34; -Force
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h5 id="2-cmd">2. cmd
-</h5><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdir &#34;path\to\dir&#34;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="创建空文件">创建空文件
+    <h4 id="初始化仓库">初始化仓库
 </h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
+<pre tabindex="0" class="chroma"><code></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">type nul &gt; &#34;C:\example\deep\path\myfile.txt&#34;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="查看当前目录内容">查看当前目录内容
-</h4><h5 id="1-所有">1. 所有
-</h5><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dir
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h5 id="2-按属性筛选">2. 按属性筛选
-</h5><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/a:
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>-d 排除目录（directories），只显示文件
-d 只显示目录（不含文件）</li>
-</ul>
-<h5 id="3-递归">3. 递归
-</h5><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/s
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h5 id="4-简洁模式">4. 简洁模式
-</h5><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/b
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h5 id="5-排序">5. 排序
-</h5><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/o:
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li><strong>n</strong> (name)、<strong>d</strong>(date)</li>
-<li>加 <strong>-</strong> ：逆序</li>
-</ul>
-<h5 id="6-支持正则表达式">6. 支持正则表达式
-</h5><h4 id="树状图">树状图
-</h4><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">tree
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
 </div>
 </div>
 </section>
