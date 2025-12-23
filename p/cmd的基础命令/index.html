@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="代理 1. 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 2. 检验 1 2 3 echo %http_proxy% echo %https_proxy% echo %all_proxy% 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n1 New-Item -ItemType Directory -Path &#34;...&#34; -Force 2. cmd 1 mkdir &#34;path\\to\\dir&#34; 创建空文件 1 type nul &gt; &#34;C:\\example\\deep\\path\\myfile.txt&#34; 查看当前目录内容 1. 所有 1 dir 2. 按属性筛选 1 /a: -d 排除目录（directories），只显示文件 d 只显示目录（不含文件） 3. 递归 1 /s 4. 简洁模式 1 /b 5. 排序 1 /o: n (name)、d(date) 加 - ：逆序 6. 支持正则表达式 树状图 1 tree ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="注释 常规单行注释 :: 代码块（括号内）注释 REM 行末注释 &amp; REM 行头 @：禁止回显（suppress echoing）当前命令本身到命令行窗口。\n代理 1. 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 2. 检验 1 2 3 echo %http_proxy% echo %https_proxy% echo %all_proxy% 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n">
 <title>CMD的基础命令</title>
 
 <link rel='canonical' href='https://windovec.github.io/p/cmd%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/'>
 
 <link rel="stylesheet" href="/scss/style.min.b0e76e98cdd4f7082d1fc36f7af7e0843a81201db2197c03ca426751dc923735.css"><meta property='og:title' content="CMD的基础命令">
-<meta property='og:description' content="代理 1. 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 2. 检验 1 2 3 echo %http_proxy% echo %https_proxy% echo %all_proxy% 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n1 New-Item -ItemType Directory -Path &#34;...&#34; -Force 2. cmd 1 mkdir &#34;path\\to\\dir&#34; 创建空文件 1 type nul &gt; &#34;C:\\example\\deep\\path\\myfile.txt&#34; 查看当前目录内容 1. 所有 1 dir 2. 按属性筛选 1 /a: -d 排除目录（directories），只显示文件 d 只显示目录（不含文件） 3. 递归 1 /s 4. 简洁模式 1 /b 5. 排序 1 /o: n (name)、d(date) 加 - ：逆序 6. 支持正则表达式 树状图 1 tree ">
+<meta property='og:description' content="注释 常规单行注释 :: 代码块（括号内）注释 REM 行末注释 &amp; REM 行头 @：禁止回显（suppress echoing）当前命令本身到命令行窗口。\n代理 1. 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 2. 检验 1 2 3 echo %http_proxy% echo %https_proxy% echo %all_proxy% 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n">
 <meta property='og:url' content='https://windovec.github.io/p/cmd%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/'>
 <meta property='og:site_name' content='WindoveC'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-22T22:18:59&#43;08:00'/><meta property='article:modified_time' content='2025-12-22T22:18:59&#43;08:00'/>
 <meta name="twitter:title" content="CMD的基础命令">
-<meta name="twitter:description" content="代理 1. 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 2. 检验 1 2 3 echo %http_proxy% echo %https_proxy% echo %all_proxy% 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n1 New-Item -ItemType Directory -Path &#34;...&#34; -Force 2. cmd 1 mkdir &#34;path\\to\\dir&#34; 创建空文件 1 type nul &gt; &#34;C:\\example\\deep\\path\\myfile.txt&#34; 查看当前目录内容 1. 所有 1 dir 2. 按属性筛选 1 /a: -d 排除目录（directories），只显示文件 d 只显示目录（不含文件） 3. 递归 1 /s 4. 简洁模式 1 /b 5. 排序 1 /o: n (name)、d(date) 加 - ：逆序 6. 支持正则表达式 树状图 1 tree ">
+<meta name="twitter:description" content="注释 常规单行注释 :: 代码块（括号内）注释 REM 行末注释 &amp; REM 行头 @：禁止回显（suppress echoing）当前命令本身到命令行窗口。\n代理 1. 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 2. 检验 1 2 3 echo %http_proxy% echo %https_proxy% echo %all_proxy% 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_ee93623c90ea26c8.png" width="300"
+                        <img src="/img/avatar_hu_f9ee51788a101886.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -302,11 +302,14 @@
       <ol>
         <li>
           <ol>
+            <li><a href="#注释">注释</a></li>
             <li><a href="#代理">代理</a></li>
             <li><a href="#补全目录">补全目录</a></li>
             <li><a href="#创建空文件">创建空文件</a></li>
             <li><a href="#查看当前目录内容">查看当前目录内容</a></li>
             <li><a href="#树状图">树状图</a></li>
+            <li><a href="#复制移动">复制移动</a></li>
+            <li><a href="#setx---环境变量">setx - 环境变量</a></li>
           </ol>
         </li>
       </ol>
@@ -379,7 +382,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -394,7 +397,27 @@
     <section class="article-content">
     
     
-    <h4 id="代理">代理
+    <h4 id="注释">注释
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>常规单行注释</th>
+          <th><code>::</code></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>代码块（括号内）注释</td>
+          <td><code>REM</code></td>
+      </tr>
+      <tr>
+          <td>行末注释</td>
+          <td><code>&amp; REM</code></td>
+      </tr>
+  </tbody>
+</table></div>
+<p><strong>行头 @</strong>：禁止回显（suppress echoing）当前命令本身到命令行窗口。</p>
+<h4 id="代理">代理
 </h4><h5 id="1-设置环境变量">1. 设置环境变量
 </h5><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -403,9 +426,9 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">set http_proxy=http://127.0.0.1:7897
-</span></span><span class="line"><span class="cl">set https_proxy=http://127.0.0.1:7897
-</span></span><span class="line"><span class="cl">set all_proxy=socks5://127.0.0.1:7897
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">http_proxy</span><span class="p">=</span>http://127.0.0.1:7897
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">https_proxy</span><span class="p">=</span>http://127.0.0.1:7897
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">all_proxy</span><span class="p">=</span>socks5://127.0.0.1:7897
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h5 id="2-检验">2. 检验
@@ -416,9 +439,9 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">echo %http_proxy%
-</span></span><span class="line"><span class="cl">echo %https_proxy%
-</span></span><span class="line"><span class="cl">echo %all_proxy%
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">%http_proxy%</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">%https_proxy%</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">%all_proxy%</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="补全目录">补全目录
@@ -428,7 +451,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdir -p &#34;path\to\dir&#34; #绝对路径相对路径都可以
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">mkdir</span> -p <span class="s2">&#34;path\to\dir&#34;</span> #绝对路径相对路径都可以
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>或</p>
@@ -437,7 +460,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">New-Item -ItemType Directory -Path &#34;...&#34; -Force
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">New-Item -ItemType Directory -Path <span class="s2">&#34;...&#34;</span> -Force
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h5 id="2-cmd">2. cmd
@@ -446,7 +469,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdir &#34;path\to\dir&#34;
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">mkdir</span> <span class="s2">&#34;path\to\dir&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="创建空文件">创建空文件
@@ -455,7 +478,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">type nul &gt; &#34;C:\example\deep\path\myfile.txt&#34;
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">type</span> nul <span class="p">&gt;</span> <span class="s2">&#34;C:\example\deep\path\myfile.txt&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="查看当前目录内容">查看当前目录内容
@@ -520,6 +543,233 @@ d 只显示目录（不含文件）</li>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">tree
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="复制移动">复制移动
+</h4><h5 id="1-copy">1. copy
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 复制单个文件到另一个目录</span>
+</span></span><span class="line"><span class="cl"><span class="k">copy</span> C:\source\file.txt D:\backup\
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 复制并重命名</span>
+</span></span><span class="line"><span class="cl"><span class="k">copy</span> C:\source\file.txt D:\backup\newname.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 复制多个文件（使用通配符）</span>
+</span></span><span class="line"><span class="cl"><span class="k">copy</span> C:\source\*.txt D:\backup\
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 合并多个文本文件为一个文件（仅适用于文本）</span>
+</span></span><span class="line"><span class="cl"><span class="k">copy</span> file1.txt + file2.txt combined.txt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="2-move">2. move
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 移动文件到另一个目录</span>
+</span></span><span class="line"><span class="cl"><span class="k">move</span> C:\temp\old.txt D:\archive\
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 移动并重命名</span>
+</span></span><span class="line"><span class="cl"><span class="k">move</span> C:\temp\old.txt D:\archive\new.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 移动多个文件</span>
+</span></span><span class="line"><span class="cl"><span class="k">move</span> C:\temp\*.log D:\logs\
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: move 也可以移动整个空文件夹（但不能移动非空文件夹）</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="3-文件夹">3. 文件夹
+</h5><ol>
+<li><strong>robocopy</strong></li>
+</ol>
+<blockquote>
+<p>更强大、可靠</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 复制整个文件夹（包括子目录和文件）</span>
+</span></span><span class="line"><span class="cl">robocopy <span class="s2">&#34;C:\source_folder&#34;</span> <span class="s2">&#34;D:\dest_folder&#34;</span> /E
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 移动整个文件夹（复制后删除源）</span>
+</span></span><span class="line"><span class="cl">robocopy <span class="s2">&#34;C:\source_folder&#34;</span> <span class="s2">&#34;D:\dest_folder&#34;</span> /E /MOVE
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>/E</code>：包含所有子目录（即使为空）</li>
+<li><code>/MOVE</code>：移动文件（复制后删除源目录中的文件）</li>
+</ul>
+<ol start="2">
+<li><strong>xcopy</strong></li>
+</ol>
+<blockquote>
+<p>传统方法，较新 Windows 中已被弃用）</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 复制整个目录树</span>
+</span></span><span class="line"><span class="cl">xcopy <span class="s2">&#34;C:\source&#34;</span> <span class="s2">&#34;D:\dest&#34;</span> /E /I
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>/E</code>：包含空子目录</li>
+<li><code>/I</code> ：如果目标不存在且复制多个文件，假定目标是目录</li>
+</ul>
+<h4 id="setx---环境变量">setx - 环境变量
+</h4><p><strong>set - 终端变量</strong></p>
+<ol>
+<li><strong>本地</strong>环境 <strong>设置</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx MACHINE Brand1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li><strong>系统</strong>环境 设置</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx MACHINE Brand1 Computer /m
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>本地环境 <strong>复制</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx MYPATH <span class="nv">%PATH%</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>本地环境 <strong>追加</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx PATH <span class="nv">%PATH%</span>;content
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>本地环境 <strong>置空</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx path=
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li><strong>远程</strong> 要在名为 <em>computer1</em> 的远程计算机上将本地环境中的 <em>MACHINE</em> 环境变量设置为 <em>Brand1</em>，请键入：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx /s computer1 /u maindom\hiropln /p p@ssW23 MACHINE Brand1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li><strong>取注册表项</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="6">
+<li><strong>显示文件</strong>的<strong>内容</strong>以及<strong>坐标</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx /f ipconfig.out /x
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="7">
+<li><strong>取</strong>文件内容 <strong>坐标</strong> <em>5,11</em> 处****</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx IPADDR /f ipconfig.out /a 5,11
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="8">
+<li>取文件内容 带有<strong>分隔符</strong> <em>#$*</em> 的坐标 <em>5,3</em> 处</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx OCTET1 /f ipconfig.out /a 5,3 /d #$*.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="9">
+<li>取文件内容  <em>Gateway</em> <strong>坐标</strong>的坐标 <em>0,7</em> 处找到的值，请键入：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx IPGATEWAY /f ipconfig.out /r 0,7 Gateway
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
