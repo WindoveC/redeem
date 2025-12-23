@@ -1003,7 +1003,7 @@ p%40ssw0rd%279%27%21&lt;/dd&gt;
     &gt;twikoojs/twikoo-netlify&lt;/a&gt; 点击 fork 将仓库 fork 到自己的账号下&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;[!NOTE]&lt;/p&gt;
+&lt;p&gt;Note&lt;/p&gt;
 &lt;p&gt;注意修改package.json中的version，默认latest 无法登录数据库&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ol&gt;
