@@ -869,7 +869,21 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;/div&gt;&lt;h2 id=&#34;其他组件&#34;&gt;其他组件
 &lt;/h2&gt;&lt;h3 id=&#34;utterancesutterances&#34;&gt;Utterances：&lt;a class=&#34;link&#34; href=&#34;https://utteranc.es/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;utterances&lt;/a&gt;
-&lt;/h3&gt;&lt;hr&gt;
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        utterances:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            repo: WindoveC/WindoveC.github.io
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            issueTerm: pathname
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            label: Comment
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
 &lt;p&gt;一个基于GitHub issues构建的轻量级评论小部件。使用GitHub issues发布博客评论、维基页面等内容！&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;选仓库&lt;/li&gt;
@@ -879,7 +893,24 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;twikootwikoo--一个简洁安全免费的静态网站评论系统&#34;&gt;Twikoo：&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Twikoo | 一个简洁、安全、免费的静态网站评论系统&lt;/a&gt;
-&lt;/h3&gt;&lt;h4 id=&#34;云函数部署---netlify-部署&#34;&gt;云函数部署 - Netlify 部署
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        twikoo:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            envId: https://wc-redeem-twikoo.netlify.app
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            region: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            path:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            lang: zh-cn
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;云函数部署---netlify-部署&#34;&gt;云函数部署 - Netlify 部署
 &lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/backend.html#netlify-%e9%83%a8%e7%bd%b2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;云函数部署 | Twikoo 文档&lt;/a&gt;&lt;/p&gt;
@@ -950,8 +981,8 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 	
 &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
+&lt;p&gt;[!NOTE]&lt;/p&gt;
 &lt;dl&gt;
-&lt;dt&gt;注意&lt;/dt&gt;
 &lt;dt&gt;如果在用户名或密码中包含以下字符和空格字符，必须使用百分比编码转换这些字符：&lt;/dt&gt;
 &lt;dd&gt;/ ? # [ ] @ ! $ &amp;amp; &amp;rsquo; ( ) * , ; = %
 例如，如果您的纯文本密码是p@ssw0rd&#39;9&amp;rsquo;!，您需要将密码编码为：
@@ -969,8 +1000,13 @@ p%40ssw0rd%279%27%21&lt;/dd&gt;
 &lt;li&gt;申请并登录 &lt;a class=&#34;link&#34; href=&#34;https://app.netlify.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Netlify&lt;/a&gt; 账号，创建一个 Team&lt;/li&gt;
 &lt;li&gt;打开 &lt;a class=&#34;link&#34; href=&#34;https://github.com/twikoojs/twikoo-netlify&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;twikoojs/twikoo-netlify&lt;/a&gt; 点击 fork 将仓库 fork 到自己的账号下
-&lt;strong&gt;注意修改package.json中的version&lt;/strong&gt;，默认配置导致我无法登录数据库&lt;/li&gt;
+    &gt;twikoojs/twikoo-netlify&lt;/a&gt; 点击 fork 将仓库 fork 到自己的账号下&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]&lt;/p&gt;
+&lt;p&gt;注意修改package.json中的version，默认latest 无法登录数据库&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
 &lt;li&gt;回到 Netlify，点击 Add new site - Import an existing project&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/assets/netlify-1.CBH5jdAK.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

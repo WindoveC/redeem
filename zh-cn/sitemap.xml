@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://windovec.github.io/</loc>
-    <lastmod>2025-12-22T23:24:37+08:00</lastmod>
+    <lastmod>2025-12-23T22:45:47+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -14,6 +14,12 @@
                 hreflang="zh-cn"
                 href="https://windovec.github.io/"
                 />
+  </url><url>
+    <loc>https://windovec.github.io/p/hugo%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BE%8E%E5%8C%96/</loc>
+    <lastmod>2025-12-23T22:45:47+08:00</lastmod>
+  </url><url>
+    <loc>https://windovec.github.io/post/</loc>
+    <lastmod>2025-12-23T22:45:47+08:00</lastmod>
   </url><url>
     <loc>https://windovec.github.io/categories/</loc>
     <lastmod>2025-12-22T23:24:37+08:00</lastmod>
@@ -29,9 +35,6 @@
                 />
   </url><url>
     <loc>https://windovec.github.io/p/github%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2025-12-22T23:24:37+08:00</lastmod>
-  </url><url>
-    <loc>https://windovec.github.io/post/</loc>
     <lastmod>2025-12-22T23:24:37+08:00</lastmod>
   </url><url>
     <loc>https://windovec.github.io/categories/%E5%9F%BA%E7%A1%80/</loc>
