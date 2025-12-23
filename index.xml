@@ -13,8 +13,8 @@
         <pubDate>Mon, 22 Dec 2025 23:24:37 +0800</pubDate>
         
         <guid>https://windovec.github.io/p/github%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</guid>
-        <description>&lt;h4 id=&#34;初始化仓库&#34;&gt;初始化仓库
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+        <description>&lt;h2 id=&#34;初始化仓库&#34;&gt;初始化仓库
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -118,8 +118,11 @@
 &lt;p&gt;首次推送必须指定远程名和分支名（如 origin main），之后因为有 -u，就可以简化命令。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;gitignore不生效清除缓存关闭跟踪&#34;&gt;.gitignore不生效（清除缓存，关闭跟踪）
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;清除缓存&#34;&gt;清除缓存
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;.gitignore不生效（关闭跟踪）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -139,8 +142,8 @@
         <pubDate>Mon, 22 Dec 2025 22:18:59 +0800</pubDate>
         
         <guid>https://windovec.github.io/p/cmd%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</guid>
-        <description>&lt;h4 id=&#34;注释&#34;&gt;注释
-&lt;/h4&gt;&lt;table&gt;
+        <description>&lt;h2 id=&#34;注释&#34;&gt;注释
+&lt;/h2&gt;&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
           &lt;th&gt;常规单行注释&lt;/th&gt;
@@ -159,9 +162,11 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;行头 @&lt;/strong&gt;：禁止回显（suppress echoing）当前命令本身到命令行窗口。&lt;/p&gt;
-&lt;h4 id=&#34;代理&#34;&gt;代理
-&lt;/h4&gt;&lt;h5 id=&#34;1-设置环境变量&#34;&gt;1. 设置环境变量
-&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;代理&#34;&gt;代理
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;设置环境变量&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -173,8 +178,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;all_proxy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;socks5://127.0.0.1:7897
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;2-检验&#34;&gt;2. 检验
-&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;检验&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -186,9 +193,32 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;%all_proxy%&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;补全目录&#34;&gt;补全目录
-&lt;/h4&gt;&lt;h5 id=&#34;1-powershell&#34;&gt;1. powershell
-&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;更换目录&#34;&gt;更换目录
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;不更换驱动器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;cd&lt;/span&gt; {&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;Relative Path&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; | &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;Absolute Path&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;更换驱动器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;cd&lt;/span&gt; /d &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;Absolute Path&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;补全目录&#34;&gt;补全目录
+&lt;/h2&gt;&lt;h3 id=&#34;1-powershell&#34;&gt;1. powershell
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -205,8 +235,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;New-Item -ItemType Directory -Path &lt;span class=&#34;s2&#34;&gt;&amp;#34;...&amp;#34;&lt;/span&gt; -Force
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;2-cmd&#34;&gt;2. cmd
-&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;2-cmd&#34;&gt;2. cmd
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -214,8 +244,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;path\to\dir&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;创建空文件&#34;&gt;创建空文件
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;创建空文件&#34;&gt;创建空文件
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -223,9 +253,9 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;type&lt;/span&gt; nul &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;C:\example\deep\path\myfile.txt&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;查看当前目录内容&#34;&gt;查看当前目录内容
-&lt;/h4&gt;&lt;h5 id=&#34;1-所有&#34;&gt;1. 所有
-&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;查看当前目录内容&#34;&gt;查看当前目录内容
+&lt;/h2&gt;&lt;h3 id=&#34;1-所有&#34;&gt;1. 所有
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -233,8 +263,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dir
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;2-按属性筛选&#34;&gt;2. 按属性筛选
-&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;2-按属性筛选&#34;&gt;2. 按属性筛选
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -246,8 +276,8 @@
 &lt;li&gt;-d 排除目录（directories），只显示文件
 d 只显示目录（不含文件）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;3-递归&#34;&gt;3. 递归
-&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;3-递归&#34;&gt;3. 递归
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -255,8 +285,8 @@ d 只显示目录（不含文件）&lt;/li&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/s
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;4-简洁模式&#34;&gt;4. 简洁模式
-&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;4-简洁模式&#34;&gt;4. 简洁模式
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -264,8 +294,8 @@ d 只显示目录（不含文件）&lt;/li&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/b
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;5-排序&#34;&gt;5. 排序
-&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;5-排序&#34;&gt;5. 排序
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -277,9 +307,9 @@ d 只显示目录（不含文件）&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;n&lt;/strong&gt; (name)、&lt;strong&gt;d&lt;/strong&gt;(date)&lt;/li&gt;
 &lt;li&gt;加 &lt;strong&gt;-&lt;/strong&gt; ：逆序&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;6-支持正则表达式&#34;&gt;6. 支持正则表达式
-&lt;/h5&gt;&lt;h4 id=&#34;树状图&#34;&gt;树状图
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;6-支持正则表达式&#34;&gt;6. 支持正则表达式
+&lt;/h3&gt;&lt;h2 id=&#34;树状图&#34;&gt;树状图
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -287,9 +317,9 @@ d 只显示目录（不含文件）&lt;/li&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tree
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;复制移动&#34;&gt;复制移动
-&lt;/h4&gt;&lt;h5 id=&#34;1-copy&#34;&gt;1. copy
-&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;复制移动&#34;&gt;复制移动
+&lt;/h2&gt;&lt;h3 id=&#34;1-copy&#34;&gt;1. copy
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -317,8 +347,8 @@ d 只显示目录（不含文件）&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;copy&lt;/span&gt; file1.txt + file2.txt combined.txt
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;2-move&#34;&gt;2. move
-&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;2-move&#34;&gt;2. move
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -344,8 +374,8 @@ d 只显示目录（不含文件）&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: move 也可以移动整个空文件夹（但不能移动非空文件夹）&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;3-文件夹&#34;&gt;3. 文件夹
-&lt;/h5&gt;&lt;ol&gt;
+&lt;/div&gt;&lt;h3 id=&#34;3-文件夹&#34;&gt;3. 文件夹
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;robocopy&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
@@ -391,8 +421,8 @@ d 只显示目录（不含文件）&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;/E&lt;/code&gt;：包含空子目录&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;/I&lt;/code&gt; ：如果目标不存在且复制多个文件，假定目标是目录&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;setx---环境变量&#34;&gt;setx - 环境变量
-&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;set - 终端变量&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;setx---环境变量&#34;&gt;setx - 环境变量
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;set - 终端变量&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;本地&lt;/strong&gt;环境 &lt;strong&gt;设置&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -525,8 +555,8 @@ d 只显示目录（不含文件）&lt;/li&gt;
         <description>&lt;blockquote&gt;
 &lt;p&gt;参考自：https://www.bilibili.com/video/BV1bovfeaEtQ&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;1-必备组件&#34;&gt;1 必备组件
-&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&#34;必备组件&#34;&gt;必备组件
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;git&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -540,15 +570,15 @@ d 只显示目录（不含文件）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;2-配置&#34;&gt;2 配置
-&lt;/h3&gt;&lt;h4 id=&#34;21-安装本地构建网页&#34;&gt;2.1 安装（本地构建网页）
-&lt;/h4&gt;&lt;h5 id=&#34;-git&#34;&gt;① git
-&lt;/h5&gt;&lt;ol&gt;
+&lt;h2 id=&#34;配置&#34;&gt;配置
+&lt;/h2&gt;&lt;h3 id=&#34;安装本地构建网页&#34;&gt;安装（本地构建网页）
+&lt;/h3&gt;&lt;p&gt;#11 ① git&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;二进制文件安装程序&lt;/li&gt;
 &lt;li&gt;环境变量&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h5 id=&#34;-hugo&#34;&gt;② hugo
-&lt;/h5&gt;&lt;ol&gt;
+&lt;p&gt;#11 ② hugo&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;使用预编译拓展版&lt;/p&gt;
 &lt;p&gt;链接：https://github.com/gohugoio/hugo/releases/latest&lt;/p&gt;
@@ -560,8 +590,8 @@ d 只显示目录（不含文件）&lt;/li&gt;
 &lt;p&gt;环境变量&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;22-创建网站资源&#34;&gt;2.2 创建网站资源
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;创建网站资源&#34;&gt;创建网站资源
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -569,9 +599,9 @@ d 只显示目录（不含文件）&lt;/li&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new site &amp;lt;name&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;22-stack主题&#34;&gt;2.2 Stack主题
-&lt;/h4&gt;&lt;h5 id=&#34;221-安装&#34;&gt;2.2.1 安装
-&lt;/h5&gt;&lt;ol&gt;
+&lt;/div&gt;&lt;h3 id=&#34;stack主题&#34;&gt;Stack主题
+&lt;/h3&gt;&lt;h4 id=&#34;安装&#34;&gt;安装
+&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;下载模板&lt;/p&gt;
 &lt;p&gt;hugo页：&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -587,8 +617,8 @@ d 只显示目录（不含文件）&lt;/li&gt;
 &lt;p&gt;将&lt;code&gt;exampleSite&lt;/code&gt;样例数据中的 &lt;code&gt;Content&lt;/code&gt; 和 &lt;strong&gt;hugo.yaml&lt;/strong&gt; 复制到主文件夹中，并删掉 **hugo.toml **和 &lt;code&gt;content/post/rich-content&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h5 id=&#34;222-hugoyaml&#34;&gt;2.2.2 hugo.yaml
-&lt;/h5&gt;&lt;ul&gt;
+&lt;h4 id=&#34;hugoyaml&#34;&gt;hugo.yaml
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;：和主题文件夹同名&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;baseurl&lt;/strong&gt;：访问网站&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;DefaultContentLanguage&lt;/strong&gt;：默认选择语言&lt;/li&gt;
@@ -620,8 +650,8 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;23-使用&#34;&gt;2.3 使用
-&lt;/h4&gt;&lt;ol&gt;
+&lt;h3 id=&#34;使用&#34;&gt;使用
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;添加内容&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -663,9 +693,9 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;/table&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;3--部署&#34;&gt;3  部署
-&lt;/h3&gt;&lt;h4 id=&#34;31-github&#34;&gt;3.1 github
-&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;① 常规部署&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;部署&#34;&gt;部署
+&lt;/h2&gt;&lt;h3 id=&#34;github&#34;&gt;github
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;① 常规部署&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;静态网页项目名   &lt;strong&gt;{github-username}.github.io&lt;/strong&gt;&lt;/p&gt;
@@ -749,7 +779,7 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;name: deploy
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 代码提交到main分支时触发github action
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 代码提交到main分支时触发github action
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;on:
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  push:
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    branches:
@@ -794,7 +824,7 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 自动生成的文件
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 自动生成的文件
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;public
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;resources
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.hugo_build.lock
@@ -836,16 +866,189 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;3-其他组件&#34;&gt;3 其他组件
-&lt;/h3&gt;&lt;h4 id=&#34;31-utterancesutterances&#34;&gt;3.1 Utterances：&lt;a class=&#34;link&#34; href=&#34;https://utteranc.es/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;h2 id=&#34;其他组件&#34;&gt;其他组件
+&lt;/h2&gt;&lt;h3 id=&#34;utterancesutterances&#34;&gt;Utterances：&lt;a class=&#34;link&#34; href=&#34;https://utteranc.es/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;utterances&lt;/a&gt;
-&lt;/h4&gt;&lt;hr&gt;
+&lt;/h3&gt;&lt;hr&gt;
 &lt;p&gt;一个基于GitHub issues构建的轻量级评论小部件。使用GitHub issues发布博客评论、维基页面等内容！&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;选仓库&lt;/li&gt;
 &lt;li&gt;到主页填信息&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Mapping&lt;/strong&gt; 默认&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;label&lt;/strong&gt; = &lt;strong&gt;Comment&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;twikootwikoo--一个简洁安全免费的静态网站评论系统&#34;&gt;Twikoo：&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Twikoo | 一个简洁、安全、免费的静态网站评论系统&lt;/a&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;云函数部署---netlify-部署&#34;&gt;云函数部署 - Netlify 部署
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/backend.html#netlify-%e9%83%a8%e7%bd%b2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;云函数部署 | Twikoo 文档&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;1-配置-mongodb-atlas&#34;&gt;1) 配置 MongoDB Atlas
+&lt;/h5&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/mongodb-atlas.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MongoDB Atlas | Twikoo 文档&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MongoDB Atlas 是 MongoDB Inc 提供的 MongoDB 数据库托管服务。免费账户可以永久使用 500 MiB 的数据库，足够存储 Twikoo 评论使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;申请 &lt;a class=&#34;link&#34; href=&#34;https://www.mongodb.com/cloud/atlas/register&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MongoDB AtLas&lt;/a&gt; 账号&lt;/li&gt;
+&lt;li&gt;创建免费 MongoDB 数据库，区域推荐选择离 Twikoo 后端（Vercel / Netlify / AWS Lambda / VPS）地理位置较近的数据中心以获得更低的数据库连接延迟。如果不清楚自己的后端在哪个区域，也可选择 &lt;code&gt;AWS / Oregon (us-west-2)&lt;/code&gt;，该数据中心基建成熟，故障率低，且使用 Oregon 州的清洁能源，较为环保&lt;/li&gt;
+&lt;li&gt;在 Database Access 页面点击 Add New Database User 创建数据库用户，Authentication Method 选 Password，在 Password Authentication 下设置数据库用户名和密码，建议点击 Auto Generate 自动生成一个不含特殊符号的强壮密码并妥善保存。点击 Database User Privileges 下方的 Add Built In Role，Select Role 选择 Atlas Admin，最后点击 Add User&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/assets/mongodb-1.kzmwAvw2.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-1.kzmwAvw2.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;925&#34;
+	srcset=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-1.kzmwAvw2_hu_42a4b16411b96978.png 480w, https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-1.kzmwAvw2_hu_5ec05d808ab61aab.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;207&#34;
+		data-flex-basis=&#34;498px&#34;
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;在 Network Access 页面点击 Add IP Address 添加网络白名单。因为 Vercel / Netlify / Lambda 的出口地址不固定，因此 Access List Entry 输入 &lt;code&gt;0.0.0.0/0&lt;/code&gt;（允许所有 IP 地址的连接）即可。如果 Twikoo 部署在自己的服务器上，这里可以填入固定 IP 地址。点击 Confirm 保存&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/assets/mongodb-2.wGC2d7_O.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-2.wGC2d7_O.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;925&#34;
+	srcset=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-2.wGC2d7_O_hu_5318a50c4549ff0d.png 480w, https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-2.wGC2d7_O_hu_5a4d37aee88ea055.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;207&#34;
+		data-flex-basis=&#34;498px&#34;
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;在 Database 页面点击 Connect，连接方式选择 Drivers，并记录数据库连接字符串，请将连接字符串中的 &lt;code&gt;&amp;lt;username&amp;gt;:&amp;lt;password&amp;gt;&lt;/code&gt; 修改为刚刚创建的数据库 &lt;code&gt;用户名:密码&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/assets/mongodb-3.BlCbBw8p.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-3.BlCbBw8p.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;925&#34;
+	srcset=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-3.BlCbBw8p_hu_f4e846908280e6a4.png 480w, https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-3.BlCbBw8p_hu_5c3b4491d365f980.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;207&#34;
+		data-flex-basis=&#34;498px&#34;
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;dl&gt;
+&lt;dt&gt;注意&lt;/dt&gt;
+&lt;dt&gt;如果在用户名或密码中包含以下字符和空格字符，必须使用百分比编码转换这些字符：&lt;/dt&gt;
+&lt;dd&gt;/ ? # [ ] @ ! $ &amp;amp; &amp;rsquo; ( ) * , ; = %
+例如，如果您的纯文本密码是p@ssw0rd&#39;9&amp;rsquo;!，您需要将密码编码为：
+p%40ssw0rd%279%27%21&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;（可选）默认的连接字符串没有指定数据库名称，Twikoo 会连接到默认的名为 test 的数据库。如果需要在同一个 MongoDB 里运行其他业务或供多个 Twikoo 实例使用，建立加入数据库名称并配置对应的 ACL。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;连接字符串包含了连接到 MongoDB 数据库的所有信息，一旦泄露会导致评论被任何人添加、修改、删除，并有可能获取你的 SMTP、图床 token 等信息。请妥善记录这一字符串，之后需要填入到 Twikoo 的部署平台里。&lt;/p&gt;
+&lt;h5 id=&#34;2-配置-netlify&#34;&gt;2) 配置 Netlify
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;申请 &lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/mongodb-atlas.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MongoDB Atlas&lt;/a&gt; 账号，获取 MongoDB 连接字符串&lt;/li&gt;
+&lt;li&gt;申请并登录 &lt;a class=&#34;link&#34; href=&#34;https://app.netlify.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Netlify&lt;/a&gt; 账号，创建一个 Team&lt;/li&gt;
+&lt;li&gt;打开 &lt;a class=&#34;link&#34; href=&#34;https://github.com/twikoojs/twikoo-netlify&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;twikoojs/twikoo-netlify&lt;/a&gt; 点击 fork 将仓库 fork 到自己的账号下
+&lt;strong&gt;注意修改package.json中的version&lt;/strong&gt;，默认配置导致我无法登录数据库&lt;/li&gt;
+&lt;li&gt;回到 Netlify，点击 Add new site - Import an existing project&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/assets/netlify-1.CBH5jdAK.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;index.assets/netlify-1.CBH5jdAK.png&#34; alt=&#34;img&#34; style=&#34;zoom: 50%;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;点击 Deploy with GitHub，如果未授权 GitHub 账号，先授权，然后选择前面 fork 的 twikoo-netlify 项目&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/assets/netlify-2.CoU6-6Qj.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-2.CoU6-6Qj.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;925&#34;
+	srcset=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-2.CoU6-6Qj_hu_ae7109a5c6e6ea5c.png 480w, https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-2.CoU6-6Qj_hu_8dd5fd5a3378bf33.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;207&#34;
+		data-flex-basis=&#34;498px&#34;
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;点击 Add environment variables - New variable，Key 输入 &lt;code&gt;MONGODB_URI&lt;/code&gt;，Value 输入前面记录的数据库连接字符串，点击 Deploy twikoo-netlify&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/assets/netlify-3.BRAuDkNv.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-3.BRAuDkNv.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;925&#34;
+	srcset=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-3.BRAuDkNv_hu_794b0aee142fd541.png 480w, https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-3.BRAuDkNv_hu_e222cd273952fd2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;207&#34;
+		data-flex-basis=&#34;498px&#34;
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;部署完成后，点击 Domain settings - 右侧 Options - Edit site name，可以设置属于自己的三级域名（&lt;code&gt;https://xxx.netlify.app&lt;/code&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/assets/netlify-4.BPwUhUpI.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-4.BPwUhUpI.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;925&#34;
+	srcset=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-4.BPwUhUpI_hu_1d39f4386762afc2.png 480w, https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-4.BPwUhUpI_hu_2b008d23a9c71f02.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;207&#34;
+		data-flex-basis=&#34;498px&#34;
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;进入 Site overview，点击上方的链接，如果环境配置正确，可以看到 “Twikoo 云函数运行正常” 的提示&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/assets/netlify-5.BSv5GDZV.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-5.BSv5GDZV.png&#34;
+	width=&#34;650&#34;
+	height=&#34;201&#34;
+	srcset=&#34;https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-5.BSv5GDZV_hu_6e615b529d2be9b4.png 480w, https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-5.BSv5GDZV_hu_4b22db2ea07f5075.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;323&#34;
+		data-flex-basis=&#34;776px&#34;
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;云函数地址（包含 &lt;code&gt;https://&lt;/code&gt; 前缀和 &lt;code&gt;/.netlify/functions/twikoo&lt;/code&gt; 后缀，例如 &lt;code&gt;https://xxx.netlify.app/.netlify/functions/twikoo&lt;/code&gt;）即为您的环境 id&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         </item>

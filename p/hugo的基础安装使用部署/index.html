@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 参考自：https://www.bilibili.com/video/BV1bovfeaEtQ\n1 必备组件 git 官网：Git HUGO 官网：The world&rsquo;s fastest framework for building websites 2 配置 2.1 安装（本地构建网页） ① git 二进制文件安装程序 环境变量 ② hugo 使用预编译拓展版\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 参考自：https://www.bilibili.com/video/BV1bovfeaEtQ\n必备组件 git 官网：Git HUGO 官网：The world&rsquo;s fastest framework for building websites 配置 安装（本地构建网页） #11 ① git\n二进制文件安装程序 环境变量 #11 ② hugo\n">
 <title>hugo的基础安装使用部署</title>
 
 <link rel='canonical' href='https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/'>
 
 <link rel="stylesheet" href="/scss/style.min.b0e76e98cdd4f7082d1fc36f7af7e0843a81201db2197c03ca426751dc923735.css"><meta property='og:title' content="hugo的基础安装使用部署">
-<meta property='og:description' content=" 参考自：https://www.bilibili.com/video/BV1bovfeaEtQ\n1 必备组件 git 官网：Git HUGO 官网：The world&rsquo;s fastest framework for building websites 2 配置 2.1 安装（本地构建网页） ① git 二进制文件安装程序 环境变量 ② hugo 使用预编译拓展版\n">
+<meta property='og:description' content=" 参考自：https://www.bilibili.com/video/BV1bovfeaEtQ\n必备组件 git 官网：Git HUGO 官网：The world&rsquo;s fastest framework for building websites 配置 安装（本地构建网页） #11 ① git\n二进制文件安装程序 环境变量 #11 ② hugo\n">
 <meta property='og:url' content='https://windovec.github.io/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/'>
 <meta property='og:site_name' content='WindoveC'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-22T22:18:59&#43;08:00'/><meta property='article:modified_time' content='2025-12-22T22:18:59&#43;08:00'/>
 <meta name="twitter:title" content="hugo的基础安装使用部署">
-<meta name="twitter:description" content=" 参考自：https://www.bilibili.com/video/BV1bovfeaEtQ\n1 必备组件 git 官网：Git HUGO 官网：The world&rsquo;s fastest framework for building websites 2 配置 2.1 安装（本地构建网页） ① git 二进制文件安装程序 环境变量 ② hugo 使用预编译拓展版\n">
+<meta name="twitter:description" content=" 参考自：https://www.bilibili.com/video/BV1bovfeaEtQ\n必备组件 git 官网：Git HUGO 官网：The world&rsquo;s fastest framework for building websites 配置 安装（本地构建网页） #11 ① git\n二进制文件安装程序 环境变量 #11 ② hugo\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -298,25 +298,31 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
+    <li><a href="#必备组件">必备组件</a></li>
+    <li><a href="#配置">配置</a>
       <ol>
-        <li><a href="#1-必备组件">1 必备组件</a></li>
-        <li><a href="#2-配置">2 配置</a>
+        <li><a href="#安装本地构建网页">安装（本地构建网页）</a></li>
+        <li><a href="#创建网站资源">创建网站资源</a></li>
+        <li><a href="#stack主题">Stack主题</a>
           <ol>
-            <li><a href="#21-安装本地构建网页">2.1 安装（本地构建网页）</a></li>
-            <li><a href="#22-创建网站资源">2.2 创建网站资源</a></li>
-            <li><a href="#22-stack主题">2.2 Stack主题</a></li>
-            <li><a href="#23-使用">2.3 使用</a></li>
+            <li><a href="#安装">安装</a></li>
+            <li><a href="#hugoyaml">hugo.yaml</a></li>
           </ol>
         </li>
-        <li><a href="#3--部署">3  部署</a>
+        <li><a href="#使用">使用</a></li>
+      </ol>
+    </li>
+    <li><a href="#部署">部署</a>
+      <ol>
+        <li><a href="#github">github</a></li>
+      </ol>
+    </li>
+    <li><a href="#其他组件">其他组件</a>
+      <ol>
+        <li><a href="#utterancesutterances">Utterances：utterances</a></li>
+        <li><a href="#twikootwikoo--一个简洁安全免费的静态网站评论系统">Twikoo：Twikoo | 一个简洁、安全、免费的静态网站评论系统</a>
           <ol>
-            <li><a href="#31-github">3.1 github</a></li>
-          </ol>
-        </li>
-        <li><a href="#3-其他组件">3 其他组件</a>
-          <ol>
-            <li><a href="#31-utterancesutterances">3.1 Utterances：utterances</a></li>
+            <li><a href="#云函数部署---netlify-部署">云函数部署 - Netlify 部署</a></li>
           </ol>
         </li>
       </ol>
@@ -389,7 +395,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 3 分钟
+                    阅读时长: 5 分钟
                 </time>
             </div>
         
@@ -407,8 +413,8 @@
     <blockquote>
 <p>参考自：https://www.bilibili.com/video/BV1bovfeaEtQ</p>
 </blockquote>
-<h3 id="1-必备组件">1 必备组件
-</h3><ul>
+<h2 id="必备组件">必备组件
+</h2><ul>
 <li><strong>git</strong>
 <ul>
 <li>官网：<a class="link" href="https://git-scm.com/"  target="_blank" rel="noopener"
@@ -422,15 +428,15 @@
 </ul>
 </li>
 </ul>
-<h3 id="2-配置">2 配置
-</h3><h4 id="21-安装本地构建网页">2.1 安装（本地构建网页）
-</h4><h5 id="-git">① git
-</h5><ol>
+<h2 id="配置">配置
+</h2><h3 id="安装本地构建网页">安装（本地构建网页）
+</h3><p>#11 ① git</p>
+<ol>
 <li>二进制文件安装程序</li>
 <li>环境变量</li>
 </ol>
-<h5 id="-hugo">② hugo
-</h5><ol>
+<p>#11 ② hugo</p>
+<ol>
 <li>
 <p>使用预编译拓展版</p>
 <p>链接：https://github.com/gohugoio/hugo/releases/latest</p>
@@ -442,8 +448,8 @@
 <p>环境变量</p>
 </li>
 </ol>
-<h4 id="22-创建网站资源">2.2 创建网站资源
-</h4><div class="highlight"><div class="chroma">
+<h3 id="创建网站资源">创建网站资源
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -451,9 +457,9 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo new site &lt;name&gt;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="22-stack主题">2.2 Stack主题
-</h4><h5 id="221-安装">2.2.1 安装
-</h5><ol>
+</div><h3 id="stack主题">Stack主题
+</h3><h4 id="安装">安装
+</h4><ol>
 <li>
 <p>下载模板</p>
 <p>hugo页：<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  target="_blank" rel="noopener"
@@ -469,8 +475,8 @@
 <p>将<code>exampleSite</code>样例数据中的 <code>Content</code> 和 <strong>hugo.yaml</strong> 复制到主文件夹中，并删掉 **hugo.toml **和 <code>content/post/rich-content</code></p>
 </li>
 </ol>
-<h5 id="222-hugoyaml">2.2.2 hugo.yaml
-</h5><ul>
+<h4 id="hugoyaml">hugo.yaml
+</h4><ul>
 <li><strong>theme</strong>：和主题文件夹同名</li>
 <li><strong>baseurl</strong>：访问网站</li>
 <li><strong>DefaultContentLanguage</strong>：默认选择语言</li>
@@ -502,8 +508,8 @@ src: img/avatar.png （/assert下）</li>
 </ul>
 </li>
 </ul>
-<h4 id="23-使用">2.3 使用
-</h4><ol>
+<h3 id="使用">使用
+</h3><ol>
 <li>
 <p>添加内容</p>
 <div class="highlight"><div class="chroma">
@@ -545,9 +551,9 @@ src: img/avatar.png （/assert下）</li>
 </table></div>
 </li>
 </ol>
-<h3 id="3--部署">3  部署
-</h3><h4 id="31-github">3.1 github
-</h4><p><strong>① 常规部署</strong></p>
+<h2 id="部署">部署
+</h2><h3 id="github">github
+</h3><p><strong>① 常规部署</strong></p>
 <ol>
 <li>
 <p>静态网页项目名   <strong>{github-username}.github.io</strong></p>
@@ -631,7 +637,7 @@ src: img/avatar.png （/assert下）</li>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">name: deploy
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 代码提交到main分支时触发github action
+</span></span><span class="line"><span class="cl">## 代码提交到main分支时触发github action
 </span></span><span class="line"><span class="cl">on:
 </span></span><span class="line"><span class="cl">  push:
 </span></span><span class="line"><span class="cl">    branches:
@@ -676,7 +682,7 @@ src: img/avatar.png （/assert下）</li>
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 自动生成的文件
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 自动生成的文件
 </span></span><span class="line"><span class="cl">public
 </span></span><span class="line"><span class="cl">resources
 </span></span><span class="line"><span class="cl">.hugo_build.lock
@@ -718,16 +724,189 @@ src: img/avatar.png （/assert下）</li>
 </span></span><span class="line"><span class="cl">git push
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="3-其他组件">3 其他组件
-</h3><h4 id="31-utterancesutterances">3.1 Utterances：<a class="link" href="https://utteranc.es/"  target="_blank" rel="noopener"
+</div><h2 id="其他组件">其他组件
+</h2><h3 id="utterancesutterances">Utterances：<a class="link" href="https://utteranc.es/"  target="_blank" rel="noopener"
     >utterances</a>
-</h4><hr>
+</h3><hr>
 <p>一个基于GitHub issues构建的轻量级评论小部件。使用GitHub issues发布博客评论、维基页面等内容！</p>
 <ol>
 <li>选仓库</li>
 <li>到主页填信息</li>
 <li><strong>Mapping</strong> 默认</li>
 <li><strong>label</strong> = <strong>Comment</strong></li>
+</ol>
+<h3 id="twikootwikoo--一个简洁安全免费的静态网站评论系统">Twikoo：<a class="link" href="https://twikoo.js.org/"  target="_blank" rel="noopener"
+    >Twikoo | 一个简洁、安全、免费的静态网站评论系统</a>
+</h3><h4 id="云函数部署---netlify-部署">云函数部署 - Netlify 部署
+</h4><blockquote>
+<p><a class="link" href="https://twikoo.js.org/backend.html#netlify-%e9%83%a8%e7%bd%b2"  target="_blank" rel="noopener"
+    >云函数部署 | Twikoo 文档</a></p>
+</blockquote>
+<h5 id="1-配置-mongodb-atlas">1) 配置 MongoDB Atlas
+</h5><blockquote>
+<p><a class="link" href="https://twikoo.js.org/mongodb-atlas.html"  target="_blank" rel="noopener"
+    >MongoDB Atlas | Twikoo 文档</a></p>
+</blockquote>
+<blockquote>
+<p>MongoDB Atlas 是 MongoDB Inc 提供的 MongoDB 数据库托管服务。免费账户可以永久使用 500 MiB 的数据库，足够存储 Twikoo 评论使用。</p>
+</blockquote>
+<ol>
+<li>申请 <a class="link" href="https://www.mongodb.com/cloud/atlas/register"  target="_blank" rel="noopener"
+    >MongoDB AtLas</a> 账号</li>
+<li>创建免费 MongoDB 数据库，区域推荐选择离 Twikoo 后端（Vercel / Netlify / AWS Lambda / VPS）地理位置较近的数据中心以获得更低的数据库连接延迟。如果不清楚自己的后端在哪个区域，也可选择 <code>AWS / Oregon (us-west-2)</code>，该数据中心基建成熟，故障率低，且使用 Oregon 州的清洁能源，较为环保</li>
+<li>在 Database Access 页面点击 Add New Database User 创建数据库用户，Authentication Method 选 Password，在 Password Authentication 下设置数据库用户名和密码，建议点击 Auto Generate 自动生成一个不含特殊符号的强壮密码并妥善保存。点击 Database User Privileges 下方的 Add Built In Role，Select Role 选择 Atlas Admin，最后点击 Add User</li>
+</ol>
+<p><a class="link" href="https://twikoo.js.org/assets/mongodb-1.kzmwAvw2.png"  target="_blank" rel="noopener"
+    ><img src="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-1.kzmwAvw2.png"
+	width="1920"
+	height="925"
+	srcset="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-1.kzmwAvw2_hu_42a4b16411b96978.png 480w, /p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-1.kzmwAvw2_hu_5ec05d808ab61aab.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="207"
+		data-flex-basis="498px"
+	
+></a></p>
+<ol start="4">
+<li>在 Network Access 页面点击 Add IP Address 添加网络白名单。因为 Vercel / Netlify / Lambda 的出口地址不固定，因此 Access List Entry 输入 <code>0.0.0.0/0</code>（允许所有 IP 地址的连接）即可。如果 Twikoo 部署在自己的服务器上，这里可以填入固定 IP 地址。点击 Confirm 保存</li>
+</ol>
+<p><a class="link" href="https://twikoo.js.org/assets/mongodb-2.wGC2d7_O.png"  target="_blank" rel="noopener"
+    ><img src="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-2.wGC2d7_O.png"
+	width="1920"
+	height="925"
+	srcset="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-2.wGC2d7_O_hu_5318a50c4549ff0d.png 480w, /p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-2.wGC2d7_O_hu_5a4d37aee88ea055.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="207"
+		data-flex-basis="498px"
+	
+></a></p>
+<ol start="5">
+<li>在 Database 页面点击 Connect，连接方式选择 Drivers，并记录数据库连接字符串，请将连接字符串中的 <code>&lt;username&gt;:&lt;password&gt;</code> 修改为刚刚创建的数据库 <code>用户名:密码</code></li>
+</ol>
+<p><a class="link" href="https://twikoo.js.org/assets/mongodb-3.BlCbBw8p.png"  target="_blank" rel="noopener"
+    ><img src="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-3.BlCbBw8p.png"
+	width="1920"
+	height="925"
+	srcset="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-3.BlCbBw8p_hu_f4e846908280e6a4.png 480w, /p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-3.BlCbBw8p_hu_5c3b4491d365f980.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="207"
+		data-flex-basis="498px"
+	
+></a></p>
+<blockquote>
+<dl>
+<dt>注意</dt>
+<dt>如果在用户名或密码中包含以下字符和空格字符，必须使用百分比编码转换这些字符：</dt>
+<dd>/ ? # [ ] @ ! $ &amp; &rsquo; ( ) * , ; = %
+例如，如果您的纯文本密码是p@ssw0rd'9&rsquo;!，您需要将密码编码为：
+p%40ssw0rd%279%27%21</dd>
+</dl>
+</blockquote>
+<ol start="6">
+<li>（可选）默认的连接字符串没有指定数据库名称，Twikoo 会连接到默认的名为 test 的数据库。如果需要在同一个 MongoDB 里运行其他业务或供多个 Twikoo 实例使用，建立加入数据库名称并配置对应的 ACL。</li>
+</ol>
+<p>连接字符串包含了连接到 MongoDB 数据库的所有信息，一旦泄露会导致评论被任何人添加、修改、删除，并有可能获取你的 SMTP、图床 token 等信息。请妥善记录这一字符串，之后需要填入到 Twikoo 的部署平台里。</p>
+<h5 id="2-配置-netlify">2) 配置 Netlify
+</h5><ol>
+<li>申请 <a class="link" href="https://twikoo.js.org/mongodb-atlas.html"  target="_blank" rel="noopener"
+    >MongoDB Atlas</a> 账号，获取 MongoDB 连接字符串</li>
+<li>申请并登录 <a class="link" href="https://app.netlify.com/"  target="_blank" rel="noopener"
+    >Netlify</a> 账号，创建一个 Team</li>
+<li>打开 <a class="link" href="https://github.com/twikoojs/twikoo-netlify"  target="_blank" rel="noopener"
+    >twikoojs/twikoo-netlify</a> 点击 fork 将仓库 fork 到自己的账号下
+<strong>注意修改package.json中的version</strong>，默认配置导致我无法登录数据库</li>
+<li>回到 Netlify，点击 Add new site - Import an existing project</li>
+</ol>
+<p><a class="link" href="https://twikoo.js.org/assets/netlify-1.CBH5jdAK.png"  target="_blank" rel="noopener"
+    ><img src="index.assets/netlify-1.CBH5jdAK.png" alt="img" style="zoom: 50%;" /></a></p>
+<ol start="5">
+<li>点击 Deploy with GitHub，如果未授权 GitHub 账号，先授权，然后选择前面 fork 的 twikoo-netlify 项目</li>
+</ol>
+<p><a class="link" href="https://twikoo.js.org/assets/netlify-2.CoU6-6Qj.png"  target="_blank" rel="noopener"
+    ><img src="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-2.CoU6-6Qj.png"
+	width="1920"
+	height="925"
+	srcset="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-2.CoU6-6Qj_hu_ae7109a5c6e6ea5c.png 480w, /p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-2.CoU6-6Qj_hu_8dd5fd5a3378bf33.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="207"
+		data-flex-basis="498px"
+	
+></a></p>
+<ol start="6">
+<li>点击 Add environment variables - New variable，Key 输入 <code>MONGODB_URI</code>，Value 输入前面记录的数据库连接字符串，点击 Deploy twikoo-netlify</li>
+</ol>
+<p><a class="link" href="https://twikoo.js.org/assets/netlify-3.BRAuDkNv.png"  target="_blank" rel="noopener"
+    ><img src="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-3.BRAuDkNv.png"
+	width="1920"
+	height="925"
+	srcset="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-3.BRAuDkNv_hu_794b0aee142fd541.png 480w, /p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-3.BRAuDkNv_hu_e222cd273952fd2.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="207"
+		data-flex-basis="498px"
+	
+></a></p>
+<ol start="7">
+<li>部署完成后，点击 Domain settings - 右侧 Options - Edit site name，可以设置属于自己的三级域名（<code>https://xxx.netlify.app</code>）</li>
+</ol>
+<p><a class="link" href="https://twikoo.js.org/assets/netlify-4.BPwUhUpI.png"  target="_blank" rel="noopener"
+    ><img src="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-4.BPwUhUpI.png"
+	width="1920"
+	height="925"
+	srcset="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-4.BPwUhUpI_hu_1d39f4386762afc2.png 480w, /p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-4.BPwUhUpI_hu_2b008d23a9c71f02.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="207"
+		data-flex-basis="498px"
+	
+></a></p>
+<ol start="8">
+<li>进入 Site overview，点击上方的链接，如果环境配置正确，可以看到 “Twikoo 云函数运行正常” 的提示</li>
+</ol>
+<p><a class="link" href="https://twikoo.js.org/assets/netlify-5.BSv5GDZV.png"  target="_blank" rel="noopener"
+    ><img src="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-5.BSv5GDZV.png"
+	width="650"
+	height="201"
+	srcset="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-5.BSv5GDZV_hu_6e615b529d2be9b4.png 480w, /p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-5.BSv5GDZV_hu_4b22db2ea07f5075.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="323"
+		data-flex-basis="776px"
+	
+></a></p>
+<ol start="9">
+<li>云函数地址（包含 <code>https://</code> 前缀和 <code>/.netlify/functions/twikoo</code> 后缀，例如 <code>https://xxx.netlify.app/.netlify/functions/twikoo</code>）即为您的环境 id</li>
 </ol>
 
 </section>
@@ -796,53 +975,53 @@ src: img/avatar.png （/assert下）</li>
      
     
         
-    <script src="https://utteranc.es/client.js" 
-        repo="WindoveC/WindoveC.github.io"
-        issue-term="pathname"
-        
-        label="Comment"
-        
-        crossorigin="anonymous"
-        async
-        >
-</script>
-
+    <script src="//cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js"></script>
+<div id="tcomment"></div>
 <style>
-    .utterances {
-        max-width: unset;
+    .twikoo {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
     }
-</style>
-
-<script>
-    let utterancesLoaded = false;
-
-    function setUtterancesTheme(theme) {
-        let utterances = document.querySelector('.utterances iframe');
-        if (utterances) {
-            utterances.contentWindow.postMessage(
-                {
-                    type: 'set-theme',
-                    theme: `github-${theme}`
-                },
-                'https://utteranc.es'
-            );
-        }
+    :root[data-scheme="dark"] {
+        --twikoo-body-text-color-main: rgba(255, 255, 255, 0.9);
+        --twikoo-body-text-color: rgba(255, 255, 255, 0.7);
     }
-
-    addEventListener('message', event => {
-        if (event.origin !== 'https://utteranc.es') return;
-
-        
-        utterancesLoaded = true;
-        setUtterancesTheme(document.documentElement.dataset.scheme)
-    });
-
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (!utterancesLoaded) return;
-        setUtterancesTheme(e.detail)
-    })
+    .twikoo .el-input-group__prepend,
+    .twikoo .tk-action-icon,
+    .twikoo .tk-submit-action-icon,
+    .twikoo .tk-time,
+    .twikoo .tk-comments-no,
+    .twikoo .tk-comments-count {
+        color: var(--twikoo-body-text-color);
+    }
+    .twikoo .el-input__inner,
+    .twikoo .el-textarea__inner,
+    .twikoo .tk-preview-container,
+    .twikoo .tk-content,
+    .twikoo .tk-nick,
+    .twikoo .tk-send,
+    .twikoo .tk-comments-no,
+    .twikoo .el-input__count,
+    .twikoo .tk-submit-action-icon {
+        color: var(--twikoo-body-text-color-main)!important;
+    }
+    .twikoo .el-button{
+        color: var(--twikoo-body-text-color)!important;
+    }
+    .twikoo .el-input__count {
+        color: var(--twikoo-body-text-color) !important;
+    }
+    .OwO .OwO-body {
+        background-color: var(--body-background) !important;
+        color: var(--body-text-color) !important;
+    }
+</style><script>
+    twikoo.init({
+        envId: 'wc-redeem-twikoo.netlify.app',
+        el: '#tcomment',})
 </script>
-
 
     
 
