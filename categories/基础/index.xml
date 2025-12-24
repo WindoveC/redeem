@@ -980,9 +980,10 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;其他组件&#34;&gt;其他组件
-&lt;/h2&gt;&lt;h3 id=&#34;utterancesutterances&#34;&gt;Utterances：&lt;a class=&#34;link&#34; href=&#34;https://utteranc.es/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;utterances&lt;/a&gt;
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;utterances&#34;&gt;Utterances：
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://utteranc.es/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;utterances&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1004,9 +1005,10 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Mapping&lt;/strong&gt; 默认&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;label&lt;/strong&gt; = &lt;strong&gt;Comment&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;twikootwikoo--一个简洁安全免费的静态网站评论系统&#34;&gt;Twikoo：&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Twikoo | 一个简洁、安全、免费的静态网站评论系统&lt;/a&gt;
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;twikoo&#34;&gt;Twikoo：
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Twikoo | 一个简洁、安全、免费的静态网站评论系统&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1023,13 +1025,15 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h4 id=&#34;云函数部署---netlify-部署&#34;&gt;云函数部署 - Netlify 部署
+&lt;h4 id=&#34;云函数部署---netlify&#34;&gt;云函数部署 - Netlify
 &lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/backend.html#netlify-%e9%83%a8%e7%bd%b2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;云函数部署 | Twikoo 文档&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h5 id=&#34;1-配置-mongodb-atlas&#34;&gt;1) 配置 MongoDB Atlas
-&lt;/h5&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;1 配置 MongoDB Atlas&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/mongodb-atlas.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MongoDB Atlas | Twikoo 文档&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1100,8 +1104,10 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;li&gt;（可选）默认的连接字符串没有指定数据库名称，Twikoo 会连接到默认的名为 test 的数据库。如果需要在同一个 MongoDB 里运行其他业务或供多个 Twikoo 实例使用，建立加入数据库名称并配置对应的 ACL。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;连接字符串包含了连接到 MongoDB 数据库的所有信息，一旦泄露会导致评论被任何人添加、修改、删除，并有可能获取你的 SMTP、图床 token 等信息。请妥善记录这一字符串，之后需要填入到 Twikoo 的部署平台里。&lt;/p&gt;
-&lt;h5 id=&#34;2-配置-netlify&#34;&gt;2) 配置 Netlify
-&lt;/h5&gt;&lt;ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2  配置 Netlify&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
 &lt;li&gt;申请 &lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/mongodb-atlas.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MongoDB Atlas&lt;/a&gt; 账号，获取 MongoDB 连接字符串&lt;/li&gt;
 &lt;li&gt;申请并登录 &lt;a class=&#34;link&#34; href=&#34;https://app.netlify.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1192,10 +1198,30 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 		data-flex-basis=&#34;776px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;云函数地址（包含 &lt;code&gt;https://&lt;/code&gt; 前缀和 &lt;code&gt;/.netlify/functions/twikoo&lt;/code&gt; 后缀，例如 &lt;code&gt;https://xxx.netlify.app/.netlify/functions/twikoo&lt;/code&gt;）即为您的环境 id&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+&lt;p&gt;云函数地址（包含 &lt;code&gt;https://&lt;/code&gt; 前缀和 &lt;code&gt;/.netlify/functions/twikoo&lt;/code&gt; 后缀，例如 &lt;code&gt;https://xxx.netlify.app/.netlify/functions/twikoo&lt;/code&gt;）即为您的环境 id&lt;/p&gt;
+&lt;h4 id=&#34;前端部署&#34;&gt;前端部署
+&lt;/h4&gt;&lt;p&gt;在中&lt;code&gt;hugo.yaml&lt;/code&gt;填写 &lt;strong&gt;envid&lt;/strong&gt; 即可&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;params:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    comments:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        twikoo:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            envId: https://xxx.netlify.app
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            region: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            path:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            lang: zh-cn
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
         </item>
         
     </channel>
