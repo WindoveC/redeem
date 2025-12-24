@@ -609,7 +609,14 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &amp;#34;update .gitignore&amp;#34;  // windows使用的命令时，需要使用双引号
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;&lt;h2 id=&#34;clone&#34;&gt;clone
+&lt;/h2&gt;&lt;h2 id=&#34;submodule&#34;&gt;submodule
+&lt;/h2&gt;&lt;h2 id=&#34;注意事项&#34;&gt;注意事项
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;clone 和 submodule 的文件不会真正上传，可能导致自动执行的job失败&lt;/li&gt;
+&lt;li&gt;通过 .git 文件夹判断是不是一个项目&lt;/li&gt;
+&lt;/ol&gt;
+</description>
         </item>
         <item>
         <title>CMD的基础命令</title>

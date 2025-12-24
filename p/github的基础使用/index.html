@@ -300,6 +300,9 @@
   <ol>
     <li><a href="#初始化仓库">初始化仓库</a></li>
     <li><a href="#清除缓存">清除缓存</a></li>
+    <li><a href="#clone">clone</a></li>
+    <li><a href="#submodule">submodule</a></li>
+    <li><a href="#注意事项">注意事项</a></li>
   </ol>
 </nav>
         </div>
@@ -504,7 +507,14 @@
 </span></span><span class="line"><span class="cl">git commit -m &#34;update .gitignore&#34;  // windows使用的命令时，需要使用双引号
 </span></span></code></pre></td></tr></table>
 </div>
-</div>
+</div><h2 id="clone">clone
+</h2><h2 id="submodule">submodule
+</h2><h2 id="注意事项">注意事项
+</h2><ol>
+<li>clone 和 submodule 的文件不会真正上传，可能导致自动执行的job失败</li>
+<li>通过 .git 文件夹判断是不是一个项目</li>
+</ol>
+
 </section>
 
 
