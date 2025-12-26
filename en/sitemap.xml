@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://windovec.github.io/en/categories/</loc>
+    <loc>https://windovec.github.io/redeem/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://windovec.github.io/categories/"
+                href="https://windovec.github.io/redeem/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://windovec.github.io/en/categories/"
+                href="https://windovec.github.io/redeem/en/categories/"
                 />
   </url><url>
-    <loc>https://windovec.github.io/en/</loc>
+    <loc>https://windovec.github.io/redeem/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://windovec.github.io/"
+                href="https://windovec.github.io/redeem/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://windovec.github.io/en/"
+                href="https://windovec.github.io/redeem/en/"
                 />
   </url><url>
-    <loc>https://windovec.github.io/en/tags/</loc>
+    <loc>https://windovec.github.io/redeem/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://windovec.github.io/tags/"
+                href="https://windovec.github.io/redeem/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://windovec.github.io/en/tags/"
+                href="https://windovec.github.io/redeem/en/tags/"
                 />
   </url>
 </urlset>

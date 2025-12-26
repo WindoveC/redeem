@@ -4,11 +4,11 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="代码块 缩小代码块的字体大小 文件：assets/scss/partials/article.scss 模块：.article-content 1 2 3 4 5 code { border-radius: var(--tag-border-radius); font-size: 14px; // Add font size setting for code block font-family: var(--code-font-family); } 修复代码出框 文件：assets/partials/layout/article.scss 模块：.article-content 1 2 3 code { word-wrap: break-word; //允许长单词或 URL 地址换行到下一行 } macOS风格 文件：assets/scss/partials/layout/article.scss 模块：.highlight 1 2 3 4 5 6 7 8 .highlight { background-color: var(--pre-background-color); padding: var(--card-padding); position: relative; border-radius: 10px; max-width: 100% !important; margin: 0 !important; box-shadow: var(--shadow-l1) !important; 文件：static/img/code-header.svg 1 2 3 4 5 &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; version=&#34;1.1&#34; x=&#34;0px&#34; y=&#34;0px&#34; width=&#34;450px&#34; height=&#34;130px&#34;&gt; &lt;ellipse cx=&#34;65&#34; cy=&#34;65&#34; rx=&#34;50&#34; ry=&#34;52&#34; stroke=&#34;rgb(220,60,54)&#34; stroke-width=&#34;2&#34; fill=&#34;rgb(237,108,96)&#34;/&gt; &lt;ellipse cx=&#34;225&#34; cy=&#34;65&#34; rx=&#34;50&#34; ry=&#34;52&#34; stroke=&#34;rgb(218,151,33)&#34; stroke-width=&#34;2&#34; fill=&#34;rgb(247,193,81)&#34;/&gt; &lt;ellipse cx=&#34;385&#34; cy=&#34;65&#34; rx=&#34;50&#34; ry=&#34;52&#34; stroke=&#34;rgb(27,161,37)&#34; stroke-width=&#34;2&#34; fill=&#34;rgb(100,200,86)&#34;/&gt; &lt;/svg&gt; 文件：assets/scss/custom.scss 1 2 3 4 5 6 7 8 9 10 11 12 13 14 // 为代码块顶部添加 macos 样式 .article-content { .highlight:before { content: &#34;&#34;; display: block; background: url(/img/code-header.svg); height: 25px; width: 100%; background-size: 52px; background-repeat: no-repeat; margin-top: -10px; margin-bottom: 0; } } hugo-notice martignoni/hugo-notice: A Hugo theme component to display nice notices\n">
 <title>Hugo的自定义美化</title>
 
-<link rel='canonical' href='https://windovec.github.io/p/hugo%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BE%8E%E5%8C%96/'>
+<link rel='canonical' href='https://windovec.github.io/redeem/p/hugo%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BE%8E%E5%8C%96/'>
 
-<link rel="stylesheet" href="/scss/style.min.7e7e47e8797277dc2c9382473df1cd6a846b00bc289ac129ae21df2a2cfc992b.css"><meta property='og:title' content="Hugo的自定义美化">
+<link rel="stylesheet" href="/redeem/scss/style.min.7e7e47e8797277dc2c9382473df1cd6a846b00bc289ac129ae21df2a2cfc992b.css"><meta property='og:title' content="Hugo的自定义美化">
 <meta property='og:description' content="代码块 缩小代码块的字体大小 文件：assets/scss/partials/article.scss 模块：.article-content 1 2 3 4 5 code { border-radius: var(--tag-border-radius); font-size: 14px; // Add font size setting for code block font-family: var(--code-font-family); } 修复代码出框 文件：assets/partials/layout/article.scss 模块：.article-content 1 2 3 code { word-wrap: break-word; //允许长单词或 URL 地址换行到下一行 } macOS风格 文件：assets/scss/partials/layout/article.scss 模块：.highlight 1 2 3 4 5 6 7 8 .highlight { background-color: var(--pre-background-color); padding: var(--card-padding); position: relative; border-radius: 10px; max-width: 100% !important; margin: 0 !important; box-shadow: var(--shadow-l1) !important; 文件：static/img/code-header.svg 1 2 3 4 5 &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; version=&#34;1.1&#34; x=&#34;0px&#34; y=&#34;0px&#34; width=&#34;450px&#34; height=&#34;130px&#34;&gt; &lt;ellipse cx=&#34;65&#34; cy=&#34;65&#34; rx=&#34;50&#34; ry=&#34;52&#34; stroke=&#34;rgb(220,60,54)&#34; stroke-width=&#34;2&#34; fill=&#34;rgb(237,108,96)&#34;/&gt; &lt;ellipse cx=&#34;225&#34; cy=&#34;65&#34; rx=&#34;50&#34; ry=&#34;52&#34; stroke=&#34;rgb(218,151,33)&#34; stroke-width=&#34;2&#34; fill=&#34;rgb(247,193,81)&#34;/&gt; &lt;ellipse cx=&#34;385&#34; cy=&#34;65&#34; rx=&#34;50&#34; ry=&#34;52&#34; stroke=&#34;rgb(27,161,37)&#34; stroke-width=&#34;2&#34; fill=&#34;rgb(100,200,86)&#34;/&gt; &lt;/svg&gt; 文件：assets/scss/custom.scss 1 2 3 4 5 6 7 8 9 10 11 12 13 14 // 为代码块顶部添加 macos 样式 .article-content { .highlight:before { content: &#34;&#34;; display: block; background: url(/img/code-header.svg); height: 25px; width: 100%; background-size: 52px; background-repeat: no-repeat; margin-top: -10px; margin-bottom: 0; } } hugo-notice martignoni/hugo-notice: A Hugo theme component to display nice notices\n">
-<meta property='og:url' content='https://windovec.github.io/p/hugo%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BE%8E%E5%8C%96/'>
+<meta property='og:url' content='https://windovec.github.io/redeem/p/hugo%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BE%8E%E5%8C%96/'>
 <meta property='og:site_name' content='WindoveC'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-23T22:45:47&#43;08:00'/><meta property='article:modified_time' content='2025-12-23T22:45:47&#43;08:00'/>
 <meta name="twitter:title" content="Hugo的自定义美化">
@@ -52,13 +52,13 @@
         
             
             <figure class="site-avatar">
-                <a href="/">
+                <a href="/redeem/">
                 
                     
                     
                     
                         
-                        <img src="/img/avatar_hu_f9ee51788a101886.png" width="300"
+                        <img src="/redeem/img/avatar_hu_f9ee51788a101886.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -71,7 +71,7 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">WindoveC</a></h1>
+            <h1 class="site-name"><a href="/redeem">WindoveC</a></h1>
             <h2 class="site-description">欢迎来到我的网站，此博客由 Hugo &amp; Stack 搭建，主要分享工作和毕设学习笔记</h2>
         </div>
     </header><ol class="menu-social">
@@ -129,7 +129,7 @@
         
         
         <li >
-            <a href='/' >
+            <a href='/redeem/' >
                 
                 
                 
@@ -149,7 +149,7 @@
         
         
         <li >
-            <a href='/%E5%85%B3%E4%BA%8E/' >
+            <a href='/redeem/%E5%85%B3%E4%BA%8E/' >
                 
                 
                 
@@ -168,7 +168,7 @@
         
         
         <li >
-            <a href='/archives/' >
+            <a href='/redeem/archives/' >
                 
                 
                 
@@ -188,7 +188,7 @@
         
         
         <li >
-            <a href='/search/' >
+            <a href='/redeem/search/' >
                 
                 
                 
@@ -207,7 +207,7 @@
         
         
         <li >
-            <a href='/%E9%93%BE%E6%8E%A5/' >
+            <a href='/redeem/%E9%93%BE%E6%8E%A5/' >
                 
                 
                 
@@ -241,9 +241,9 @@
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="https://windovec.github.io/" selected>简体中文</option>
+                                    <option value="https://windovec.github.io/redeem/" selected>简体中文</option>
                                 
-                                    <option value="https://windovec.github.io/en/" >English</option>
+                                    <option value="https://windovec.github.io/redeem/en/" >English</option>
                                 
                             </select>
                         </li>
@@ -341,11 +341,11 @@
     
     <header class="article-category">
         
-            <a href="/categories/%E5%AD%A6%E4%B9%A0/" >
+            <a href="/redeem/categories/%E5%AD%A6%E4%B9%A0/" >
                 学习
             </a>
         
-            <a href="/categories/%E6%8E%A2%E7%B4%A2/" >
+            <a href="/redeem/categories/%E6%8E%A2%E7%B4%A2/" >
                 探索
             </a>
         
@@ -354,7 +354,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/hugo%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BE%8E%E5%8C%96/">Hugo的自定义美化</a>
+            <a href="/redeem/p/hugo%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BE%8E%E5%8C%96/">Hugo的自定义美化</a>
         </h2>
     
         
@@ -909,7 +909,7 @@
             
                 
 <article class="">
-    <a href="/p/github%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
+    <a href="/redeem/p/github%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
         
         
 
@@ -922,7 +922,7 @@
             
                 
 <article class="">
-    <a href="/p/cmd%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
+    <a href="/redeem/p/cmd%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
         
         
 
@@ -935,7 +935,7 @@
             
                 
 <article class="">
-    <a href="/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/">
+    <a href="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/">
         
         
 
@@ -1103,7 +1103,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
+            </script><script type="text/javascript" src="/redeem/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
