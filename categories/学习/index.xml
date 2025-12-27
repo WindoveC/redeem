@@ -59,7 +59,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;macos风格&#34;&gt;macOS风格
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;修改baseurl会失效，待补充&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;文件：&lt;code&gt;assets/scss/partials/layout/article.scss&lt;/code&gt;
 &lt;ul&gt;
 &lt;li&gt;模块：&lt;code&gt;.highlight&lt;/code&gt;&lt;/li&gt;
