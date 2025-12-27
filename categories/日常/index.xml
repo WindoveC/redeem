@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>日常 on WindoveC</title>
-        <link>https://windovec.github.io/redeem/categories/%E6%97%A5%E5%B8%B8/</link>
+        <link>https://example.com/categories/%E6%97%A5%E5%B8%B8/</link>
         <description>Recent content in 日常 on WindoveC</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WindoveC</copyright>
-        <lastBuildDate>Fri, 26 Dec 2025 14:23:14 +0800</lastBuildDate><atom:link href="https://windovec.github.io/redeem/categories/%E6%97%A5%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 26 Dec 2025 14:23:14 +0800</lastBuildDate><atom:link href="https://example.com/categories/%E6%97%A5%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Windows使用经验</title>
-        <link>https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</link>
+        <link>https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</link>
         <pubDate>Fri, 26 Dec 2025 14:23:14 +0800</pubDate>
         
-        <guid>https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</guid>
+        <guid>https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</guid>
         <description>&lt;h3 id=&#34;开启终端和命令行代理脚本&#34;&gt;开启终端和命令行代理脚本
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;最终&lt;/li&gt;
@@ -169,10 +169,10 @@
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;2.4g频段&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;2.4 GHz 频段范围内有每隔 5 MHz 分隔的频道14个（除了第14频道与第13频道相隔了 12 MHz）。[2] 40 MHz 频段可以由两个相邻 20 MHz 频段组成。取决于哪个频带是主（控制）频带，哪个频带是从（扩展）频带，路由器可能会显示成 1+5、5+1、9+13、13+9。 &lt;img src=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/2.4g.png&#34;
+&lt;p&gt;2.4 GHz 频段范围内有每隔 5 MHz 分隔的频道14个（除了第14频道与第13频道相隔了 12 MHz）。[2] 40 MHz 频段可以由两个相邻 20 MHz 频段组成。取决于哪个频带是主（控制）频带，哪个频带是从（扩展）频带，路由器可能会显示成 1+5、5+1、9+13、13+9。 &lt;img src=&#34;https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/2.4g.png&#34;
 	width=&#34;1026&#34;
 	height=&#34;246&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/2.4g_hu_1d0a5f01e12ac2fb.png 480w, https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/2.4g_hu_90c3aec7d8fc2931.png 1024w&#34;
+	srcset=&#34;https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/2.4g_hu_1d0a5f01e12ac2fb.png 480w, https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/2.4g_hu_90c3aec7d8fc2931.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -188,10 +188,10 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;5.2G频段&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;5.2G的可用信道：36、40、44、48、52、56、60、64； 由于国家使用雷达环境中会与52、56、60、64信道冲突，因此常规模式下建议避开这些雷达信道，以免出现无线终端接入问题。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.2g.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.2g.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;212&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.2g_hu_69184bd47b7224e8.png 480w, https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.2g_hu_b93b04fe0c8b14c5.png 1024w&#34;
+	srcset=&#34;https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.2g_hu_69184bd47b7224e8.png 480w, https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.2g_hu_b93b04fe0c8b14c5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -204,10 +204,10 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;5.5G频段&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;5.5GHz 属于 5GHz 频段的一部分，在不同国家和地区具体的频率划分可能会有所不同。在中国，5GHz 频段的划分包括 5.470GHz - 5.725GHz 的频率范围。
-&lt;img src=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.5g.png&#34;
+&lt;img src=&#34;https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.5g.png&#34;
 	width=&#34;1025&#34;
 	height=&#34;214&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.5g_hu_487855bc6b1660a9.png 480w, https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.5g_hu_655d445282e4cb37.png 1024w&#34;
+	srcset=&#34;https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.5g_hu_487855bc6b1660a9.png 480w, https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.5g_hu_655d445282e4cb37.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -220,10 +220,10 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;5.8G频段&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;5.8GHz频段，&lt;strong&gt;中国开放只有149、153、157、161、165这5个信道&lt;/strong&gt;； 其中可支持一组80MHz信道捆绑（149-161）或两组40MHz捆绑（149-153和157-161）； 所以165信道支持20MHz频宽。 165信道不可见是因为当前频宽为20MHz，改频宽后可见。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.8g.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.8g.png&#34;
 	width=&#34;1025&#34;
 	height=&#34;173&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.8g_hu_9b598785b65fb427.png 480w, https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.8g_hu_c53dc74aa41c072e.png 1024w&#34;
+	srcset=&#34;https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.8g_hu_9b598785b65fb427.png 480w, https://example.com/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.8g_hu_c53dc74aa41c072e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
