@@ -323,6 +323,7 @@
         <li><a href="#示例-1">示例</a></li>
       </ol>
     </li>
+    <li><a href="#修改文章字体行距">修改文章字体行距</a></li>
   </ol>
 </nav>
         </div>
@@ -409,9 +410,9 @@
     <h2 id="代码块">代码块
 </h2><h3 id="缩小代码块的字体大小">缩小代码块的字体大小
 </h3><ul>
-<li>文件：assets/scss/partials/article.scss
+<li>文件：<code>assets/scss/partials/article.scss</code>
 <ul>
-<li>模块：.article-content</li>
+<li>模块：<code>.article-content</code></li>
 </ul>
 </li>
 </ul>
@@ -433,9 +434,9 @@
 </div>
 </div><h3 id="修复代码出框">修复代码出框
 </h3><ul>
-<li>文件：assets/partials/layout/article.scss
+<li>文件：<code>assets/partials/layout/article.scss</code>
 <ul>
-<li>模块：.article-content</li>
+<li>模块：<code>.article-content</code></li>
 </ul>
 </li>
 </ul>
@@ -453,9 +454,9 @@
 </div>
 </div><h3 id="macos风格">macOS风格
 </h3><ul>
-<li>文件：assets/scss/partials/layout/article.scss
+<li>文件：<code>assets/scss/partials/layout/article.scss</code>
 <ul>
-<li>模块：.highlight</li>
+<li>模块：<code>.highlight</code></li>
 </ul>
 </li>
 </ul>
@@ -482,7 +483,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>文件：static/img/code-header.svg</li>
+<li>文件：<code>static/img/code-header.svg</code></li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -501,7 +502,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>文件：assets/scss/custom.scss</li>
+<li>文件：<code>assets/scss/custom.scss</code></li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -869,6 +870,45 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&gt; [!QUESTION] Can admonitions be nested?
 </span></span><span class="line"><span class="cl">&gt; &gt; [!TODO] Yes!, they can.
 </span></span><span class="line"><span class="cl">&gt; &gt; &gt; [!EXAMPLE]  You can even use multiple layers of nesting.
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="修改文章字体行距">修改文章字体行距
+</h2><p>文件：assets/scss/variables.scss</p>
+<ul>
+<li>
+<p>模块：<code>:root</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">/**</span>
+</span></span><span class="line"><span class="cl"><span class="o">*</span>   <span class="n">Article</span> <span class="n">content</span> <span class="n">font</span> <span class="n">settings</span>
+</span></span><span class="line"><span class="cl"><span class="o">*/</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="n">root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="o">--</span><span class="n">article</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span> <span class="k">var</span><span class="p">(</span><span class="o">--</span><span class="n">base</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="o">--</span><span class="n">article</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">1.6</span><span class="n">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="n">include</span> <span class="n">respond</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">--</span><span class="n">article</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">1.7</span><span class="n">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">--</span><span class="n">article</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="n">height</span><span class="p">:</span> <span class="mf">1.85</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
