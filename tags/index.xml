@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on WindoveC</title>
-        <link>https://example.com/tags/</link>
+        <link>https://windovec.github.io/redeem/tags/</link>
         <description>Recent content in Tags on WindoveC</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>WindoveC</copyright><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>WindoveC</copyright><atom:link href="https://windovec.github.io/redeem/tags/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
