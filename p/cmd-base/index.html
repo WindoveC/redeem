@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="初始化仓库 1 2 3 4 5 6 git init git add . git commit -m &#34;first commit&#34; git branch -M main git remote add origin https://github.com/WindoveC/WindoveC.github.io.git git push -u origin main git init\n在当前目录初始化一个新的 Git 仓库。\n执行后，Git 会在该目录下创建一个隐藏的 .git 文件夹，用于跟踪版本历史。\n">
-<title>Github的基础使用</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="注释 常规单行注释 :: 代码块（括号内）注释 REM 行末注释 &amp; REM 行头 @：禁止回显（suppress echoing）当前命令本身到命令行窗口。\n代理 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 检验 1 2 echo %&lt;variable_name&gt;% set &lt;variable_name&gt; 更换目录 不更换驱动器 1 cd {&lt;Relative Path&gt; | &lt;Absolute Path&gt;} 更换驱动器 1 cd /d &lt;Absolute Path&gt; 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n">
+<title>CMD的基础命令</title>
 
-<link rel='canonical' href='https://windovec.github.io/redeem/p/github%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/'>
+<link rel='canonical' href='https://windovec.github.io/redeem/p/cmd-base/'>
 
-<link rel="stylesheet" href="/redeem/scss/style.min.b0bdd7050cd417228f19ed0929e86edcda8198b8f997a9247e6e7f10f31b5c10.css"><meta property='og:title' content="Github的基础使用">
-<meta property='og:description' content="初始化仓库 1 2 3 4 5 6 git init git add . git commit -m &#34;first commit&#34; git branch -M main git remote add origin https://github.com/WindoveC/WindoveC.github.io.git git push -u origin main git init\n在当前目录初始化一个新的 Git 仓库。\n执行后，Git 会在该目录下创建一个隐藏的 .git 文件夹，用于跟踪版本历史。\n">
-<meta property='og:url' content='https://windovec.github.io/redeem/p/github%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/'>
+<link rel="stylesheet" href="/redeem/scss/style.min.b0bdd7050cd417228f19ed0929e86edcda8198b8f997a9247e6e7f10f31b5c10.css"><meta property='og:title' content="CMD的基础命令">
+<meta property='og:description' content="注释 常规单行注释 :: 代码块（括号内）注释 REM 行末注释 &amp; REM 行头 @：禁止回显（suppress echoing）当前命令本身到命令行窗口。\n代理 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 检验 1 2 echo %&lt;variable_name&gt;% set &lt;variable_name&gt; 更换目录 不更换驱动器 1 cd {&lt;Relative Path&gt; | &lt;Absolute Path&gt;} 更换驱动器 1 cd /d &lt;Absolute Path&gt; 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n">
+<meta property='og:url' content='https://windovec.github.io/redeem/p/cmd-base/'>
 <meta property='og:site_name' content='WindoveC'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-22T23:24:37&#43;08:00'/><meta property='article:modified_time' content='2025-12-22T23:24:37&#43;08:00'/>
-<meta name="twitter:title" content="Github的基础使用">
-<meta name="twitter:description" content="初始化仓库 1 2 3 4 5 6 git init git add . git commit -m &#34;first commit&#34; git branch -M main git remote add origin https://github.com/WindoveC/WindoveC.github.io.git git push -u origin main git init\n在当前目录初始化一个新的 Git 仓库。\n执行后，Git 会在该目录下创建一个隐藏的 .git 文件夹，用于跟踪版本历史。\n">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-22T22:18:59&#43;08:00'/><meta property='article:modified_time' content='2025-12-22T22:18:59&#43;08:00'/>
+<meta name="twitter:title" content="CMD的基础命令">
+<meta name="twitter:description" content="注释 常规单行注释 :: 代码块（括号内）注释 REM 行末注释 &amp; REM 行头 @：禁止回显（suppress echoing）当前命令本身到命令行窗口。\n代理 设置环境变量 1 2 3 set http_proxy=http://127.0.0.1:7897 set https_proxy=http://127.0.0.1:7897 set all_proxy=socks5://127.0.0.1:7897 检验 1 2 echo %&lt;variable_name&gt;% set &lt;variable_name&gt; 更换目录 不更换驱动器 1 cd {&lt;Relative Path&gt; | &lt;Absolute Path&gt;} 更换驱动器 1 cd /d &lt;Absolute Path&gt; 补全目录 1. powershell 1 mkdir -p &#34;path\\to\\dir&#34; #绝对路径相对路径都可以 或\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -298,11 +298,35 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#初始化仓库">初始化仓库</a></li>
-    <li><a href="#清除缓存">清除缓存</a></li>
-    <li><a href="#clone">clone</a></li>
-    <li><a href="#submodule">submodule</a></li>
-    <li><a href="#注意事项">注意事项</a></li>
+    <li><a href="#注释">注释</a></li>
+    <li><a href="#代理">代理</a></li>
+    <li><a href="#更换目录">更换目录</a></li>
+    <li><a href="#补全目录">补全目录</a>
+      <ol>
+        <li><a href="#1-powershell">1. powershell</a></li>
+        <li><a href="#2-cmd">2. cmd</a></li>
+      </ol>
+    </li>
+    <li><a href="#创建空文件">创建空文件</a></li>
+    <li><a href="#查看当前目录内容">查看当前目录内容</a>
+      <ol>
+        <li><a href="#1-所有">1. 所有</a></li>
+        <li><a href="#2-按属性筛选">2. 按属性筛选</a></li>
+        <li><a href="#3-递归">3. 递归</a></li>
+        <li><a href="#4-简洁模式">4. 简洁模式</a></li>
+        <li><a href="#5-排序">5. 排序</a></li>
+        <li><a href="#6-支持正则表达式">6. 支持正则表达式</a></li>
+      </ol>
+    </li>
+    <li><a href="#树状图">树状图</a></li>
+    <li><a href="#复制移动">复制移动</a>
+      <ol>
+        <li><a href="#1-copy">1. copy</a></li>
+        <li><a href="#2-move">2. move</a></li>
+        <li><a href="#3-文件夹">3. 文件夹</a></li>
+      </ol>
+    </li>
+    <li><a href="#setx---环境变量">setx - 环境变量</a></li>
   </ol>
 </nav>
         </div>
@@ -334,7 +358,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/redeem/p/github%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">Github的基础使用</a>
+            <a href="/redeem/p/cmd-base/">CMD的基础命令</a>
         </h2>
     
         
@@ -356,7 +380,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published" datetime='2025-12-22T23:24:37&#43;08:00'>Dec 22, 2025</time>
+                <time class="article-time--published" datetime='2025-12-22T22:18:59&#43;08:00'>Dec 22, 2025</time>
             </div>
         
 
@@ -386,115 +410,30 @@
     <section class="article-content">
     
     
-    <h2 id="初始化仓库">初始化仓库
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git init
-</span></span><span class="line"><span class="cl">git add .
-</span></span><span class="line"><span class="cl">git commit -m &#34;first commit&#34;
-</span></span><span class="line"><span class="cl">git branch -M main
-</span></span><span class="line"><span class="cl">git remote add origin https://github.com/WindoveC/WindoveC.github.io.git
-</span></span><span class="line"><span class="cl">git push -u origin main
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ol>
-<li>
-<p><code>git init</code></p>
-<ul>
-<li>
-<p>在当前目录初始化一个新的 Git 仓库。</p>
-</li>
-<li>
-<p>执行后，Git 会在该目录下创建一个隐藏的 .git 文件夹，用于跟踪版本历史。</p>
-</li>
-<li>
-<p>此时项目处于“未跟踪”状态，还没有任何提交。</p>
-</li>
-</ul>
-</li>
-<li>
-<p><code>git add .</code></p>
-<ul>
-<li>
-<p>将当前目录下所有文件和子目录（除了被 .gitignore 忽略的）添加到 暂存区（staging area）。</p>
-</li>
-<li>
-<p>这是告诉 Git：“我打算把这些更改包含在下一次提交中”。</p>
-</li>
-<li>
-<p>注意：. 表示当前目录。如果你只想添加特定文件，可以写 git add filename。</p>
-</li>
-</ul>
-</li>
-<li>
-<p><code>git commit -m &quot;first commit&quot;</code></p>
-</li>
+    <h2 id="注释">注释
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>常规单行注释</th>
+          <th><code>::</code></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>代码块（括号内）注释</td>
+          <td><code>REM</code></td>
+      </tr>
+      <tr>
+          <td>行末注释</td>
+          <td><code>&amp; REM</code></td>
+      </tr>
+  </tbody>
+</table></div>
+<p><strong>行头 @</strong>：禁止回显（suppress echoing）当前命令本身到命令行窗口。</p>
+<h2 id="代理">代理
+</h2><ol>
+<li><strong>设置环境变量</strong></li>
 </ol>
-<ul>
-<li>
-<p>将暂存区的内容正式提交到本地 Git 仓库，并附上提交信息 &ldquo;first commit&rdquo;。</p>
-</li>
-<li>
-<p>这是你项目的第一个提交（initial commit），从此 Git 开始记录变更历史。</p>
-</li>
-</ul>
-<ol start="3">
-<li><code>git branch -M main</code></li>
-</ol>
-<ul>
-<li>
-<p>将当前分支重命名为 main。</p>
-</li>
-<li>
-<p>-M 是 &ndash;move &ndash;force 的缩写，相当于强制重命名。</p>
-</li>
-<li>
-<p>在较新版本的 Git（≥2.28）中，默认分支名已从 master 改为 main，而 GitHub 也默认使用 main。</p>
-</li>
-<li>
-<p>如果你之前是 master 分支，这条命令确保你使用的是 main，以便与 GitHub 保持一致。</p>
-</li>
-<li>
-<p>如果你刚 git init，默认分支可能是 master（取决于 Git 配置），所以这一步很关键。</p>
-</li>
-</ul>
-<ol start="3">
-<li><code>git remote add origin https://github.com/WindoveC/WindoveC.github.io.git</code></li>
-</ol>
-<ul>
-<li>将你的本地仓库与一个远程仓库关联起来。</li>
-<li>origin 是远程仓库的别名（约定俗成的名字）。</li>
-<li>后面的 URL 是你在 GitHub 上创建的仓库地址（这里是你的 GitHub Pages 仓库）。</li>
-</ul>
-<ol start="4">
-<li><code>git push -u origin main</code></li>
-</ol>
-<ul>
-<li>
-<p>将本地 main 分支推送到远程仓库的 main 分支。</p>
-</li>
-<li>
-<p>-u（或 &ndash;set-upstream）参数会建立本地分支与远程分支的追踪关系。</p>
-</li>
-<li>
-<p>设置后，以后只需输入 git push 或 git pull，Git 就知道默认操作哪个远程分支。</p>
-</li>
-<li>
-<p>首次推送必须指定远程名和分支名（如 origin main），之后因为有 -u，就可以简化命令。</p>
-</li>
-</ul>
-<h2 id="清除缓存">清除缓存
-</h2><blockquote>
-<p>.gitignore不生效（关闭跟踪）</p>
-</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -502,19 +441,376 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git rm -r --cached .
-</span></span><span class="line"><span class="cl">git add .
-</span></span><span class="line"><span class="cl">git commit -m &#34;update .gitignore&#34;  // windows使用的命令时，需要使用双引号
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">http_proxy</span><span class="p">=</span>http://127.0.0.1:7897
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">https_proxy</span><span class="p">=</span>http://127.0.0.1:7897
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">all_proxy</span><span class="p">=</span>socks5://127.0.0.1:7897
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="clone">clone
-</h2><h2 id="submodule">submodule
-</h2><h2 id="注意事项">注意事项
-</h2><ol>
-<li>clone 和 submodule 的文件不会真正上传，可能导致自动执行的job失败</li>
-<li>通过 .git 文件夹判断是不是一个项目</li>
+</div><ol start="2">
+<li><strong>检验</strong></li>
 </ol>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">%&lt;variable_name&gt;%</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="p">&lt;</span>variable_name&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="更换目录">更换目录
+</h2><ol>
+<li>不更换驱动器</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">cd</span> {<span class="p">&lt;</span>Relative Path<span class="p">&gt;</span> | <span class="p">&lt;</span>Absolute Path<span class="p">&gt;</span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>更换驱动器</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="p">&lt;</span>Absolute Path&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="补全目录">补全目录
+</h2><h3 id="1-powershell">1. powershell
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">mkdir</span> -p <span class="s2">&#34;path\to\dir&#34;</span> #绝对路径相对路径都可以
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>或</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">New-Item -ItemType Directory -Path <span class="s2">&#34;...&#34;</span> -Force
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-cmd">2. cmd
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">mkdir</span> <span class="s2">&#34;path\to\dir&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="创建空文件">创建空文件
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">type</span> nul <span class="p">&gt;</span> <span class="s2">&#34;C:\example\deep\path\myfile.txt&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="查看当前目录内容">查看当前目录内容
+</h2><h3 id="1-所有">1. 所有
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dir
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-按属性筛选">2. 按属性筛选
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/a:
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>-d 排除目录（directories），只显示文件
+d 只显示目录（不含文件）</li>
+</ul>
+<h3 id="3-递归">3. 递归
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/s
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4-简洁模式">4. 简洁模式
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/b
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5-排序">5. 排序
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/o:
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>n</strong> (name)、<strong>d</strong>(date)</li>
+<li>加 <strong>-</strong> ：逆序</li>
+</ul>
+<h3 id="6-支持正则表达式">6. 支持正则表达式
+</h3><h2 id="树状图">树状图
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">tree
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="复制移动">复制移动
+</h2><h3 id="1-copy">1. copy
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 复制单个文件到另一个目录</span>
+</span></span><span class="line"><span class="cl"><span class="k">copy</span> C:\source\file.txt D:\backup\
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 复制并重命名</span>
+</span></span><span class="line"><span class="cl"><span class="k">copy</span> C:\source\file.txt D:\backup\newname.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 复制多个文件（使用通配符）</span>
+</span></span><span class="line"><span class="cl"><span class="k">copy</span> C:\source\*.txt D:\backup\
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 合并多个文本文件为一个文件（仅适用于文本）</span>
+</span></span><span class="line"><span class="cl"><span class="k">copy</span> file1.txt + file2.txt combined.txt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-move">2. move
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 移动文件到另一个目录</span>
+</span></span><span class="line"><span class="cl"><span class="k">move</span> C:\temp\old.txt D:\archive\
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 移动并重命名</span>
+</span></span><span class="line"><span class="cl"><span class="k">move</span> C:\temp\old.txt D:\archive\new.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 移动多个文件</span>
+</span></span><span class="line"><span class="cl"><span class="k">move</span> C:\temp\*.log D:\logs\
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: move 也可以移动整个空文件夹（但不能移动非空文件夹）</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-文件夹">3. 文件夹
+</h3><ol>
+<li><strong>robocopy</strong></li>
+</ol>
+<blockquote>
+<p>更强大、可靠</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 复制整个文件夹（包括子目录和文件）</span>
+</span></span><span class="line"><span class="cl">robocopy <span class="s2">&#34;C:\source_folder&#34;</span> <span class="s2">&#34;D:\dest_folder&#34;</span> /E
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 移动整个文件夹（复制后删除源）</span>
+</span></span><span class="line"><span class="cl">robocopy <span class="s2">&#34;C:\source_folder&#34;</span> <span class="s2">&#34;D:\dest_folder&#34;</span> /E /MOVE
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>/E</code>：包含所有子目录（即使为空）</li>
+<li><code>/MOVE</code>：移动文件（复制后删除源目录中的文件）</li>
+</ul>
+<ol start="2">
+<li><strong>xcopy</strong></li>
+</ol>
+<blockquote>
+<p>传统方法，较新 Windows 中已被弃用）</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 复制整个目录树</span>
+</span></span><span class="line"><span class="cl">xcopy <span class="s2">&#34;C:\source&#34;</span> <span class="s2">&#34;D:\dest&#34;</span> /E /I
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>/E</code>：包含空子目录</li>
+<li><code>/I</code> ：如果目标不存在且复制多个文件，假定目标是目录</li>
+</ul>
+<h2 id="setx---环境变量">setx - 环境变量
+</h2><p><strong>set - 终端变量</strong></p>
+<ol>
+<li><strong>本地</strong>环境 <strong>设置</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx MACHINE Brand1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li><strong>系统</strong>环境 设置</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx MACHINE Brand1 Computer /m
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>本地环境 <strong>复制</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx MYPATH <span class="nv">%PATH%</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>本地环境 <strong>追加</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx PATH <span class="nv">%PATH%</span>;content
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>本地环境 <strong>置空</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx path <span class="s2">&#34;&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li><strong>远程</strong> 要在名为 <em>computer1</em> 的远程计算机上将本地环境中的 <em>MACHINE</em> 环境变量设置为 <em>Brand1</em>，请键入：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx /s computer1 /u maindom\hiropln /p p@ssW23 MACHINE Brand1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li><strong>取注册表项</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="6">
+<li><strong>显示文件</strong>的<strong>内容</strong>以及<strong>坐标</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx /f ipconfig.out /x
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="7">
+<li><strong>取</strong>文件内容 <strong>坐标</strong> <em>5,11</em> 处****</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx IPADDR /f ipconfig.out /a 5,11
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="8">
+<li>取文件内容 带有<strong>分隔符</strong> <em>#$*</em> 的坐标 <em>5,3</em> 处</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx OCTET1 /f ipconfig.out /a 5,3 /d #$*.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="9">
+<li>取文件内容  <em>Gateway</em> <strong>坐标</strong>的坐标 <em>0,7</em> 处找到的值，请键入：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">setx IPGATEWAY /f ipconfig.out /r 0,7 Gateway
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -550,12 +846,12 @@
             
                 
 <article class="">
-    <a href="/redeem/p/cmd%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
+    <a href="/redeem/p/github-base/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">CMD的基础命令</h2>
+            <h2 class="article-title">Github的基础使用</h2>
         </div>
     </a>
 </article>
@@ -563,7 +859,7 @@
             
                 
 <article class="">
-    <a href="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/">
+    <a href="/redeem/p/hugo-base/">
         
         
 
@@ -576,7 +872,7 @@
             
                 
 <article class="">
-    <a href="/redeem/p/hugo%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BE%8E%E5%8C%96/">
+    <a href="/redeem/p/hugo-cust/">
         
         
 

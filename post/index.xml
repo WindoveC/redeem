@@ -9,10 +9,10 @@
         <copyright>WindoveC</copyright>
         <lastBuildDate>Fri, 26 Dec 2025 14:29:57 +0800</lastBuildDate><atom:link href="https://windovec.github.io/redeem/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>IDEA的安装与配置</title>
-        <link>https://windovec.github.io/redeem/p/idea%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</link>
+        <link>https://windovec.github.io/redeem/p/idea-base/</link>
         <pubDate>Fri, 26 Dec 2025 14:29:57 +0800</pubDate>
         
-        <guid>https://windovec.github.io/redeem/p/idea%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://windovec.github.io/redeem/p/idea-base/</guid>
         <description>&lt;h2 id=&#34;主题&#34;&gt;主题
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;One Dark Theme&lt;/strong&gt;&lt;/li&gt;
@@ -25,18 +25,18 @@
         </item>
         <item>
         <title>Java基础</title>
-        <link>https://windovec.github.io/redeem/p/java%E5%9F%BA%E7%A1%80/</link>
+        <link>https://windovec.github.io/redeem/p/java-base/</link>
         <pubDate>Fri, 26 Dec 2025 14:26:48 +0800</pubDate>
         
-        <guid>https://windovec.github.io/redeem/p/java%E5%9F%BA%E7%A1%80/</guid>
+        <guid>https://windovec.github.io/redeem/p/java-base/</guid>
         <description></description>
         </item>
         <item>
         <title>Windows使用经验</title>
-        <link>https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</link>
+        <link>https://windovec.github.io/redeem/p/win-exp/</link>
         <pubDate>Fri, 26 Dec 2025 14:23:14 +0800</pubDate>
         
-        <guid>https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</guid>
+        <guid>https://windovec.github.io/redeem/p/win-exp/</guid>
         <description>&lt;h3 id=&#34;开启终端和命令行代理脚本&#34;&gt;开启终端和命令行代理脚本
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;最终&lt;/li&gt;
@@ -193,10 +193,10 @@
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;2.4g频段&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;2.4 GHz 频段范围内有每隔 5 MHz 分隔的频道14个（除了第14频道与第13频道相隔了 12 MHz）。[2] 40 MHz 频段可以由两个相邻 20 MHz 频段组成。取决于哪个频带是主（控制）频带，哪个频带是从（扩展）频带，路由器可能会显示成 1+5、5+1、9+13、13+9。 &lt;img src=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/2.4g.png&#34;
+&lt;p&gt;2.4 GHz 频段范围内有每隔 5 MHz 分隔的频道14个（除了第14频道与第13频道相隔了 12 MHz）。[2] 40 MHz 频段可以由两个相邻 20 MHz 频段组成。取决于哪个频带是主（控制）频带，哪个频带是从（扩展）频带，路由器可能会显示成 1+5、5+1、9+13、13+9。 &lt;img src=&#34;https://windovec.github.io/redeem/p/win-exp/index.assets/2.4g.png&#34;
 	width=&#34;1026&#34;
 	height=&#34;246&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/2.4g_hu_1d0a5f01e12ac2fb.png 480w, https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/2.4g_hu_90c3aec7d8fc2931.png 1024w&#34;
+	srcset=&#34;https://windovec.github.io/redeem/p/win-exp/index.assets/2.4g_hu_1d0a5f01e12ac2fb.png 480w, https://windovec.github.io/redeem/p/win-exp/index.assets/2.4g_hu_90c3aec7d8fc2931.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -212,10 +212,10 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;5.2G频段&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;5.2G的可用信道：36、40、44、48、52、56、60、64； 由于国家使用雷达环境中会与52、56、60、64信道冲突，因此常规模式下建议避开这些雷达信道，以免出现无线终端接入问题。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.2g.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/win-exp/index.assets/5.2g.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;212&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.2g_hu_69184bd47b7224e8.png 480w, https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.2g_hu_b93b04fe0c8b14c5.png 1024w&#34;
+	srcset=&#34;https://windovec.github.io/redeem/p/win-exp/index.assets/5.2g_hu_69184bd47b7224e8.png 480w, https://windovec.github.io/redeem/p/win-exp/index.assets/5.2g_hu_b93b04fe0c8b14c5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -228,10 +228,10 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;5.5G频段&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;5.5GHz 属于 5GHz 频段的一部分，在不同国家和地区具体的频率划分可能会有所不同。在中国，5GHz 频段的划分包括 5.470GHz - 5.725GHz 的频率范围。
-&lt;img src=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.5g.png&#34;
+&lt;img src=&#34;https://windovec.github.io/redeem/p/win-exp/index.assets/5.5g.png&#34;
 	width=&#34;1025&#34;
 	height=&#34;214&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.5g_hu_487855bc6b1660a9.png 480w, https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.5g_hu_655d445282e4cb37.png 1024w&#34;
+	srcset=&#34;https://windovec.github.io/redeem/p/win-exp/index.assets/5.5g_hu_487855bc6b1660a9.png 480w, https://windovec.github.io/redeem/p/win-exp/index.assets/5.5g_hu_655d445282e4cb37.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -244,10 +244,10 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;5.8G频段&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;5.8GHz频段，&lt;strong&gt;中国开放只有149、153、157、161、165这5个信道&lt;/strong&gt;； 其中可支持一组80MHz信道捆绑（149-161）或两组40MHz捆绑（149-153和157-161）； 所以165信道支持20MHz频宽。 165信道不可见是因为当前频宽为20MHz，改频宽后可见。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.8g.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/win-exp/index.assets/5.8g.png&#34;
 	width=&#34;1025&#34;
 	height=&#34;173&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.8g_hu_9b598785b65fb427.png 480w, https://windovec.github.io/redeem/p/windows%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/index.assets/5.8g_hu_c53dc74aa41c072e.png 1024w&#34;
+	srcset=&#34;https://windovec.github.io/redeem/p/win-exp/index.assets/5.8g_hu_9b598785b65fb427.png 480w, https://windovec.github.io/redeem/p/win-exp/index.assets/5.8g_hu_c53dc74aa41c072e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -264,10 +264,10 @@
         </item>
         <item>
         <title>Hugo的自定义美化</title>
-        <link>https://windovec.github.io/redeem/p/hugo%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BE%8E%E5%8C%96/</link>
+        <link>https://windovec.github.io/redeem/p/hugo-cust/</link>
         <pubDate>Tue, 23 Dec 2025 22:45:47 +0800</pubDate>
         
-        <guid>https://windovec.github.io/redeem/p/hugo%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BE%8E%E5%8C%96/</guid>
+        <guid>https://windovec.github.io/redeem/p/hugo-cust/</guid>
         <description>&lt;h2 id=&#34;代码块&#34;&gt;代码块
 &lt;/h2&gt;&lt;h3 id=&#34;缩小代码块的字体大小&#34;&gt;缩小代码块的字体大小
 &lt;/h3&gt;&lt;ul&gt;
@@ -779,10 +779,10 @@
         </item>
         <item>
         <title>Github的基础使用</title>
-        <link>https://windovec.github.io/redeem/p/github%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</link>
+        <link>https://windovec.github.io/redeem/p/github-base/</link>
         <pubDate>Mon, 22 Dec 2025 23:24:37 +0800</pubDate>
         
-        <guid>https://windovec.github.io/redeem/p/github%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</guid>
+        <guid>https://windovec.github.io/redeem/p/github-base/</guid>
         <description>&lt;h2 id=&#34;初始化仓库&#34;&gt;初始化仓库
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -915,10 +915,10 @@
         </item>
         <item>
         <title>CMD的基础命令</title>
-        <link>https://windovec.github.io/redeem/p/cmd%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</link>
+        <link>https://windovec.github.io/redeem/p/cmd-base/</link>
         <pubDate>Mon, 22 Dec 2025 22:18:59 +0800</pubDate>
         
-        <guid>https://windovec.github.io/redeem/p/cmd%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</guid>
+        <guid>https://windovec.github.io/redeem/p/cmd-base/</guid>
         <description>&lt;h2 id=&#34;注释&#34;&gt;注释
 &lt;/h2&gt;&lt;table&gt;
   &lt;thead&gt;
@@ -1323,10 +1323,10 @@ d 只显示目录（不含文件）&lt;/li&gt;
         </item>
         <item>
         <title>hugo的基础安装使用部署</title>
-        <link>https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/</link>
+        <link>https://windovec.github.io/redeem/p/hugo-base/</link>
         <pubDate>Mon, 22 Dec 2025 22:18:59 +0800</pubDate>
         
-        <guid>https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/</guid>
+        <guid>https://windovec.github.io/redeem/p/hugo-base/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;参考自：https://www.bilibili.com/video/BV1bovfeaEtQ&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1737,10 +1737,10 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;li&gt;创建免费 MongoDB 数据库，区域推荐选择离 Twikoo 后端（Vercel / Netlify / AWS Lambda / VPS）地理位置较近的数据中心以获得更低的数据库连接延迟。如果不清楚自己的后端在哪个区域，也可选择 &lt;code&gt;AWS / Oregon (us-west-2)&lt;/code&gt;，该数据中心基建成熟，故障率低，且使用 Oregon 州的清洁能源，较为环保&lt;/li&gt;
 &lt;li&gt;在 Database Access 页面点击 Add New Database User 创建数据库用户，Authentication Method 选 Password，在 Password Authentication 下设置数据库用户名和密码，建议点击 Auto Generate 自动生成一个不含特殊符号的强壮密码并妥善保存。点击 Database User Privileges 下方的 Add Built In Role，Select Role 选择 Atlas Admin，最后点击 Add User&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-1.kzmwAvw2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/mongodb-1.kzmwAvw2.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;925&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-1.kzmwAvw2_hu_42a4b16411b96978.png 480w, https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-1.kzmwAvw2_hu_5ec05d808ab61aab.png 1024w&#34;
+	srcset=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/mongodb-1.kzmwAvw2_hu_42a4b16411b96978.png 480w, https://windovec.github.io/redeem/p/hugo-base/index.assets/mongodb-1.kzmwAvw2_hu_5ec05d808ab61aab.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1752,10 +1752,10 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;在 Network Access 页面点击 Add IP Address 添加网络白名单。因为 Vercel / Netlify / Lambda 的出口地址不固定，因此 Access List Entry 输入 &lt;code&gt;0.0.0.0/0&lt;/code&gt;（允许所有 IP 地址的连接）即可。如果 Twikoo 部署在自己的服务器上，这里可以填入固定 IP 地址。点击 Confirm 保存&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-2.wGC2d7_O.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/mongodb-2.wGC2d7_O.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;925&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-2.wGC2d7_O_hu_5318a50c4549ff0d.png 480w, https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-2.wGC2d7_O_hu_5a4d37aee88ea055.png 1024w&#34;
+	srcset=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/mongodb-2.wGC2d7_O_hu_5318a50c4549ff0d.png 480w, https://windovec.github.io/redeem/p/hugo-base/index.assets/mongodb-2.wGC2d7_O_hu_5a4d37aee88ea055.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1768,10 +1768,10 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;li&gt;在 Database 页面点击 Connect，连接方式选择 Drivers，并记录数据库连接字符串，请将连接字符串中的 &lt;code&gt;&amp;lt;username&amp;gt;:&amp;lt;password&amp;gt;&lt;/code&gt; 修改为刚刚创建的数据库 &lt;code&gt;用户名:密码&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twikoo.js.org/assets/mongodb-3.BlCbBw8p.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-3.BlCbBw8p.png&#34;
+    &gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/mongodb-3.BlCbBw8p.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;925&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-3.BlCbBw8p_hu_f4e846908280e6a4.png 480w, https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-3.BlCbBw8p_hu_5c3b4491d365f980.png 1024w&#34;
+	srcset=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/mongodb-3.BlCbBw8p_hu_f4e846908280e6a4.png 480w, https://windovec.github.io/redeem/p/hugo-base/index.assets/mongodb-3.BlCbBw8p_hu_5c3b4491d365f980.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1817,10 +1817,10 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
     &lt;/div&gt;&lt;ol&gt;
 &lt;li&gt;回到 Netlify，点击 Add new site - Import an existing project&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-1.CBH5jdAK-1766562425239-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-1.CBH5jdAK-1766562425239-1.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;925&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-1.CBH5jdAK-1766562425239-1_hu_203be4f672027e7c.png 480w, https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-1.CBH5jdAK-1766562425239-1_hu_41df30faf9b6c283.png 1024w&#34;
+	srcset=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-1.CBH5jdAK-1766562425239-1_hu_203be4f672027e7c.png 480w, https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-1.CBH5jdAK-1766562425239-1_hu_41df30faf9b6c283.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1832,10 +1832,10 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;点击 Deploy with GitHub，如果未授权 GitHub 账号，先授权，然后选择前面 fork 的 twikoo-netlify 项目&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-2.CoU6-6Qj.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-2.CoU6-6Qj.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;925&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-2.CoU6-6Qj_hu_ae7109a5c6e6ea5c.png 480w, https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-2.CoU6-6Qj_hu_8dd5fd5a3378bf33.png 1024w&#34;
+	srcset=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-2.CoU6-6Qj_hu_ae7109a5c6e6ea5c.png 480w, https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-2.CoU6-6Qj_hu_8dd5fd5a3378bf33.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1847,10 +1847,10 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;点击 Add environment variables - New variable，Key 输入 &lt;code&gt;MONGODB_URI&lt;/code&gt;，Value 输入前面记录的数据库连接字符串，点击 Deploy twikoo-netlify&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-3.BRAuDkNv.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-3.BRAuDkNv.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;925&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-3.BRAuDkNv_hu_794b0aee142fd541.png 480w, https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-3.BRAuDkNv_hu_e222cd273952fd2.png 1024w&#34;
+	srcset=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-3.BRAuDkNv_hu_794b0aee142fd541.png 480w, https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-3.BRAuDkNv_hu_e222cd273952fd2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1862,10 +1862,10 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;部署完成后，点击 Domain settings - 右侧 Options - Edit site name，可以设置属于自己的三级域名（&lt;code&gt;https://xxx.netlify.app&lt;/code&gt;）&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-4.BPwUhUpI.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-4.BPwUhUpI.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;925&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-4.BPwUhUpI_hu_1d39f4386762afc2.png 480w, https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-4.BPwUhUpI_hu_2b008d23a9c71f02.png 1024w&#34;
+	srcset=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-4.BPwUhUpI_hu_1d39f4386762afc2.png 480w, https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-4.BPwUhUpI_hu_2b008d23a9c71f02.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1877,10 +1877,10 @@ src: img/avatar.png （/assert下）&lt;/li&gt;
 &lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;进入 Site overview，点击上方的链接，如果环境配置正确，可以看到 “Twikoo 云函数运行正常” 的提示&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-5.BSv5GDZV.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-5.BSv5GDZV.png&#34;
 	width=&#34;650&#34;
 	height=&#34;201&#34;
-	srcset=&#34;https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-5.BSv5GDZV_hu_6e615b529d2be9b4.png 480w, https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-5.BSv5GDZV_hu_4b22db2ea07f5075.png 1024w&#34;
+	srcset=&#34;https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-5.BSv5GDZV_hu_6e615b529d2be9b4.png 480w, https://windovec.github.io/redeem/p/hugo-base/index.assets/netlify-5.BSv5GDZV_hu_4b22db2ea07f5075.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

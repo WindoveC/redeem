@@ -4,11 +4,11 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 参考自：https://www.bilibili.com/video/BV1bovfeaEtQ\n必备组件 git 官网：Git HUGO 官网：The world&rsquo;s fastest framework for building websites 配置 安装（本地构建网页） #11 ① git\n二进制文件安装程序 环境变量 #11 ② hugo\n">
 <title>hugo的基础安装使用部署</title>
 
-<link rel='canonical' href='https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/'>
+<link rel='canonical' href='https://windovec.github.io/redeem/p/hugo-base/'>
 
 <link rel="stylesheet" href="/redeem/scss/style.min.b0bdd7050cd417228f19ed0929e86edcda8198b8f997a9247e6e7f10f31b5c10.css"><meta property='og:title' content="hugo的基础安装使用部署">
 <meta property='og:description' content=" 参考自：https://www.bilibili.com/video/BV1bovfeaEtQ\n必备组件 git 官网：Git HUGO 官网：The world&rsquo;s fastest framework for building websites 配置 安装（本地构建网页） #11 ① git\n二进制文件安装程序 环境变量 #11 ② hugo\n">
-<meta property='og:url' content='https://windovec.github.io/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/'>
+<meta property='og:url' content='https://windovec.github.io/redeem/p/hugo-base/'>
 <meta property='og:site_name' content='WindoveC'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-22T22:18:59&#43;08:00'/><meta property='article:modified_time' content='2025-12-22T22:18:59&#43;08:00'/>
 <meta name="twitter:title" content="hugo的基础安装使用部署">
@@ -359,7 +359,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/">hugo的基础安装使用部署</a>
+            <a href="/redeem/p/hugo-base/">hugo的基础安装使用部署</a>
         </h2>
     
         
@@ -821,10 +821,10 @@ src: img/avatar.png （/assert下）</li>
 <li>创建免费 MongoDB 数据库，区域推荐选择离 Twikoo 后端（Vercel / Netlify / AWS Lambda / VPS）地理位置较近的数据中心以获得更低的数据库连接延迟。如果不清楚自己的后端在哪个区域，也可选择 <code>AWS / Oregon (us-west-2)</code>，该数据中心基建成熟，故障率低，且使用 Oregon 州的清洁能源，较为环保</li>
 <li>在 Database Access 页面点击 Add New Database User 创建数据库用户，Authentication Method 选 Password，在 Password Authentication 下设置数据库用户名和密码，建议点击 Auto Generate 自动生成一个不含特殊符号的强壮密码并妥善保存。点击 Database User Privileges 下方的 Add Built In Role，Select Role 选择 Atlas Admin，最后点击 Add User</li>
 </ol>
-<p><img src="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-1.kzmwAvw2.png"
+<p><img src="/redeem/p/hugo-base/index.assets/mongodb-1.kzmwAvw2.png"
 	width="1920"
 	height="925"
-	srcset="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-1.kzmwAvw2_hu_42a4b16411b96978.png 480w, /redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-1.kzmwAvw2_hu_5ec05d808ab61aab.png 1024w"
+	srcset="/redeem/p/hugo-base/index.assets/mongodb-1.kzmwAvw2_hu_42a4b16411b96978.png 480w, /redeem/p/hugo-base/index.assets/mongodb-1.kzmwAvw2_hu_5ec05d808ab61aab.png 1024w"
 	loading="lazy"
 	
 	
@@ -836,10 +836,10 @@ src: img/avatar.png （/assert下）</li>
 <ol start="4">
 <li>在 Network Access 页面点击 Add IP Address 添加网络白名单。因为 Vercel / Netlify / Lambda 的出口地址不固定，因此 Access List Entry 输入 <code>0.0.0.0/0</code>（允许所有 IP 地址的连接）即可。如果 Twikoo 部署在自己的服务器上，这里可以填入固定 IP 地址。点击 Confirm 保存</li>
 </ol>
-<p><img src="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-2.wGC2d7_O.png"
+<p><img src="/redeem/p/hugo-base/index.assets/mongodb-2.wGC2d7_O.png"
 	width="1920"
 	height="925"
-	srcset="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-2.wGC2d7_O_hu_5318a50c4549ff0d.png 480w, /redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-2.wGC2d7_O_hu_5a4d37aee88ea055.png 1024w"
+	srcset="/redeem/p/hugo-base/index.assets/mongodb-2.wGC2d7_O_hu_5318a50c4549ff0d.png 480w, /redeem/p/hugo-base/index.assets/mongodb-2.wGC2d7_O_hu_5a4d37aee88ea055.png 1024w"
 	loading="lazy"
 	
 	
@@ -852,10 +852,10 @@ src: img/avatar.png （/assert下）</li>
 <li>在 Database 页面点击 Connect，连接方式选择 Drivers，并记录数据库连接字符串，请将连接字符串中的 <code>&lt;username&gt;:&lt;password&gt;</code> 修改为刚刚创建的数据库 <code>用户名:密码</code></li>
 </ol>
 <p><a class="link" href="https://twikoo.js.org/assets/mongodb-3.BlCbBw8p.png"  target="_blank" rel="noopener"
-    ><img src="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-3.BlCbBw8p.png"
+    ><img src="/redeem/p/hugo-base/index.assets/mongodb-3.BlCbBw8p.png"
 	width="1920"
 	height="925"
-	srcset="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-3.BlCbBw8p_hu_f4e846908280e6a4.png 480w, /redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/mongodb-3.BlCbBw8p_hu_5c3b4491d365f980.png 1024w"
+	srcset="/redeem/p/hugo-base/index.assets/mongodb-3.BlCbBw8p_hu_f4e846908280e6a4.png 480w, /redeem/p/hugo-base/index.assets/mongodb-3.BlCbBw8p_hu_5c3b4491d365f980.png 1024w"
 	loading="lazy"
 	
 	
@@ -902,10 +902,10 @@ src: img/avatar.png （/assert下）</li>
     </div><ol>
 <li>回到 Netlify，点击 Add new site - Import an existing project</li>
 </ol>
-<p><img src="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-1.CBH5jdAK-1766562425239-1.png"
+<p><img src="/redeem/p/hugo-base/index.assets/netlify-1.CBH5jdAK-1766562425239-1.png"
 	width="1920"
 	height="925"
-	srcset="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-1.CBH5jdAK-1766562425239-1_hu_203be4f672027e7c.png 480w, /redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-1.CBH5jdAK-1766562425239-1_hu_41df30faf9b6c283.png 1024w"
+	srcset="/redeem/p/hugo-base/index.assets/netlify-1.CBH5jdAK-1766562425239-1_hu_203be4f672027e7c.png 480w, /redeem/p/hugo-base/index.assets/netlify-1.CBH5jdAK-1766562425239-1_hu_41df30faf9b6c283.png 1024w"
 	loading="lazy"
 	
 	
@@ -917,10 +917,10 @@ src: img/avatar.png （/assert下）</li>
 <ol start="2">
 <li>点击 Deploy with GitHub，如果未授权 GitHub 账号，先授权，然后选择前面 fork 的 twikoo-netlify 项目</li>
 </ol>
-<p><img src="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-2.CoU6-6Qj.png"
+<p><img src="/redeem/p/hugo-base/index.assets/netlify-2.CoU6-6Qj.png"
 	width="1920"
 	height="925"
-	srcset="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-2.CoU6-6Qj_hu_ae7109a5c6e6ea5c.png 480w, /redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-2.CoU6-6Qj_hu_8dd5fd5a3378bf33.png 1024w"
+	srcset="/redeem/p/hugo-base/index.assets/netlify-2.CoU6-6Qj_hu_ae7109a5c6e6ea5c.png 480w, /redeem/p/hugo-base/index.assets/netlify-2.CoU6-6Qj_hu_8dd5fd5a3378bf33.png 1024w"
 	loading="lazy"
 	
 	
@@ -932,10 +932,10 @@ src: img/avatar.png （/assert下）</li>
 <ol start="3">
 <li>点击 Add environment variables - New variable，Key 输入 <code>MONGODB_URI</code>，Value 输入前面记录的数据库连接字符串，点击 Deploy twikoo-netlify</li>
 </ol>
-<p><img src="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-3.BRAuDkNv.png"
+<p><img src="/redeem/p/hugo-base/index.assets/netlify-3.BRAuDkNv.png"
 	width="1920"
 	height="925"
-	srcset="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-3.BRAuDkNv_hu_794b0aee142fd541.png 480w, /redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-3.BRAuDkNv_hu_e222cd273952fd2.png 1024w"
+	srcset="/redeem/p/hugo-base/index.assets/netlify-3.BRAuDkNv_hu_794b0aee142fd541.png 480w, /redeem/p/hugo-base/index.assets/netlify-3.BRAuDkNv_hu_e222cd273952fd2.png 1024w"
 	loading="lazy"
 	
 	
@@ -947,10 +947,10 @@ src: img/avatar.png （/assert下）</li>
 <ol start="4">
 <li>部署完成后，点击 Domain settings - 右侧 Options - Edit site name，可以设置属于自己的三级域名（<code>https://xxx.netlify.app</code>）</li>
 </ol>
-<p><img src="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-4.BPwUhUpI.png"
+<p><img src="/redeem/p/hugo-base/index.assets/netlify-4.BPwUhUpI.png"
 	width="1920"
 	height="925"
-	srcset="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-4.BPwUhUpI_hu_1d39f4386762afc2.png 480w, /redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-4.BPwUhUpI_hu_2b008d23a9c71f02.png 1024w"
+	srcset="/redeem/p/hugo-base/index.assets/netlify-4.BPwUhUpI_hu_1d39f4386762afc2.png 480w, /redeem/p/hugo-base/index.assets/netlify-4.BPwUhUpI_hu_2b008d23a9c71f02.png 1024w"
 	loading="lazy"
 	
 	
@@ -962,10 +962,10 @@ src: img/avatar.png （/assert下）</li>
 <ol start="5">
 <li>进入 Site overview，点击上方的链接，如果环境配置正确，可以看到 “Twikoo 云函数运行正常” 的提示</li>
 </ol>
-<p><img src="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-5.BSv5GDZV.png"
+<p><img src="/redeem/p/hugo-base/index.assets/netlify-5.BSv5GDZV.png"
 	width="650"
 	height="201"
-	srcset="/redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-5.BSv5GDZV_hu_6e615b529d2be9b4.png 480w, /redeem/p/hugo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2/index.assets/netlify-5.BSv5GDZV_hu_4b22db2ea07f5075.png 1024w"
+	srcset="/redeem/p/hugo-base/index.assets/netlify-5.BSv5GDZV_hu_6e615b529d2be9b4.png 480w, /redeem/p/hugo-base/index.assets/netlify-5.BSv5GDZV_hu_4b22db2ea07f5075.png 1024w"
 	loading="lazy"
 	
 	
@@ -1033,7 +1033,7 @@ src: img/avatar.png （/assert下）</li>
             
                 
 <article class="">
-    <a href="/redeem/p/github%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
+    <a href="/redeem/p/github-base/">
         
         
 
@@ -1046,7 +1046,7 @@ src: img/avatar.png （/assert下）</li>
             
                 
 <article class="">
-    <a href="/redeem/p/cmd%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
+    <a href="/redeem/p/cmd-base/">
         
         
 
@@ -1059,7 +1059,7 @@ src: img/avatar.png （/assert下）</li>
             
                 
 <article class="">
-    <a href="/redeem/p/hugo%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BE%8E%E5%8C%96/">
+    <a href="/redeem/p/hugo-cust/">
         
         
 
