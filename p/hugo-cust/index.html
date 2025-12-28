@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="代码块 缩小代码块的字体大小 文件：assets/scss/partials/article.scss 模块：.article-content 1 2 3 4 5 code { border-radius: var(--tag-border-radius); font-size: 14px; // Add font size setting for code block font-family: var(--code-font-family); } 修复代码出框 文件：assets/partials/layout/article.scss 模块：.article-content 1 2 3 code { word-wrap: break-word; //允许长单词或 URL 地址换行到下一行 } macOS风格 修改baseurl会失效，待补充\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="代码块 缩小代码块的字体大小 文件：assets/scss/custom.scss 1 2 3 4 5 6 7 8 9 10 11 12 13 14 // 代码块字体样式 code, pre, .highlight { font-weight: 300 !important; font-size: 1.6rem; } //行内代码 未使用 .article-content code { border: none; border-radius: 4px ; font-size: 0.85em ; } 修复代码出框 文件：assets/partials/layout/article.scss 模块：.article-content 1 2 3 code { word-wrap: break-word; //允许长单词或 URL 地址换行到下一行 } macOS风格 Note 修改 baseurl 后，如果是多级地址，需要使用 .. 返回上级目录，或者 /path\n">
 <title>Hugo的自定义美化</title>
 
 <link rel='canonical' href='https://windovec.github.io/redeem/p/hugo-cust/'>
 
-<link rel="stylesheet" href="/redeem/scss/style.min.b0bdd7050cd417228f19ed0929e86edcda8198b8f997a9247e6e7f10f31b5c10.css"><meta property='og:title' content="Hugo的自定义美化">
-<meta property='og:description' content="代码块 缩小代码块的字体大小 文件：assets/scss/partials/article.scss 模块：.article-content 1 2 3 4 5 code { border-radius: var(--tag-border-radius); font-size: 14px; // Add font size setting for code block font-family: var(--code-font-family); } 修复代码出框 文件：assets/partials/layout/article.scss 模块：.article-content 1 2 3 code { word-wrap: break-word; //允许长单词或 URL 地址换行到下一行 } macOS风格 修改baseurl会失效，待补充\n">
+<link rel="stylesheet" href="/redeem/scss/style.min.eee7878bda19a3528722545b6f4acfa36706781709350225f09d30ab509a1b7c.css"><meta property='og:title' content="Hugo的自定义美化">
+<meta property='og:description' content="代码块 缩小代码块的字体大小 文件：assets/scss/custom.scss 1 2 3 4 5 6 7 8 9 10 11 12 13 14 // 代码块字体样式 code, pre, .highlight { font-weight: 300 !important; font-size: 1.6rem; } //行内代码 未使用 .article-content code { border: none; border-radius: 4px ; font-size: 0.85em ; } 修复代码出框 文件：assets/partials/layout/article.scss 模块：.article-content 1 2 3 code { word-wrap: break-word; //允许长单词或 URL 地址换行到下一行 } macOS风格 Note 修改 baseurl 后，如果是多级地址，需要使用 .. 返回上级目录，或者 /path\n">
 <meta property='og:url' content='https://windovec.github.io/redeem/p/hugo-cust/'>
 <meta property='og:site_name' content='WindoveC'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-23T22:45:47&#43;08:00'/><meta property='article:modified_time' content='2025-12-23T22:45:47&#43;08:00'/>
 <meta name="twitter:title" content="Hugo的自定义美化">
-<meta name="twitter:description" content="代码块 缩小代码块的字体大小 文件：assets/scss/partials/article.scss 模块：.article-content 1 2 3 4 5 code { border-radius: var(--tag-border-radius); font-size: 14px; // Add font size setting for code block font-family: var(--code-font-family); } 修复代码出框 文件：assets/partials/layout/article.scss 模块：.article-content 1 2 3 code { word-wrap: break-word; //允许长单词或 URL 地址换行到下一行 } macOS风格 修改baseurl会失效，待补充\n">
+<meta name="twitter:description" content="代码块 缩小代码块的字体大小 文件：assets/scss/custom.scss 1 2 3 4 5 6 7 8 9 10 11 12 13 14 // 代码块字体样式 code, pre, .highlight { font-weight: 300 !important; font-size: 1.6rem; } //行内代码 未使用 .article-content code { border: none; border-radius: 4px ; font-size: 0.85em ; } 修复代码出框 文件：assets/partials/layout/article.scss 模块：.article-content 1 2 3 code { word-wrap: break-word; //允许长单词或 URL 地址换行到下一行 } macOS风格 Note 修改 baseurl 后，如果是多级地址，需要使用 .. 返回上级目录，或者 /path\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -410,26 +410,40 @@
     <h2 id="代码块">代码块
 </h2><h3 id="缩小代码块的字体大小">缩小代码块的字体大小
 </h3><ul>
-<li>文件：<code>assets/scss/partials/article.scss</code>
-<ul>
-<li>模块：<code>.article-content</code></li>
-</ul>
-</li>
+<li>文件：<code>assets/scss/custom.scss</code></li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">code</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">:</span> <span class="k">var</span><span class="p">(</span><span class="o">--</span><span class="n">tag</span><span class="o">-</span><span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">14</span><span class="n">px</span><span class="p">;</span> <span class="o">//</span> <span class="n">Add</span> <span class="n">font</span> <span class="n">size</span> <span class="n">setting</span> <span class="k">for</span> <span class="n">code</span> <span class="n">block</span>
-</span></span><span class="line"><span class="cl">    <span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span> <span class="k">var</span><span class="p">(</span><span class="o">--</span><span class="n">code</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// 代码块字体样式
+</span></span><span class="line"><span class="cl">code,
+</span></span><span class="line"><span class="cl">pre,
+</span></span><span class="line"><span class="cl">.highlight {
+</span></span><span class="line"><span class="cl">    font-weight: 300 !important;
+</span></span><span class="line"><span class="cl">    font-size: 1.6rem;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">//行内代码 未使用
+</span></span><span class="line"><span class="cl">.article-content code {
+</span></span><span class="line"><span class="cl">    border: none;
+</span></span><span class="line"><span class="cl">    border-radius: 4px ;
+</span></span><span class="line"><span class="cl">    font-size: 0.85em ;
+</span></span><span class="line"><span class="cl">}
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="修复代码出框">修复代码出框
@@ -453,8 +467,16 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="macos风格">macOS风格
-</h3><p><strong>修改baseurl会失效，待补充</strong></p>
-<ul>
+</h3>
+            <link rel="stylesheet" href="/redeem/css/vendors/admonitions.a5128328e65b14e9af1bfc5d96ffbcc40978b6d81dbeecb7f70959b501ee715c.css" integrity="sha256-pRKDKOZbFOmvG/xdlv&#43;8xAl4ttgdvuy39wlZtQHucVw=" crossorigin="anonymous">
+    <div class="admonition note">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 125.7-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
+        <span>Note</span>
+      </div>
+      <div class="admonition-content">
+        <p>修改 <strong>baseurl</strong> 后，如果是多级地址，需要使用 <code>..</code> 返回上级目录，或者 <code>/path</code></p>
+      </div>
+    </div><ul>
 <li>文件：<code>assets/scss/partials/layout/article.scss</code>
 <ul>
 <li>模块：<code>.highlight</code></li>

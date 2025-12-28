@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://windovec.github.io/redeem/p/hugo-base/'>
 
-<link rel="stylesheet" href="/redeem/scss/style.min.b0bdd7050cd417228f19ed0929e86edcda8198b8f997a9247e6e7f10f31b5c10.css"><meta property='og:title' content="hugo的基础安装使用部署">
+<link rel="stylesheet" href="/redeem/scss/style.min.eee7878bda19a3528722545b6f4acfa36706781709350225f09d30ab509a1b7c.css"><meta property='og:title' content="hugo的基础安装使用部署">
 <meta property='og:description' content=" 参考自：https://www.bilibili.com/video/BV1bovfeaEtQ\n必备组件 git 官网：Git HUGO 官网：The world&rsquo;s fastest framework for building websites 配置 安装（本地构建网页） #11 ① git\n二进制文件安装程序 环境变量 #11 ② hugo\n">
 <meta property='og:url' content='https://windovec.github.io/redeem/p/hugo-base/'>
 <meta property='og:site_name' content='WindoveC'>
@@ -507,11 +507,20 @@
 </ol>
 <h4 id="hugoyaml">hugo.yaml
 </h4><ul>
-<li><strong>theme</strong>：和主题文件夹同名</li>
-<li><strong>baseurl</strong>：访问网站</li>
-<li><strong>DefaultContentLanguage</strong>：默认选择语言</li>
-<li><strong>hasCJKLanguage</strong>：按照推荐置为true</li>
-<li><strong>languages</strong>：可供选择语言列表
+<li>
+<p><strong>theme</strong>：和主题文件夹同名</p>
+</li>
+<li>
+<p><strong>baseurl</strong>：访问网站</p>
+</li>
+<li>
+<p><strong>DefaultContentLanguage</strong>：默认选择语言</p>
+</li>
+<li>
+<p><strong>hasCJKLanguage</strong>：按照推荐置为true</p>
+</li>
+<li>
+<p><strong>languages</strong>：可供选择语言列表</p>
 <ul>
 <li><strong>languageName</strong>：显示语言名</li>
 <li><strong>title</strong>：页面、标签页标题</li>
@@ -521,20 +530,40 @@ sidebar:
 <strong>subtitle</strong>: 页面内的描述</li>
 </ul>
 </li>
-<li>pagination:
-<strong>pagerSize</strong>: 每页最大文章数目</li>
-<li>params:
+<li>
+<p>pagination:
+<strong>pagerSize</strong>: 每页最大文章数目</p>
+</li>
+<li>
+<p>params:</p>
 <ul>
-<li><strong>favicon</strong>：标签图标</li>
-<li><strong>dateFormat</strong>：时间格式</li>
-<li><strong>sidebar</strong>：侧边栏
+<li>
+<p><strong>favicon</strong>：标签图标</p>
+</li>
+<li>
+<p><strong>dateFormat</strong>：时间格式</p>
+</li>
+<li>
+<p><strong>sidebar</strong>：侧边栏
 <strong>emoji</strong>：头像右下
 subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 <strong>avatar</strong>：头像
 enabled: true
 local: true
-src: img/avatar.png （/assert下）</li>
-<li><strong>其他注意参考theme文件夹下路径以及格式即可</strong></li>
+src: img/avatar.png （/assert下）</p>
+
+            <link rel="stylesheet" href="/redeem/css/vendors/admonitions.a5128328e65b14e9af1bfc5d96ffbcc40978b6d81dbeecb7f70959b501ee715c.css" integrity="sha256-pRKDKOZbFOmvG/xdlv&#43;8xAl4ttgdvuy39wlZtQHucVw=" crossorigin="anonymous">
+    <div class="admonition note">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 125.7-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
+        <span>Note</span>
+      </div>
+      <div class="admonition-content">
+        <p>修改 <strong>baseurl</strong> 后，如果是多级地址，需要使用 <code>..</code> 返回上级目录，或者 <code>/path</code></p>
+      </div>
+    </div></li>
+<li>
+<p><strong>其他注意参考theme文件夹下路径以及格式即可</strong></p>
+</li>
 </ul>
 </li>
 </ul>
@@ -865,7 +894,6 @@ src: img/avatar.png （/assert下）</li>
 	
 ></a></p>
 
-            <link rel="stylesheet" href="/redeem/css/vendors/admonitions.a5128328e65b14e9af1bfc5d96ffbcc40978b6d81dbeecb7f70959b501ee715c.css" integrity="sha256-pRKDKOZbFOmvG/xdlv&#43;8xAl4ttgdvuy39wlZtQHucVw=" crossorigin="anonymous">
     <div class="admonition note">
       <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 125.7-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
         <span>Note</span>
