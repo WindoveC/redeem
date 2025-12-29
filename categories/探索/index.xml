@@ -1113,12 +1113,12 @@ d 只显示目录（不含文件）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;配置&#34;&gt;配置
 &lt;/h2&gt;&lt;h3 id=&#34;安装本地构建网页&#34;&gt;安装（本地构建网页）
-&lt;/h3&gt;&lt;p&gt;#11 ① git&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;① git&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;二进制文件安装程序&lt;/li&gt;
 &lt;li&gt;环境变量&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;#11 ② hugo&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;② hugo&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;使用预编译拓展版&lt;/p&gt;

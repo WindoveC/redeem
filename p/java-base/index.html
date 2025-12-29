@@ -344,6 +344,32 @@
       <ol>
         <li><a href="#判断语句">判断语句</a></li>
         <li><a href="#选择语句">选择语句</a></li>
+        <li><a href="#循环结构">循环结构</a>
+          <ol>
+            <li><a href="#for循环">for循环</a></li>
+            <li><a href="#while循环">while循环</a></li>
+            <li><a href="#dowhile循环">do&hellip;while循环</a></li>
+          </ol>
+        </li>
+        <li><a href="#无限循环">无限循环</a>
+          <ol>
+            <li><a href="#for格式">for格式</a></li>
+            <li><a href="#while格式">while格式</a></li>
+            <li><a href="#dowhile格式">do&hellip;while格式</a></li>
+          </ol>
+        </li>
+        <li><a href="#条件控制语句">条件控制语句</a>
+          <ol>
+            <li><a href="#break">break</a></li>
+            <li><a href="#continue">continue</a></li>
+          </ol>
+        </li>
+        <li><a href="#random">Random</a></li>
+        <li><a href="#循环嵌套">循环嵌套</a>
+          <ol>
+            <li><a href="#补充知识">补充知识</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -402,7 +428,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 5 分钟
+                    阅读时长: 7 分钟
                 </time>
             </div>
         
@@ -964,6 +990,250 @@ default可以放在任意位置，也可以省略</p>
 </div>
 </div></li>
 </ol>
+<h3 id="循环结构">循环结构
+</h3><h4 id="for循环">for循环
+</h4><p>知道循环次数或者循环范围</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">初始化语句</span><span class="p">;</span><span class="n">条件判断语句</span><span class="p">;</span><span class="n">条件控制语句</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">循环体语句</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="while循环">while循环
+</h4><p>不知道循环次数或者循环范围，知道循环的结束条件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="n">初始化语句</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span><span class="n">条件判断语句</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">循环体</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">条件控制语句</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="dowhile循环">do&hellip;while循环
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="n">初始化语句</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">do</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">循环体</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">条件控制语句</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">条件判断语句</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="无限循环">无限循环
+</h3><h4 id="for格式">for格式
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="k">for</span><span class="p">(;;){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;循环执行一直在打印内容&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="while格式">while格式
+</h4><p>常用</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span><span class="kc">true</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;循环执行一直在打印内容&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="dowhile格式">do&hellip;while格式
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="k">do</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;循环执行一直在打印内容&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="条件控制语句">条件控制语句
+</h3><h4 id="break">break
+</h4><p>不能单独存在的。可以用在switch和循环中，表示结束，跳出的意思。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">//1.吃1~5号包子
+</span></span><span class="line"><span class="cl">for (int i = 1; i &lt;= 5; i++) {
+</span></span><span class="line"><span class="cl">    System.out.println(&#34;在吃第&#34; + i + &#34;个包子&#34;);
+</span></span><span class="line"><span class="cl">    //2.吃完第三个的时候就不吃了
+</span></span><span class="line"><span class="cl">    if(i == 3){
+</span></span><span class="line"><span class="cl">        break;//结束整个循环。
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">//检验输入
+</span></span><span class="line"><span class="cl">while (true){
+</span></span><span class="line"><span class="cl">    System.out.println(&#34;请输入当前人物受到的伤害：&#34;);
+</span></span><span class="line"><span class="cl">    hurt = sc.nextInt();
+</span></span><span class="line"><span class="cl">    // 判断是否符合当前的需求
+</span></span><span class="line"><span class="cl">    if (hurt &gt; 0) {
+</span></span><span class="line"><span class="cl">        break;
+</span></span><span class="line"><span class="cl">    }else{
+</span></span><span class="line"><span class="cl">        System.out.println(&#34;当前收到了伤害不能为负数&#34;);
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">//找质数
+</span></span><span class="line"><span class="cl">int count = 0;
+</span></span><span class="line"><span class="cl">for (int i = 2; i &lt;= number - 1; i++) { // 100  2 - 99
+</span></span><span class="line"><span class="cl">    if (number % i == 0) {
+</span></span><span class="line"><span class="cl">        count++;
+</span></span><span class="line"><span class="cl">        // 只要找到了一个数字能被number整除，那么number就不是质数，后面的数据就没有必要再判断了
+</span></span><span class="line"><span class="cl">        // System.out.println(&#34;不是&#34;);
+</span></span><span class="line"><span class="cl">        // 如果在这个范围中我找到了一个能被number整除，
+</span></span><span class="line"><span class="cl">        break;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="continue">continue
+</h4><p>不能单独存在的。只能存在于循环当中。表示：跳过本次循环，继续执行下次循环。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">//1.吃1~5号包子
+</span></span><span class="line"><span class="cl">for (int i = 1; i &lt;= 5; i++) {
+</span></span><span class="line"><span class="cl">    //2.第3个包子有虫子就跳过，继续吃下面的包子
+</span></span><span class="line"><span class="cl">    if(i == 3){
+</span></span><span class="line"><span class="cl">        //跳过本次循环（本次循环中，下面的代码就不执行了），继续执行下次循环。
+</span></span><span class="line"><span class="cl">        continue;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">    System.out.println(&#34;在吃第&#34; + i + &#34;个包子&#34;);
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="random">Random
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.random</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 定位Random类的位置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Test1</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 1. 找到Random这个类</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Random</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 2. 生成一个随机数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// (了解)第一种写法：默认是在int的取值范围之内获取随机数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">   
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// (重要)第二种写法：一个int参数，表示随机的最大值，不包含</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 1~100</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="n">100</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// (重要)第三种写法：两个int参数，范围是a ~ b，包含a，不包含b JDK17</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 1~100</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">101</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="循环嵌套">循环嵌套
+</h3><p><code>for</code>、<code>while</code> 可以互相嵌套</p>
+<h4 id="补充知识">补充知识
+</h4><ul>
+<li>
+<p>制表符 <code>\t</code></p>
+<p>在IDEA中，在前面的字符后面补1-4个空格，让这个整体（空格为分界）的长度凑成4的整数倍</p>
+</li>
+</ul>
 
 </section>
 
