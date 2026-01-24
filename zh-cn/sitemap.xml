@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://windovec.github.io/redeem/</loc>
-    <lastmod>2025-12-26T14:29:57+08:00</lastmod>
+    <lastmod>2026-01-22T09:05:58+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,10 +15,13 @@
                 href="https://windovec.github.io/redeem/"
                 />
   </url><url>
-    <loc>https://windovec.github.io/redeem/p/idea-base/</loc>
-    <lastmod>2025-12-26T14:29:57+08:00</lastmod>
-  </url><url>
     <loc>https://windovec.github.io/redeem/post/</loc>
+    <lastmod>2026-01-22T09:05:58+08:00</lastmod>
+  </url><url>
+    <loc>https://windovec.github.io/redeem/p/%E4%BB%A3%E7%90%86/</loc>
+    <lastmod>2026-01-22T09:05:58+08:00</lastmod>
+  </url><url>
+    <loc>https://windovec.github.io/redeem/p/idea-base/</loc>
     <lastmod>2025-12-26T14:29:57+08:00</lastmod>
   </url><url>
     <loc>https://windovec.github.io/redeem/p/java-base/</loc>
