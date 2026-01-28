@@ -4,11 +4,11 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Clash Meta (mihomo) 链式代理 官方文档： dialer-proxy 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 proxies: - name: &#34;ss1&#34; dialer-proxy: dialer ... - name: &#34;ss2&#34; ... proxy-groups: - name: dialer type: select proxies: - ss2 rules: - MATCH,ss1 指定当前 proxies 通过 dialer-proxy 建立网络连接，值可以为策略组/出站代理的 name\n">
 <title>代理</title>
 
-<link rel='canonical' href='https://windovec.github.io/redeem/p/%E4%BB%A3%E7%90%86/'>
+<link rel='canonical' href='https://windovec.github.io/redeem/p/proxy/'>
 
 <link rel="stylesheet" href="/redeem/scss/style.min.919e2d4f1e21cc10402f961910fcaa3b779273d37c0fab25eece88edcbd5e750.css"><meta property='og:title' content="代理">
 <meta property='og:description' content="Clash Meta (mihomo) 链式代理 官方文档： dialer-proxy 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 proxies: - name: &#34;ss1&#34; dialer-proxy: dialer ... - name: &#34;ss2&#34; ... proxy-groups: - name: dialer type: select proxies: - ss2 rules: - MATCH,ss1 指定当前 proxies 通过 dialer-proxy 建立网络连接，值可以为策略组/出站代理的 name\n">
-<meta property='og:url' content='https://windovec.github.io/redeem/p/%E4%BB%A3%E7%90%86/'>
+<meta property='og:url' content='https://windovec.github.io/redeem/p/proxy/'>
 <meta property='og:site_name' content='WindoveC'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-01-22T09:05:58&#43;08:00'/><meta property='article:modified_time' content='2026-01-22T09:05:58&#43;08:00'/>
 <meta name="twitter:title" content="代理">
@@ -324,6 +324,15 @@
         </li>
       </ol>
     </li>
+    <li><a href="#代理检查">代理检查</a>
+      <ol>
+        <li><a href="#命令行">命令行</a></li>
+        <li><a href="#国内">国内</a></li>
+        <li><a href="#国外">国外</a></li>
+        <li><a href="#v4v6">v4v6</a></li>
+        <li><a href="#神经">神经</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -343,7 +352,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/redeem/p/%E4%BB%A3%E7%90%86/">代理</a>
+            <a href="/redeem/p/proxy/">代理</a>
         </h2>
     
         
@@ -380,7 +389,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 8 分钟
+                    阅读时长: 9 分钟
                 </time>
             </div>
         
@@ -807,7 +816,10 @@
 </div><p>The traffic flow is Clash &lt;-&gt; http &lt;-&gt; vmess &lt;-&gt; ss1 &lt;-&gt; ss2 &lt;-&gt; Internet.</p>
 <h3 id="脚本">脚本
 </h3><h4 id="添加出站代理">添加出站代理
-</h4><div class="highlight"><div class="chroma">
+</h4><ul>
+<li><strong>dialer策略组复制策略组版</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -878,21 +890,220 @@
 </span><span class="lnt">67
 </span><span class="lnt">68
 </span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Define main function (script entry)
-</span></span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">main</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// === 配置区：在这里定义任意数量的自定义 SOCKS5 节点 ===
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">main</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// ================= 配置区域 =================
 </span></span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">customNodes</span> <span class="o">=</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;1024proxy&#34;</span><span class="p">,</span>   <span class="c1">// 节点显示名称（可自定义）
-</span></span></span><span class="line"><span class="cl">      <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;socks5&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">server</span><span class="o">:</span> <span class="s2">&#34;us.1024proxy.io&#34;</span><span class="p">,</span>           <span class="c1">// 服务器地址
-</span></span></span><span class="line"><span class="cl">      <span class="nx">port</span><span class="o">:</span> <span class="mi">3000</span><span class="p">,</span>                    <span class="c1">// 端口
-</span></span></span><span class="line"><span class="cl">      <span class="nx">udp</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>                     <span class="c1">// 启用 UDP（推荐）
-</span></span></span><span class="line"><span class="cl">      <span class="nx">username</span><span class="o">:</span> <span class="s2">&#34;2nlo5364-region-US-asn-AS7018-sid-49euBkbk-t-120&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;1024proxy-US&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;socks5&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">server</span><span class="o">:</span> <span class="s2">&#34;us.1024proxy.io&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">port</span><span class="o">:</span> <span class="mi">3000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">udp</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">username</span><span class="o">:</span> <span class="s2">&#34;your-username&#34;</span><span class="p">,</span> <span class="c1">// 请替换真实账号
+</span></span></span><span class="line"><span class="cl">      <span class="nx">password</span><span class="o">:</span> <span class="s2">&#34;your-password&#34;</span>  <span class="c1">// 请替换真实密码
+</span></span></span><span class="line"><span class="cl">      <span class="c1">// dialer-proxy 将由脚本自动注入
+</span></span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 可以添加更多...
+</span></span></span><span class="line"><span class="cl">  <span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// ===========================================
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 1. 基础安全检查
+</span></span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span><span class="p">))</span> <span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">]))</span> <span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 2. 获取默认策略组（通常是列表里的第一个）
+</span></span></span><span class="line"><span class="cl">  <span class="c1">// 如果没有策略组，直接返回，避免报错
+</span></span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">].</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="nx">config</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">firstGroup</span> <span class="o">=</span> <span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 3. 创建 Dialer 策略组：直接克隆第一个分组
+</span></span></span><span class="line"><span class="cl">  <span class="c1">// 我们使用 ...展开运算符复制属性 (type, url, interval, proxies, use 等)
+</span></span></span><span class="line"><span class="cl">  <span class="c1">// 然后覆盖 name 为 &#39;dialer&#39;
+</span></span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">dialerGroup</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span><span class="nx">firstGroup</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;dialer&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 4. 将 Dialer 添加到策略组列表末尾
+</span></span></span><span class="line"><span class="cl">  <span class="c1">// 先检查是否存在同名 dialer（防止重复添加），存在则覆盖，不存在则追加
+</span></span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">existingDialerIndex</span> <span class="o">=</span> <span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">].</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">g</span> <span class="p">=&gt;</span> <span class="nx">g</span><span class="p">.</span><span class="nx">name</span> <span class="o">===</span> <span class="s2">&#34;dialer&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">existingDialerIndex</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">][</span><span class="nx">existingDialerIndex</span><span class="p">]</span> <span class="o">=</span> <span class="nx">dialerGroup</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">dialerGroup</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 5. 处理自定义节点并注入
+</span></span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">customNodeNames</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">node</span> <span class="k">of</span> <span class="nx">customNodes</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 5.1 注入 dialer-proxy 属性
+</span></span></span><span class="line"><span class="cl">    <span class="c1">// 这使得该节点会走 dialer 策略组的流量
+</span></span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">nodePayload</span> <span class="o">=</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">      <span class="p">...</span><span class="nx">node</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;dialer-proxy&#34;</span><span class="o">:</span> <span class="s2">&#34;dialer&#34;</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 5.2 添加到全局 proxies 列表
+</span></span></span><span class="line"><span class="cl">    <span class="c1">// 检查重名，避免重复添加
+</span></span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">idx</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">p</span> <span class="p">=&gt;</span> <span class="nx">p</span><span class="p">.</span><span class="nx">name</span> <span class="o">===</span> <span class="nx">node</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">idx</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">=</span> <span class="nx">nodePayload</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">nodePayload</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 记录名字以便后续添加到分组
+</span></span></span><span class="line"><span class="cl">    <span class="nx">customNodeNames</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 6. 将自定义节点添加到第一个分组（默认分组）的末尾
+</span></span></span><span class="line"><span class="cl">  <span class="c1">// 注意：我们在步骤 3 已经克隆了 firstGroup 给 dialer
+</span></span></span><span class="line"><span class="cl">  <span class="c1">// 所以现在修改 firstGroup 不会影响 dialer（避免死循环）
+</span></span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">firstGroup</span><span class="p">.</span><span class="nx">proxies</span><span class="p">))</span> <span class="nx">firstGroup</span><span class="p">.</span><span class="nx">proxies</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nx">customNodeNames</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">name</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 移除旧的同名引用（保持整洁）
+</span></span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">idx</span> <span class="o">=</span> <span class="nx">firstGroup</span><span class="p">.</span><span class="nx">proxies</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">idx</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="nx">firstGroup</span><span class="p">.</span><span class="nx">proxies</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">idx</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 追加到末尾
+</span></span></span><span class="line"><span class="cl">    <span class="nx">firstGroup</span><span class="p">.</span><span class="nx">proxies</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">config</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>dialer策略组复制节点版</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">main</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// === 配置区 ===
+</span></span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">customNodes</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;1024proxy-US&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;socks5&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">server</span><span class="o">:</span> <span class="s2">&#34;us.1024proxy.io&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">port</span><span class="o">:</span> <span class="mi">3000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">udp</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">username</span><span class="o">:</span> <span class="s2">&#34;2nlo5364-region-US-asn-AS7018-sid-49euBkbk-t-120&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">password</span><span class="o">:</span> <span class="s2">&#34;k2i3j7xq&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// dialer-proxy 属性将在脚本末尾自动注入
+</span></span></span><span class="line"><span class="cl">    <span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// 可继续添加更多...
 </span></span></span><span class="line"><span class="cl">    <span class="c1">// {
 </span></span></span><span class="line"><span class="cl">    <span class="c1">//   name: &#34;CustomLabel - Backup&#34;,
@@ -905,47 +1116,69 @@
 </span></span></span><span class="line"><span class="cl">    <span class="c1">// }
 </span></span></span><span class="line"><span class="cl">  <span class="p">];</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1">// 确保 proxies 是数组
-</span></span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 基础初始化检查
+</span></span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span><span class="p">))</span> <span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">]))</span> <span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// === Step 1: 准备 Dialer 分组所需的数据 ===
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 1.1 获取所有“非策略组”的原始节点名称 (用于 dialer)
+</span></span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">originalLeafProxies</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">p</span> <span class="p">=&gt;</span> <span class="o">!</span><span class="p">[</span><span class="s1">&#39;select&#39;</span><span class="p">,</span> <span class="s1">&#39;url-test&#39;</span><span class="p">,</span> <span class="s1">&#39;fallback&#39;</span><span class="p">,</span> <span class="s1">&#39;load-balance&#39;</span><span class="p">,</span> <span class="s1">&#39;relay&#39;</span><span class="p">].</span><span class="nx">includes</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">type</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">p</span> <span class="p">=&gt;</span> <span class="nx">p</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 1.2 [关键修复] 获取所有 Provider 的名称 (用于订阅节点)
+</span></span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">providerNames</span> <span class="o">=</span> <span class="nx">config</span><span class="p">[</span><span class="s1">&#39;proxy-providers&#39;</span><span class="p">]</span> <span class="o">?</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">config</span><span class="p">[</span><span class="s1">&#39;proxy-providers&#39;</span><span class="p">])</span> <span class="o">:</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// === Step 2: 创建或更新 Dialer 策略组 ===
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 逻辑：Dialer 应该包含所有原始节点 + 所有订阅集合
+</span></span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">dialerGroup</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;dialer&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;select&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">proxies</span><span class="o">:</span> <span class="nx">originalLeafProxies</span><span class="p">,</span> <span class="c1">// 手动节点
+</span></span></span><span class="line"><span class="cl">    <span class="nx">use</span><span class="o">:</span> <span class="nx">providerNames</span>            <span class="c1">// [新增] 订阅集合
+</span></span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 查找并替换，或追加
+</span></span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">dialerIndex</span> <span class="o">=</span> <span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">].</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">g</span> <span class="p">=&gt;</span> <span class="nx">g</span><span class="p">.</span><span class="nx">name</span> <span class="o">===</span> <span class="s2">&#34;dialer&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">dialerIndex</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 保留原有的 filter/icon 等高级配置，只更新 proxies 和 use
+</span></span></span><span class="line"><span class="cl">    <span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">][</span><span class="nx">dialerIndex</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">][</span><span class="nx">dialerIndex</span><span class="p">],</span> <span class="p">...</span><span class="nx">dialerGroup</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">dialerGroup</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1">// 确保 proxy-groups 存在且为数组
-</span></span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">])</span> <span class="o">||</span> <span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">].</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">config</span><span class="p">;</span> <span class="c1">// 无代理组，直接返回
-</span></span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">firstGroup</span> <span class="o">=</span> <span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1">// 只处理 select 类型的主代理组（避免误改 fallback/url-test）
-</span></span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">firstGroup</span><span class="p">.</span><span class="nx">type</span> <span class="o">!==</span> <span class="s2">&#34;select&#34;</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">config</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1">// 确保该分组有 proxies 字段
-</span></span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">firstGroup</span><span class="p">.</span><span class="nx">proxies</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">firstGroup</span><span class="p">.</span><span class="nx">proxies</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">groupProxies</span> <span class="o">=</span> <span class="nx">firstGroup</span><span class="p">.</span><span class="nx">proxies</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1">// 遍历所有自定义节点
+</span></span><span class="line"><span class="cl">  <span class="c1">// === Step 3: 将自定义节点注入全局列表 ===
 </span></span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">node</span> <span class="k">of</span> <span class="nx">customNodes</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">nodeName</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 使用 Object.assign 确保不修改原 customNodes 引用，同时注入 dialer-proxy
+</span></span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">nodePayload</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">node</span><span class="p">,</span> <span class="s2">&#34;dialer-proxy&#34;</span><span class="o">:</span> <span class="s2">&#34;dialer&#34;</span> <span class="p">};</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">// 1. 添加到全局 proxies（避免重复）
-</span></span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">proxyExists</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">p</span> <span class="p">=&gt;</span> <span class="nx">p</span><span class="p">.</span><span class="nx">name</span> <span class="o">===</span> <span class="nx">nodeName</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">proxyExists</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 检查去重：如果同名节点已存在，更新它；不存在则 push
+</span></span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">existingIdx</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">p</span> <span class="p">=&gt;</span> <span class="nx">p</span><span class="p">.</span><span class="nx">name</span> <span class="o">===</span> <span class="nx">node</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">existingIdx</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span><span class="p">[</span><span class="nx">existingIdx</span><span class="p">]</span> <span class="o">=</span> <span class="nx">nodePayload</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">config</span><span class="p">.</span><span class="nx">proxies</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">nodePayload</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">// 2. 添加到第一个分组末尾（先去重）
-</span></span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">idxInGroup</span> <span class="o">=</span> <span class="nx">groupProxies</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">nodeName</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">idxInGroup</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">groupProxies</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">idxInGroup</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// 移除旧位置
-</span></span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">groupProxies</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">nodeName</span><span class="p">);</span> <span class="c1">// 插入到末尾
-</span></span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// === Step 4: 将自定义节点添加到第一个 Select 分组 ===
+</span></span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">].</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">firstGroup</span> <span class="o">=</span> <span class="nx">config</span><span class="p">[</span><span class="s2">&#34;proxy-groups&#34;</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 仅当第一个分组是手动选择类型时才修改
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">firstGroup</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&#34;select&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">firstGroup</span><span class="p">.</span><span class="nx">proxies</span><span class="p">))</span> <span class="nx">firstGroup</span><span class="p">.</span><span class="nx">proxies</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="nx">customNodes</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">node</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 先移除旧的（如果存在），再添加到末尾
+</span></span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">idx</span> <span class="o">=</span> <span class="nx">firstGroup</span><span class="p">.</span><span class="nx">proxies</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">idx</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="nx">firstGroup</span><span class="p">.</span><span class="nx">proxies</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">idx</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">firstGroup</span><span class="p">.</span><span class="nx">proxies</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">config</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -1216,6 +1449,100 @@
 </span></span><span class="line"><span class="cl">    Z --&gt; AE
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    AD --&gt; AF([结束 - 成功])
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="代理检查">代理检查
+</h2><h3 id="命令行">命令行
+</h3><h3 id="国内">国内
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">curl cip.cc
+</span></span><span class="line"><span class="cl">curl myip.ipip.net
+</span></span><span class="line"><span class="cl">curl ddns.oray.com/checkip
+</span></span><span class="line"><span class="cl">curl ip.3322.net
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="国外">国外
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">curl ip-api.com
+</span></span><span class="line"><span class="cl">curl <span class="s2">&#34;ip-api.com/line?fields=query,country,city,isp&#34;</span>
+</span></span><span class="line"><span class="cl">curl ip-api.com/json
+</span></span><span class="line"><span class="cl">curl wtfismyip.com/json
+</span></span><span class="line"><span class="cl">curl tnx.nl/ip
+</span></span><span class="line"><span class="cl">curl api.ipify.org
+</span></span><span class="line"><span class="cl">curl checkip.amazonaws.com
+</span></span><span class="line"><span class="cl">curl eth0.me
+</span></span><span class="line"><span class="cl">curl icanhazip.com
+</span></span><span class="line"><span class="cl">curl ident.me
+</span></span><span class="line"><span class="cl">curl ifconfig.me
+</span></span><span class="line"><span class="cl">curl ip.dnsexit.com
+</span></span><span class="line"><span class="cl">curl ip.sb
+</span></span><span class="line"><span class="cl">curl ipecho.net/plain
+</span></span><span class="line"><span class="cl">curl l2.io/ip
+</span></span><span class="line"><span class="cl">curl myexternalip.com/raw
+</span></span><span class="line"><span class="cl">curl myip.dnsomatic.com
+</span></span><span class="line"><span class="cl">curl wgetip.com
+</span></span><span class="line"><span class="cl">curl whatismyip.akamai.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="v4v6">v4v6
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">curl ipv4.icanhazip.com
+</span></span><span class="line"><span class="cl">curl ipv6.icanhazip.com
+</span></span><span class="line"><span class="cl">curl 4.ifconfig.me
+</span></span><span class="line"><span class="cl">curl 6.ifconfig.me
+</span></span><span class="line"><span class="cl">curl v4.ident.me
+</span></span><span class="line"><span class="cl">curl v6.ident.me
+</span></span><span class="line"><span class="cl">curl 4.ipw.cn
+</span></span><span class="line"><span class="cl">curl 6.ipw.cn
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="神经">神经
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">curl ipinfo.io/ip
 </span></span></code></pre></td></tr></table>
 </div>
 </div>

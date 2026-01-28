@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="开启终端和命令行代理脚本 最终 1 2 3 4 5 6 @echo off echo 正在设置代理环境变量... setx http_proxy http://127.0.0.1:7897 setx https_proxy http://127.0.0.1:7897 setx all_proxy socks5://127.0.0.1:7897 pause 无效尝试 1 2 3 4 5 6 7 8 9 10 11 12 13 @echo off echo 当前环境变量： &amp; set http_proxy &amp; set https_proxy &amp; set all_proxy &amp; echo %http_proxy% &amp; echo %https_proxy% &amp; echo %all_proxy% &amp; echo. echo 正在设置代理环境变量... setx http_proxy http://127.0.0.1:7897 setx https_proxy http://127.0.0.1:7897 setx all_proxy socks5://127.0.0.1:7897 set http_proxy= set https_proxy= set all_proxy= timeout /t 1 /nobreak &gt;nul start &#34;Proxy Check&#34; /i cmd /c ^ &#34;echo 检查代理环境变量： &amp; set http_proxy &amp; set https_proxy &amp; set all_proxy &amp; echo %http_proxy% &amp; echo %https_proxy% &amp; echo %all_proxy% &amp; echo. &amp; pause&#34; pause 参数解释\n">
-<title>Windows使用经验</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="零、系统 linux server 开机网络检测 1 sudo vi /etc/systemd/system/network-online.targets.wants/networking.service1 修改TimeoutStartSec\n1 sudo vi /etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service 修改TimeoutStartSec\n修改网卡配置 /etc/netplan/00-installer-config.yaml ，也有可能不是这个名字，一般这个文件夹下面只有一个yaml配置文件，用来配置网卡的信息。在网卡上添加 optional: true 选项 然后重启系统，再看是否还卡同样的问题\n">
+<title>Linux</title>
 
-<link rel='canonical' href='https://windovec.github.io/redeem/p/win-exp/'>
+<link rel='canonical' href='https://windovec.github.io/redeem/p/linux/'>
 
-<link rel="stylesheet" href="/redeem/scss/style.min.919e2d4f1e21cc10402f961910fcaa3b779273d37c0fab25eece88edcbd5e750.css"><meta property='og:title' content="Windows使用经验">
-<meta property='og:description' content="开启终端和命令行代理脚本 最终 1 2 3 4 5 6 @echo off echo 正在设置代理环境变量... setx http_proxy http://127.0.0.1:7897 setx https_proxy http://127.0.0.1:7897 setx all_proxy socks5://127.0.0.1:7897 pause 无效尝试 1 2 3 4 5 6 7 8 9 10 11 12 13 @echo off echo 当前环境变量： &amp; set http_proxy &amp; set https_proxy &amp; set all_proxy &amp; echo %http_proxy% &amp; echo %https_proxy% &amp; echo %all_proxy% &amp; echo. echo 正在设置代理环境变量... setx http_proxy http://127.0.0.1:7897 setx https_proxy http://127.0.0.1:7897 setx all_proxy socks5://127.0.0.1:7897 set http_proxy= set https_proxy= set all_proxy= timeout /t 1 /nobreak &gt;nul start &#34;Proxy Check&#34; /i cmd /c ^ &#34;echo 检查代理环境变量： &amp; set http_proxy &amp; set https_proxy &amp; set all_proxy &amp; echo %http_proxy% &amp; echo %https_proxy% &amp; echo %all_proxy% &amp; echo. &amp; pause&#34; pause 参数解释\n">
-<meta property='og:url' content='https://windovec.github.io/redeem/p/win-exp/'>
+<link rel="stylesheet" href="/redeem/scss/style.min.919e2d4f1e21cc10402f961910fcaa3b779273d37c0fab25eece88edcbd5e750.css"><meta property='og:title' content="Linux">
+<meta property='og:description' content="零、系统 linux server 开机网络检测 1 sudo vi /etc/systemd/system/network-online.targets.wants/networking.service1 修改TimeoutStartSec\n1 sudo vi /etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service 修改TimeoutStartSec\n修改网卡配置 /etc/netplan/00-installer-config.yaml ，也有可能不是这个名字，一般这个文件夹下面只有一个yaml配置文件，用来配置网卡的信息。在网卡上添加 optional: true 选项 然后重启系统，再看是否还卡同样的问题\n">
+<meta property='og:url' content='https://windovec.github.io/redeem/p/linux/'>
 <meta property='og:site_name' content='WindoveC'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-26T14:23:14&#43;08:00'/><meta property='article:modified_time' content='2025-12-26T14:23:14&#43;08:00'/>
-<meta name="twitter:title" content="Windows使用经验">
-<meta name="twitter:description" content="开启终端和命令行代理脚本 最终 1 2 3 4 5 6 @echo off echo 正在设置代理环境变量... setx http_proxy http://127.0.0.1:7897 setx https_proxy http://127.0.0.1:7897 setx all_proxy socks5://127.0.0.1:7897 pause 无效尝试 1 2 3 4 5 6 7 8 9 10 11 12 13 @echo off echo 当前环境变量： &amp; set http_proxy &amp; set https_proxy &amp; set all_proxy &amp; echo %http_proxy% &amp; echo %https_proxy% &amp; echo %all_proxy% &amp; echo. echo 正在设置代理环境变量... setx http_proxy http://127.0.0.1:7897 setx https_proxy http://127.0.0.1:7897 setx all_proxy socks5://127.0.0.1:7897 set http_proxy= set https_proxy= set all_proxy= timeout /t 1 /nobreak &gt;nul start &#34;Proxy Check&#34; /i cmd /c ^ &#34;echo 检查代理环境变量： &amp; set http_proxy &amp; set https_proxy &amp; set all_proxy &amp; echo %http_proxy% &amp; echo %https_proxy% &amp; echo %all_proxy% &amp; echo. &amp; pause&#34; pause 参数解释\n">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-01-29T03:34:08&#43;08:00'/><meta property='article:modified_time' content='2026-01-29T04:15:54&#43;08:00'/>
+<meta name="twitter:title" content="Linux">
+<meta name="twitter:description" content="零、系统 linux server 开机网络检测 1 sudo vi /etc/systemd/system/network-online.targets.wants/networking.service1 修改TimeoutStartSec\n1 sudo vi /etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service 修改TimeoutStartSec\n修改网卡配置 /etc/netplan/00-installer-config.yaml ，也有可能不是这个名字，一般这个文件夹下面只有一个yaml配置文件，用来配置网卡的信息。在网卡上添加 optional: true 选项 然后重启系统，再看是否还卡同样的问题\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -298,18 +298,48 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
+    <li><a href="#零系统">零、系统</a>
       <ol>
-        <li>
+        <li><a href="#linux-server">linux server</a>
           <ol>
-            <li><a href="#开启终端和命令行代理脚本">开启终端和命令行代理脚本</a></li>
-            <li><a href="#清除资源管理器图标缓存">清除资源管理器图标缓存</a></li>
-            <li><a href="#5g-移动热点-所选网络波段不可用">5G 移动热点 所选网络波段不可用</a></li>
-            <li><a href="#1-intel-说明">1 Intel 说明</a></li>
-            <li><a href="#2-常用wifi信道与频段">2 常用WiFi信道与频段</a></li>
+            <li><a href="#开机网络检测">开机网络检测</a></li>
+            <li><a href="#02-扩容">0.2 扩容</a></li>
           </ol>
         </li>
-        <li><a href="#剪切板数量">剪切板数量</a></li>
+        <li><a href="#1修改中文">1、修改中文</a></li>
+        <li><a href="#2镜像">2、镜像</a>
+          <ol>
+            <li><a href="#21-docker">2.1 docker</a></li>
+          </ol>
+        </li>
+        <li><a href="#3账户">3、账户</a>
+          <ol>
+            <li><a href="#31-创建">3.1 创建</a></li>
+            <li><a href="#32-密码修改">3.2 密码修改</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#一远程">一、远程</a>
+      <ol>
+        <li><a href="#ssh">ssh</a></li>
+        <li><a href="#zerotier">zerotier</a></li>
+      </ol>
+    </li>
+    <li><a href="#二编译">二、编译</a>
+      <ol>
+        <li><a href="#cc">C/C++</a></li>
+      </ol>
+    </li>
+    <li><a href="#三共享">三、共享</a>
+      <ol>
+        <li><a href="#vmware">VMware</a>
+          <ol>
+            <li><a href="#挂载">挂载</a></li>
+            <li><a href="#自动挂载">自动挂载</a></li>
+          </ol>
+        </li>
+        <li><a href="#virtualbox">VirtualBox</a></li>
       </ol>
     </li>
   </ol>
@@ -328,18 +358,10 @@
 
     <div class="article-details">
     
-    <header class="article-category">
-        
-            <a href="/redeem/categories/%E6%97%A5%E5%B8%B8/" >
-                日常
-            </a>
-        
-    </header>
-    
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/redeem/p/win-exp/">Windows使用经验</a>
+            <a href="/redeem/p/linux/">Linux</a>
         </h2>
     
         
@@ -361,7 +383,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published" datetime='2025-12-26T14:23:14&#43;08:00'>Dec 26, 2025</time>
+                <time class="article-time--published" datetime='2026-01-29T03:34:08&#43;08:00'>Jan 29, 2026</time>
             </div>
         
 
@@ -391,11 +413,219 @@
     <section class="article-content">
     
     
-    <h4 id="开启终端和命令行代理脚本">开启终端和命令行代理脚本
-</h4><ul>
-<li>最终</li>
-</ul>
+    <h2 id="零系统">零、系统
+</h2><h3 id="linux-server">linux server
+</h3><h4 id="开机网络检测">开机网络检测
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vi /etc/systemd/system/network-online.targets.wants/networking.service1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>修改TimeoutStartSec</p>
+</blockquote>
 <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vi /etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>修改TimeoutStartSec</p>
+</blockquote>
+<blockquote>
+<p>修改网卡配置 <code>/etc/netplan/00-installer-config.yaml</code> ，也有可能不是这个名字，一般这个文件夹下面只有一个yaml配置文件，用来配置网卡的信息。在网卡上添加 <code>optional: true</code> 选项 然后重启系统，再看是否还卡同样的问题</p>
+<p><img src="/redeem/p/linux/index.assets/image-20260129033512902.png"
+	width="565"
+	height="344"
+	srcset="/redeem/p/linux/index.assets/image-20260129033512902_hu_1be55dc2962ff7f6.png 480w, /redeem/p/linux/index.assets/image-20260129033512902_hu_b23486a7a28428ba.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="164"
+		data-flex-basis="394px"
+	
+></p>
+</blockquote>
+<h4 id="02-扩容">0.2 扩容
+</h4><p><a class="link" href="https://blog.hellowood.dev/posts/ubuntu-server-22-%e8%99%9a%e6%8b%9f%e6%9c%ba%e7%a9%ba%e9%97%b4%e6%89%a9%e5%ae%b9/"  target="_blank" rel="noopener"
+    >Ubuntu Server 22 虚拟机空间扩容</a></p>
+<ol>
+<li><strong>配置 vmware / virtualbox</strong></li>
+<li><strong>linux server 中设置</strong></li>
+</ol>
+<p><strong>1)</strong> 检查未分区空间<br>
+使用 <code>fdisk</code> 命令查看 <code>/dev/sda</code>设备情况</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fdisk /dev/sda
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>输入 <code>F</code> 显示未分区的空间大小</p>
+<p><strong>2)</strong> 确定逻辑分区<br>
+<strong>2.1)</strong> 确定设备<br>
+通过 <code>df -h</code> 命令查看空间，发现挂载到根/目录的设备是 <code>/dev/mapper/ubuntu--vg-ubuntu--lv</code></p>
+<p><strong>2.2)</strong> 确定逻辑分区<br>
+使用 <code>lsblk</code> 查看分区信息，发现 <code>ubuntu--vg-ubuntu--lv</code>是在<code>/dev/sda3</code>下的逻辑分区，所以需要将未分区的空间添加到 <code>/sda/sda3</code>分区下</p>
+<p><strong>3)</strong> 扩容</p>
+<p><strong>3.1)</strong> 调整物理卷的大小</p>
+<p>当磁盘大小发生变化后，需要使用 <code>pvresize</code> 调整物理卷的大小</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pvresize /dev/sda3
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Physical volume &ldquo;/dev/sda3&rdquo; changed<br>
+1 physical volume(s) resized or updated / 0 physical volume(s) not resized</p>
+</blockquote>
+<p><strong>3.2)</strong> 扩容分区<br>
+通过 <code>growpart</code> 将未分区空间添加到 <code>/dev/sda</code> 设备的逻辑分区 <code>3</code> 下面</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">growpart /dev/sda <span class="m">3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>CHANGED: partition=3 start=6397952 old: size=77486080 end=83884032 new: size=161374175 end=167772127</p>
+</blockquote>
+<p><strong>3.3)</strong> 使用所有空闲空间为逻辑分区扩容<br>
+使用 <code>lvresize</code> 命令进行扩容，将所有空闲的空间都分配给 <code>/dev/mapper/ubuntu--vg-ubuntu--lv</code>；需要注意的是 <code>/dev/mapper/ubuntu--vg-ubuntu--lv</code>名称中间是两个 <code>-</code>符号</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lvresize -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Size of logical volume ubuntu-vg/ubuntu-lv changed from 18.47 GiB (4729 extents) to &lt;36.95 GiB (9458 extents).<br>
+Logical volume ubuntu-vg/ubuntu-lv successfully resized.</p>
+</blockquote>
+<p><strong>3.4)</strong>. 扩展文件系统本身<br>
+扩容完成后，需要扩展文件系统本身，让系统能够使用新的可用的逻辑分区</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>resize2fs 1.46.5 (30-Dec-2021)<br>
+Filesystem at /dev/mapper/ubuntu&ndash;vg-ubuntu&ndash;lv is mounted on /; on-line resizing required<br>
+old_desc_blocks = 3, new_desc_blocks = 5<br>
+The filesystem on /dev/mapper/ubuntu&ndash;vg-ubuntu&ndash;lv is now 9684992 (4k) blocks long.</p>
+</blockquote>
+<p><strong>3.5)</strong> 检查分区大小<br>
+使用 <code>df</code> 命令再次检查分区大小，发现 <code>/</code> 挂载的空间大小已经扩容完成了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">df -hT
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Filesystem                        Type   Size  Used Avail Use% Mounted on<br>
+tmpfs                             tmpfs  796M  1.4M  794M   1% /run<br>
+/dev/mapper/ubuntu&ndash;vg-ubuntu&ndash;lv ext4    40G   19G   21G  47% /<br>
+tmpfs                             tmpfs  3.9G     0  3.9G   0% /dev/shm<br>
+tmpfs                             tmpfs  5.0M     0  5.0M   0% /run/lock<br>
+/dev/sda2                         ext4   2.0G  127M  1.7G   7% /boot<br>
+/dev/sda1                         vfat   1.1G  5.3M  1.1G   1% /boot/efi<br>
+tmpfs                             tmpfs  796M  4.0K  796M   1% /run/user/0</p>
+</blockquote>
+<h3 id="1修改中文">1、修改中文
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">LANG</span><span class="o">=</span>en_US
+</span></span><span class="line"><span class="cl">xdg-user-dirs-gtk-update
+</span></span><span class="line"><span class="cl"><span class="c1">#接着输入如下命令，然后关闭终端并重启</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">LANG</span><span class="o">=</span>zh_CN
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2镜像">2、镜像
+</h3><h4 id="21-docker">2.1 docker
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /etc/docker
+</span></span><span class="line"><span class="cl">sudo tee /etc/docker/daemon.json <span class="s">&lt;&lt;-&#39;EOF&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s">{
+</span></span></span><span class="line"><span class="cl"><span class="s">  &#34;registry-mirrors&#34;: [&#34;https://g25jcx74.mirror.aliyuncs.com&#34;]
+</span></span></span><span class="line"><span class="cl"><span class="s">}
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span><span class="line"><span class="cl">sudo systemctl restart docker
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3账户">3、账户
+</h3><h4 id="31-创建">3.1 创建
+</h4><p><code>addsuer</code> 含有引导， <code>useradd</code> 需要参数（三无）</p>
+<h4 id="32-密码修改">3.2 密码修改
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo passwd username
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>可以修改为低强度密码</p>
+</blockquote>
+<h2 id="一远程">一、远程
+</h2><h3 id="ssh">ssh
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install openssh-server
+</span></span><span class="line"><span class="cl">service ssh start
+</span></span><span class="line"><span class="cl">service ssh status
+</span></span><span class="line"><span class="cl">ip a
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="zerotier">zerotier
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -405,217 +635,88 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
-</span></span><span class="line"><span class="cl"><span class="k">echo</span> 正在设置代理环境变量...
-</span></span><span class="line"><span class="cl">setx http_proxy http://127.0.0.1:7897
-</span></span><span class="line"><span class="cl">setx https_proxy http://127.0.0.1:7897
-</span></span><span class="line"><span class="cl">setx all_proxy socks5://127.0.0.1:7897
-</span></span><span class="line"><span class="cl"><span class="k">pause</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install curl                   <span class="c1">#curl</span>
+</span></span><span class="line"><span class="cl">curl -s https://install.zerotier.com <span class="p">|</span> sudo bash
+</span></span><span class="line"><span class="cl">sudo systemctl start zerotier-one.service
+</span></span><span class="line"><span class="cl">sudo zerotier-cli join xxxxxxxxxxxxxxxx <span class="c1">#加入</span>
+</span></span><span class="line"><span class="cl">sudo zerotier-cli info                  <span class="c1">#信息</span>
+</span></span><span class="line"><span class="cl">sudo zerotier-cli listnetworks          <span class="c1">#列表</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>无效尝试</li>
-</ul>
-<div class="highlight"><div class="chroma">
+</div><blockquote>
+<p>查询节点：<br>
+<code>zerotier-cli peers</code><br>
+离开网络：<br>
+<code>zerotier-cli leave xxxxxxxxxxx</code><br>
+获取地址和服务状态<br>
+<code>zerotier-cli status</code></p>
+</blockquote>
+<h2 id="二编译">二、编译
+</h2><h3 id="cc">C/C++
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
-</span></span><span class="line"><span class="cl"><span class="k">echo</span> 当前环境变量： <span class="p">&amp;</span> <span class="k">set</span> <span class="nv">http_proxy </span><span class="p">&amp;</span> <span class="k">set</span> <span class="nv">https_proxy </span><span class="p">&amp;</span> <span class="k">set</span> <span class="nv">all_proxy </span><span class="p">&amp;</span> <span class="k">echo</span> <span class="nv">%http_proxy%</span> <span class="p">&amp;</span> <span class="k">echo</span> <span class="nv">%https_proxy%</span> <span class="p">&amp;</span> <span class="k">echo</span> <span class="nv">%all_proxy%</span> <span class="p">&amp;</span> <span class="k">echo</span>. 
-</span></span><span class="line"><span class="cl"><span class="k">echo</span> 正在设置代理环境变量...
-</span></span><span class="line"><span class="cl">setx http_proxy http://127.0.0.1:7897
-</span></span><span class="line"><span class="cl">setx https_proxy http://127.0.0.1:7897
-</span></span><span class="line"><span class="cl">setx all_proxy socks5://127.0.0.1:7897
-</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">http_proxy</span><span class="p">=</span>
-</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">https_proxy</span><span class="p">=</span>
-</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">all_proxy</span><span class="p">=</span>
-</span></span><span class="line"><span class="cl">timeout /t 1 /nobreak <span class="p">&gt;</span>nul
-</span></span><span class="line"><span class="cl"><span class="k">start</span> <span class="s2">&#34;Proxy Check&#34;</span> /i cmd /c <span class="se">^
-</span></span></span><span class="line"><span class="cl"><span class="se"> </span>   <span class="s2">&#34;echo 检查代理环境变量： &amp; set http_proxy &amp; set https_proxy &amp; set all_proxy &amp; echo </span><span class="nv">%http_proxy%</span><span class="s2"> &amp; echo </span><span class="nv">%https_proxy%</span><span class="s2"> &amp; echo </span><span class="nv">%all_proxy%</span><span class="s2"> &amp; echo. &amp; pause&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="k">pause</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install build-essential
+</span></span><span class="line"><span class="cl">sudo apt install vim
+</span></span><span class="line"><span class="cl">vim  ~/.vimrc
 </span></span></code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>
-<p>参数解释</p>
-<ul>
-<li>
-<p><code>&amp;</code>：一行中连接多条命令</p>
-</li>
-<li>
-<p><code>^</code>：一个命令换行</p>
-</li>
-<li>
-<p><code>start [&lt;&quot;title&quot;&gt;] &lt;program&gt;</code></p>
-<ul>
-<li>
-<p>/<code>i</code>：不继承环境变量</p>
-<p>未知原因不生效</p>
-</li>
-</ul>
-</li>
-<li>
-<p><code>cmd</code></p>
-<ul>
-<li><code>/c</code>：执行后关闭cmd</li>
-<li><code>/k</code>：执行后不关闭cmd</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="清除资源管理器图标缓存">清除资源管理器图标缓存
+</div><h2 id="三共享">三、共享
+</h2><h3 id="vmware">VMware
+</h3><h4 id="挂载">挂载
 </h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">taskkill /f /im explorer.exe
-</span></span><span class="line"><span class="cl"><span class="k">DEL</span> /F /S /Q /A <span class="nv">%LocalAppData%</span>\IconCache.db
-</span></span><span class="line"><span class="cl"><span class="k">DEL</span> /F /S /Q /A <span class="nv">%LocalAppData%</span>\Microsoft\Windows\Explorer\iconcache_*.db
-</span></span><span class="line"><span class="cl"><span class="k">del</span> /f <span class="s2">&#34;</span><span class="nv">%userprofile%</span><span class="s2">\AppData\Local\Microsoft\Windows\Explorer\thumbcache_32.db&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="k">del</span> /f <span class="s2">&#34;</span><span class="nv">%userprofile%</span><span class="s2">\AppData\Local\Microsoft\Windows\Explorer\thumbcache_96.db&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="k">del</span> /f <span class="s2">&#34;</span><span class="nv">%userprofile%</span><span class="s2">\AppData\Local\Microsoft\Windows\Explorer\thumbcache_102.db&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="k">del</span> /f <span class="s2">&#34;</span><span class="nv">%userprofile%</span><span class="s2">\AppData\Local\Microsoft\Windows\Explorer\thumbcache_256.db&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="k">del</span> /f <span class="s2">&#34;</span><span class="nv">%userprofile%</span><span class="s2">\AppData\Local\Microsoft\Windows\Explorer\thumbcache_1024.db&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="k">del</span> /f <span class="s2">&#34;</span><span class="nv">%userprofile%</span><span class="s2">\AppData\Local\Microsoft\Windows\Explorer\thumbcache_idx.db&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="k">del</span> /f <span class="s2">&#34;</span><span class="nv">%userprofile%</span><span class="s2">\AppData\Local\Microsoft\Windows\Explorer\thumbcache_sr.db&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="k">start</span> explorer.exe
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /mnt/hgfs
+</span></span><span class="line"><span class="cl">sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
+</span></span><span class="line"><span class="cl">sudo vmhgfs-fuse .host:/vmshare /mnt/hgfs -o allow_other
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="5g-移动热点-所选网络波段不可用">5G 移动热点 所选网络波段不可用
-</h4><p><strong>中国开放只有149、153、157、161、165这5个信道</strong></p>
-<h4 id="1-intel-说明">1 Intel 说明
-</h4><blockquote>
-<p><a class="link" href="https://www.intel.cn/content/www/cn/zh/support/articles/000029083/wireless.html#primary-content"  target="_blank" rel="noopener"
-    >无法在 5 GHz 频段上使用 Windows® 10 移动热点功能</a></p>
+</div><blockquote>
+<p>1、内核4.0以前的共享方法：<br>
+mount -t vmhgfs .host:/ /mnt/hgfs<br>
+2、内核4.0之后的共享方法<br>
+vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</p>
 </blockquote>
-<p><strong>如何在 Windows® 10 上启用移动热点功能。</strong></p>
-<p>启用 <a class="link" href="https://support.microsoft.com/en-us/windows/use-your-pc-as-a-mobile-hotspot-c89b0fad-72d5-41e8-f7ea-406ad9036b85"  target="_blank" rel="noopener"
-    >Microsoft Windows® 10 移动热点</a> 功能的步骤。</p>
-<div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>项目</th>
-          <th>内容</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>您看到了什么？</strong></td>
-          <td>Windows® 10 移动热点允许您配置热点运行所在的网络频段。在某些情况下，您可能会出现错误，或者看不到 5 GHz 频段的选项。</td>
-      </tr>
-      <tr>
-          <td><strong>注意</strong></td>
-          <td>网络频段选项不受支持，且不会与前代英特尔®无线适配器一起出现。特别是英特尔®无线 7265 家族（ <a class="link" href="https://www.intel.cn/content/www/cn/zh/support/articles/000026395/network-and-i-o/wireless-networking.html"  target="_blank" rel="noopener"
-    >修订版本 C</a> ）以及更早的版本。</td>
-      </tr>
-      <tr>
-          <td><strong>您为什么会看到它？</strong></td>
-          <td>某些国家/地区存在监管限制，不允许热点自行在 5 GHz 频段上运行。<strong>只有当 Windows® 10 电脑连接至位于特定（被动）的 5GHz 通道上的无线接入点 （AP） 时，您才能在 5GHz 上使用热点。</strong></td>
-      </tr>
-      <tr>
-          <td><strong>如何解决.</strong></td>
-          <td>这种表现是预料之中的，由于存在特定国家的监管限制。但是，对于这些国家/地区，您可以先连接至获批准的 5GHz（被动）通道，然后再启动热点，来使用 5GHz 上的热点。</td>
-      </tr>
-  </tbody>
-</table></div>
-<h4 id="2-常用wifi信道与频段">2 常用WiFi信道与频段
-</h4><ul>
-<li>
-<p><strong>2.4g频段</strong></p>
-<p>2.4 GHz 频段范围内有每隔 5 MHz 分隔的频道14个（除了第14频道与第13频道相隔了 12 MHz）。[2] 40 MHz 频段可以由两个相邻 20 MHz 频段组成。取决于哪个频带是主（控制）频带，哪个频带是从（扩展）频带，路由器可能会显示成 1+5、5+1、9+13、13+9。 <img src="/redeem/p/win-exp/index.assets/2.4g.png"
-	width="1026"
-	height="246"
-	srcset="/redeem/p/win-exp/index.assets/2.4g_hu_1d0a5f01e12ac2fb.png 480w, /redeem/p/win-exp/index.assets/2.4g_hu_90c3aec7d8fc2931.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="417"
-		data-flex-basis="1000px"
-	
-></p>
-</li>
-<li>
-<p><strong>5g频段</strong></p>
-<ul>
-<li>
-<p><strong>5.2G频段</strong></p>
-<p>5.2G的可用信道：36、40、44、48、52、56、60、64； 由于国家使用雷达环境中会与52、56、60、64信道冲突，因此常规模式下建议避开这些雷达信道，以免出现无线终端接入问题。</p>
-<p><img src="/redeem/p/win-exp/index.assets/5.2g.png"
-	width="1024"
-	height="212"
-	srcset="/redeem/p/win-exp/index.assets/5.2g_hu_69184bd47b7224e8.png 480w, /redeem/p/win-exp/index.assets/5.2g_hu_b93b04fe0c8b14c5.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="483"
-		data-flex-basis="1159px"
-	
-></p>
-</li>
-<li>
-<p><strong>5.5G频段</strong></p>
-<p>5.5GHz 属于 5GHz 频段的一部分，在不同国家和地区具体的频率划分可能会有所不同。在中国，5GHz 频段的划分包括 5.470GHz - 5.725GHz 的频率范围。<br>
-<img src="/redeem/p/win-exp/index.assets/5.5g.png"
-	width="1025"
-	height="214"
-	srcset="/redeem/p/win-exp/index.assets/5.5g_hu_487855bc6b1660a9.png 480w, /redeem/p/win-exp/index.assets/5.5g_hu_655d445282e4cb37.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="478"
-		data-flex-basis="1149px"
-	
-></p>
-</li>
-<li>
-<p><strong>5.8G频段</strong></p>
-<p>5.8GHz频段，<strong>中国开放只有149、153、157、161、165这5个信道</strong>； 其中可支持一组80MHz信道捆绑（149-161）或两组40MHz捆绑（149-153和157-161）； 所以165信道支持20MHz频宽。 165信道不可见是因为当前频宽为20MHz，改频宽后可见。</p>
-<p><img src="/redeem/p/win-exp/index.assets/5.8g.png"
-	width="1025"
-	height="173"
-	srcset="/redeem/p/win-exp/index.assets/5.8g_hu_9b598785b65fb427.png 480w, /redeem/p/win-exp/index.assets/5.8g_hu_c53dc74aa41c072e.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="592"
-		data-flex-basis="1421px"
-	
-></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="剪切板数量">剪切板数量
-</h3>
+<h4 id="自动挂载">自动挂载
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo cp /etc/fstab /etc/fstab.bak
+</span></span><span class="line"><span class="cl">sudo vim /etc/fstab
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>在最后一行插入这样一句<br>
+.host:/vmshare /mnt/hgfs fuse.vmhgfs-fuse allow_other,defaults 0 0<br>
+.host:/ /mnt/share fuse.vmhgfs-fuse allow_other 0 0 #或者尝试</p>
+</blockquote>
+<h3 id="virtualbox">VirtualBox
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir share
+</span></span><span class="line"><span class="cl">sudo mount -t vboxsf vbshare ~/Desktop/fileshare
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>sudo umount -f /mnt/shared</p>
+</blockquote>
+
 </section>
 
 
@@ -634,7 +735,19 @@
 
         <span>采用 CC BY-NC-SA 4.0 许可</span>
     </section>
-    </footer>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Jan 29, 2026 04:15 &#43;0800
+        </span>
+    </section></footer>
 
 
     

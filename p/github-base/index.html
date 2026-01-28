@@ -303,6 +303,12 @@
     <li><a href="#clone">clone</a></li>
     <li><a href="#submodule">submodule</a></li>
     <li><a href="#注意事项">注意事项</a></li>
+    <li><a href="#release批量下载">release批量下载</a>
+      <ol>
+        <li><a href="#组件">组件</a></li>
+        <li><a href="#步骤">步骤</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -371,7 +377,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 3 分钟
                 </time>
             </div>
         
@@ -514,6 +520,206 @@
 <li>clone 和 submodule 的文件不会真正上传，可能导致自动执行的job失败</li>
 <li>通过 .git 文件夹判断是不是一个项目</li>
 </ol>
+<h2 id="release批量下载">release批量下载
+</h2><h3 id="组件">组件
+</h3><ul>
+<li><a class="link" href="https://cli.github.com/"  target="_blank" rel="noopener"
+    >GitHub CLI | Take GitHub to the command line</a></li>
+</ul>
+<h3 id="步骤">步骤
+</h3><ol>
+<li>
+<p><strong>设置代理</strong></p>
+</li>
+<li>
+<p><strong>授权</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">auth</span> <span class="n">login</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>可选<br>
+<img src="/redeem/p/github-base/index.assets/image-20260128235910243.png"
+	width="1835"
+	height="530"
+	srcset="/redeem/p/github-base/index.assets/image-20260128235910243_hu_4bc4e9700313b1ec.png 480w, /redeem/p/github-base/index.assets/image-20260128235910243_hu_835b6ba591120294.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="346"
+		data-flex-basis="830px"
+	
+></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<p>**默认查看最近 30 个版本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">list</span> <span class="n">-R</span> <span class="p">&lt;</span><span class="n">username</span><span class="p">&gt;/&lt;</span><span class="n">repo</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>示例</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">list</span> <span class="n">-R</span> <span class="nb">Make-md</span><span class="p">/</span><span class="n">makemd</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>自定义查看更多版本（如 50 或 100 个）</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">list</span> <span class="n">-R</span> <span class="p">&lt;</span><span class="n">username</span><span class="p">&gt;/&lt;</span><span class="n">repo</span><span class="p">&gt;</span> <span class="p">-</span><span class="n">-limit</span> <span class="p">&lt;</span><span class="n">number</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>示例：</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">list</span> <span class="n">-R</span> <span class="nb">Make-md</span><span class="p">/</span><span class="n">makemd</span> <span class="p">-</span><span class="n">-limit</span> <span class="mf">100</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>下载特定版本的 Release 文件</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">download</span> <span class="p">&lt;</span><span class="n">tag</span><span class="p">&gt;</span> <span class="n">-D</span> <span class="p">&lt;</span><span class="n">dest</span><span class="p">&gt;</span> <span class="n">-R</span> <span class="p">&lt;</span><span class="n">username</span><span class="p">&gt;/&lt;</span><span class="n">repo</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>示例：</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">download</span> <span class="mf">0.8</span><span class="p">.</span><span class="py">14</span> <span class="n">-D</span> <span class="n">E:</span><span class="p">\</span><span class="n">Documents</span><span class="p">\</span><span class="n">Desktop</span> <span class="n">-R</span> <span class="nb">Make-md</span><span class="p">/</span><span class="n">makemd</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>下载最新版本的 Release 文件</strong></p>
+<blockquote>
+<p>不指定对应的 <code>tag</code> 参数，默认下载的就是最新（Latest）版本的 Release。</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">download</span> <span class="n">-D</span> <span class="p">&lt;</span><span class="n">dest</span><span class="p">&gt;</span> <span class="n">-R</span> <span class="p">&lt;</span><span class="n">username</span><span class="p">&gt;/&lt;</span><span class="n">repo</span><span class="p">&gt;</span> <span class="n">-p</span> <span class="p">*</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>示例：</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">download</span> <span class="n">-D</span> <span class="n">E:</span><span class="p">\</span><span class="n">Documents</span><span class="p">\</span><span class="n">Desktop</span> <span class="n">-R</span> <span class="nb">Make-md</span><span class="p">/</span><span class="n">makemd</span> <span class="n">-p</span> <span class="p">*</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>下载最新发行版的源代码存档 (ZIP)</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">download</span> <span class="n">-D</span> <span class="p">&lt;</span><span class="n">dest</span><span class="p">&gt;</span> <span class="n">-R</span> <span class="p">&lt;</span><span class="n">username</span><span class="p">&gt;/&lt;</span><span class="n">repo</span><span class="p">&gt;</span> <span class="n">-A</span> <span class="n">zip</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>示例：</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">download</span> <span class="n">-D</span> <span class="n">E:</span><span class="p">\</span><span class="n">Documents</span><span class="p">\</span><span class="n">Desktop</span><span class="p">\</span><span class="n">test</span> <span class="n">-R</span> <span class="nb">Make-md</span><span class="p">/</span><span class="n">makemd</span> <span class="n">-A</span> <span class="n">zip</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>下载特定发行版的源代码存档</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">download</span> <span class="p">&lt;</span><span class="n">tag</span><span class="p">&gt;</span> <span class="n">-D</span> <span class="p">&lt;</span><span class="n">dest</span><span class="p">&gt;</span> <span class="n">-R</span> <span class="p">&lt;</span><span class="n">username</span><span class="p">&gt;/&lt;</span><span class="n">repo</span><span class="p">&gt;</span> <span class="p">-</span><span class="n">-archive</span><span class="p">=</span><span class="n">zip</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>示例：</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">download</span> <span class="mf">0.7</span><span class="p">.</span><span class="py">6</span> <span class="n">-D</span> <span class="n">E:</span><span class="p">\</span><span class="n">Documents</span><span class="p">\</span><span class="n">Desktop</span> <span class="n">-R</span> <span class="nb">Make-md</span><span class="p">/</span><span class="n">makemd</span> <span class="p">-</span><span class="n">-archive</span><span class="p">=</span><span class="n">zip</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>下载所有版本的 Release 资源文件</strong></p>
+<blockquote>
+<p>使用通配符 <code>-p &quot;*&quot;</code> 下载仓库中所有 Release 的资产文件。</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">download</span> <span class="n">-p</span> <span class="s2">&#34;*&#34;</span> <span class="n">-D</span> <span class="p">&lt;</span><span class="n">dest</span><span class="p">&gt;</span> <span class="n">-R</span> <span class="p">&lt;</span><span class="n">username</span><span class="p">&gt;/&lt;</span><span class="n">repo</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>示例：</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">download</span> <span class="n">-p</span> <span class="s2">&#34;*&#34;</span> <span class="n">-D</span> <span class="n">E:</span><span class="p">\</span><span class="n">Documents</span><span class="p">\</span><span class="n">Desktop</span> <span class="n">-R</span> <span class="nb">Make-md</span><span class="p">/</span><span class="n">makemd</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>批量下载所有版本的源代码存档 (PowerShell 脚本)</strong></p>
+<blockquote>
+<p>此命令会自动提取版本号并循环执行下载，下次使用时只需更改仓库名称。</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gh</span> <span class="n">release</span> <span class="n">list</span> <span class="n">-R</span> <span class="nb">Make-md</span><span class="p">/</span><span class="n">makemd</span> <span class="p">|</span> <span class="nb">Select-String</span> <span class="n">-Pattern</span> <span class="s1">&#39;\d+\.\d+(\.\d+)?&#39;</span> <span class="p">|</span> <span class="p">%{</span><span class="nv">$_</span><span class="p">.</span><span class="py">Matches</span><span class="p">.</span><span class="n">Value</span><span class="p">}</span> <span class="p">|</span> <span class="nb">ForEach-Object</span> <span class="p">{</span><span class="nb">Write-Host</span> <span class="s2">&#34;Downloading version </span><span class="nv">$_</span><span class="s2">...&#34;</span> <span class="p">;</span> <span class="n">gh</span> <span class="n">release</span> <span class="n">download</span> <span class="nv">$_</span> <span class="n">-D</span> <span class="n">E:</span><span class="p">\</span><span class="n">Documents</span><span class="p">\</span><span class="n">Desktop</span><span class="p">\</span><span class="n">test</span> <span class="n">-R</span> <span class="nb">Make-md</span><span class="p">/</span><span class="n">makemd</span> <span class="n">-A</span> <span class="n">zip</span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
 
 </section>
 

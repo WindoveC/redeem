@@ -13,8 +13,8 @@
         <pubDate>Fri, 26 Dec 2025 14:23:14 +0800</pubDate>
         
         <guid>https://windovec.github.io/redeem/p/win-exp/</guid>
-        <description>&lt;h3 id=&#34;开启终端和命令行代理脚本&#34;&gt;开启终端和命令行代理脚本
-&lt;/h3&gt;&lt;ul&gt;
+        <description>&lt;h4 id=&#34;开启终端和命令行代理脚本&#34;&gt;开启终端和命令行代理脚本
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;最终&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -99,8 +99,8 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;清除资源管理器图标缓存&#34;&gt;清除资源管理器图标缓存
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h4 id=&#34;清除资源管理器图标缓存&#34;&gt;清除资源管理器图标缓存
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -128,10 +128,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;start&lt;/span&gt; explorer.exe
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;5g-移动热点-所选网络波段不可用&#34;&gt;5G 移动热点 所选网络波段不可用
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;中国开放只有149、153、157、161、165这5个信道&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;1-intel-说明&#34;&gt;1 Intel 说明
-&lt;/h3&gt;&lt;blockquote&gt;
+&lt;/div&gt;&lt;h4 id=&#34;5g-移动热点-所选网络波段不可用&#34;&gt;5G 移动热点 所选网络波段不可用
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;中国开放只有149、153、157、161、165这5个信道&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;1-intel-说明&#34;&gt;1 Intel 说明
+&lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.intel.cn/content/www/cn/zh/support/articles/000029083/wireless.html#primary-content&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;无法在 5 GHz 频段上使用 Windows® 10 移动热点功能&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -165,8 +165,8 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;2-常用wifi信道与频段&#34;&gt;2 常用WiFi信道与频段
-&lt;/h3&gt;&lt;ul&gt;
+&lt;h4 id=&#34;2-常用wifi信道与频段&#34;&gt;2 常用WiFi信道与频段
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;2.4g频段&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;2.4 GHz 频段范围内有每隔 5 MHz 分隔的频道14个（除了第14频道与第13频道相隔了 12 MHz）。[2] 40 MHz 频段可以由两个相邻 20 MHz 频段组成。取决于哪个频带是主（控制）频带，哪个频带是从（扩展）频带，路由器可能会显示成 1+5、5+1、9+13、13+9。 &lt;img src=&#34;https://windovec.github.io/redeem/p/win-exp/index.assets/2.4g.png&#34;
@@ -203,7 +203,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;5.5G频段&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;5.5GHz 属于 5GHz 频段的一部分，在不同国家和地区具体的频率划分可能会有所不同。在中国，5GHz 频段的划分包括 5.470GHz - 5.725GHz 的频率范围。
+&lt;p&gt;5.5GHz 属于 5GHz 频段的一部分，在不同国家和地区具体的频率划分可能会有所不同。在中国，5GHz 频段的划分包括 5.470GHz - 5.725GHz 的频率范围。&lt;br&gt;
 &lt;img src=&#34;https://windovec.github.io/redeem/p/win-exp/index.assets/5.5g.png&#34;
 	width=&#34;1025&#34;
 	height=&#34;214&#34;
@@ -236,7 +236,8 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
+&lt;h3 id=&#34;剪切板数量&#34;&gt;剪切板数量
+&lt;/h3&gt;</description>
         </item>
         
     </channel>

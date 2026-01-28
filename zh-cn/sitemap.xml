@@ -2,23 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://windovec.github.io/redeem/</loc>
-    <lastmod>2026-01-22T09:05:58+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://windovec.github.io/redeem/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://windovec.github.io/redeem/"
-                />
+    <loc>https://windovec.github.io/redeem/p/linux/</loc>
+    <lastmod>2026-01-29T04:15:54+08:00</lastmod>
   </url><url>
     <loc>https://windovec.github.io/redeem/post/</loc>
-    <lastmod>2026-01-22T09:05:58+08:00</lastmod>
+    <lastmod>2026-01-29T04:15:54+08:00</lastmod>
   </url><url>
-    <loc>https://windovec.github.io/redeem/p/%E4%BB%A3%E7%90%86/</loc>
+    <loc>https://windovec.github.io/redeem/p/android/</loc>
+    <lastmod>2026-01-29T04:15:54+08:00</lastmod>
+  </url><url>
+    <loc>https://windovec.github.io/redeem/p/swr/</loc>
+    <lastmod>2026-01-29T04:15:54+08:00</lastmod>
+  </url><url>
+    <loc>https://windovec.github.io/redeem/p/proxy/</loc>
     <lastmod>2026-01-22T09:05:58+08:00</lastmod>
   </url><url>
     <loc>https://windovec.github.io/redeem/p/idea-base/</loc>
@@ -68,10 +64,23 @@
     <lastmod>2025-12-22T22:18:59+08:00</lastmod>
   </url><url>
     <loc>https://windovec.github.io/redeem/page/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-27T17:21:48+08:00</lastmod>
   </url><url>
     <loc>https://windovec.github.io/redeem/archives/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-24T17:10:24+08:00</lastmod>
+  </url><url>
+    <loc>https://windovec.github.io/redeem/</loc>
+    <lastmod>2025-12-24T17:10:24+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://windovec.github.io/redeem/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://windovec.github.io/redeem/"
+                />
   </url><url>
     <loc>https://windovec.github.io/redeem/tags/</loc>
     <xhtml:link
@@ -86,9 +95,12 @@
                 />
   </url><url>
     <loc>https://windovec.github.io/redeem/%E5%85%B3%E4%BA%8E/</loc>
+    <lastmod>2025-12-26T18:52:55+08:00</lastmod>
   </url><url>
     <loc>https://windovec.github.io/redeem/%E9%93%BE%E6%8E%A5/</loc>
+    <lastmod>2025-12-27T17:21:48+08:00</lastmod>
   </url><url>
     <loc>https://windovec.github.io/redeem/search/</loc>
+    <lastmod>2025-12-24T17:10:24+08:00</lastmod>
   </url>
 </urlset>
