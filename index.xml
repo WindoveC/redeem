@@ -6628,7 +6628,7 @@ Goldmark by @yuin is now the new default library used for Markdown in Hugo. （N
 &lt;/h2&gt;</description>
         </item>
         <item>
-        <title>Github的基础使用</title>
+        <title>git的基础使用</title>
         <link>https://windovec.github.io/redeem/p/github-base/</link>
         <pubDate>Mon, 22 Dec 2025 23:24:37 +0800</pubDate>
         
@@ -6961,6 +6961,212 @@ Goldmark by @yuin is now the new default library used for Markdown in Hugo. （N
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;提交说明&#34;&gt;提交说明
+&lt;/h2&gt;&lt;h3 id=&#34;什么是约定式提交&#34;&gt;什么是&lt;a class=&#34;link&#34; href=&#34;https://zhida.zhihu.com/search?content_id=232220431&amp;amp;content_type=Article&amp;amp;match_order=1&amp;amp;q=%e7%ba%a6%e5%ae%9a%e5%bc%8f%e6%8f%90%e4%ba%a4&amp;amp;zhida_source=entity&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;约定式提交&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;约定式提交（&lt;a class=&#34;link&#34; href=&#34;https://zhida.zhihu.com/search?content_id=232220431&amp;amp;content_type=Article&amp;amp;match_order=1&amp;amp;q=Conventional&amp;#43;Commits&amp;amp;zhida_source=entity&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Conventional Commits&lt;/a&gt;）是一种用于代码版本控制的规范，旨在通过明确和标准化提交信息来提高代码协作质量和效率。其基本原则是通过规定提交信息的结构和语义来提高代码版本控制的可读性、可维护性和自动化程度。&lt;/p&gt;
+&lt;p&gt;约定式提交规范通常要求提交信息包括一个描述性的&amp;quot;类型&amp;quot;、一个可选的&amp;quot;作用域&amp;quot;、一个用于简洁说明的&amp;quot;主题&amp;quot;，以及可选的&amp;quot;正文&amp;quot;和&amp;quot;尾部&amp;quot;等组成部分。这些组成部分的格式和语义都是根据规范要求进行约定的，比如使用&amp;quot;feat&amp;quot;来表示新功能、&amp;ldquo;fix&amp;quot;表示修复错误、&amp;ldquo;docs&amp;quot;表示文档变更等。&lt;/p&gt;
+&lt;p&gt;通过遵循约定式提交规范，开发人员可以更容易地理解和管理代码的变更历史，同时也为自动化工具提供了更多可靠的信息，例如自动生成版本号、发布日志和代码库更新等操作。&lt;/p&gt;
+&lt;h3 id=&#34;提交说明的结构&#34;&gt;提交说明的结构
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;type&amp;gt;[optional scope]: &amp;lt;description&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[optional body]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[optional footer(s)]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;译文&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;类型&amp;gt;[可选 范围]: &amp;lt;描述&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[可选 正文]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[可选 脚注]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;范围scope&#34;&gt;范围（scope）
+&lt;/h4&gt;&lt;p&gt;可以为提交类型添加一个围在圆括号内的作用域，以为其提供额外的上下文信息。例如 &lt;code&gt;feat(parser): adds ability to parse arrays.&lt;/code&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;breaking-change&#34;&gt;BREAKING CHANGE
+&lt;/h4&gt;&lt;p&gt;在可选的正文或脚注的起始位置带有 &lt;code&gt;BREAKING CHANGE:&lt;/code&gt; 的提交，表示引入了破坏性 API 变更（这和语义化版本中的 &lt;a class=&#34;link&#34; href=&#34;https://link.juejin.cn?target=https%3A%2F%2Fsemver.org%2Flang%2Fzh-CN%2F%23%E6%91%98%E8%A6%81&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;MAJOR&lt;/code&gt;&lt;/a&gt; 相对应）。 破坏性变更可以是任意 &lt;em&gt;类型&lt;/em&gt; 提交的一部分。&lt;/p&gt;
+&lt;h3 id=&#34;约定式提交规范&#34;&gt;约定式提交规范
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;每个提交都&lt;strong&gt;必须&lt;/strong&gt;使用类型字段前缀，它由一个名词组成，诸如&lt;code&gt;feat&lt;/code&gt;或&lt;code&gt;fix&lt;/code&gt;，其后接一个&lt;strong&gt;可选的&lt;/strong&gt;作用域字段，以及一个&lt;strong&gt;必要的&lt;/strong&gt;冒号（英文半角）和空格。&lt;/li&gt;
+&lt;li&gt;当一个提交为应用或类库实现了新特性时，&lt;strong&gt;必须&lt;/strong&gt;使用&lt;code&gt;feat&lt;/code&gt;类型。&lt;/li&gt;
+&lt;li&gt;当一个提交为应用修复 bug 时，&lt;strong&gt;必须&lt;/strong&gt;使用&lt;code&gt;fix&lt;/code&gt;类型。&lt;/li&gt;
+&lt;li&gt;作用域字段可以跟随在类型字段后面。作用有&lt;strong&gt;必须&lt;/strong&gt;是一个描述某部分代码的名词，并用圆括号包围，例如：&lt;code&gt;fix(parser): &lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;描述字段&lt;strong&gt;必须&lt;/strong&gt;紧接在类型/作用域前缀的空格之后。描述指的是对代码变更的简短总结，例如：&lt;code&gt;fix:array parsing issue when multiplejspaces were contained in string&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;在简短描述之后，&lt;strong&gt;可以&lt;/strong&gt;编写更长的提交正文，为代码变更提供额外的上下文信息。正文&lt;strong&gt;必须&lt;/strong&gt;起始于描述字段结束的一个空行后。&lt;/li&gt;
+&lt;li&gt;在正文结束的一个空行之后，&lt;strong&gt;可以&lt;/strong&gt;编写一行或或多行脚注。脚注&lt;strong&gt;必须&lt;/strong&gt;包含关于提交的元信息，例如：关联的合并请求、Reviewer、破坏性变更、每条元信息一行。&lt;/li&gt;
+&lt;li&gt;破坏性变更&lt;strong&gt;必须&lt;/strong&gt;标示在正文区域最开始处，或脚注区域中某一行的开始。一个破坏性变更&lt;strong&gt;必须&lt;/strong&gt;包含大写的文本&lt;code&gt;BREAKING CHANGE&lt;/code&gt;，后面紧跟冒号和空格。&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;BREAKING CHANGE:&lt;/code&gt;之后&lt;strong&gt;必须&lt;/strong&gt;提供描述，以描述对 API 的变更。例如：&lt;code&gt;BREAKING CHANGE: enviroment variables now take precedence over cofig files&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;在提交说明中，&lt;strong&gt;可以&lt;/strong&gt;使用&lt;code&gt;feat&lt;/code&gt;和&lt;code&gt;fix&lt;/code&gt;之外的类型。&lt;/li&gt;
+&lt;li&gt;工具的实现&lt;strong&gt;必须不&lt;/strong&gt;区分大小写地解析构成约定式提交的信息单元，只有&lt;code&gt;BREAKING CHANGE&lt;/code&gt;  &lt;strong&gt;必须&lt;/strong&gt;是大写的。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可以&lt;/strong&gt;在类型/作用域前缀之后，&lt;code&gt;:&lt;/code&gt;之前，附加&lt;code&gt;!&lt;/code&gt;字符，以进一步提醒注意破坏性变更。当有&lt;code&gt;!&lt;/code&gt;前缀时，正文或脚注内必须包含&lt;code&gt;BREAKING CHANGE: description&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;示例&#34;&gt;示例
+&lt;/h3&gt;&lt;p&gt;包含了描述并且脚注中有破坏性变更的提交说明&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;feat: allow provided config object to extend other configs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;BREAKING CHANGE: `extends` key in config file is now used for extending other config files
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;包含了 &lt;code&gt;!&lt;/code&gt; 字符以提醒注意破坏性变更的提交说明&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;feat!: send an email to the customer when a product is shipped
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;包含了范围和破坏性变更 &lt;code&gt;!&lt;/code&gt; 的提交说明&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; feat(api)!: send an email to the customer when a product is shipped
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;包含了 &lt;code&gt;!&lt;/code&gt; 和 BREAKING CHANGE 脚注的提交说明&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; chore!: drop support for Node 6  BREAKING CHANGE: use JavaScript features not available in Node 6.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;不包含正文的提交说明&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; docs: correct spelling of CHANGELOG
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;包含范围的提交说明&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; feat(lang): add polish language
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;包含多行正文和多行脚注的提交说明&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fix: prevent racing of requests
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Introduce a request id and a reference to latest request. Dismiss
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;incoming responses other than from latest request.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Remove timeouts which were used to mitigate the racing issue but are
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;obsolete now.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Reviewed-by: Z
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Refs: #123
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;type-类型概览&#34;&gt;type 类型概览
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;值&lt;/th&gt;
+          &lt;th&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;feat&lt;/td&gt;
+          &lt;td&gt;在代码库中新增了一个功能（这和语义化版本中的 &lt;a class=&#34;link&#34; href=&#34;https://link.juejin.cn/?target=https%3A%2F%2Fsemver.org%2Flang%2Fzh-CN%2F%23%E6%91%98%E8%A6%81&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;MINOR&lt;/code&gt;&lt;/a&gt; 相对应）。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;fix&lt;/td&gt;
+          &lt;td&gt;在代码库中修复了一个 bug （这和语义化版本中的 &lt;a class=&#34;link&#34; href=&#34;https://link.juejin.cn/?target=https%3A%2F%2Fsemver.org%2Flang%2Fzh-CN%2F%23%E6%91%98%E8%A6%81&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;PATCH&lt;/code&gt;&lt;/a&gt; 相对应）。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;docs&lt;/td&gt;
+          &lt;td&gt;文档变更&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;style&lt;/td&gt;
+          &lt;td&gt;代码格式（不影响功能，例如空格、分号等格式修正）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;refactor&lt;/td&gt;
+          &lt;td&gt;代码重构&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;perf&lt;/td&gt;
+          &lt;td&gt;改善性能&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;test&lt;/td&gt;
+          &lt;td&gt;测试&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;build&lt;/td&gt;
+          &lt;td&gt;变更项目构建或外部依赖（例如scopes: webpack、gulp、npm等）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ci&lt;/td&gt;
+          &lt;td&gt;更改持续集成软件的配置文件和package中的scripts命令，例如scopes: Travis, Circle等&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;chore&lt;/td&gt;
+          &lt;td&gt;变更构建流程或辅助工具&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;revert&lt;/td&gt;
+          &lt;td&gt;代码回退&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 </description>
         </item>
         <item>
