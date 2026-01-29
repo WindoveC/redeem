@@ -299,6 +299,23 @@
             <nav id="TableOfContents">
   <ol>
     <li><a href="#初始化仓库">初始化仓库</a></li>
+    <li><a href="#双人开发流程">双人开发流程</a>
+      <ol>
+        <li><a href="#核心原则">核心原则</a></li>
+        <li><a href="#第一部分标准工作流-feature-branch-workflow">第一部分：标准工作流 (Feature Branch Workflow)</a>
+          <ol>
+            <li><a href="#1-项目初始化仅需一次">1. 项目初始化（仅需一次）</a></li>
+            <li><a href="#2-日常开发循环核心四步">2. 日常开发循环（核心四步）</a></li>
+          </ol>
+        </li>
+        <li><a href="#第二部分应对突发状况-git-stash">第二部分：应对突发状况 (Git Stash)</a></li>
+        <li><a href="#第三部分解决代码冲突-conflict-resolution">第三部分：解决代码冲突 (Conflict Resolution)</a>
+          <ol>
+            <li><a href="#团队协作黄金法则">团队协作“黄金法则”</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
     <li><a href="#清除缓存">清除缓存</a></li>
     <li><a href="#clone">clone</a></li>
     <li><a href="#submodule">submodule</a></li>
@@ -309,7 +326,7 @@
         <li><a href="#步骤">步骤</a></li>
       </ol>
     </li>
-    <li><a href="#提交说明">提交说明</a>
+    <li><a href="#commit">commit</a>
       <ol>
         <li><a href="#什么是约定式提交">什么是约定式提交</a></li>
         <li><a href="#提交说明的结构">提交说明的结构</a>
@@ -321,6 +338,56 @@
         <li><a href="#约定式提交规范">约定式提交规范</a></li>
         <li><a href="#示例">示例</a></li>
         <li><a href="#type-类型概览">type 类型概览</a></li>
+      </ol>
+    </li>
+    <li><a href="#查看旧代码">查看旧代码</a>
+      <ol>
+        <li><a href="#游离-detached-状态">游离 (detached) 状态</a></li>
+      </ol>
+    </li>
+    <li><a href="#git-checkout">Git Checkout</a>
+      <ol>
+        <li><a href="#概述">概述</a></li>
+        <li><a href="#核心语法">核心语法</a></li>
+        <li><a href="#主要功能详解">主要功能详解</a>
+          <ol>
+            <li><a href="#分支切换-switching-branches">分支切换 (Switching Branches)</a></li>
+            <li><a href="#创建并切换分支-create-and-checkout">创建并切换分支 (Create and Checkout)</a></li>
+            <li><a href="#撤销本地修改-discard-changes">撤销本地修改 (Discard Changes)</a></li>
+            <li><a href="#检出特定提交-detached-head-state">检出特定提交 (Detached HEAD State)</a></li>
+          </ol>
+        </li>
+        <li><a href="#新版命令演进">新版命令演进</a></li>
+        <li><a href="#常见问题排查">常见问题排查</a></li>
+      </ol>
+    </li>
+    <li><a href="#reset-vs-revert-vs-rebase">Reset vs Revert vs Rebase</a>
+      <ol>
+        <li><a href="#概述-1">概述</a></li>
+        <li><a href="#对比矩阵">对比矩阵</a></li>
+        <li><a href="#解析">解析</a>
+          <ol>
+            <li><a href="#git-reset-重置">git reset (重置)</a></li>
+            <li><a href="#git-revert-回滚">git revert (回滚)</a></li>
+            <li><a href="#git-rebase-变基">git rebase (变基)</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#精细化提交">精细化提交</a>
+      <ol>
+        <li><a href="#git-add--p">git add -p</a>
+          <ol>
+            <li><a href="#语句">语句</a></li>
+            <li><a href="#示例-1">示例</a></li>
+          </ol>
+        </li>
+        <li><a href="#git-commit-amend">git commit &ndash;amend</a>
+          <ol>
+            <li><a href="#修改备注">修改备注</a></li>
+            <li><a href="#修改文件">修改文件</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -391,7 +458,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 6 分钟
+                    阅读时长: 19 分钟
                 </time>
             </div>
         
@@ -417,9 +484,9 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git init
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init
 </span></span><span class="line"><span class="cl">git add .
-</span></span><span class="line"><span class="cl">git commit -m &#34;first commit&#34;
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;first commit&#34;</span>
 </span></span><span class="line"><span class="cl">git branch -M main
 </span></span><span class="line"><span class="cl">git remote add origin https://github.com/WindoveC/WindoveC.github.io.git
 </span></span><span class="line"><span class="cl">git push -u origin main
@@ -427,7 +494,7 @@
 </div>
 </div><ol>
 <li>
-<p><code>git init</code></p>
+<p><strong><code>git init</code></strong></p>
 <ul>
 <li>
 <p>在当前目录初始化一个新的 Git 仓库。</p>
@@ -441,7 +508,7 @@
 </ul>
 </li>
 <li>
-<p><code>git add .</code></p>
+<p><strong><code>git add .</code></strong></p>
 <ul>
 <li>
 <p>将当前目录下所有文件和子目录（除了被 .gitignore 忽略的）添加到 暂存区（staging area）。</p>
@@ -455,7 +522,7 @@
 </ul>
 </li>
 <li>
-<p><code>git commit -m &quot;first commit&quot;</code></p>
+<p><strong><code>git commit -m &quot;first commit&quot;</code></strong></p>
 </li>
 </ol>
 <ul>
@@ -466,8 +533,8 @@
 <p>这是你项目的第一个提交（initial commit），从此 Git 开始记录变更历史。</p>
 </li>
 </ul>
-<ol start="3">
-<li><code>git branch -M main</code></li>
+<ol start="4">
+<li><strong><code>git branch -M main</code></strong></li>
 </ol>
 <ul>
 <li>
@@ -486,16 +553,16 @@
 <p>如果你刚 git init，默认分支可能是 master（取决于 Git 配置），所以这一步很关键。</p>
 </li>
 </ul>
-<ol start="3">
-<li><code>git remote add origin https://github.com/WindoveC/WindoveC.github.io.git</code></li>
+<ol start="5">
+<li><strong><code>git remote add origin https://github.com/WindoveC/WindoveC.github.io.git</code></strong></li>
 </ol>
 <ul>
 <li>将你的本地仓库与一个远程仓库关联起来。</li>
 <li>origin 是远程仓库的别名（约定俗成的名字）。</li>
 <li>后面的 URL 是你在 GitHub 上创建的仓库地址（这里是你的 GitHub Pages 仓库）。</li>
 </ul>
-<ol start="4">
-<li><code>git push -u origin main</code></li>
+<ol start="6">
+<li><strong><code>git push -u origin main</code></strong></li>
 </ol>
 <ul>
 <li>
@@ -511,6 +578,293 @@
 <p>首次推送必须指定远程名和分支名（如 origin main），之后因为有 -u，就可以简化命令。</p>
 </li>
 </ul>
+<h2 id="双人开发流程">双人开发流程
+</h2><h3 id="核心原则">核心原则
+</h3><p><strong>永远不要直接在主分支（<code>main</code> 或 <code>master</code>）上修改代码。</strong></p>
+<h3 id="第一部分标准工作流-feature-branch-workflow">第一部分：标准工作流 (Feature Branch Workflow)
+</h3><h4 id="1-项目初始化仅需一次">1. 项目初始化（仅需一次）
+</h4><ul>
+<li><strong>开发者 A</strong>：创建远程仓库，并 <code>git clone &lt;地址&gt;</code> 到本地。</li>
+<li><strong>开发者 B</strong>：直接 <code>git clone &lt;地址&gt;</code> 到本地。</li>
+</ul>
+<h4 id="2-日常开发循环核心四步">2. 日常开发循环（核心四步）
+</h4><p>假设你要开发一个新功能（例如“登录页”）：</p>
+<ol>
+<li><strong>同步起点</strong></li>
+</ol>
+<p>永远基于最新的主分支开始工作。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout main        <span class="c1"># 回到主分支</span>
+</span></span><span class="line"><span class="cl">git pull origin main     <span class="c1"># 拉取远程最新代码</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li><strong>创建分支</strong></li>
+</ol>
+<p>起一个清晰的名字（如 <code>feature/login</code>）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout -b feature/login_page
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li><strong>开发与提交</strong></li>
+</ol>
+<p>在该分支上写代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;完成登录页UI布局&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li><strong>推送与合并</strong></li>
+</ol>
+<p>功能完成后，推送到远程服务器。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git push origin feature/login_page
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在 GitHub/GitLab 网页上发起 <strong>Pull Request (PR)</strong>，邀请队友审核代码。</p>
+<ul>
+<li>
+<p><strong>Base (基础/目标分支)</strong>：选择 <strong><code>main</code></strong>。</p>
+<ul>
+<li><em>含义</em>：这是“目的地”，也就是大家公用的、稳定的代码库。</li>
+</ul>
+</li>
+<li>
+<p><strong>Compare (对比/源分支)</strong>：选择 <strong><code>feature/login_page</code></strong>。</p>
+<ul>
+<li><em>含义</em>：这是“来源”，也就是你刚刚写好、准备提交上去的新代码。</li>
+</ul>
+</li>
+<li>
+<p><strong>合并</strong>：队友审核通过后，点击网页上的 &ldquo;Merge&rdquo; 按钮。</p>
+</li>
+</ul>
+<ol start="5">
+<li>
+<p><strong>清理分支</strong></p>
+<ol>
+<li><strong>清理远程分支 (GitHub/GitLab)</strong></li>
+</ol>
+<ul>
+<li>
+<p>网页端自动删除（推荐）</p>
+<p>当你点击 &ldquo;Merge&rdquo; 按钮合并成功后，GitHub/GitLab 通常会在按钮旁边立刻弹出一个 &ldquo;Delete branch&rdquo;（删除分支）的按钮。</p>
+</li>
+<li>
+<p>命令行删除</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">语法：git push origin --delete &lt;分支名&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git push origin --delete feature/login_page
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<ol start="2">
+<li>
+<p>清理本地分支</p>
+<p>远程仓库删除分支后，本地电脑上用 <code>git branch</code> 查看，分支仍存在，需要手动删除</p>
+<ol>
+<li>
+<p>切回主分支（你不能删除自己当前站着的分支，必须先“下车”）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout main
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>拉取最新代码（告诉 Git 刚才已经合并发生了）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git pull origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>删除功能分支：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">使用 -d <span class="o">(</span>小写<span class="o">)</span> 是安全删除
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git branch -d feature/login_page
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注：如果 Git 报错说“该分支未合并”，而你确定要强制删除它（比如这个功能做废了），可以用 -D (大写) 强制删除：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git branch -D feature/login_page。
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+</li>
+<li>
+<p>清理“幽灵”分支<br>
+本地用 git branch -a 查看所有分支时，依然能看到一大堆红色的 remotes/origin/队友的分支缓存。<br>
+一键清理命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote prune origin
+</span></span><span class="line"><span class="cl">或者
+</span></span><span class="line"><span class="cl">git fetch -p
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>作用：这句话的意思是“Git，请看一眼远程服务器，如果服务器上有些分支已经没了，就把我本地的这些缓存也都清理掉。”</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="第二部分应对突发状况-git-stash">第二部分：应对突发状况 (Git Stash)
+</h3><p><strong>场景</strong>：你在 <code>feature</code> 分支上代码写了一半，全是报错（不能提交），但老板让你立刻去 <code>main</code> 分支修一个紧急 Bug。</p>
+<p>此时千万不要直接切分支，请使用“暂停键”：</p>
+<ol>
+<li>
+<p><strong>暂停手头工作（存入抽屉）</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git stash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>此时你的工作区会变干净，回到上一次提交的状态。</em></p>
+</li>
+<li>
+<p><strong>去修 Bug</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout main
+</span></span><span class="line"><span class="cl"><span class="c1"># ...修复Bug，提交，推送...</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>回到工作现场（从抽屉取出）</strong>：</p>
+<p>修完 Bug 后，切回你的功能分支，把刚才写的代码拿出来：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout feature/login_page
+</span></span><span class="line"><span class="cl">git stash pop
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>之前的代码回来了，你可以继续工作。</em></p>
+</li>
+</ol>
+<h3 id="第三部分解决代码冲突-conflict-resolution">第三部分：解决代码冲突 (Conflict Resolution)
+</h3><p><strong>场景</strong>：当你尝试合并代码（或 <code>git pull</code>）时，Git 报错提示冲突。通常是因为<strong>两个人修改了同一个文件的同一行</strong>。</p>
+<ol>
+<li><strong>识别冲突现场</strong></li>
+</ol>
+<p>打开冲突的文件，你会看到类似下面的标记：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+</span></span><span class="line"><span class="cl">这是我修改的代码（当前分支）
+</span></span><span class="line"><span class="cl">=======
+</span></span><span class="line"><span class="cl">这是队友修改的代码（传入分支）
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt;&gt;&gt;&gt;&gt; main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li><strong>手动“做手术”</strong></li>
+</ol>
+<ul>
+<li><strong>决定保留什么</strong>：保留你的？保留队友的？还是两者都要？</li>
+<li><strong>清理战场</strong>：删除 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 这些符号。</li>
+</ul>
+<p>修改后的代码可能长这样：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">这是我和队友共同商量后保留的代码
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>告诉 Git 冲突已解决</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .                        <span class="c1"># 标记文件为已解决</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;解决代码合并冲突&#34;</span>   <span class="c1"># 提交</span>
+</span></span><span class="line"><span class="cl">git push                         <span class="c1"># 推送</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h4 id="团队协作黄金法则">团队协作“黄金法则”
+</h4><ol>
+<li><strong>Commit Often (多提交)</strong>：不要憋大招。把任务拆细，写完一个小点就提交一次，方便回溯。</li>
+<li><strong>Pull Often (勤拉取)</strong>：每天开工前、准备 Push 前，都 <code>git pull origin main</code> 一下，尽量减少与队友的代码差异。</li>
+<li><strong>Talk First (先沟通)</strong>：遇到冲突如果你看不懂队友的代码，<strong>绝对不要</strong>直接删掉，先转头问他一句：“这块冲突了，我们要保留哪部分？”</li>
+</ol>
 <h2 id="清除缓存">清除缓存
 </h2><blockquote>
 <p>.gitignore不生效（关闭跟踪）</p>
@@ -734,7 +1088,7 @@
 </div>
 </div></li>
 </ul>
-<h2 id="提交说明">提交说明
+<h2 id="commit">commit
 </h2><h3 id="什么是约定式提交">什么是<a class="link" href="https://zhida.zhihu.com/search?content_id=232220431&amp;content_type=Article&amp;match_order=1&amp;q=%e7%ba%a6%e5%ae%9a%e5%bc%8f%e6%8f%90%e4%ba%a4&amp;zhida_source=entity"  target="_blank" rel="noopener"
     >约定式提交</a>
 </h3><p>约定式提交（<a class="link" href="https://zhida.zhihu.com/search?content_id=232220431&amp;content_type=Article&amp;match_order=1&amp;q=Conventional&#43;Commits&amp;zhida_source=entity"  target="_blank" rel="noopener"
@@ -940,6 +1294,745 @@
       </tr>
   </tbody>
 </table></div>
+<h2 id="查看旧代码">查看旧代码
+</h2><ul>
+<li>
+<p><strong>如果你只是想“看看”旧代码：</strong> 直接点确定即可。看完后，通过检出（Checkout）原来的分支名（如 <code>main</code>）就能回到正常轨道。</p>
+</li>
+<li>
+<p><strong>如果你想在这个提交的基础上“开始写新代码”：</strong></p>
+<ol>
+<li>点击确定进入游离状态。</li>
+<li><strong>立刻</strong>右键创建一个<strong>新分支</strong>（New Branch）。</li>
+<li>这样你就从“游离状态”回到了“分支状态”，代码也就安全了。</li>
+</ol>
+</li>
+<li>
+<p>在切换版本时，如果你当前工作区有还没保存（commit）的代码，软件提供了两个选项：</p>
+<ul>
+<li><strong>贮藏并自动恢复 (Stash &amp; Pop)：</strong> 这是最推荐的选项。它会把你当前的修改暂时存起来，切到目标提交后再把修改还原回来。</li>
+<li><strong>丢弃更改：</strong> 强制切换，你当前所有没提交的代码都会<strong>永久丢失</strong>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="游离-detached-状态">游离 (detached) 状态
+</h3><ul>
+<li><strong>什么是游离状态？</strong> 通常我们是在某个“分支”（如 <code>main</code> 或 <code>dev</code>）上工作的，HEAD 指向分支名。现在你直接指向了一个“提交”，HEAD 就像脱离了轨道，不再属于任何分支。</li>
+<li><strong>风险：</strong> 在游离状态下，你可以继续写代码并 commit，但这些新的 commit <strong>不会被记录在任何分支上</strong>。一旦你切换回其他分支，这些新写的代码就会变得难以找回（变成孤儿提交）。</li>
+</ul>
+<h2 id="git-checkout">Git Checkout
+</h2><h3 id="概述">概述
+</h3><p><code>git checkout</code> 是 Git 版本控制系统中用于更新工作区（Working Tree）的核心命令。它主要用于在不同的开发上下文（分支）之间切换，或将文件恢复到特定版本的状态。</p>
+<p>该命令通过更改 <code>HEAD</code> 指针并更新工作目录中的文件，使其与索引（Index）或指定的树对象（Tree-ish）相匹配。</p>
+<h3 id="核心语法">核心语法
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout <span class="o">[</span>选项<span class="o">]</span> &lt;分支名 <span class="p">|</span> 提交哈希 <span class="p">|</span> 文件名&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="主要功能详解">主要功能详解
+</h3><h4 id="分支切换-switching-branches">分支切换 (Switching Branches)
+</h4><p>将 <code>HEAD</code> 指针指向另一个分支，并更新工作目录以匹配该分支的状态。</p>
+<ul>
+<li>
+<p><strong>基础用法</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout &lt;branch_name&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>执行逻辑</strong>：</p>
+<ol>
+<li>Git 检查本地是否存在未提交的修改（Dirty Working Tree）。如果存在冲突，操作将被中止（除非强制切换）。</li>
+<li><code>HEAD</code> 指向 <code>&lt;branch_name&gt;</code>。</li>
+<li>工作区文件更新为 <code>&lt;branch_name&gt;</code> 的最新快照。</li>
+</ol>
+</li>
+</ul>
+<h4 id="创建并切换分支-create-and-checkout">创建并切换分支 (Create and Checkout)
+</h4><p>这是 <code>git branch</code> 和 <code>git checkout</code> 的组合命令，用于基于当前所在位置（或指定点）创建一个新分支并立即切换过去。</p>
+<ul>
+<li>
+<p><strong>语法</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout -b &lt;new_branch_name&gt; <span class="o">[</span>start_point<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>参数说明</strong>：</p>
+<ul>
+<li><code>-b</code>：表示创建新分支。</li>
+<li><code>[start_point]</code>（可选）：指定新分支基于哪个提交或远程分支创建。若省略，默认基于当前 <code>HEAD</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>示例</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl"><span class="c1"># 基于当前分支创建名为 feature/payment 的新分支</span>
+</span></span><span class="line"><span class="cl">git checkout -b feature/payment
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="撤销本地修改-discard-changes">撤销本地修改 (Discard Changes)
+</h4><p>将工作区中的文件重置为暂存区（Index）或最近一次提交（HEAD）时的状态。此操作用于放弃对文件的本地修改。</p>
+<ul>
+<li>
+<p><strong>语法</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout -- &lt;filename&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>注意</strong>：</p>
+<ul>
+<li><code>--</code> 符号用于明确分隔选项和文件名，防止文件名与分支名冲突。</li>
+<li><strong>风险提示</strong>：此操作是<strong>不可逆</strong>的。一旦执行，工作区中该文件未提交的更改将被永久覆盖。</li>
+</ul>
+</li>
+</ul>
+<h4 id="检出特定提交-detached-head-state">检出特定提交 (Detached HEAD State)
+</h4><p>可以将 <code>HEAD</code> 直接指向某个具体的提交哈希（Commit Hash），而不是指向某个分支引用。</p>
+<ul>
+<li>
+<p><strong>语法</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout &lt;commit_hash&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>状态说明</strong>：</p>
+<p>此时处于 <strong>&ldquo;Detached HEAD&rdquo;（头指针游离）</strong> 状态。</p>
+<ul>
+<li>在此状态下的提交不会属于任何现有分支。</li>
+<li>若切换到其他分支，在此期间产生的提交可能会丢失（被 Git 垃圾回收）。</li>
+<li><strong>适用场景</strong>：临时查看历史版本的代码、调试旧版本 Bug。</li>
+</ul>
+</li>
+</ul>
+<h3 id="新版命令演进">新版命令演进
+</h3><blockquote>
+<p>Git 2.23+</p>
+</blockquote>
+<p>鉴于 <code>git checkout</code> 职责过多（既负责分支切换，又负责文件恢复），容易产生混淆，Git 2.23 版本引入了两个职责更单一的新命令。建议在文档化规范中逐步推广使用新命令。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th><strong>操作目标</strong></th>
+          <th><strong>传统命令 (git checkout)</strong></th>
+          <th><strong>推荐新命令</strong></th>
+          <th><strong>语义说明</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>切换分支</strong></td>
+          <td><code>git checkout &lt;branch&gt;</code></td>
+          <td><strong><code>git switch &lt;branch&gt;</code></strong></td>
+          <td>语义明确，仅用于切换分支。</td>
+      </tr>
+      <tr>
+          <td><strong>创建并切换</strong></td>
+          <td><code>git checkout -b &lt;branch&gt;</code></td>
+          <td><strong><code>git switch -c &lt;branch&gt;</code></strong></td>
+          <td><code>-c</code> 代表 create。</td>
+      </tr>
+      <tr>
+          <td><strong>撤销文件修改</strong></td>
+          <td><code>git checkout -- &lt;file&gt;</code></td>
+          <td><strong><code>git restore &lt;file&gt;</code></strong></td>
+          <td>语义明确，表示从源恢复文件。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="常见问题排查">常见问题排查
+</h3><ul>
+<li><strong>错误：<code>error: Your local changes to the following files would be overwritten by checkout</code></strong>
+<ul>
+<li><strong>原因</strong>：当前工作区有未提交的修改，且切换目标分支也有该文件的修改，Git 无法安全覆盖。</li>
+<li><strong>解决方案</strong>：
+<ol>
+<li>提交当前修改 (<code>git commit</code>)。</li>
+<li>暂存当前修改 (<code>git stash</code>)。</li>
+<li>放弃当前修改 (<code>git restore</code> 或 <code>git checkout --</code>)。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><strong>错误：<code>fatal: 'xxx' is not a commit and a branch 'xxx' cannot be created from it</code></strong>
+<ul>
+<li><strong>原因</strong>：尝试检出的分支或提交哈希不存在。</li>
+<li><strong>解决方案</strong>：运行 <code>git branch -a</code> 或 <code>git log</code> 确认名称正确。</li>
+</ul>
+</li>
+</ul>
+<h2 id="reset-vs-revert-vs-rebase">Reset vs Revert vs Rebase
+</h2>
+            <link rel="stylesheet" href="/redeem/css/vendors/admonitions.a5128328e65b14e9af1bfc5d96ffbcc40978b6d81dbeecb7f70959b501ee715c.css" integrity="sha256-pRKDKOZbFOmvG/xdlv&#43;8xAl4ttgdvuy39wlZtQHucVw=" crossorigin="anonymous">
+    <div class="admonition warning">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+        <span>Warning</span>
+      </div>
+      <div class="admonition-content">
+        <p>Git 的黄金法则 —— <strong>永远不要对已经推送到公共仓库的提交执行 <code>reset</code> 或 <code>rebase</code>。</strong> 这会导致其他协作者的历史记录混乱。</p>
+      </div>
+    </div><h3 id="概述-1">概述
+</h3><ul>
+<li><strong><code>git reset</code> (重置)</strong>：<strong>“时光倒流”</strong>。将当前分支的指针移回过去的某个时刻，如同从未发生过之后的提交。属于<strong>破坏性</strong>操作。</li>
+<li><strong><code>git revert</code> (回滚)</strong>：<strong>“负负得正”</strong>。创建一个新的提交，其内容是撤销之前的某次修改。属于<strong>增量式</strong>操作，保留历史痕迹。</li>
+<li><strong><code>git rebase</code> (变基)</strong>：<strong>“移花接木”</strong>。将一系列提交暂存，然后在一个新的基点上重新应用一遍。用于保持提交记录的线性整洁。</li>
+</ul>
+<h3 id="对比矩阵">对比矩阵
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th><strong>维度</strong></th>
+          <th><strong>git reset</strong></th>
+          <th><strong>git revert</strong></th>
+          <th><strong>git rebase</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>核心动作</strong></td>
+          <td><strong>移动</strong>指针 (回退)</td>
+          <td><strong>新增</strong>提交 (抵消)</td>
+          <td><strong>复制并重放</strong>提交 (移动基底)</td>
+      </tr>
+      <tr>
+          <td><strong>历史记录</strong></td>
+          <td>被修改 (变短)</td>
+          <td>被保留 (变长)</td>
+          <td>被重写 (线性化)</td>
+      </tr>
+      <tr>
+          <td><strong>Commit ID</strong></td>
+          <td>可能会丢失旧 ID</td>
+          <td>产生新 ID，旧 ID 不变</td>
+          <td>产生全新的 ID (旧的被丢弃)</td>
+      </tr>
+      <tr>
+          <td><strong>安全性</strong></td>
+          <td><strong>高风险</strong> (可能丢失代码)</td>
+          <td><strong>安全</strong> (无损操作)</td>
+          <td><strong>中风险</strong> (需处理冲突)</td>
+      </tr>
+      <tr>
+          <td><strong>协作影响</strong></td>
+          <td><strong>严禁</strong>用于公共分支</td>
+          <td><strong>推荐</strong>用于公共分支</td>
+          <td><strong>慎用</strong>于公共分支</td>
+      </tr>
+      <tr>
+          <td><strong>主要目的</strong></td>
+          <td>修正本地错误</td>
+          <td>修正线上 Bug</td>
+          <td>保持提交历史整洁/同步</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="解析">解析
+</h3><h4 id="git-reset-重置">git reset (重置)
+</h4><p><code>git reset</code> 通过移动 <code>HEAD</code> 指针和当前分支引用来“重写历史”。</p>
+<ul>
+<li>
+<p><strong>基本语法</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git reset <span class="o">[</span>&lt;mode&gt;<span class="o">]</span> <span class="o">[</span>&lt;commit&gt;<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>工作原理</strong>：</p>
+<p>假设提交历史为 <code>A -&gt; B -&gt; C</code>，当前 HEAD 指向 C。</p>
+<p>执行 <code>git reset --hard B</code> 后，历史变为 <code>A -&gt; B</code>。提交 C 实际上被“孤立”并最终会被 Git 的垃圾回收机制清除。</p>
+</li>
+<li>
+<p><strong>三种核心模式</strong>：</p>
+<ol>
+<li><code>--soft</code>：回退指针，但<strong>保留</strong>工作区和暂存区的修改（变更为“待提交”状态）。</li>
+<li><code>--mixed</code> (默认)：回退指针，保留工作区修改，但<strong>重置</strong>暂存区（变更为“未暂存”状态）。</li>
+<li><code>--hard</code>：回退指针，<strong>彻底删除</strong>工作区和暂存区的所有修改。</li>
+</ol>
+</li>
+<li>
+<p><strong>适用场景</strong>：</p>
+<ul>
+<li>撤销<strong>本地</strong>（尚未 Push）的错误提交。</li>
+<li>合并多个未推送的提交（Squash）。</li>
+</ul>
+</li>
+<li>
+<p><strong>示例</strong>：</p>
+<p><strong>场景 A：提交太早了，想撤销 Commit 但保留代码继续写</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># HEAD^ 表示回退到上一个版本</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 效果：刚才 commit 的代码回到了暂存区 (staged)，你可以继续修改文件然后再次 commit</span>
+</span></span><span class="line"><span class="cl">git reset --soft HEAD^
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>场景 B：刚才写的代码全是垃圾，想彻底重置</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 效果：彻底丢弃当前所有未提交的修改，且回退到 a1b2c3d 这个版本</span>
+</span></span><span class="line"><span class="cl">git reset --hard a1b2c3d
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>场景 C：把暂存区的文件移除 (Unstage)</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 场景：你 git add . 把所有文件都放进去了，但其中有一个 file.txt 不想提交</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 效果：file.txt 变回“未暂存”状态，但文件内容还在</span>
+</span></span><span class="line"><span class="cl">git reset HEAD file.txt
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="git-revert-回滚">git revert (回滚)
+</h4><p><code>git revert</code> 不删除历史，而是通过添加新历史来抵消旧历史。</p>
+<ul>
+<li>
+<p><strong>基本语法</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git revert <span class="o">[</span>options<span class="o">]</span> &lt;commit&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>常用参数</strong><br>
+<strong><code>-n</code> (or <code>--no-commit</code>)</strong>：执行回滚操作，但不自动生成提交。允许你在手动调整后再提交。</p>
+</li>
+<li>
+<p><strong>工作原理</strong>：</p>
+<p>假设提交历史为 <code>A -&gt; B -&gt; C</code>，且 C 中添加了一行代码。</p>
+<p>执行 <code>git revert C</code> 后，Git 会自动生成一个新的提交 D。历史变为 <code>A -&gt; B -&gt; C -&gt; D</code>。</p>
+<p>提交 D 的内容是删除 C 中添加的那行代码。</p>
+</li>
+<li>
+<p><strong>特点</strong>：</p>
+<ul>
+<li>历史记录是<strong>向前滚动</strong>的，只会增加，不会减少。</li>
+<li>旧的提交 ID（Hash）保持不变。</li>
+</ul>
+</li>
+<li>
+<p><strong>适用场景</strong>：</p>
+<ul>
+<li>撤销<strong>已发布</strong>（已 Push 到公共分支）的错误代码。</li>
+<li>需要保留“曾经出过错并被修复”的审计记录。</li>
+</ul>
+</li>
+<li>
+<p><strong>示例</strong>：</p>
+<p><strong>场景 A：回滚某个特定的历史提交</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 假设 commit hash 为 a1b2c3d 的提交里有一个 Bug</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 效果：Git 会自动生成一个新的 commit，内容是删除 a1b2c3d 里增加的代码</span>
+</span></span><span class="line"><span class="cl">git revert a1b2c3d
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>(执行后，Git 会弹出编辑器让你确认新的 Commit Message，保存退出即可)</em></p>
+<p><strong>场景 B：回滚最近一次提交</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 效果：撤销最近一次提交的修改，并生成记录</span>
+</span></span><span class="line"><span class="cl">git revert HEAD
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="git-rebase-变基">git rebase (变基)
+</h4><p><code>git rebase</code> 用于重新整理提交记录的基底，常用于替代 <code>merge</code>。</p>
+<ul>
+<li>
+<p><strong>基本语法</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git rebase <span class="o">[</span>-i<span class="o">]</span> &lt;new_base&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>常用参数</strong><br>
+<strong><code>-i</code> (interactive)</strong>：交互模式。允许用户在变基过程中对提交进行合并、修改、删除或重排。</p>
+</li>
+<li>
+<p><strong>工作原理</strong>：</p>
+<p>假设你在 <code>feature</code> 分支开发，基于 <code>main</code> 分支的旧节点。</p>
+<p>执行 <code>git rebase main</code>，Git 会：</p>
+<ol>
+<li>把 <code>feature</code> 分支的差异保存为临时补丁。</li>
+<li>将 <code>feature</code> 分支的起点移动到 <code>main</code> 分支的最新节点。</li>
+<li>依次重新应用这些补丁。</li>
+</ol>
+</li>
+<li>
+<p><strong>结果</strong>：提交历史变成一条直线，没有分叉。但原有的提交 Hash 值会全部改变。</p>
+</li>
+<li>
+<p><strong>适用场景</strong>：</p>
+<ul>
+<li>拉取公共代码时：<code>git pull --rebase</code>（避免无意义的 Merge Commit）。</li>
+<li>整理本地提交：<code>git rebase -i</code>（交互式变基，用于合并、修改多个本地提交）。</li>
+</ul>
+</li>
+<li>
+<p><strong>示例</strong>：</p>
+<p><strong>场景 A：更新功能分支（线性历史）</strong></p>
+<p>假设你在 feature 分支，main 分支已经有了更新。你想同步 main 的代码，但不想产生 Merge Commit。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. 确保在 feature 分支</span>
+</span></span><span class="line"><span class="cl">git checkout feature
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 执行变基</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 效果：把你 feature 分支独有的 commit 暂时拿下来，更新 base 到 main 的最新点，然后再把你 commit 一个个贴上去</span>
+</span></span><span class="line"><span class="cl">git rebase main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>(执行后，Git 会弹出编辑器让你确认新的 Commit Message，保存退出即可)</em></p>
+<p><strong>场景 B：合并多个 Commit (Squash) —— 面试常考</strong></p>
+<p>你在开发过程中提交了 3 次（&ldquo;WIP&rdquo;, &ldquo;WIP&rdquo;, &ldquo;Done&rdquo;），想合并成一个整洁的提交 &ldquo;Complete Feature&rdquo;。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. 开启交互式变基，对象是最近 3 次提交</span>
+</span></span><span class="line"><span class="cl">git rebase -i HEAD~3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 此时会弹出编辑器，显示如下内容：</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># pick a1b2c 第一次提交</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># pick d4e5f 第二次提交</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># pick g7h8i 第三次提交</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 你需要修改第一列的命令（将 pick 改为 squash 或 s）：</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># pick a1b2c 第一次提交</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># squash d4e5f (合并到上一个)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># squash g7h8i (合并到上一个)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 4. 保存退出，Git 会让你填写最终合并后的 Commit Message。</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>场景 C：去除操作 (drop)</strong></p>
+<p>假设你现在的提交历史是这样的（从旧到新）：<code>A</code> -&gt; <code>B</code> -&gt; <strong><code>C (想删除)</code></strong> -&gt; <code>D</code> -&gt; <code>E (最新)</code></p>
+<p><strong>结果</strong>：<code>A</code> -&gt; <code>B</code> -&gt; <code>D'</code> -&gt; <code>E'</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. 开启交互式变基，对象是最近 3 次提交</span>
+</span></span><span class="line"><span class="cl">git rebase -i HEAD~3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 此时会弹出编辑器，显示如下内容：</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># pick a1b2c3d fix: 修复了一个bug       &lt;-- 最旧的</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># pick e4f5g6h feat: 添加了登录功能     &lt;-- 你想删的这个</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># pick i7j8k9l style: 修改样式          &lt;-- 最新的</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ...下面是一堆注释说明...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 找到你想删除的那行（e4f5g6h），把开头的 pick 改为 drop</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># pick a1b2c3d fix: 修复了一个bug</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># drop e4f5g6h feat: 添加了登录功能     &lt;-- 标记为“丢弃”</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># pick i7j8k9l style: 修改样式</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 4. 保存退出</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><strong>可能遇到的问题：冲突 (Conflict)</strong></p>
+<p>i7j8k9l 调用 a1b2c3d 中新添加的函数</p>
+<ol>
+<li>Git 会暂停 rebase，提示你解决冲突。</li>
+<li>打开代码文件，修好代码（比如在 D 里把调用代码也删掉）。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li><strong>不要 commit</strong>，而是继续 rebase：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git rebase --continue
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+    <div class="admonition warning">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+        <span>Warning</span>
+      </div>
+      <div class="admonition-content">
+        <p><strong>千万不要在已经 Push 到公共仓库（多人共享）的分支上做这个操作！</strong></p>
+<ul>
+<li>
+<p><strong>原因</strong>：你删除了 <code>C</code>，导致 <code>D</code> 和 <code>E</code> 的 Hash 值都变了（变成了 <code>D'</code> 和 <code>E'</code>）。</p>
+</li>
+<li>
+<p><strong>后果</strong>：你的队友电脑上还是旧的 <code>A-B-C-D-E</code>，你的是新的 <code>A-B-D'-E'</code>。当你们尝试合并时，会产生灾难性的冲突。</p>
+</li>
+</ul>
+      </div>
+    </div></li>
+</ul>
+<h2 id="精细化提交">精细化提交
+</h2><h3 id="git-add--p">git add -p
+</h3><h4 id="语句">语句
+</h4><p>在终端输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">git add -p User.js
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>(如果不指定文件名，它会遍历所有修改过的文件)</em></p>
+<p>此时，Git 会进入<strong>交互模式</strong>。它不会直接把文件放进暂存区，而是把你的修改切成一块一块的（称为 <strong>Hunk</strong>），然后一块块地问你：</p>
+<blockquote>
+<p><strong>Stage this hunk [y,n,q,a,d,s,e,?]?</strong> <em>(要把这块代码放入暂存区吗？)</em></p>
+</blockquote>
+<p>你需要根据情况输入以下指令（不区分大小写）：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>指令</th>
+          <th>含义 (English)</th>
+          <th>作用 (中文)</th>
+          <th><strong>最常用场景</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong><code>y</code></strong></td>
+          <td><strong>Y</strong>es</td>
+          <td><strong>是</strong>，暂存这块代码</td>
+          <td>这块是我要的，放进“购物车”。</td>
+      </tr>
+      <tr>
+          <td><strong><code>n</code></strong></td>
+          <td><strong>N</strong>o</td>
+          <td><strong>否</strong>，跳过这块代码</td>
+          <td>这块不是这次要提交的，留在工作区。</td>
+      </tr>
+      <tr>
+          <td><strong><code>s</code></strong></td>
+          <td><strong>S</strong>plit</td>
+          <td><strong>拆分</strong></td>
+          <td>**神器！**如果 Git 把“修Bug”和“改格式”混在一个块里了，按 <code>s</code> 把它切得更细。</td>
+      </tr>
+      <tr>
+          <td><strong><code>q</code></strong></td>
+          <td><strong>Q</strong>uit</td>
+          <td><strong>退出</strong></td>
+          <td>不玩了，剩下的都不暂存，直接退出。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="示例-1">示例
+</h4><ol>
+<li>
+<p><strong>第一步：挑选出“修 Bug”的代码</strong></p>
+<ol>
+<li>
+<p>输入 <code>git add -p User.js</code>。</p>
+</li>
+<li>
+<p>Git 显示第一块代码（Bug 修复部分）。</p>
+<ul>
+<li>Git 问：<code>Stage this hunk?</code></li>
+<li>你输：<strong><code>y</code></strong> (回车)。</li>
+</ul>
+</li>
+<li>
+<p>Git 显示第二块代码（格式化部分）。</p>
+<ul>
+<li>Git 问：<code>Stage this hunk?</code></li>
+<li>你输：<strong><code>n</code></strong> (回车)。</li>
+</ul>
+</li>
+<li>
+<p>如果没有更多修改，Git 会自动结束。</p>
+</li>
+</ol>
+<p>此时，<strong>暂存区</strong>里只有“修 Bug”的代码，<strong>工作区</strong>里还留着“格式化”的代码。</p>
+</li>
+<li>
+<p><strong>第二步：提交第一次 Commit</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Fix: 修复空指针问题&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>第三步：提交剩下的代码</strong></p>
+</li>
+</ol>
+<h3 id="git-commit-amend">git commit &ndash;amend
+</h3>
+    <div class="admonition warning">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+        <span>Warning</span>
+      </div>
+      <div class="admonition-content">
+        <p><strong>如果你的代码已经 <code>git push</code> 推送到远程仓库了，严禁使用 <code>git commit --amend</code>！</strong></p>
+<ul>
+<li><strong>原因</strong>：你修改了本地的历史（Commit ID 变了），但远程仓库还是旧的 ID。当你再次 Push 时，Git 会报错，强行 Push 会覆盖队友的代码。</li>
+<li><strong>正确做法</strong>：如果已经 Push 了，就老老实实再提交一个新的 Commit 吧，不要试图掩盖了。</li>
+</ul>
+      </div>
+    </div><h4 id="修改备注">修改备注
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 不需要修改任何文件，直接输入：</span>
+</span></span><span class="line"><span class="cl">git commit --amend -m <span class="s2">&#34;Fix(LOGIN-101): 修复登录页面的空指针 Bug&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h4 id="修改文件">修改文件
+</h4><ol>
+<li>
+<p><strong>先把漏掉的文件加上去</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add User.test.js
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>使用修补提交</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git commit --amend --no-edit
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>--no-edit</code>：意思是“我只想把文件加进去，不想改刚才写的 Commit Message，别弹编辑器出来了”。</li>
+</ul>
+</li>
+</ol>
 
 </section>
 

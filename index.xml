@@ -6644,9 +6644,9 @@ Goldmark by @yuin is now the new default library used for Markdown in Hugo. （N
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &amp;#34;first commit&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;first commit&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch -M main
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote add origin https://github.com/WindoveC/WindoveC.github.io.git
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -u origin main
@@ -6654,7 +6654,7 @@ Goldmark by @yuin is now the new default library used for Markdown in Hugo. （N
 &lt;/div&gt;
 &lt;/div&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;在当前目录初始化一个新的 Git 仓库。&lt;/p&gt;
@@ -6668,7 +6668,7 @@ Goldmark by @yuin is now the new default library used for Markdown in Hugo. （N
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;将当前目录下所有文件和子目录（除了被 .gitignore 忽略的）添加到 暂存区（staging area）。&lt;/p&gt;
@@ -6682,7 +6682,7 @@ Goldmark by @yuin is now the new default library used for Markdown in Hugo. （N
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;git commit -m &amp;quot;first commit&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;git commit -m &amp;quot;first commit&amp;quot;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
@@ -6693,8 +6693,8 @@ Goldmark by @yuin is now the new default library used for Markdown in Hugo. （N
 &lt;p&gt;这是你项目的第一个提交（initial commit），从此 Git 开始记录变更历史。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;&lt;code&gt;git branch -M main&lt;/code&gt;&lt;/li&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;git branch -M main&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -6713,16 +6713,16 @@ Goldmark by @yuin is now the new default library used for Markdown in Hugo. （N
 &lt;p&gt;如果你刚 git init，默认分支可能是 master（取决于 Git 配置），所以这一步很关键。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;&lt;code&gt;git remote add origin https://github.com/WindoveC/WindoveC.github.io.git&lt;/code&gt;&lt;/li&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;git remote add origin https://github.com/WindoveC/WindoveC.github.io.git&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;将你的本地仓库与一个远程仓库关联起来。&lt;/li&gt;
 &lt;li&gt;origin 是远程仓库的别名（约定俗成的名字）。&lt;/li&gt;
 &lt;li&gt;后面的 URL 是你在 GitHub 上创建的仓库地址（这里是你的 GitHub Pages 仓库）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;&lt;code&gt;git push -u origin main&lt;/code&gt;&lt;/li&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;git push -u origin main&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -6738,6 +6738,293 @@ Goldmark by @yuin is now the new default library used for Markdown in Hugo. （N
 &lt;p&gt;首次推送必须指定远程名和分支名（如 origin main），之后因为有 -u，就可以简化命令。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;双人开发流程&#34;&gt;双人开发流程
+&lt;/h2&gt;&lt;h3 id=&#34;核心原则&#34;&gt;核心原则
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;永远不要直接在主分支（&lt;code&gt;main&lt;/code&gt; 或 &lt;code&gt;master&lt;/code&gt;）上修改代码。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第一部分标准工作流-feature-branch-workflow&#34;&gt;第一部分：标准工作流 (Feature Branch Workflow)
+&lt;/h3&gt;&lt;h4 id=&#34;1-项目初始化仅需一次&#34;&gt;1. 项目初始化（仅需一次）
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;开发者 A&lt;/strong&gt;：创建远程仓库，并 &lt;code&gt;git clone &amp;lt;地址&amp;gt;&lt;/code&gt; 到本地。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开发者 B&lt;/strong&gt;：直接 &lt;code&gt;git clone &amp;lt;地址&amp;gt;&lt;/code&gt; 到本地。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-日常开发循环核心四步&#34;&gt;2. 日常开发循环（核心四步）
+&lt;/h4&gt;&lt;p&gt;假设你要开发一个新功能（例如“登录页”）：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;同步起点&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;永远基于最新的主分支开始工作。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout main        &lt;span class=&#34;c1&#34;&gt;# 回到主分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git pull origin main     &lt;span class=&#34;c1&#34;&gt;# 拉取远程最新代码&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;创建分支&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;起一个清晰的名字（如 &lt;code&gt;feature/login&lt;/code&gt;）。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout -b feature/login_page
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;开发与提交&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在该分支上写代码。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;完成登录页UI布局&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;strong&gt;推送与合并&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;功能完成后，推送到远程服务器。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin feature/login_page
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在 GitHub/GitLab 网页上发起 &lt;strong&gt;Pull Request (PR)&lt;/strong&gt;，邀请队友审核代码。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Base (基础/目标分支)&lt;/strong&gt;：选择 &lt;strong&gt;&lt;code&gt;main&lt;/code&gt;&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;含义&lt;/em&gt;：这是“目的地”，也就是大家公用的、稳定的代码库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Compare (对比/源分支)&lt;/strong&gt;：选择 &lt;strong&gt;&lt;code&gt;feature/login_page&lt;/code&gt;&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;含义&lt;/em&gt;：这是“来源”，也就是你刚刚写好、准备提交上去的新代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;合并&lt;/strong&gt;：队友审核通过后，点击网页上的 &amp;ldquo;Merge&amp;rdquo; 按钮。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;清理分支&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;清理远程分支 (GitHub/GitLab)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;网页端自动删除（推荐）&lt;/p&gt;
+&lt;p&gt;当你点击 &amp;ldquo;Merge&amp;rdquo; 按钮合并成功后，GitHub/GitLab 通常会在按钮旁边立刻弹出一个 &amp;ldquo;Delete branch&amp;rdquo;（删除分支）的按钮。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;命令行删除&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;语法：git push origin --delete &amp;lt;分支名&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin --delete feature/login_page
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;清理本地分支&lt;/p&gt;
+&lt;p&gt;远程仓库删除分支后，本地电脑上用 &lt;code&gt;git branch&lt;/code&gt; 查看，分支仍存在，需要手动删除&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;切回主分支（你不能删除自己当前站着的分支，必须先“下车”）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拉取最新代码（告诉 Git 刚才已经合并发生了）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git pull origin main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;删除功能分支：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;使用 -d &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;小写&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; 是安全删除
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch -d feature/login_page
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注：如果 Git 报错说“该分支未合并”，而你确定要强制删除它（比如这个功能做废了），可以用 -D (大写) 强制删除：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch -D feature/login_page。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;清理“幽灵”分支&lt;br&gt;
+本地用 git branch -a 查看所有分支时，依然能看到一大堆红色的 remotes/origin/队友的分支缓存。&lt;br&gt;
+一键清理命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote prune origin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;或者
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git fetch -p
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;作用：这句话的意思是“Git，请看一眼远程服务器，如果服务器上有些分支已经没了，就把我本地的这些缓存也都清理掉。”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第二部分应对突发状况-git-stash&#34;&gt;第二部分：应对突发状况 (Git Stash)
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：你在 &lt;code&gt;feature&lt;/code&gt; 分支上代码写了一半，全是报错（不能提交），但老板让你立刻去 &lt;code&gt;main&lt;/code&gt; 分支修一个紧急 Bug。&lt;/p&gt;
+&lt;p&gt;此时千万不要直接切分支，请使用“暂停键”：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;暂停手头工作（存入抽屉）&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git stash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;此时你的工作区会变干净，回到上一次提交的状态。&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;去修 Bug&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ...修复Bug，提交，推送...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;回到工作现场（从抽屉取出）&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;修完 Bug 后，切回你的功能分支，把刚才写的代码拿出来：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout feature/login_page
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git stash pop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;之前的代码回来了，你可以继续工作。&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第三部分解决代码冲突-conflict-resolution&#34;&gt;第三部分：解决代码冲突 (Conflict Resolution)
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：当你尝试合并代码（或 &lt;code&gt;git pull&lt;/code&gt;）时，Git 报错提示冲突。通常是因为&lt;strong&gt;两个人修改了同一个文件的同一行&lt;/strong&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;识别冲突现场&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;打开冲突的文件，你会看到类似下面的标记：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;这是我修改的代码（当前分支）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;=======
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;这是队友修改的代码（传入分支）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;手动“做手术”&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;决定保留什么&lt;/strong&gt;：保留你的？保留队友的？还是两者都要？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;清理战场&lt;/strong&gt;：删除 &lt;code&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&lt;/code&gt;, &lt;code&gt;=======&lt;/code&gt;, &lt;code&gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt; 这些符号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;修改后的代码可能长这样：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;这是我和队友共同商量后保留的代码
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;告诉 Git 冲突已解决&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .                        &lt;span class=&#34;c1&#34;&gt;# 标记文件为已解决&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;解决代码合并冲突&amp;#34;&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# 提交&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push                         &lt;span class=&#34;c1&#34;&gt;# 推送&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;团队协作黄金法则&#34;&gt;团队协作“黄金法则”
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Commit Often (多提交)&lt;/strong&gt;：不要憋大招。把任务拆细，写完一个小点就提交一次，方便回溯。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pull Often (勤拉取)&lt;/strong&gt;：每天开工前、准备 Push 前，都 &lt;code&gt;git pull origin main&lt;/code&gt; 一下，尽量减少与队友的代码差异。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Talk First (先沟通)&lt;/strong&gt;：遇到冲突如果你看不懂队友的代码，&lt;strong&gt;绝对不要&lt;/strong&gt;直接删掉，先转头问他一句：“这块冲突了，我们要保留哪部分？”&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2 id=&#34;清除缓存&#34;&gt;清除缓存
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;.gitignore不生效（关闭跟踪）&lt;/p&gt;
@@ -6961,7 +7248,7 @@ Goldmark by @yuin is now the new default library used for Markdown in Hugo. （N
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;提交说明&#34;&gt;提交说明
+&lt;h2 id=&#34;commit&#34;&gt;commit
 &lt;/h2&gt;&lt;h3 id=&#34;什么是约定式提交&#34;&gt;什么是&lt;a class=&#34;link&#34; href=&#34;https://zhida.zhihu.com/search?content_id=232220431&amp;amp;content_type=Article&amp;amp;match_order=1&amp;amp;q=%e7%ba%a6%e5%ae%9a%e5%bc%8f%e6%8f%90%e4%ba%a4&amp;amp;zhida_source=entity&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;约定式提交&lt;/a&gt;
 &lt;/h3&gt;&lt;p&gt;约定式提交（&lt;a class=&#34;link&#34; href=&#34;https://zhida.zhihu.com/search?content_id=232220431&amp;amp;content_type=Article&amp;amp;match_order=1&amp;amp;q=Conventional&amp;#43;Commits&amp;amp;zhida_source=entity&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -7167,6 +7454,744 @@ Goldmark by @yuin is now the new default library used for Markdown in Hugo. （N
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;查看旧代码&#34;&gt;查看旧代码
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;如果你只是想“看看”旧代码：&lt;/strong&gt; 直接点确定即可。看完后，通过检出（Checkout）原来的分支名（如 &lt;code&gt;main&lt;/code&gt;）就能回到正常轨道。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;如果你想在这个提交的基础上“开始写新代码”：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击确定进入游离状态。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;立刻&lt;/strong&gt;右键创建一个&lt;strong&gt;新分支&lt;/strong&gt;（New Branch）。&lt;/li&gt;
+&lt;li&gt;这样你就从“游离状态”回到了“分支状态”，代码也就安全了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在切换版本时，如果你当前工作区有还没保存（commit）的代码，软件提供了两个选项：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;贮藏并自动恢复 (Stash &amp;amp; Pop)：&lt;/strong&gt; 这是最推荐的选项。它会把你当前的修改暂时存起来，切到目标提交后再把修改还原回来。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;丢弃更改：&lt;/strong&gt; 强制切换，你当前所有没提交的代码都会&lt;strong&gt;永久丢失&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;游离-detached-状态&#34;&gt;游离 (detached) 状态
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;什么是游离状态？&lt;/strong&gt; 通常我们是在某个“分支”（如 &lt;code&gt;main&lt;/code&gt; 或 &lt;code&gt;dev&lt;/code&gt;）上工作的，HEAD 指向分支名。现在你直接指向了一个“提交”，HEAD 就像脱离了轨道，不再属于任何分支。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;风险：&lt;/strong&gt; 在游离状态下，你可以继续写代码并 commit，但这些新的 commit &lt;strong&gt;不会被记录在任何分支上&lt;/strong&gt;。一旦你切换回其他分支，这些新写的代码就会变得难以找回（变成孤儿提交）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;git-checkout&#34;&gt;Git Checkout
+&lt;/h2&gt;&lt;h3 id=&#34;概述&#34;&gt;概述
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;git checkout&lt;/code&gt; 是 Git 版本控制系统中用于更新工作区（Working Tree）的核心命令。它主要用于在不同的开发上下文（分支）之间切换，或将文件恢复到特定版本的状态。&lt;/p&gt;
+&lt;p&gt;该命令通过更改 &lt;code&gt;HEAD&lt;/code&gt; 指针并更新工作目录中的文件，使其与索引（Index）或指定的树对象（Tree-ish）相匹配。&lt;/p&gt;
+&lt;h3 id=&#34;核心语法&#34;&gt;核心语法
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;选项&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &amp;lt;分支名 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 提交哈希 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 文件名&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;主要功能详解&#34;&gt;主要功能详解
+&lt;/h3&gt;&lt;h4 id=&#34;分支切换-switching-branches&#34;&gt;分支切换 (Switching Branches)
+&lt;/h4&gt;&lt;p&gt;将 &lt;code&gt;HEAD&lt;/code&gt; 指针指向另一个分支，并更新工作目录以匹配该分支的状态。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;基础用法&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout &amp;lt;branch_name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;执行逻辑&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Git 检查本地是否存在未提交的修改（Dirty Working Tree）。如果存在冲突，操作将被中止（除非强制切换）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HEAD&lt;/code&gt; 指向 &lt;code&gt;&amp;lt;branch_name&amp;gt;&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;工作区文件更新为 &lt;code&gt;&amp;lt;branch_name&amp;gt;&lt;/code&gt; 的最新快照。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;创建并切换分支-create-and-checkout&#34;&gt;创建并切换分支 (Create and Checkout)
+&lt;/h4&gt;&lt;p&gt;这是 &lt;code&gt;git branch&lt;/code&gt; 和 &lt;code&gt;git checkout&lt;/code&gt; 的组合命令，用于基于当前所在位置（或指定点）创建一个新分支并立即切换过去。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout -b &amp;lt;new_branch_name&amp;gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;start_point&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;参数说明&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-b&lt;/code&gt;：表示创建新分支。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[start_point]&lt;/code&gt;（可选）：指定新分支基于哪个提交或远程分支创建。若省略，默认基于当前 &lt;code&gt;HEAD&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 基于当前分支创建名为 feature/payment 的新分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout -b feature/payment
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;撤销本地修改-discard-changes&#34;&gt;撤销本地修改 (Discard Changes)
+&lt;/h4&gt;&lt;p&gt;将工作区中的文件重置为暂存区（Index）或最近一次提交（HEAD）时的状态。此操作用于放弃对文件的本地修改。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout -- &amp;lt;filename&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--&lt;/code&gt; 符号用于明确分隔选项和文件名，防止文件名与分支名冲突。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;风险提示&lt;/strong&gt;：此操作是&lt;strong&gt;不可逆&lt;/strong&gt;的。一旦执行，工作区中该文件未提交的更改将被永久覆盖。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;检出特定提交-detached-head-state&#34;&gt;检出特定提交 (Detached HEAD State)
+&lt;/h4&gt;&lt;p&gt;可以将 &lt;code&gt;HEAD&lt;/code&gt; 直接指向某个具体的提交哈希（Commit Hash），而不是指向某个分支引用。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout &amp;lt;commit_hash&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;状态说明&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;此时处于 &lt;strong&gt;&amp;ldquo;Detached HEAD&amp;rdquo;（头指针游离）&lt;/strong&gt; 状态。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在此状态下的提交不会属于任何现有分支。&lt;/li&gt;
+&lt;li&gt;若切换到其他分支，在此期间产生的提交可能会丢失（被 Git 垃圾回收）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;适用场景&lt;/strong&gt;：临时查看历史版本的代码、调试旧版本 Bug。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;新版命令演进&#34;&gt;新版命令演进
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Git 2.23+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;鉴于 &lt;code&gt;git checkout&lt;/code&gt; 职责过多（既负责分支切换，又负责文件恢复），容易产生混淆，Git 2.23 版本引入了两个职责更单一的新命令。建议在文档化规范中逐步推广使用新命令。&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;操作目标&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;传统命令 (git checkout)&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;推荐新命令&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;语义说明&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;切换分支&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;git checkout &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;git switch &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;语义明确，仅用于切换分支。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;创建并切换&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;git checkout -b &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;git switch -c &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;-c&lt;/code&gt; 代表 create。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;撤销文件修改&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;git checkout -- &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;git restore &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;语义明确，表示从源恢复文件。&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;常见问题排查&#34;&gt;常见问题排查
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;错误：&lt;code&gt;error: Your local changes to the following files would be overwritten by checkout&lt;/code&gt;&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;：当前工作区有未提交的修改，且切换目标分支也有该文件的修改，Git 无法安全覆盖。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：
+&lt;ol&gt;
+&lt;li&gt;提交当前修改 (&lt;code&gt;git commit&lt;/code&gt;)。&lt;/li&gt;
+&lt;li&gt;暂存当前修改 (&lt;code&gt;git stash&lt;/code&gt;)。&lt;/li&gt;
+&lt;li&gt;放弃当前修改 (&lt;code&gt;git restore&lt;/code&gt; 或 &lt;code&gt;git checkout --&lt;/code&gt;)。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;错误：&lt;code&gt;fatal: &#39;xxx&#39; is not a commit and a branch &#39;xxx&#39; cannot be created from it&lt;/code&gt;&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;：尝试检出的分支或提交哈希不存在。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：运行 &lt;code&gt;git branch -a&lt;/code&gt; 或 &lt;code&gt;git log&lt;/code&gt; 确认名称正确。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reset-vs-revert-vs-rebase&#34;&gt;Reset vs Revert vs Rebase
+&lt;/h2&gt;
+    &lt;div class=&#34;admonition warning&#34;&gt;
+      &lt;div class=&#34;admonition-header&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z&#34;/&gt;&lt;/svg&gt;
+        &lt;span&gt;Warning&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;admonition-content&#34;&gt;
+        &lt;p&gt;Git 的黄金法则 —— &lt;strong&gt;永远不要对已经推送到公共仓库的提交执行 &lt;code&gt;reset&lt;/code&gt; 或 &lt;code&gt;rebase&lt;/code&gt;。&lt;/strong&gt; 这会导致其他协作者的历史记录混乱。&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;h3 id=&#34;概述-1&#34;&gt;概述
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;git reset&lt;/code&gt; (重置)&lt;/strong&gt;：&lt;strong&gt;“时光倒流”&lt;/strong&gt;。将当前分支的指针移回过去的某个时刻，如同从未发生过之后的提交。属于&lt;strong&gt;破坏性&lt;/strong&gt;操作。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;git revert&lt;/code&gt; (回滚)&lt;/strong&gt;：&lt;strong&gt;“负负得正”&lt;/strong&gt;。创建一个新的提交，其内容是撤销之前的某次修改。属于&lt;strong&gt;增量式&lt;/strong&gt;操作，保留历史痕迹。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;git rebase&lt;/code&gt; (变基)&lt;/strong&gt;：&lt;strong&gt;“移花接木”&lt;/strong&gt;。将一系列提交暂存，然后在一个新的基点上重新应用一遍。用于保持提交记录的线性整洁。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;对比矩阵&#34;&gt;对比矩阵
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;维度&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;git reset&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;git revert&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;git rebase&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;核心动作&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;移动&lt;/strong&gt;指针 (回退)&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;新增&lt;/strong&gt;提交 (抵消)&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;复制并重放&lt;/strong&gt;提交 (移动基底)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;历史记录&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;被修改 (变短)&lt;/td&gt;
+          &lt;td&gt;被保留 (变长)&lt;/td&gt;
+          &lt;td&gt;被重写 (线性化)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Commit ID&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;可能会丢失旧 ID&lt;/td&gt;
+          &lt;td&gt;产生新 ID，旧 ID 不变&lt;/td&gt;
+          &lt;td&gt;产生全新的 ID (旧的被丢弃)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;安全性&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;高风险&lt;/strong&gt; (可能丢失代码)&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;安全&lt;/strong&gt; (无损操作)&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;中风险&lt;/strong&gt; (需处理冲突)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;协作影响&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;严禁&lt;/strong&gt;用于公共分支&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;推荐&lt;/strong&gt;用于公共分支&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;慎用&lt;/strong&gt;于公共分支&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;主要目的&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;修正本地错误&lt;/td&gt;
+          &lt;td&gt;修正线上 Bug&lt;/td&gt;
+          &lt;td&gt;保持提交历史整洁/同步&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;解析&#34;&gt;解析
+&lt;/h3&gt;&lt;h4 id=&#34;git-reset-重置&#34;&gt;git reset (重置)
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;git reset&lt;/code&gt; 通过移动 &lt;code&gt;HEAD&lt;/code&gt; 指针和当前分支引用来“重写历史”。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;基本语法&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&amp;lt;mode&amp;gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&amp;lt;commit&amp;gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作原理&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;假设提交历史为 &lt;code&gt;A -&amp;gt; B -&amp;gt; C&lt;/code&gt;，当前 HEAD 指向 C。&lt;/p&gt;
+&lt;p&gt;执行 &lt;code&gt;git reset --hard B&lt;/code&gt; 后，历史变为 &lt;code&gt;A -&amp;gt; B&lt;/code&gt;。提交 C 实际上被“孤立”并最终会被 Git 的垃圾回收机制清除。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;三种核心模式&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;--soft&lt;/code&gt;：回退指针，但&lt;strong&gt;保留&lt;/strong&gt;工作区和暂存区的修改（变更为“待提交”状态）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--mixed&lt;/code&gt; (默认)：回退指针，保留工作区修改，但&lt;strong&gt;重置&lt;/strong&gt;暂存区（变更为“未暂存”状态）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--hard&lt;/code&gt;：回退指针，&lt;strong&gt;彻底删除&lt;/strong&gt;工作区和暂存区的所有修改。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;适用场景&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;撤销&lt;strong&gt;本地&lt;/strong&gt;（尚未 Push）的错误提交。&lt;/li&gt;
+&lt;li&gt;合并多个未推送的提交（Squash）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景 A：提交太早了，想撤销 Commit 但保留代码继续写&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# HEAD^ 表示回退到上一个版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 效果：刚才 commit 的代码回到了暂存区 (staged)，你可以继续修改文件然后再次 commit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset --soft HEAD^
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;场景 B：刚才写的代码全是垃圾，想彻底重置&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 效果：彻底丢弃当前所有未提交的修改，且回退到 a1b2c3d 这个版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset --hard a1b2c3d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;场景 C：把暂存区的文件移除 (Unstage)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 场景：你 git add . 把所有文件都放进去了，但其中有一个 file.txt 不想提交&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 效果：file.txt 变回“未暂存”状态，但文件内容还在&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset HEAD file.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;git-revert-回滚&#34;&gt;git revert (回滚)
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;git revert&lt;/code&gt; 不删除历史，而是通过添加新历史来抵消旧历史。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;基本语法&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git revert &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &amp;lt;commit&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;code&gt;-n&lt;/code&gt; (or &lt;code&gt;--no-commit&lt;/code&gt;)&lt;/strong&gt;：执行回滚操作，但不自动生成提交。允许你在手动调整后再提交。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作原理&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;假设提交历史为 &lt;code&gt;A -&amp;gt; B -&amp;gt; C&lt;/code&gt;，且 C 中添加了一行代码。&lt;/p&gt;
+&lt;p&gt;执行 &lt;code&gt;git revert C&lt;/code&gt; 后，Git 会自动生成一个新的提交 D。历史变为 &lt;code&gt;A -&amp;gt; B -&amp;gt; C -&amp;gt; D&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;提交 D 的内容是删除 C 中添加的那行代码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;历史记录是&lt;strong&gt;向前滚动&lt;/strong&gt;的，只会增加，不会减少。&lt;/li&gt;
+&lt;li&gt;旧的提交 ID（Hash）保持不变。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;适用场景&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;撤销&lt;strong&gt;已发布&lt;/strong&gt;（已 Push 到公共分支）的错误代码。&lt;/li&gt;
+&lt;li&gt;需要保留“曾经出过错并被修复”的审计记录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景 A：回滚某个特定的历史提交&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 假设 commit hash 为 a1b2c3d 的提交里有一个 Bug&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 效果：Git 会自动生成一个新的 commit，内容是删除 a1b2c3d 里增加的代码&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git revert a1b2c3d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;(执行后，Git 会弹出编辑器让你确认新的 Commit Message，保存退出即可)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景 B：回滚最近一次提交&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 效果：撤销最近一次提交的修改，并生成记录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git revert HEAD
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;git-rebase-变基&#34;&gt;git rebase (变基)
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;git rebase&lt;/code&gt; 用于重新整理提交记录的基底，常用于替代 &lt;code&gt;merge&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;基本语法&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git rebase &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;-i&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &amp;lt;new_base&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;code&gt;-i&lt;/code&gt; (interactive)&lt;/strong&gt;：交互模式。允许用户在变基过程中对提交进行合并、修改、删除或重排。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作原理&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;假设你在 &lt;code&gt;feature&lt;/code&gt; 分支开发，基于 &lt;code&gt;main&lt;/code&gt; 分支的旧节点。&lt;/p&gt;
+&lt;p&gt;执行 &lt;code&gt;git rebase main&lt;/code&gt;，Git 会：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;把 &lt;code&gt;feature&lt;/code&gt; 分支的差异保存为临时补丁。&lt;/li&gt;
+&lt;li&gt;将 &lt;code&gt;feature&lt;/code&gt; 分支的起点移动到 &lt;code&gt;main&lt;/code&gt; 分支的最新节点。&lt;/li&gt;
+&lt;li&gt;依次重新应用这些补丁。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;结果&lt;/strong&gt;：提交历史变成一条直线，没有分叉。但原有的提交 Hash 值会全部改变。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;适用场景&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;拉取公共代码时：&lt;code&gt;git pull --rebase&lt;/code&gt;（避免无意义的 Merge Commit）。&lt;/li&gt;
+&lt;li&gt;整理本地提交：&lt;code&gt;git rebase -i&lt;/code&gt;（交互式变基，用于合并、修改多个本地提交）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景 A：更新功能分支（线性历史）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;假设你在 feature 分支，main 分支已经有了更新。你想同步 main 的代码，但不想产生 Merge Commit。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. 确保在 feature 分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout feature
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. 执行变基&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 效果：把你 feature 分支独有的 commit 暂时拿下来，更新 base 到 main 的最新点，然后再把你 commit 一个个贴上去&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git rebase main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;(执行后，Git 会弹出编辑器让你确认新的 Commit Message，保存退出即可)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景 B：合并多个 Commit (Squash) —— 面试常考&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你在开发过程中提交了 3 次（&amp;ldquo;WIP&amp;rdquo;, &amp;ldquo;WIP&amp;rdquo;, &amp;ldquo;Done&amp;rdquo;），想合并成一个整洁的提交 &amp;ldquo;Complete Feature&amp;rdquo;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. 开启交互式变基，对象是最近 3 次提交&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git rebase -i HEAD~3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. 此时会弹出编辑器，显示如下内容：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pick a1b2c 第一次提交&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pick d4e5f 第二次提交&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pick g7h8i 第三次提交&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. 你需要修改第一列的命令（将 pick 改为 squash 或 s）：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pick a1b2c 第一次提交&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# squash d4e5f (合并到上一个)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# squash g7h8i (合并到上一个)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 4. 保存退出，Git 会让你填写最终合并后的 Commit Message。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;场景 C：去除操作 (drop)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;假设你现在的提交历史是这样的（从旧到新）：&lt;code&gt;A&lt;/code&gt; -&amp;gt; &lt;code&gt;B&lt;/code&gt; -&amp;gt; &lt;strong&gt;&lt;code&gt;C (想删除)&lt;/code&gt;&lt;/strong&gt; -&amp;gt; &lt;code&gt;D&lt;/code&gt; -&amp;gt; &lt;code&gt;E (最新)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;结果&lt;/strong&gt;：&lt;code&gt;A&lt;/code&gt; -&amp;gt; &lt;code&gt;B&lt;/code&gt; -&amp;gt; &lt;code&gt;D&#39;&lt;/code&gt; -&amp;gt; &lt;code&gt;E&#39;&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. 开启交互式变基，对象是最近 3 次提交&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git rebase -i HEAD~3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. 此时会弹出编辑器，显示如下内容：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pick a1b2c3d fix: 修复了一个bug       &amp;lt;-- 最旧的&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pick e4f5g6h feat: 添加了登录功能     &amp;lt;-- 你想删的这个&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pick i7j8k9l style: 修改样式          &amp;lt;-- 最新的&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ...下面是一堆注释说明...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. 找到你想删除的那行（e4f5g6h），把开头的 pick 改为 drop&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pick a1b2c3d fix: 修复了一个bug&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# drop e4f5g6h feat: 添加了登录功能     &amp;lt;-- 标记为“丢弃”&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pick i7j8k9l style: 修改样式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 4. 保存退出&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;可能遇到的问题：冲突 (Conflict)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;i7j8k9l 调用 a1b2c3d 中新添加的函数&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Git 会暂停 rebase，提示你解决冲突。&lt;/li&gt;
+&lt;li&gt;打开代码文件，修好代码（比如在 D 里把调用代码也删掉）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;不要 commit&lt;/strong&gt;，而是继续 rebase：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git rebase --continue
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;div class=&#34;admonition warning&#34;&gt;
+      &lt;div class=&#34;admonition-header&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z&#34;/&gt;&lt;/svg&gt;
+        &lt;span&gt;Warning&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;admonition-content&#34;&gt;
+        &lt;p&gt;&lt;strong&gt;千万不要在已经 Push 到公共仓库（多人共享）的分支上做这个操作！&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：你删除了 &lt;code&gt;C&lt;/code&gt;，导致 &lt;code&gt;D&lt;/code&gt; 和 &lt;code&gt;E&lt;/code&gt; 的 Hash 值都变了（变成了 &lt;code&gt;D&#39;&lt;/code&gt; 和 &lt;code&gt;E&#39;&lt;/code&gt;）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;后果&lt;/strong&gt;：你的队友电脑上还是旧的 &lt;code&gt;A-B-C-D-E&lt;/code&gt;，你的是新的 &lt;code&gt;A-B-D&#39;-E&#39;&lt;/code&gt;。当你们尝试合并时，会产生灾难性的冲突。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;精细化提交&#34;&gt;精细化提交
+&lt;/h2&gt;&lt;h3 id=&#34;git-add--p&#34;&gt;git add -p
+&lt;/h3&gt;&lt;h4 id=&#34;语句&#34;&gt;语句
+&lt;/h4&gt;&lt;p&gt;在终端输入：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add -p User.js
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;(如果不指定文件名，它会遍历所有修改过的文件)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;此时，Git 会进入&lt;strong&gt;交互模式&lt;/strong&gt;。它不会直接把文件放进暂存区，而是把你的修改切成一块一块的（称为 &lt;strong&gt;Hunk&lt;/strong&gt;），然后一块块地问你：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Stage this hunk [y,n,q,a,d,s,e,?]?&lt;/strong&gt; &lt;em&gt;(要把这块代码放入暂存区吗？)&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你需要根据情况输入以下指令（不区分大小写）：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;指令&lt;/th&gt;
+          &lt;th&gt;含义 (English)&lt;/th&gt;
+          &lt;th&gt;作用 (中文)&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;最常用场景&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;y&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;Y&lt;/strong&gt;es&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;是&lt;/strong&gt;，暂存这块代码&lt;/td&gt;
+          &lt;td&gt;这块是我要的，放进“购物车”。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;n&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;N&lt;/strong&gt;o&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;否&lt;/strong&gt;，跳过这块代码&lt;/td&gt;
+          &lt;td&gt;这块不是这次要提交的，留在工作区。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;s&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;S&lt;/strong&gt;plit&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;拆分&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;**神器！**如果 Git 把“修Bug”和“改格式”混在一个块里了，按 &lt;code&gt;s&lt;/code&gt; 把它切得更细。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;q&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;Q&lt;/strong&gt;uit&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;退出&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;不玩了，剩下的都不暂存，直接退出。&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;示例-1&#34;&gt;示例
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;第一步：挑选出“修 Bug”的代码&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;输入 &lt;code&gt;git add -p User.js&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Git 显示第一块代码（Bug 修复部分）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Git 问：&lt;code&gt;Stage this hunk?&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;你输：&lt;strong&gt;&lt;code&gt;y&lt;/code&gt;&lt;/strong&gt; (回车)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Git 显示第二块代码（格式化部分）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Git 问：&lt;code&gt;Stage this hunk?&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;你输：&lt;strong&gt;&lt;code&gt;n&lt;/code&gt;&lt;/strong&gt; (回车)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果没有更多修改，Git 会自动结束。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;此时，&lt;strong&gt;暂存区&lt;/strong&gt;里只有“修 Bug”的代码，&lt;strong&gt;工作区&lt;/strong&gt;里还留着“格式化”的代码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;第二步：提交第一次 Commit&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Fix: 修复空指针问题&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;第三步：提交剩下的代码&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;git-commit-amend&#34;&gt;git commit &amp;ndash;amend
+&lt;/h3&gt;
+    &lt;div class=&#34;admonition warning&#34;&gt;
+      &lt;div class=&#34;admonition-header&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z&#34;/&gt;&lt;/svg&gt;
+        &lt;span&gt;Warning&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;admonition-content&#34;&gt;
+        &lt;p&gt;&lt;strong&gt;如果你的代码已经 &lt;code&gt;git push&lt;/code&gt; 推送到远程仓库了，严禁使用 &lt;code&gt;git commit --amend&lt;/code&gt;！&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;：你修改了本地的历史（Commit ID 变了），但远程仓库还是旧的 ID。当你再次 Push 时，Git 会报错，强行 Push 会覆盖队友的代码。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;正确做法&lt;/strong&gt;：如果已经 Push 了，就老老实实再提交一个新的 Commit 吧，不要试图掩盖了。&lt;/li&gt;
+&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;h4 id=&#34;修改备注&#34;&gt;修改备注
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 不需要修改任何文件，直接输入：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit --amend -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Fix(LOGIN-101): 修复登录页面的空指针 Bug&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;修改文件&#34;&gt;修改文件
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;先把漏掉的文件加上去&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add User.test.js
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;使用修补提交&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit --amend --no-edit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--no-edit&lt;/code&gt;：意思是“我只想把文件加进去，不想改刚才写的 Commit Message，别弹编辑器出来了”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         </item>
         <item>
