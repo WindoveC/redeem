@@ -324,6 +324,15 @@
       </ol>
     </li>
     <li><a href="#修改文章字体行距">修改文章字体行距</a></li>
+    <li><a href="#软换行">软换行</a></li>
+    <li><a href="#添加最后更新时间字段">添加最后更新时间字段</a>
+      <ol>
+        <li><a href="#update-hugoyaml">Update hugo.yaml</a></li>
+        <li><a href="#cloudflare-pages">Cloudflare pages</a></li>
+        <li><a href="#修改显示位置">修改显示位置</a></li>
+      </ol>
+    </li>
+    <li><a href="#按最后修改时间排序">按最后修改时间排序</a></li>
   </ol>
 </nav>
         </div>
@@ -392,7 +401,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 3 分钟
+                    阅读时长: 6 分钟
                 </time>
             </div>
         
@@ -936,7 +945,331 @@
 </div>
 </div></li>
 </ul>
-
+<h2 id="软换行">软换行
+</h2><ul>
+<li><strong>现象</strong></li>
+</ul>
+<p>当需要分段时，输入 Enter ，Typora 会在源码中自动插入一个空行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Hello
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">World
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>当排版需要连续的两行时，则输入 Shift + Enter ，换行在 Typora 中能够正确显示</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Hello
+</span></span><span class="line"><span class="cl">World
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>但这是因为在 Preference &gt; Markdown &gt; Whitespace / Line Break &gt; When Writing 的值设置为了 Preserve whitespace and single line break。<br>
+Hugo 输出为 HTML 时不能正确显示。（用其它的 markdown 编辑器打开也可能会有兼容问题）<br>
+连续两行会被显示成这样</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Hello World
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>原因</strong></li>
+</ul>
+<p>根据 Markdown Syntax 文档，当从源码输出为 HTML 时，换行符（软换行）不会被转换为 <code>&lt;br /&gt;</code> （硬换行），如果要插入硬换行，你需要在行尾输入两个（或更多）空格。<br>
+根据 GitHub Flavored Markdown Spec 文档，要插入硬换行，你还可以在行尾输入 \ 或者直接输入 <code>&lt;br /&gt;</code> 。</p>
+<ul>
+<li>
+<p><strong>解决方案</strong></p>
+<ul>
+<li>
+<p>在行尾插入 两个空格、 \ 或 <code>&lt;br /&gt;</code> 的缺点<br>
+<code>\</code> 还没有被广泛支持<br>
+<code>&lt;br /&gt;</code> 看着很违和</p>
+</li>
+<li>
+<p>Hugo 使用 BlackFriday 把 markdown 转换为 HTML，可以在 Hugo 的配置文件中添加以下设置，将换行符强制输出为硬换行。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[blackfriday]
+</span></span><span class="line"><span class="cl">  extensions = [&#34;hardLineBreak&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>后续</p>
+<blockquote>
+<p>v0.60.0<br>
+Goldmark by @yuin is now the new default library used for Markdown in Hugo. （Nov 27, 2019）</p>
+</blockquote>
+<p>但是现在 hugo 不再使用Blackfriday改成了Goldmark,可以在下面看到<br>
+<a class="link" href="https://github.com/gohugoio/hugo/issues/9944"  target="_blank" rel="noopener"
+    >https://github.com/gohugoio/hugo/issues/9944</a><br>
+所以就要配置goldmark的hardLineBreak，看了下，在下面找到了答案<br>
+<a class="link" href="https://github.com/yuin/goldmark/issues/247"  target="_blank" rel="noopener"
+    >https://github.com/yuin/goldmark/issues/247</a><br>
+之后看了 hugo 的配置<br>
+<a class="link" href="https://gohugo.io/getting-started/configuration-markup/#configure-markup"  target="_blank" rel="noopener"
+    >https://gohugo.io/getting-started/configuration-markup/#configure-markup</a><br>
+只要在<code>hugo.yaml</code>配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">markup:
+</span></span><span class="line"><span class="cl">  goldmark:
+</span></span><span class="line"><span class="cl">    renderer:
+</span></span><span class="line"><span class="cl">      hardWraps: true
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+<h2 id="添加最后更新时间字段">添加最后更新时间字段
+</h2><p>其实hugo stack这个主题是默认支持显示文章更新时间的，相关代码在 <code>layouts/partials/article/componets/footer.html</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="k">if</span> <span class="nx">ne</span> <span class="p">.</span><span class="nx">Lastmod</span> <span class="p">.</span><span class="nb">Date</span> <span class="o">-</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">section</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;article-lastmod&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{{</span> <span class="nx">partial</span> <span class="s2">&#34;helper/icon&#34;</span> <span class="s2">&#34;clock&#34;</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{{</span> <span class="nx">T</span> <span class="s2">&#34;article.lastUpdatedOn&#34;</span> <span class="p">}}</span> <span class="p">{{</span> <span class="p">.</span><span class="nx">Lastmod</span> <span class="o">|</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Format</span> <span class="p">(</span> <span class="nx">or</span> <span class="p">.</span><span class="nx">Site</span><span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">dateFormat</span><span class="p">.</span><span class="nx">lastUpdated</span> <span class="s2">&#34;Jan 02, 2006 15:04 MST&#34;</span> <span class="p">)</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/span&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/section&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="nx">end</span> <span class="o">-</span><span class="p">}}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这段代码很好理解，如果文章配置了lastmod字段，就会在文章结尾的位置显示最后更新时间。但是这样有点麻烦，更新了文章还要手动修改lastmod时间，我决定读取git的文件提交时间。</p>
+<h3 id="update-hugoyaml">Update hugo.yaml
+</h3><ul>
+<li>可选：修改时间格式</li>
+</ul>
+<p>只需要给你的hugo.yaml配置文件增加以下配置就可以实现自动读取git提交时间，这里面的配置大概是两个作用，<code>enableGitInfo</code> 开启git文件信息，然后 <code>lastmod</code> 先读取文章内的信息，没有的话读取git信息，最后读取 <code>date</code> 信息。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">lastmod</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="s2">&#34;lastmod&#34;</span><span class="w">    </span><span class="c"># 优先使用 frontmatter 里的 lastmod</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="s2">&#34;:git&#34;</span><span class="w">       </span><span class="c"># 如果没有 lastmod，则使用 Git 提交时间</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="s2">&#34;date&#34;</span><span class="w">       </span><span class="c"># 最后 fallback 到 date 字段</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">enableGitInfo</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="cloudflare-pages">Cloudflare pages
+</h3><p>然而你部署到 <code>cloudflare/github</code> 之后你会发现所有文章的更新时间都是最后一次提交的git时间，是因为这些CI/CD平台只会读取最新的一条提交记录，解决方法很简单: 在cloudflare pages 修改部署命令拉取更多记录：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">fetch</span> <span class="o">--</span><span class="nx">unshallow</span> <span class="o">&amp;&amp;</span> <span class="nx">hugo</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>github workflows添加fetch-depth参数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl">- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="修改显示位置">修改显示位置
+</h3><p>默认的更新时间会显示在文章最下方，我是改到了标题下方会更显眼，读者一点进来就能知道这篇文章是否完全过时了： 修改 <code>layouts/partials/article/componets/details.html</code> 插入这段代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="k">if</span> <span class="nx">ne</span> <span class="p">.</span><span class="nx">Lastmod</span> <span class="p">.</span><span class="nb">Date</span> <span class="o">-</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{{</span> <span class="nx">partial</span> <span class="s2">&#34;helper/icon&#34;</span> <span class="s2">&#34;date&#34;</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">time</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;article-time--published&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{{</span> <span class="nx">T</span> <span class="s2">&#34;article.lastUpdatedOn&#34;</span> <span class="p">}}</span> <span class="p">{{</span> <span class="p">.</span><span class="nx">Lastmod</span> <span class="o">|</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Format</span> <span class="p">(</span> <span class="nx">or</span> <span class="p">.</span><span class="nx">Site</span><span class="p">.</span><span class="nx">Params</span><span class="p">.</span><span class="nx">dateFormat</span><span class="p">.</span><span class="nx">lastUpdated</span> <span class="s2">&#34;Jan 02, 2006 15:04 MST&#34;</span> <span class="p">)</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/time&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="nx">end</span> <span class="o">-</span><span class="p">}}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>参考 2</p>
+<p>参考官方文档，在博客项目下创建一个目录layouts\partials\article\components，一定要和stack主题的路径对应上，思想就是hugo生成静态页面时，使用自定义的页面替换stack主题的页面。</p>
+<ul>
+<li>details.html页面</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;div class=&#34;article-details&#34;&gt;
+</span></span><span class="line"><span class="cl">    // 略...
+</span></span><span class="line"><span class="cl">    &lt;footer class=&#34;article-time&#34;&gt;
+</span></span><span class="line"><span class="cl">        // 发布日期代码块
+</span></span><span class="line"><span class="cl">        {{ if $showDate }}
+</span></span><span class="line"><span class="cl">            &lt;div&gt;
+</span></span><span class="line"><span class="cl">                {{ partial &#34;helper/icon&#34; &#34;date&#34; }}
+</span></span><span class="line"><span class="cl">                &lt;time class=&#34;article-time--published&#34;&gt;
+</span></span><span class="line"><span class="cl">                    {{- .Date.Format (or .Site.Params.dateFormat.published &#34;Jan 02, 2006&#34;) -}}
+</span></span><span class="line"><span class="cl">                &lt;/time&gt;
+</span></span><span class="line"><span class="cl">            &lt;/div&gt;
+</span></span><span class="line"><span class="cl">        {{ end }}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        // 阅读时间代码块
+</span></span><span class="line"><span class="cl">        {{ if $showReadingTime }}
+</span></span><span class="line"><span class="cl">            &lt;div&gt;
+</span></span><span class="line"><span class="cl">                {{ partial &#34;helper/icon&#34; &#34;clock&#34; }}
+</span></span><span class="line"><span class="cl">                &lt;time class=&#34;article-time--reading&#34;&gt;
+</span></span><span class="line"><span class="cl">                    {{ T &#34;article.readingTime&#34; .ReadingTime }}
+</span></span><span class="line"><span class="cl">                &lt;/time&gt;
+</span></span><span class="line"><span class="cl">            &lt;/div&gt;
+</span></span><span class="line"><span class="cl">        {{ end }}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        // 剪切到这里，并修改标签和上面的代码块一致
+</span></span><span class="line"><span class="cl">        {{ if ne .Lastmod .Date }}
+</span></span><span class="line"><span class="cl">        &lt;div class=&#34;article-lastmod&#34;&gt;
+</span></span><span class="line"><span class="cl">            {{ partial &#34;helper/icon&#34; &#34;clock&#34; }}
+</span></span><span class="line"><span class="cl">            &lt;time&gt;
+</span></span><span class="line"><span class="cl">                {{ T &#34;article.lastUpdatedOn&#34; }} {{ .Lastmod.Format ( or .Site.Params.dateFormat.lastUpdated &#34;Jan 02, 2006 15:04 MST&#34; ) }}
+</span></span><span class="line"><span class="cl">            &lt;/time&gt;
+</span></span><span class="line"><span class="cl">        &lt;/div&gt;
+</span></span><span class="line"><span class="cl">        {{- end -}}
+</span></span><span class="line"><span class="cl">    &lt;/footer&gt;
+</span></span><span class="line"><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    // 略...
+</span></span><span class="line"><span class="cl">&lt;/div&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>footer.html页面</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;footer class=&#34;article-footer&#34;&gt;
+</span></span><span class="line"><span class="cl">    // 略...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    // 这一块是默认的最后更新时间代码块，将这块代码剪切到details.html的正确位置
+</span></span><span class="line"><span class="cl">    {{- if ne .Lastmod .Date -}}
+</span></span><span class="line"><span class="cl">    &lt;section class=&#34;article-lastmod&#34;&gt;
+</span></span><span class="line"><span class="cl">        {{ partial &#34;helper/icon&#34; &#34;clock&#34; }}
+</span></span><span class="line"><span class="cl">        &lt;span&gt;
+</span></span><span class="line"><span class="cl">            {{ T &#34;article.lastUpdatedOn&#34; }} {{ .Lastmod.Format ( or .Site.Params.dateFormat.lastUpdated &#34;Jan 02, 2006 15:04 MST&#34; ) }}
+</span></span><span class="line"><span class="cl">        &lt;/span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/section&gt;
+</span></span><span class="line"><span class="cl">    {{- end -}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;/footer&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="按最后修改时间排序">按最后修改时间排序
+</h2>
 </section>
 
 
