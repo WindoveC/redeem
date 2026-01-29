@@ -1056,13 +1056,13 @@ com.miui.securityinputmethod - MIUI安全输入法，提供安全的文本输入
         <pubDate>Thu, 29 Jan 2026 03:26:46 +0800</pubDate>
         
         <guid>https://windovec.github.io/redeem/p/swr/</guid>
-        <description>&lt;h1 id=&#34;ide&#34;&gt;IDE
-&lt;/h1&gt;&lt;h2 id=&#34;android-studio&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.android.google.cn/studio?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;ide&#34;&gt;IDE
+&lt;/h2&gt;&lt;h3 id=&#34;android-studio&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.android.google.cn/studio?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Android Studio&lt;/a&gt;
-&lt;/h2&gt;&lt;h3 id=&#34;本体&#34;&gt;本体
-&lt;/h3&gt;&lt;h3 id=&#34;环境变量&#34;&gt;环境变量
-&lt;/h3&gt;&lt;h3 id=&#34;ndk&#34;&gt;NDK
-&lt;/h3&gt;&lt;hr&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;本体&#34;&gt;本体
+&lt;/h4&gt;&lt;h4 id=&#34;环境变量&#34;&gt;环境变量
+&lt;/h4&gt;&lt;h4 id=&#34;ndk&#34;&gt;NDK
+&lt;/h4&gt;&lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;介绍&lt;br&gt;
 Android NDK 是一个工具集，可让您使用 C 和 C++ 等语言以原生代码实现应用的各个部分。对于特定类型的应用，这可以帮助您重复使用以这些语言编写的代码库。&lt;/li&gt;
@@ -1073,8 +1073,8 @@ Android NDK 是一个工具集，可让您使用 C 和 C++ 等语言以原生代
 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/ndk/downloads?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;NDK 下载  | Android NDK  | Android Developers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;仅限命令行工具&#34;&gt;仅限命令行工具
-&lt;/h3&gt;&lt;hr&gt;
+&lt;h4 id=&#34;仅限命令行工具&#34;&gt;仅限命令行工具
+&lt;/h4&gt;&lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;介绍&lt;br&gt;
@@ -1105,8 +1105,8 @@ Android SDK 命令行工具软件包包含可用于构建和调试 Android 应�
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;组件-sdkmanager&#34;&gt;组件 sdkmanager
-&lt;/h4&gt;&lt;ul&gt;
+&lt;h5 id=&#34;组件-sdkmanager&#34;&gt;组件 sdkmanager
+&lt;/h5&gt;&lt;ul&gt;
 &lt;li&gt;介绍&lt;br&gt;
 &lt;code&gt;sdkmanager&lt;/code&gt; 是一个命令行工具，您可以用它来查看、安装、更新和卸载 Android SDK 的软件包。如果使用 Android Studio，则无需使用此工具，而可以&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/studio/intro/update?hl=zh-cn#sdk-manager&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;从 IDE 管理 SDK 软件包&lt;/a&gt;。&lt;/li&gt;
@@ -1114,8 +1114,8 @@ Android SDK 命令行工具软件包包含可用于构建和调试 Android 应�
 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/tools/sdkmanager?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;sdkmanager  | Android Studio  | Android Developers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;旧版-sdk-tools&#34;&gt;旧版 SDK-Tools：
-&lt;/h4&gt;&lt;ul&gt;
+&lt;h5 id=&#34;旧版-sdk-tools&#34;&gt;旧版 SDK-Tools：
+&lt;/h5&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;sdk-tools-windows-3859397.zip&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;sdk-tools-linux-3859397.zip&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;sdk-tools-darwin-3859397.zip&lt;/code&gt;&lt;/li&gt;
@@ -1123,8 +1123,8 @@ Android SDK 命令行工具软件包包含可用于构建和调试 Android 应�
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 这些属于旧版的独立命令行工具，已经被上面的 &lt;code&gt;commandlinetools&lt;/code&gt; 取代了。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;sdk-平台工具&#34;&gt;SDK 平台工具
-&lt;/h3&gt;&lt;hr&gt;
+&lt;h4 id=&#34;sdk-平台工具&#34;&gt;SDK 平台工具
+&lt;/h4&gt;&lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;介绍&lt;br&gt;
@@ -1138,14 +1138,14 @@ Android SDK Platform-Tools 是 Android SDK 的一个组件。它包含与 Androi
     &gt;SDK 平台工具版本说明  | Android Studio  | Android Developers&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;sdk-build-tools&#34;&gt;SDK Build Tools
-&lt;/h3&gt;&lt;hr&gt;
+&lt;h4 id=&#34;sdk-build-tools&#34;&gt;SDK Build Tools
+&lt;/h4&gt;&lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;介绍&lt;br&gt;
 Android SDK Build-Tools 是构建 Android 应用所需的一个 Android SDK 组件，安装在 &lt;code&gt;&amp;lt;sdk&amp;gt;/build-tools/&lt;/code&gt; 目录中。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;sdk-管理器&#34;&gt;SDK 管理器
-&lt;/h3&gt;&lt;hr&gt;
+&lt;h4 id=&#34;sdk-管理器&#34;&gt;SDK 管理器
+&lt;/h4&gt;&lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;installer_r24.4.1-windows.exe&lt;/code&gt;: Windows 版 SDK 管理器安装程序。&lt;/p&gt;
@@ -1163,10 +1163,10 @@ Android SDK Build-Tools 是构建 Android 应用所需的一个 Android SDK 组�
 &lt;blockquote&gt;
 &lt;p&gt;(Legacy Installer / SDK R24)，这些是“古董”级别的工具，大约是在 2015 年左右使用的。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&#34;数据库&#34;&gt;数据库
-&lt;/h1&gt;&lt;h2 id=&#34;microsoft-sql-server&#34;&gt;Microsoft SQL Server
-&lt;/h2&gt;&lt;h3 id=&#34;本体-1&#34;&gt;本体
-&lt;/h3&gt;&lt;blockquote&gt;
+&lt;h2 id=&#34;数据库&#34;&gt;数据库
+&lt;/h2&gt;&lt;h3 id=&#34;microsoft-sql-server&#34;&gt;Microsoft SQL Server
+&lt;/h3&gt;&lt;h4 id=&#34;本体-1&#34;&gt;本体
+&lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;Detailed results:&lt;br&gt;
 Feature:                       Data Quality Services&lt;br&gt;
 Feature:                       全文和语义提取搜索&lt;br&gt;
@@ -1177,15 +1177,15 @@ Feature:                       SQL Browser&lt;br&gt;
 Feature:                       SQL 编写器&lt;br&gt;
 Feature:                       安装程序支持文件&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;实例&#34;&gt;实例
-&lt;/h4&gt;&lt;p&gt;MSSQLSERVER&lt;/p&gt;
-&lt;h4 id=&#34;管理员账号密码&#34;&gt;管理员账号密码
-&lt;/h4&gt;&lt;blockquote&gt;
+&lt;h5 id=&#34;实例&#34;&gt;实例
+&lt;/h5&gt;&lt;p&gt;MSSQLSERVER&lt;/p&gt;
+&lt;h5 id=&#34;管理员账号密码&#34;&gt;管理员账号密码
+&lt;/h5&gt;&lt;blockquote&gt;
 &lt;p&gt;sa&lt;br&gt;
 mssql9264&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;日志&#34;&gt;日志
-&lt;/h4&gt;&lt;p&gt;C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log\20250916_225210\ConfigurationFile.ini&lt;/p&gt;
+&lt;h5 id=&#34;日志&#34;&gt;日志
+&lt;/h5&gt;&lt;p&gt;C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log\20250916_225210\ConfigurationFile.ini&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/swr/index.assets/image-20250916231217300.png&#34;
 	width=&#34;867&#34;
 	height=&#34;106&#34;
@@ -1198,8 +1198,8 @@ mssql9264&lt;/p&gt;
 		data-flex-basis=&#34;1963px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;sql-server-2022-配置管理器&#34;&gt;SQL Server 2022 配置管理器
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/swr/index.assets/image-20250916232515322.png&#34;
+&lt;h4 id=&#34;sql-server-2022-配置管理器&#34;&gt;SQL Server 2022 配置管理器
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/swr/index.assets/image-20250916232515322.png&#34;
 	width=&#34;650&#34;
 	height=&#34;101&#34;
 	srcset=&#34;https://windovec.github.io/redeem/p/swr/index.assets/image-20250916232515322_hu_a00f4150689b7b6d.png 480w, https://windovec.github.io/redeem/p/swr/index.assets/image-20250916232515322_hu_524bf7f80187bcac.png 1024w&#34;
@@ -1211,8 +1211,8 @@ mssql9264&lt;/p&gt;
 		data-flex-basis=&#34;1544px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;重启&#34;&gt;重启
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h5 id=&#34;重启&#34;&gt;重启
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1222,8 +1222,8 @@ mssql9264&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;net&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stop&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mssqlserver&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;ssms&#34;&gt;SSMS
-&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/zh-cn/ssms/install/install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;h4 id=&#34;ssms&#34;&gt;SSMS
+&lt;/h4&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/zh-cn/ssms/install/install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;安装 SQL Server Management Studio | Microsoft Learn&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;核心&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/swr/index.assets/image-20250916232007722.png&#34;
@@ -1240,17 +1240,17 @@ mssql9264&lt;/p&gt;
 		data-flex-basis=&#34;1102px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;mysql&#34;&gt;MySQL
-&lt;/h2&gt;&lt;h3 id=&#34;本体-2&#34;&gt;本体
-&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;mysql&#34;&gt;MySQL
+&lt;/h3&gt;&lt;h4 id=&#34;本体-2&#34;&gt;本体
+&lt;/h4&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MySQL Community (GPL) Downloads »&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/downloads/windows/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MySQL Installer for Windows&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Windows (x86, 32-bit), MSI Installer&lt;/p&gt;
-&lt;h4 id=&#34;重启-1&#34;&gt;重启
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h5 id=&#34;重启-1&#34;&gt;重启
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1260,8 +1260,8 @@ mssql9264&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;net&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stop&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mysql&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;功能选择&#34;&gt;功能选择
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/swr/index.assets/image-20250916233813739.png&#34;
+&lt;/div&gt;&lt;h5 id=&#34;功能选择&#34;&gt;功能选择
+&lt;/h5&gt;&lt;p&gt;&lt;img src=&#34;https://windovec.github.io/redeem/p/swr/index.assets/image-20250916233813739.png&#34;
 	width=&#34;794&#34;
 	height=&#34;493&#34;
 	srcset=&#34;https://windovec.github.io/redeem/p/swr/index.assets/image-20250916233813739_hu_45698697e796d8b8.png 480w, https://windovec.github.io/redeem/p/swr/index.assets/image-20250916233813739_hu_288e4d3e58785410.png 1024w&#34;
@@ -1275,15 +1275,15 @@ mssql9264&lt;/p&gt;
 		data-flex-basis=&#34;386px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;实例-1&#34;&gt;实例
-&lt;/h4&gt;&lt;p&gt;MySQL80&lt;/p&gt;
-&lt;h4 id=&#34;管理员账号密码-1&#34;&gt;管理员账号密码
-&lt;/h4&gt;&lt;blockquote&gt;
+&lt;h5 id=&#34;实例-1&#34;&gt;实例
+&lt;/h5&gt;&lt;p&gt;MySQL80&lt;/p&gt;
+&lt;h5 id=&#34;管理员账号密码-1&#34;&gt;管理员账号密码
+&lt;/h5&gt;&lt;blockquote&gt;
 &lt;p&gt;root&lt;br&gt;
 mysql9264&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;环境变量-1&#34;&gt;环境变量
-&lt;/h4&gt;&lt;ul&gt;
+&lt;h5 id=&#34;环境变量-1&#34;&gt;环境变量
+&lt;/h5&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;MYSQL_HOME&lt;br&gt;
 E:\Program Files\MySQL\MySQL Server 8.0&lt;/p&gt;
@@ -1293,10 +1293,10 @@ E:\Program Files\MySQL\MySQL Server 8.0&lt;/p&gt;
 %MYSQL_HOME%\bin&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;workbench&#34;&gt;Workbench
-&lt;/h3&gt;&lt;h3 id=&#34;shell&#34;&gt;Shell
-&lt;/h3&gt;&lt;h1 id=&#34;异地组网&#34;&gt;异地组网
-&lt;/h1&gt;&lt;table&gt;
+&lt;h4 id=&#34;workbench&#34;&gt;Workbench
+&lt;/h4&gt;&lt;h4 id=&#34;shell&#34;&gt;Shell
+&lt;/h4&gt;&lt;h2 id=&#34;异地组网&#34;&gt;异地组网
+&lt;/h2&gt;&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
           &lt;th&gt;&lt;strong&gt;特性&lt;/strong&gt;&lt;/th&gt;
@@ -1344,24 +1344,24 @@ E:\Program Files\MySQL\MySQL Server 8.0&lt;/p&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;easytier&#34;&gt;EasyTier
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;easytier&#34;&gt;EasyTier
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;GitHub 地址&lt;/strong&gt; ：&lt;a class=&#34;link&#34; href=&#34;https://github.com/EasyTier/EasyTier&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;EasyTier/EasyTier&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;官方文档&lt;/strong&gt;：&lt;a class=&#34;link&#34; href=&#34;https://easytier.rs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;EasyTier - 简单、安全、去中心化的异地组网方案&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：无需注册，去中心化，适合跨运营商的高速 P2P 连接。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;vnt&#34;&gt;VNT
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;vnt&#34;&gt;VNT
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;GitHub 地址&lt;/strong&gt;： &lt;a class=&#34;link&#34; href=&#34;https://github.com/vnt-dev/vnt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;vnt-dev/vnt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;项目主页/文档&lt;/strong&gt;： &lt;a class=&#34;link&#34; href=&#34;https://rustvnt.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;首页 | VNT&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：C/Rust 编写，资源占用极低，抗封锁能力强，适合路由器部署。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;tailscale&#34;&gt;Tailscale
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;tailscale&#34;&gt;Tailscale
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;GitHub 地址&lt;/strong&gt;：&lt;a class=&#34;link&#34; href=&#34;https://github.com/tailscale/tailscale&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;tailscale/tailscale&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;官方文档&lt;/strong&gt;：&lt;a class=&#34;link&#34; href=&#34;https://tailscale.com/kb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1370,44 +1370,44 @@ E:\Program Files\MySQL\MySQL Server 8.0&lt;/p&gt;
     &gt;pkgs.tailscale.com/stable/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：基于 WireGuard，安全性极高，支持 MagicDNS，全平台 App 覆盖，国内建议配合自建 DERP 中继。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;zerotier&#34;&gt;ZeroTier
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;zerotier&#34;&gt;ZeroTier
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;GitHub 地址&lt;/strong&gt;： &lt;a class=&#34;link&#34; href=&#34;https://github.com/zerotier/ZeroTierOne&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;zerotier/ZeroTierOne&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;官方文档&lt;/strong&gt;：&lt;a class=&#34;link&#34; href=&#34;https://docs.zerotier.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Getting Started with ZeroTier | ZeroTier Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：模拟二层以太网，像物理网线一样工作，特别适合需要局域网发现（如游戏、老旧软件）的场景。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;wireguard&#34;&gt;WireGuard
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;wireguard&#34;&gt;WireGuard
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;GitHub 地址&lt;/strong&gt;： &lt;a class=&#34;link&#34; href=&#34;https://github.com/WireGuard&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;WireGuard&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;官方文档&lt;/strong&gt;：&lt;a class=&#34;link&#34; href=&#34;https://www.wireguard.com/quickstart/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Quick Start - WireGuard&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：性能的巅峰。代码量极小，安全性极高，几乎所有现代操作系统内核都已内置。需要手动管理每个设备的密钥、IP、路由。最致命的是：&lt;strong&gt;它没有自动打洞能力&lt;/strong&gt;。如果两端都没有公网 IP，原生 WireGuard 几乎无法直接建立连接。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;串流---服务端&#34;&gt;串流 - 服务端
-&lt;/h1&gt;&lt;h2 id=&#34;sunshine&#34;&gt;sunshine
-&lt;/h2&gt;&lt;h3 id=&#34;sunshine-1&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/LizardByte/Sunshine&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;串流---服务端&#34;&gt;串流 - 服务端
+&lt;/h2&gt;&lt;h3 id=&#34;sunshine&#34;&gt;sunshine
+&lt;/h3&gt;&lt;h4 id=&#34;sunshine-1&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/LizardByte/Sunshine&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Sunshine&lt;/a&gt;
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;文档&lt;/strong&gt;：&lt;a class=&#34;link&#34; href=&#34;https://docs.lizardbyte.dev/projects/sunshine/latest/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Sunshine: Sunshine&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;vigembus手柄&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nefarius/ViGEmBus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h4 id=&#34;vigembus手柄&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nefarius/ViGEmBus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;ViGEmBus&lt;/a&gt;（手柄）
-&lt;/h3&gt;&lt;h3 id=&#34;foundation-sunshinesunshine-基地版&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/qiin2333/foundation-sunshine&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h4&gt;&lt;h4 id=&#34;foundation-sunshinesunshine-基地版&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/qiin2333/foundation-sunshine&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;foundation-sunshine&lt;/a&gt;（sunshine 基地版）
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;文档&lt;/strong&gt;：&lt;a class=&#34;link&#34; href=&#34;https://docs.qq.com/aio/DSGdQc3htbFJjSFdO?p=DXpTjzl2kZwBjN7jlRMkRJ&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Sunshine基地版使用手册初版&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;apollosunshine-fork&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ClassicOldSong/Apollo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h4 id=&#34;apollosunshine-fork&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ClassicOldSong/Apollo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Apollo&lt;/a&gt;（sunshine fork）
-&lt;/h3&gt;&lt;h1 id=&#34;串流---客户端&#34;&gt;串流 - 客户端
-&lt;/h1&gt;&lt;h2 id=&#34;moonlight&#34;&gt;moonlight
-&lt;/h2&gt;&lt;h3 id=&#34;配置&#34;&gt;配置
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h4&gt;&lt;h2 id=&#34;串流---客户端&#34;&gt;串流 - 客户端
+&lt;/h2&gt;&lt;h3 id=&#34;moonlight&#34;&gt;moonlight
+&lt;/h3&gt;&lt;h4 id=&#34;配置&#34;&gt;配置
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;基本设置 - 视频分辨率 - 本地&lt;/li&gt;
 &lt;li&gt;基本设置 - 视频帧数&lt;/li&gt;
 &lt;li&gt;基本设置 - 视频帧速调节&lt;/li&gt;
@@ -1415,17 +1415,17 @@ E:\Program Files\MySQL\MySQL Server 8.0&lt;/p&gt;
 &lt;li&gt;输入设置 - 将触控屏作为触控板使用 - 关闭&lt;/li&gt;
 &lt;li&gt;高级设置  - HDR&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;moonlight-android&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/moonlight-stream/moonlight-android&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h4 id=&#34;moonlight-android&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/moonlight-stream/moonlight-android&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;moonlight-android&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;moonlight-android黑月亮&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ClassicOldSong/moonlight-android&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h4&gt;&lt;h4 id=&#34;moonlight-android黑月亮&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ClassicOldSong/moonlight-android&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;moonlight-android&lt;/a&gt;（黑月亮）
-&lt;/h3&gt;&lt;h3 id=&#34;moonlight-androidmoonlight-阿西西版&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Axixi2233/moonlight-android&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h4&gt;&lt;h4 id=&#34;moonlight-androidmoonlight-阿西西版&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Axixi2233/moonlight-android&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;moonlight-android&lt;/a&gt;（moonlight 阿西西版）
-&lt;/h3&gt;&lt;h3 id=&#34;moonlight-vplusmoonlight-威力加强版&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/qiin2333/moonlight-vplus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h4&gt;&lt;h4 id=&#34;moonlight-vplusmoonlight-威力加强版&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/qiin2333/moonlight-vplus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;moonlight-vplus&lt;/a&gt;（moonlight 威力加强版）
-&lt;/h3&gt;&lt;h3 id=&#34;moonlight-androidmoonlight-皇冠版&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/WACrown/moonlight-android&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h4&gt;&lt;h4 id=&#34;moonlight-androidmoonlight-皇冠版&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/WACrown/moonlight-android&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;moonlight-android&lt;/a&gt;（moonlight 皇冠版）
-&lt;/h3&gt;</description>
+&lt;/h4&gt;</description>
         </item>
         <item>
         <title>代理</title>

@@ -10,7 +10,7 @@
 <meta property='og:description' content="IDE Android Studio 本体 环境变量 NDK 介绍\nAndroid NDK 是一个工具集，可让您使用 C 和 C++ 等语言以原生代码实现应用的各个部分。对于特定类型的应用，这可以帮助您重复使用以这些语言编写的代码库。 文档\nNDK 使用入门 | Android NDK | Android Developers 下载\nNDK 下载 | Android NDK | Android Developers 仅限命令行工具 介绍\nAndroid Studio 中包含命令行工具。如果您不需要 Android Studio，可以从上面下载基本的 Android 命令行工具。您可以使用随附的 sdkmanager 下载其他 SDK 软件包。\nAndroid SDK 命令行工具软件包包含可用于构建和调试 Android 应用的各种工具。此软件包与 Android Studio 同步发布，并将安装在 android_sdk/cmdline-tools/version/bin/ 目录中。\n">
 <meta property='og:url' content='https://windovec.github.io/redeem/p/swr/'>
 <meta property='og:site_name' content='WindoveC'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-01-29T03:26:46&#43;08:00'/><meta property='article:modified_time' content='2026-01-29T11:12:02&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-01-29T03:26:46&#43;08:00'/><meta property='article:modified_time' content='2026-01-29T11:16:06&#43;08:00'/>
 <meta name="twitter:title" content="SWR">
 <meta name="twitter:description" content="IDE Android Studio 本体 环境变量 NDK 介绍\nAndroid NDK 是一个工具集，可让您使用 C 和 C++ 等语言以原生代码实现应用的各个部分。对于特定类型的应用，这可以帮助您重复使用以这些语言编写的代码库。 文档\nNDK 使用入门 | Android NDK | Android Developers 下载\nNDK 下载 | Android NDK | Android Developers 仅限命令行工具 介绍\nAndroid Studio 中包含命令行工具。如果您不需要 Android Studio，可以从上面下载基本的 Android 命令行工具。您可以使用随附的 sdkmanager 下载其他 SDK 软件包。\nAndroid SDK 命令行工具软件包包含可用于构建和调试 Android 应用的各种工具。此软件包与 Android Studio 同步发布，并将安装在 android_sdk/cmdline-tools/version/bin/ 目录中。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -298,87 +298,72 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#android-studio">Android Studio</a>
+    <li><a href="#ide">IDE</a>
       <ol>
-        <li><a href="#本体">本体</a></li>
-        <li><a href="#环境变量">环境变量</a></li>
-        <li><a href="#ndk">NDK</a></li>
-        <li><a href="#仅限命令行工具">仅限命令行工具</a>
+        <li><a href="#android-studio">Android Studio</a>
           <ol>
-            <li><a href="#组件-sdkmanager">组件 sdkmanager</a></li>
-            <li><a href="#旧版-sdk-tools">旧版 SDK-Tools：</a></li>
+            <li><a href="#本体">本体</a></li>
+            <li><a href="#环境变量">环境变量</a></li>
+            <li><a href="#ndk">NDK</a></li>
+            <li><a href="#仅限命令行工具">仅限命令行工具</a></li>
+            <li><a href="#sdk-平台工具">SDK 平台工具</a></li>
+            <li><a href="#sdk-build-tools">SDK Build Tools</a></li>
+            <li><a href="#sdk-管理器">SDK 管理器</a></li>
           </ol>
         </li>
-        <li><a href="#sdk-平台工具">SDK 平台工具</a></li>
-        <li><a href="#sdk-build-tools">SDK Build Tools</a></li>
-        <li><a href="#sdk-管理器">SDK 管理器</a></li>
       </ol>
     </li>
-  </ol>
-
-  <ol>
-    <li><a href="#microsoft-sql-server">Microsoft SQL Server</a>
+    <li><a href="#数据库">数据库</a>
       <ol>
-        <li><a href="#本体-1">本体</a>
+        <li><a href="#microsoft-sql-server">Microsoft SQL Server</a>
           <ol>
-            <li><a href="#实例">实例</a></li>
-            <li><a href="#管理员账号密码">管理员账号密码</a></li>
-            <li><a href="#日志">日志</a></li>
+            <li><a href="#本体-1">本体</a></li>
+            <li><a href="#sql-server-2022-配置管理器">SQL Server 2022 配置管理器</a></li>
+            <li><a href="#ssms">SSMS</a></li>
           </ol>
         </li>
-        <li><a href="#sql-server-2022-配置管理器">SQL Server 2022 配置管理器</a>
+        <li><a href="#mysql">MySQL</a>
           <ol>
-            <li><a href="#重启">重启</a></li>
+            <li><a href="#本体-2">本体</a></li>
+            <li><a href="#workbench">Workbench</a></li>
+            <li><a href="#shell">Shell</a></li>
           </ol>
         </li>
-        <li><a href="#ssms">SSMS</a></li>
       </ol>
     </li>
-    <li><a href="#mysql">MySQL</a>
+    <li><a href="#异地组网">异地组网</a>
       <ol>
-        <li><a href="#本体-2">本体</a>
+        <li><a href="#easytier">EasyTier</a></li>
+        <li><a href="#vnt">VNT</a></li>
+        <li><a href="#tailscale">Tailscale</a></li>
+        <li><a href="#zerotier">ZeroTier</a></li>
+        <li><a href="#wireguard">WireGuard</a></li>
+      </ol>
+    </li>
+    <li><a href="#串流---服务端">串流 - 服务端</a>
+      <ol>
+        <li><a href="#sunshine">sunshine</a>
           <ol>
-            <li><a href="#重启-1">重启</a></li>
-            <li><a href="#功能选择">功能选择</a></li>
-            <li><a href="#实例-1">实例</a></li>
-            <li><a href="#管理员账号密码-1">管理员账号密码</a></li>
-            <li><a href="#环境变量-1">环境变量</a></li>
+            <li><a href="#sunshine-1">Sunshine</a></li>
+            <li><a href="#vigembus手柄">ViGEmBus（手柄）</a></li>
+            <li><a href="#foundation-sunshinesunshine-基地版">foundation-sunshine（sunshine 基地版）</a></li>
+            <li><a href="#apollosunshine-fork">Apollo（sunshine fork）</a></li>
           </ol>
         </li>
-        <li><a href="#workbench">Workbench</a></li>
-        <li><a href="#shell">Shell</a></li>
       </ol>
     </li>
-  </ol>
-
-  <ol>
-    <li><a href="#easytier">EasyTier</a></li>
-    <li><a href="#vnt">VNT</a></li>
-    <li><a href="#tailscale">Tailscale</a></li>
-    <li><a href="#zerotier">ZeroTier</a></li>
-    <li><a href="#wireguard">WireGuard</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#sunshine">sunshine</a>
+    <li><a href="#串流---客户端">串流 - 客户端</a>
       <ol>
-        <li><a href="#sunshine-1">Sunshine</a></li>
-        <li><a href="#vigembus手柄">ViGEmBus（手柄）</a></li>
-        <li><a href="#foundation-sunshinesunshine-基地版">foundation-sunshine（sunshine 基地版）</a></li>
-        <li><a href="#apollosunshine-fork">Apollo（sunshine fork）</a></li>
-      </ol>
-    </li>
-  </ol>
-
-  <ol>
-    <li><a href="#moonlight">moonlight</a>
-      <ol>
-        <li><a href="#配置">配置</a></li>
-        <li><a href="#moonlight-android">moonlight-android</a></li>
-        <li><a href="#moonlight-android黑月亮">moonlight-android（黑月亮）</a></li>
-        <li><a href="#moonlight-androidmoonlight-阿西西版">moonlight-android（moonlight 阿西西版）</a></li>
-        <li><a href="#moonlight-vplusmoonlight-威力加强版">moonlight-vplus（moonlight 威力加强版）</a></li>
-        <li><a href="#moonlight-androidmoonlight-皇冠版">moonlight-android（moonlight 皇冠版）</a></li>
+        <li><a href="#moonlight">moonlight</a>
+          <ol>
+            <li><a href="#配置">配置</a></li>
+            <li><a href="#moonlight-android">moonlight-android</a></li>
+            <li><a href="#moonlight-android黑月亮">moonlight-android（黑月亮）</a></li>
+            <li><a href="#moonlight-androidmoonlight-阿西西版">moonlight-android（moonlight 阿西西版）</a></li>
+            <li><a href="#moonlight-vplusmoonlight-威力加强版">moonlight-vplus（moonlight 威力加强版）</a></li>
+            <li><a href="#moonlight-androidmoonlight-皇冠版">moonlight-android（moonlight 皇冠版）</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -452,13 +437,13 @@
     <section class="article-content">
     
     
-    <h1 id="ide">IDE
-</h1><h2 id="android-studio"><a class="link" href="https://developer.android.google.cn/studio?hl=zh-cn"  target="_blank" rel="noopener"
+    <h2 id="ide">IDE
+</h2><h3 id="android-studio"><a class="link" href="https://developer.android.google.cn/studio?hl=zh-cn"  target="_blank" rel="noopener"
     >Android Studio</a>
-</h2><h3 id="本体">本体
-</h3><h3 id="环境变量">环境变量
-</h3><h3 id="ndk">NDK
-</h3><hr>
+</h3><h4 id="本体">本体
+</h4><h4 id="环境变量">环境变量
+</h4><h4 id="ndk">NDK
+</h4><hr>
 <ul>
 <li>介绍<br>
 Android NDK 是一个工具集，可让您使用 C 和 C++ 等语言以原生代码实现应用的各个部分。对于特定类型的应用，这可以帮助您重复使用以这些语言编写的代码库。</li>
@@ -469,8 +454,8 @@ Android NDK 是一个工具集，可让您使用 C 和 C++ 等语言以原生代
 <a class="link" href="https://developer.android.com/ndk/downloads?hl=zh-cn"  target="_blank" rel="noopener"
     >NDK 下载  | Android NDK  | Android Developers</a></li>
 </ul>
-<h3 id="仅限命令行工具">仅限命令行工具
-</h3><hr>
+<h4 id="仅限命令行工具">仅限命令行工具
+</h4><hr>
 <ul>
 <li>
 <p>介绍<br>
@@ -501,8 +486,8 @@ Android SDK 命令行工具软件包包含可用于构建和调试 Android 应�
 ></p>
 </li>
 </ul>
-<h4 id="组件-sdkmanager">组件 sdkmanager
-</h4><ul>
+<h5 id="组件-sdkmanager">组件 sdkmanager
+</h5><ul>
 <li>介绍<br>
 <code>sdkmanager</code> 是一个命令行工具，您可以用它来查看、安装、更新和卸载 Android SDK 的软件包。如果使用 Android Studio，则无需使用此工具，而可以<a class="link" href="https://developer.android.com/studio/intro/update?hl=zh-cn#sdk-manager"  target="_blank" rel="noopener"
     >从 IDE 管理 SDK 软件包</a>。</li>
@@ -510,8 +495,8 @@ Android SDK 命令行工具软件包包含可用于构建和调试 Android 应�
 <a class="link" href="https://developer.android.com/tools/sdkmanager?hl=zh-cn"  target="_blank" rel="noopener"
     >sdkmanager  | Android Studio  | Android Developers</a></li>
 </ul>
-<h4 id="旧版-sdk-tools">旧版 SDK-Tools：
-</h4><ul>
+<h5 id="旧版-sdk-tools">旧版 SDK-Tools：
+</h5><ul>
 <li><code>sdk-tools-windows-3859397.zip</code></li>
 <li><code>sdk-tools-linux-3859397.zip</code></li>
 <li><code>sdk-tools-darwin-3859397.zip</code></li>
@@ -519,8 +504,8 @@ Android SDK 命令行工具软件包包含可用于构建和调试 Android 应�
 <blockquote>
 <p><strong>注意：</strong> 这些属于旧版的独立命令行工具，已经被上面的 <code>commandlinetools</code> 取代了。</p>
 </blockquote>
-<h3 id="sdk-平台工具">SDK 平台工具
-</h3><hr>
+<h4 id="sdk-平台工具">SDK 平台工具
+</h4><hr>
 <ul>
 <li>
 <p>介绍<br>
@@ -534,14 +519,14 @@ Android SDK Platform-Tools 是 Android SDK 的一个组件。它包含与 Androi
     >SDK 平台工具版本说明  | Android Studio  | Android Developers</a></p>
 </li>
 </ul>
-<h3 id="sdk-build-tools">SDK Build Tools
-</h3><hr>
+<h4 id="sdk-build-tools">SDK Build Tools
+</h4><hr>
 <ul>
 <li>介绍<br>
 Android SDK Build-Tools 是构建 Android 应用所需的一个 Android SDK 组件，安装在 <code>&lt;sdk&gt;/build-tools/</code> 目录中。</li>
 </ul>
-<h3 id="sdk-管理器">SDK 管理器
-</h3><hr>
+<h4 id="sdk-管理器">SDK 管理器
+</h4><hr>
 <ul>
 <li>
 <p><code>installer_r24.4.1-windows.exe</code>: Windows 版 SDK 管理器安装程序。</p>
@@ -559,10 +544,10 @@ Android SDK Build-Tools 是构建 Android 应用所需的一个 Android SDK 组�
 <blockquote>
 <p>(Legacy Installer / SDK R24)，这些是“古董”级别的工具，大约是在 2015 年左右使用的。</p>
 </blockquote>
-<h1 id="数据库">数据库
-</h1><h2 id="microsoft-sql-server">Microsoft SQL Server
-</h2><h3 id="本体-1">本体
-</h3><blockquote>
+<h2 id="数据库">数据库
+</h2><h3 id="microsoft-sql-server">Microsoft SQL Server
+</h3><h4 id="本体-1">本体
+</h4><blockquote>
 <p>Detailed results:<br>
 Feature:                       Data Quality Services<br>
 Feature:                       全文和语义提取搜索<br>
@@ -573,15 +558,15 @@ Feature:                       SQL Browser<br>
 Feature:                       SQL 编写器<br>
 Feature:                       安装程序支持文件</p>
 </blockquote>
-<h4 id="实例">实例
-</h4><p>MSSQLSERVER</p>
-<h4 id="管理员账号密码">管理员账号密码
-</h4><blockquote>
+<h5 id="实例">实例
+</h5><p>MSSQLSERVER</p>
+<h5 id="管理员账号密码">管理员账号密码
+</h5><blockquote>
 <p>sa<br>
 mssql9264</p>
 </blockquote>
-<h4 id="日志">日志
-</h4><p>C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log\20250916_225210\ConfigurationFile.ini</p>
+<h5 id="日志">日志
+</h5><p>C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log\20250916_225210\ConfigurationFile.ini</p>
 <p><img src="/redeem/p/swr/index.assets/image-20250916231217300.png"
 	width="867"
 	height="106"
@@ -594,8 +579,8 @@ mssql9264</p>
 		data-flex-basis="1963px"
 	
 ></p>
-<h3 id="sql-server-2022-配置管理器">SQL Server 2022 配置管理器
-</h3><p><img src="/redeem/p/swr/index.assets/image-20250916232515322.png"
+<h4 id="sql-server-2022-配置管理器">SQL Server 2022 配置管理器
+</h4><p><img src="/redeem/p/swr/index.assets/image-20250916232515322.png"
 	width="650"
 	height="101"
 	srcset="/redeem/p/swr/index.assets/image-20250916232515322_hu_a00f4150689b7b6d.png 480w, /redeem/p/swr/index.assets/image-20250916232515322_hu_524bf7f80187bcac.png 1024w"
@@ -607,8 +592,8 @@ mssql9264</p>
 		data-flex-basis="1544px"
 	
 ></p>
-<h4 id="重启">重启
-</h4><div class="highlight"><div class="chroma">
+<h5 id="重启">重启
+</h5><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -618,8 +603,8 @@ mssql9264</p>
 </span></span><span class="line"><span class="cl"><span class="n">net</span> <span class="n">stop</span> <span class="n">mssqlserver</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="ssms">SSMS
-</h3><p><a class="link" href="https://learn.microsoft.com/zh-cn/ssms/install/install"  target="_blank" rel="noopener"
+</div><h4 id="ssms">SSMS
+</h4><p><a class="link" href="https://learn.microsoft.com/zh-cn/ssms/install/install"  target="_blank" rel="noopener"
     >安装 SQL Server Management Studio | Microsoft Learn</a></p>
 <p>核心</p>
 <p><img src="/redeem/p/swr/index.assets/image-20250916232007722.png"
@@ -636,17 +621,17 @@ mssql9264</p>
 		data-flex-basis="1102px"
 	
 ></p>
-<h2 id="mysql">MySQL
-</h2><h3 id="本体-2">本体
-</h3><p><a class="link" href="https://dev.mysql.com/downloads/"  target="_blank" rel="noopener"
+<h3 id="mysql">MySQL
+</h3><h4 id="本体-2">本体
+</h4><p><a class="link" href="https://dev.mysql.com/downloads/"  target="_blank" rel="noopener"
     >MySQL Community (GPL) Downloads »</a></p>
 <ul>
 <li><a class="link" href="https://dev.mysql.com/downloads/windows/"  target="_blank" rel="noopener"
     >MySQL Installer for Windows</a></li>
 </ul>
 <p>Windows (x86, 32-bit), MSI Installer</p>
-<h4 id="重启-1">重启
-</h4><div class="highlight"><div class="chroma">
+<h5 id="重启-1">重启
+</h5><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -656,8 +641,8 @@ mssql9264</p>
 </span></span><span class="line"><span class="cl"><span class="n">net</span> <span class="n">stop</span> <span class="n">mysql</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="功能选择">功能选择
-</h4><p><img src="/redeem/p/swr/index.assets/image-20250916233813739.png"
+</div><h5 id="功能选择">功能选择
+</h5><p><img src="/redeem/p/swr/index.assets/image-20250916233813739.png"
 	width="794"
 	height="493"
 	srcset="/redeem/p/swr/index.assets/image-20250916233813739_hu_45698697e796d8b8.png 480w, /redeem/p/swr/index.assets/image-20250916233813739_hu_288e4d3e58785410.png 1024w"
@@ -671,15 +656,15 @@ mssql9264</p>
 		data-flex-basis="386px"
 	
 ></p>
-<h4 id="实例-1">实例
-</h4><p>MySQL80</p>
-<h4 id="管理员账号密码-1">管理员账号密码
-</h4><blockquote>
+<h5 id="实例-1">实例
+</h5><p>MySQL80</p>
+<h5 id="管理员账号密码-1">管理员账号密码
+</h5><blockquote>
 <p>root<br>
 mysql9264</p>
 </blockquote>
-<h4 id="环境变量-1">环境变量
-</h4><ul>
+<h5 id="环境变量-1">环境变量
+</h5><ul>
 <li>
 <p>MYSQL_HOME<br>
 E:\Program Files\MySQL\MySQL Server 8.0</p>
@@ -689,10 +674,10 @@ E:\Program Files\MySQL\MySQL Server 8.0</p>
 %MYSQL_HOME%\bin</p>
 </li>
 </ul>
-<h3 id="workbench">Workbench
-</h3><h3 id="shell">Shell
-</h3><h1 id="异地组网">异地组网
-</h1><div class="table-wrapper"><table>
+<h4 id="workbench">Workbench
+</h4><h4 id="shell">Shell
+</h4><h2 id="异地组网">异地组网
+</h2><div class="table-wrapper"><table>
   <thead>
       <tr>
           <th><strong>特性</strong></th>
@@ -740,24 +725,24 @@ E:\Program Files\MySQL\MySQL Server 8.0</p>
       </tr>
   </tbody>
 </table></div>
-<h2 id="easytier">EasyTier
-</h2><ul>
+<h3 id="easytier">EasyTier
+</h3><ul>
 <li><strong>GitHub 地址</strong> ：<a class="link" href="https://github.com/EasyTier/EasyTier"  target="_blank" rel="noopener"
     >EasyTier/EasyTier</a></li>
 <li><strong>官方文档</strong>：<a class="link" href="https://easytier.rs/"  target="_blank" rel="noopener"
     >EasyTier - 简单、安全、去中心化的异地组网方案</a></li>
 <li><strong>特点</strong>：无需注册，去中心化，适合跨运营商的高速 P2P 连接。</li>
 </ul>
-<h2 id="vnt">VNT
-</h2><ul>
+<h3 id="vnt">VNT
+</h3><ul>
 <li><strong>GitHub 地址</strong>： <a class="link" href="https://github.com/vnt-dev/vnt"  target="_blank" rel="noopener"
     >vnt-dev/vnt</a></li>
 <li><strong>项目主页/文档</strong>： <a class="link" href="https://rustvnt.com/"  target="_blank" rel="noopener"
     >首页 | VNT</a></li>
 <li><strong>特点</strong>：C/Rust 编写，资源占用极低，抗封锁能力强，适合路由器部署。</li>
 </ul>
-<h2 id="tailscale">Tailscale
-</h2><ul>
+<h3 id="tailscale">Tailscale
+</h3><ul>
 <li><strong>GitHub 地址</strong>：<a class="link" href="https://github.com/tailscale/tailscale"  target="_blank" rel="noopener"
     >tailscale/tailscale</a></li>
 <li><strong>官方文档</strong>：<a class="link" href="https://tailscale.com/kb"  target="_blank" rel="noopener"
@@ -766,44 +751,44 @@ E:\Program Files\MySQL\MySQL Server 8.0</p>
     >pkgs.tailscale.com/stable/</a></li>
 <li><strong>特点</strong>：基于 WireGuard，安全性极高，支持 MagicDNS，全平台 App 覆盖，国内建议配合自建 DERP 中继。</li>
 </ul>
-<h2 id="zerotier">ZeroTier
-</h2><ul>
+<h3 id="zerotier">ZeroTier
+</h3><ul>
 <li><strong>GitHub 地址</strong>： <a class="link" href="https://github.com/zerotier/ZeroTierOne"  target="_blank" rel="noopener"
     >zerotier/ZeroTierOne</a></li>
 <li><strong>官方文档</strong>：<a class="link" href="https://docs.zerotier.com/"  target="_blank" rel="noopener"
     >Getting Started with ZeroTier | ZeroTier Documentation</a></li>
 <li><strong>特点</strong>：模拟二层以太网，像物理网线一样工作，特别适合需要局域网发现（如游戏、老旧软件）的场景。</li>
 </ul>
-<h2 id="wireguard">WireGuard
-</h2><ul>
+<h3 id="wireguard">WireGuard
+</h3><ul>
 <li><strong>GitHub 地址</strong>： <a class="link" href="https://github.com/WireGuard"  target="_blank" rel="noopener"
     >WireGuard</a></li>
 <li><strong>官方文档</strong>：<a class="link" href="https://www.wireguard.com/quickstart/"  target="_blank" rel="noopener"
     >Quick Start - WireGuard</a></li>
 <li><strong>特点</strong>：性能的巅峰。代码量极小，安全性极高，几乎所有现代操作系统内核都已内置。需要手动管理每个设备的密钥、IP、路由。最致命的是：<strong>它没有自动打洞能力</strong>。如果两端都没有公网 IP，原生 WireGuard 几乎无法直接建立连接。</li>
 </ul>
-<h1 id="串流---服务端">串流 - 服务端
-</h1><h2 id="sunshine">sunshine
-</h2><h3 id="sunshine-1"><a class="link" href="https://github.com/LizardByte/Sunshine"  target="_blank" rel="noopener"
+<h2 id="串流---服务端">串流 - 服务端
+</h2><h3 id="sunshine">sunshine
+</h3><h4 id="sunshine-1"><a class="link" href="https://github.com/LizardByte/Sunshine"  target="_blank" rel="noopener"
     >Sunshine</a>
-</h3><ul>
+</h4><ul>
 <li><strong>文档</strong>：<a class="link" href="https://docs.lizardbyte.dev/projects/sunshine/latest/index.html"  target="_blank" rel="noopener"
     >Sunshine: Sunshine</a></li>
 </ul>
-<h3 id="vigembus手柄"><a class="link" href="https://github.com/nefarius/ViGEmBus"  target="_blank" rel="noopener"
+<h4 id="vigembus手柄"><a class="link" href="https://github.com/nefarius/ViGEmBus"  target="_blank" rel="noopener"
     >ViGEmBus</a>（手柄）
-</h3><h3 id="foundation-sunshinesunshine-基地版"><a class="link" href="https://github.com/qiin2333/foundation-sunshine"  target="_blank" rel="noopener"
+</h4><h4 id="foundation-sunshinesunshine-基地版"><a class="link" href="https://github.com/qiin2333/foundation-sunshine"  target="_blank" rel="noopener"
     >foundation-sunshine</a>（sunshine 基地版）
-</h3><ul>
+</h4><ul>
 <li><strong>文档</strong>：<a class="link" href="https://docs.qq.com/aio/DSGdQc3htbFJjSFdO?p=DXpTjzl2kZwBjN7jlRMkRJ"  target="_blank" rel="noopener"
     >Sunshine基地版使用手册初版</a></li>
 </ul>
-<h3 id="apollosunshine-fork"><a class="link" href="https://github.com/ClassicOldSong/Apollo"  target="_blank" rel="noopener"
+<h4 id="apollosunshine-fork"><a class="link" href="https://github.com/ClassicOldSong/Apollo"  target="_blank" rel="noopener"
     >Apollo</a>（sunshine fork）
-</h3><h1 id="串流---客户端">串流 - 客户端
-</h1><h2 id="moonlight">moonlight
-</h2><h3 id="配置">配置
-</h3><ul>
+</h4><h2 id="串流---客户端">串流 - 客户端
+</h2><h3 id="moonlight">moonlight
+</h3><h4 id="配置">配置
+</h4><ul>
 <li>基本设置 - 视频分辨率 - 本地</li>
 <li>基本设置 - 视频帧数</li>
 <li>基本设置 - 视频帧速调节</li>
@@ -811,17 +796,17 @@ E:\Program Files\MySQL\MySQL Server 8.0</p>
 <li>输入设置 - 将触控屏作为触控板使用 - 关闭</li>
 <li>高级设置  - HDR</li>
 </ul>
-<h3 id="moonlight-android"><a class="link" href="https://github.com/moonlight-stream/moonlight-android"  target="_blank" rel="noopener"
+<h4 id="moonlight-android"><a class="link" href="https://github.com/moonlight-stream/moonlight-android"  target="_blank" rel="noopener"
     >moonlight-android</a>
-</h3><h3 id="moonlight-android黑月亮"><a class="link" href="https://github.com/ClassicOldSong/moonlight-android"  target="_blank" rel="noopener"
+</h4><h4 id="moonlight-android黑月亮"><a class="link" href="https://github.com/ClassicOldSong/moonlight-android"  target="_blank" rel="noopener"
     >moonlight-android</a>（黑月亮）
-</h3><h3 id="moonlight-androidmoonlight-阿西西版"><a class="link" href="https://github.com/Axixi2233/moonlight-android"  target="_blank" rel="noopener"
+</h4><h4 id="moonlight-androidmoonlight-阿西西版"><a class="link" href="https://github.com/Axixi2233/moonlight-android"  target="_blank" rel="noopener"
     >moonlight-android</a>（moonlight 阿西西版）
-</h3><h3 id="moonlight-vplusmoonlight-威力加强版"><a class="link" href="https://github.com/qiin2333/moonlight-vplus"  target="_blank" rel="noopener"
+</h4><h4 id="moonlight-vplusmoonlight-威力加强版"><a class="link" href="https://github.com/qiin2333/moonlight-vplus"  target="_blank" rel="noopener"
     >moonlight-vplus</a>（moonlight 威力加强版）
-</h3><h3 id="moonlight-androidmoonlight-皇冠版"><a class="link" href="https://github.com/WACrown/moonlight-android"  target="_blank" rel="noopener"
+</h4><h4 id="moonlight-androidmoonlight-皇冠版"><a class="link" href="https://github.com/WACrown/moonlight-android"  target="_blank" rel="noopener"
     >moonlight-android</a>（moonlight 皇冠版）
-</h3>
+</h4>
 </section>
 
 
@@ -850,7 +835,7 @@ E:\Program Files\MySQL\MySQL Server 8.0</p>
 
 
         <span>
-            最后更新于 Jan 29, 2026 11:12 &#43;0800
+            最后更新于 Jan 29, 2026 11:16 &#43;0800
         </span>
     </section></footer>
 
