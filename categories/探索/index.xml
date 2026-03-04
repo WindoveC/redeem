@@ -2252,7 +2252,7 @@ Goldmark by @yuin is now the new default library used for Markdown in Hugo. （N
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;可能遇到的问题：冲突 (Conflict)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;i7j8k9l 调用 a1b2c3d 中新添加的函数&lt;/p&gt;
+&lt;p&gt;i7j8k9l 调用 &lt;del&gt;a1b2c3d&lt;/del&gt;？ 中新添加的函数&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Git 会暂停 rebase，提示你解决冲突。&lt;/li&gt;
 &lt;li&gt;打开代码文件，修好代码（比如在 D 里把调用代码也删掉）。&lt;/li&gt;
