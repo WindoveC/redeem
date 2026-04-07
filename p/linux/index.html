@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="零、系统 linux server 开机网络检测 1 sudo vi /etc/systemd/system/network-online.targets.wants/networking.service1 修改TimeoutStartSec\n1 sudo vi /etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service 修改TimeoutStartSec\n修改网卡配置 /etc/netplan/00-installer-config.yaml ，也有可能不是这个名字，一般这个文件夹下面只有一个yaml配置文件，用来配置网卡的信息。在网卡上添加 optional: true 选项 然后重启系统，再看是否还卡同样的问题\n">
 <title>Linux</title>

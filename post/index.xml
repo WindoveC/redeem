@@ -5,9 +5,9 @@
         <link>https://windovec.github.io/redeem/post/</link>
         <description>Recent content in Posts on WindoveC</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
+        <language>en-us</language>
         <copyright>WindoveC</copyright>
-        <lastBuildDate>Thu, 29 Jan 2026 11:16:06 +0800</lastBuildDate><atom:link href="https://windovec.github.io/redeem/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 07 Apr 2026 11:01:55 +0800</lastBuildDate><atom:link href="https://windovec.github.io/redeem/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux</title>
         <link>https://windovec.github.io/redeem/p/linux/</link>
         <pubDate>Thu, 29 Jan 2026 03:34:08 +0800</pubDate>
@@ -1117,9 +1117,20 @@ Android SDK 命令行工具软件包包含可用于构建和调试 Android 应�
 &lt;/ul&gt;
 &lt;h5 id=&#34;旧版-sdk-tools&#34;&gt;旧版 SDK-Tools：
 &lt;/h5&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;sdk-tools-windows-3859397.zip&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sdk-tools-linux-3859397.zip&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sdk-tools-darwin-3859397.zip&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第三方下载&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.androiddevtools.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.androiddevtools.cn&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sdk-tools-windows-3859397.zip&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sdk-tools-linux-3859397.zip&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sdk-tools-darwin-3859397.zip&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 这些属于旧版的独立命令行工具，已经被上面的 &lt;code&gt;commandlinetools&lt;/code&gt; 取代了。&lt;/p&gt;
@@ -7233,8 +7244,8 @@ IDEA 中可通过字符串名&lt;code&gt;.length ().fori&lt;/code&gt; 快速生�
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;StringBuilder(int capacity)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;StringBuilder&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;capacity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;指定容量&lt;/li&gt;
@@ -7244,8 +7255,8 @@ IDEA 中可通过字符串名&lt;code&gt;.length ().fori&lt;/code&gt; 快速生�
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;StringBuilder sb2 = new StringBuilder(&amp;#34;ABC&amp;#34;);
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;StringBuilder&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sb2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;StringBuilder&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ABC&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
@@ -7345,6 +7356,9 @@ IDEA 中可通过字符串名&lt;code&gt;.length ().fori&lt;/code&gt; 快速生�
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;public int length()&lt;/strong&gt;：返回长度（已经存多少）&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;拓展知识点（文档未提及但高频考点）&lt;/p&gt;
