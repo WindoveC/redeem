@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://windovec.github.io/redeem/p/swr/'>
 
-<link rel="stylesheet" href="/redeem/scss/style.min.919e2d4f1e21cc10402f961910fcaa3b779273d37c0fab25eece88edcbd5e750.css"><meta property='og:title' content="SWR">
+<link rel="stylesheet" href="/redeem/scss/style.min.3183d6d145029ae49a232e9429a063dc77463de8d569146af8a611a9fdcc92b5.css"><meta property='og:title' content="SWR">
 <meta property='og:description' content="IDE Android Studio 本体 环境变量 NDK 介绍\nAndroid NDK 是一个工具集，可让您使用 C 和 C++ 等语言以原生代码实现应用的各个部分。对于特定类型的应用，这可以帮助您重复使用以这些语言编写的代码库。 文档\nNDK 使用入门 | Android NDK | Android Developers 下载\nNDK 下载 | Android NDK | Android Developers 仅限命令行工具 介绍\nAndroid Studio 中包含命令行工具。如果您不需要 Android Studio，可以从上面下载基本的 Android 命令行工具。您可以使用随附的 sdkmanager 下载其他 SDK 软件包。\nAndroid SDK 命令行工具软件包包含可用于构建和调试 Android 应用的各种工具。此软件包与 Android Studio 同步发布，并将安装在 android_sdk/cmdline-tools/version/bin/ 目录中。\n">
 <meta property='og:url' content='https://windovec.github.io/redeem/p/swr/'>
 <meta property='og:site_name' content='WindoveC'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-01-29T03:26:46&#43;08:00'/><meta property='article:modified_time' content='2026-04-08T17:41:23&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-01-29T03:26:46&#43;08:00'/><meta property='article:modified_time' content='2026-08-23T01:41:12&#43;08:00'/>
 <meta name="twitter:title" content="SWR">
 <meta name="twitter:description" content="IDE Android Studio 本体 环境变量 NDK 介绍\nAndroid NDK 是一个工具集，可让您使用 C 和 C++ 等语言以原生代码实现应用的各个部分。对于特定类型的应用，这可以帮助您重复使用以这些语言编写的代码库。 文档\nNDK 使用入门 | Android NDK | Android Developers 下载\nNDK 下载 | Android NDK | Android Developers 仅限命令行工具 介绍\nAndroid Studio 中包含命令行工具。如果您不需要 Android Studio，可以从上面下载基本的 Android 命令行工具。您可以使用随附的 sdkmanager 下载其他 SDK 软件包。\nAndroid SDK 命令行工具软件包包含可用于构建和调试 Android 应用的各种工具。此软件包与 Android Studio 同步发布，并将安装在 android_sdk/cmdline-tools/version/bin/ 目录中。\n">
     <link rel="shortcut icon" href="/redeem/favicon.ico" />
@@ -311,6 +311,16 @@
             <li><a href="#sdk-管理器">SDK 管理器</a></li>
           </ol>
         </li>
+        <li><a href="#vs-code">VS Code</a>
+          <ol>
+            <li><a href="#远程-remote---ssh">远程 Remote - SSH</a></li>
+          </ol>
+        </li>
+        <li><a href="#qoder">Qoder</a>
+          <ol>
+            <li><a href="#下载链接">下载链接</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
     <li><a href="#数据库">数据库</a>
@@ -364,6 +374,70 @@
             <li><a href="#moonlight-androidmoonlight-皇冠版">moonlight-android（moonlight 皇冠版）</a></li>
           </ol>
         </li>
+      </ol>
+    </li>
+    <li><a href="#anaconda">Anaconda</a>
+      <ol>
+        <li><a href="#安装">安装</a>
+          <ol>
+            <li></li>
+            <li><a href="#linux-miniconda">linux Miniconda</a></li>
+          </ol>
+        </li>
+        <li><a href="#使用">使用</a>
+          <ol>
+            <li><a href="#安装软件包">安装软件包</a></li>
+          </ol>
+        </li>
+        <li><a href="#配置-1">配置</a></li>
+        <li><a href="#迁移">迁移</a>
+          <ol>
+            <li><a href="#导出环境到一个-yml-文件">导出环境到一个 <code>yml</code> 文件：</a></li>
+            <li><a href="#重建环境">重建环境</a></li>
+            <li><a href="#刷新-conda-环境索引">刷新 conda 环境索引</a></li>
+            <li><a href="#修复路径硬编码">修复路径硬编码</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#python">Python</a>
+      <ol>
+        <li><a href="#安装-1">安装</a></li>
+        <li><a href="#使用-1">使用</a>
+          <ol>
+            <li><a href="#安装软件包-1">安装软件包</a></li>
+          </ol>
+        </li>
+        <li><a href="#配置-2">配置</a>
+          <ol>
+            <li><a href="#pip-安装位置">pip 安装位置</a></li>
+            <li><a href="#pip-缓存位置">pip 缓存位置</a></li>
+            <li><a href="#清除孤儿依赖">清除孤儿依赖</a></li>
+          </ol>
+        </li>
+        <li><a href="#迁移-1">迁移</a>
+          <ol>
+            <li><a href="#导出环境要求">导出环境要求</a></li>
+            <li><a href="#软件包缺失检查">软件包缺失检查</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#ai">AI</a>
+      <ol>
+        <li><a href="#claude-code">Claude Code</a>
+          <ol>
+            <li><a href="#安装-2">安装</a></li>
+            <li><a href="#配置-3">配置</a></li>
+          </ol>
+        </li>
+        <li><a href="#codex-cli">Codex CLI</a>
+          <ol>
+            <li><a href="#安装-3">安装</a></li>
+            <li><a href="#配置-4">配置</a></li>
+          </ol>
+        </li>
+        <li><a href="#nodejs">Node.js</a></li>
       </ol>
     </li>
   </ol>
@@ -422,7 +496,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 4 分钟
+                    阅读时长: 13 分钟
                 </time>
             </div>
         
@@ -555,7 +629,265 @@ Android SDK Build-Tools 是构建 Android 应用所需的一个 Android SDK 组�
 <blockquote>
 <p>(Legacy Installer / SDK R24)，这些是“古董”级别的工具，大约是在 2015 年左右使用的。</p>
 </blockquote>
-<h2 id="数据库">数据库
+<h3 id="vs-code">VS Code
+</h3><h4 id="远程-remote---ssh">远程 Remote - SSH
+</h4><ol>
+<li>
+<p>安装插件</p>
+</li>
+<li>
+<p>建立连接</p>
+</li>
+<li>
+<p>远程资源管理器-&gt;打开SSH配置文件选择要更新的 SSH 配置文件，一般选择第一个也就是C:\Users${user}.ssh\config，打开后编辑配置并保存</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Host 别名
+</span></span><span class="line"><span class="cl">  HostName IP/域名
+</span></span><span class="line"><span class="cl">  Port 端口
+</span></span><span class="line"><span class="cl">  User 用户名
+</span></span><span class="line"><span class="cl">  IdentityFile 私钥路径
+</span></span><span class="line"><span class="cl">  # ServerAliveInterval 30  # 保活
+</span></span><span class="line"><span class="cl">  # ForwardAgent yes        # 代理密钥
+</span></span><span class="line"><span class="cl">  # LocalForward 端口 目标IP:端口  # 本地转发
+</span></span><span class="line"><span class="cl">  # RemoteForward 端口 本地IP:端口 # 远程转发
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>离线下载vscode-server并安装<br>
+如果远程端不能联网可以下载包离线安装,下载 vscode-server  的 url 需要和 vscode 客户端版本的 commit-id 对应.<br>
+通过 vscode 面板的帮助-&gt;关于可以获取该信息,复制信息,我当前版本如下(提交后面对应的就是 commit_id):</p>
+<ul>
+<li>
+<p>旧版离线包下载</p>
+<p>vscode-server 下载地址如下,其中 commit_id 是上面复制的提交 id:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">x86:
+</span></span><span class="line"><span class="cl">https://update.code.visualstudio.com/commit:${commit_id}/server-linux-x64/stable
+</span></span><span class="line"><span class="cl">arm:
+</span></span><span class="line"><span class="cl">https://update.code.visualstudio.com/commit:${commit_id}/server-linux-arm64/stable
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>将下载的文件 vscode-server-linux-x64.tar.gz 解压解包后名为 vscode-server-linux-x64 文件夹 改名为 <code>${commit_id}</code> 放在 <code>/home/${user}/.vscode-server/bin/</code> 目录下.</p>
+</li>
+<li>
+<p>新版离线包下载</p>
+<p>在某次更新后远程端的 .vscode-server 目录结构发生变化</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">📦.vscode-server
+</span></span><span class="line"><span class="cl"> ┣━ 📁bin  # 存放旧方法下的vscode commit相关文件
+</span></span><span class="line"><span class="cl"> ┃   ┗━ 📁${commit_id1}
+</span></span><span class="line"><span class="cl"> ┃   ┗━ 📁${commit_id2}
+</span></span><span class="line"><span class="cl"> ┃   ┗━ ···
+</span></span><span class="line"><span class="cl"> ┣━ 📁cli  # 存放新方法下的vscode commit相关文件
+</span></span><span class="line"><span class="cl"> ┃   ┗━ 📁servers
+</span></span><span class="line"><span class="cl"> ┃   ┃   ┗━ 📁Stable-${commit_id}
+</span></span><span class="line"><span class="cl"> ┃   ┃   ┃   ┗━ 📁server
+</span></span><span class="line"><span class="cl"> ┃   ┃   ┃   ┗━ ···
+</span></span><span class="line"><span class="cl"> ┃   ┃   ┗━ ···
+</span></span><span class="line"><span class="cl"> ┃   ┗━ 📜iru.json  # 存放最近的vscode commit_id
+</span></span><span class="line"><span class="cl"> ┣━ 📜code-${commit_id}  # 存放vscode_cli_alpine_x64_cli.tar.gz解压后名为code的文件,并将其改名为code-${commit_id}
+</span></span><span class="line"><span class="cl"> ┣━ 📁data
+</span></span><span class="line"><span class="cl"> ┗━ 📁extensions
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>现在需要安装两个文件,两个文件的下载地址如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">x86</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">vscode</span><span class="o">.</span><span class="n">download</span><span class="o">.</span><span class="n">prss</span><span class="o">.</span><span class="n">microsoft</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">dbazure</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">stable</span><span class="o">/$</span><span class="p">{</span><span class="n">commit_id</span><span class="p">}</span><span class="o">/</span><span class="n">vscode</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">x64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</span></span><span class="line"><span class="cl"><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">vscode</span><span class="o">.</span><span class="n">download</span><span class="o">.</span><span class="n">prss</span><span class="o">.</span><span class="n">microsoft</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">dbazure</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">stable</span><span class="o">/$</span><span class="p">{</span><span class="n">commit_id</span><span class="p">}</span><span class="o">/</span><span class="n">vscode_cli_alpine_x64_cli</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">arm</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">vscode</span><span class="o">.</span><span class="n">download</span><span class="o">.</span><span class="n">prss</span><span class="o">.</span><span class="n">microsoft</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">dbazure</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">stable</span><span class="o">/$</span><span class="p">{</span><span class="n">commit_id</span><span class="p">}</span><span class="o">/</span><span class="n">vscode</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">arm64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</span></span><span class="line"><span class="cl"><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">vscode</span><span class="o">.</span><span class="n">download</span><span class="o">.</span><span class="n">prss</span><span class="o">.</span><span class="n">microsoft</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">dbazure</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">stable</span><span class="o">/$</span><span class="p">{</span><span class="n">commit_id</span><span class="p">}</span><span class="o">/</span><span class="n">vscode_cli_alpine_arm64_cli</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>第一个文件 vscode-server-linux-x64.tar.gz 解压解包后名为 vscode-server-linux-x64 文件夹改名为 server 放在 <code>/home/${user}/.vscode-server/cli/servers/Stable-${commit_id}/</code> 目录下.</p>
+</li>
+<li>
+<p>第二个文件 vscode_cli_alpine_x64_cli.tar.gz 解压解包后名为 code 的文件改名为 <code>code-${commit_id}</code> 放在<code>/home/${user}/.vscode-server/</code>目录下</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="无法连接可能问题">无法连接可能问题
+</h5><ul>
+<li>
+<p>权限问题</p>
+<p>如果仍然连接不上,则可能需要修改.vscode-server文件夹及其子目录的权限,例如权限改为700,再尝试连接</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod -R <span class="m">700</span> /home/<span class="si">${</span><span class="nv">user</span><span class="si">}</span>/.vscode-server/
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>ssh 设置问题</p>
+<ol>
+<li>
+<p>打开远程主机的 sshd_config 文件,一般在 <code>/etc/ssh/sshd_config</code> 文件,找到 <code>AllowTcpForwarding no</code> 这一行,将 no 改为 yes,然后保存退出.</p>
+</li>
+<li>
+<p>然后重启 ssh 服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo systemctl restart sshd
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+</li>
+<li>
+<p><code>known_hosts</code> 文件问题</p>
+<p>如果仍然连接不上,则可能是由于 known_hosts 文件问题导致的,如果你使用了相同的 ip 地址连接过不同主机就会出现此问题,可以尝试删除 known_hosts 文件,然后再尝试连接,本地主机下执行以下命令:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">rm </span><span class="nv">$env:USERPROFILE</span><span class="p">\.</span><span class="n">ssh</span><span class="p">\</span><span class="n">known_hosts</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">del</span> <span class="nv">%USERPROFILE%</span>\.ssh\known_hosts
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ol>
+<h5 id="免密登录">免密登录
+</h5><ol>
+<li>
+<p>生成 SSH 密钥<br>
+生成 ssh 使用的公钥/密钥对,请从客户端上的 PowerShell 或 cmd 提示符运行以下命令,具体使用方法详细见:微软官方</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ssh-keygen -t rsa
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>输入命令执行完成后会生成 <code>C:\Users\${user}\.ssh</code> , 里面会有 id_rsa(私钥 ), id_rsa.pub(公钥)两个文件, 这两个是默认名称,在执行命令时可以添加选项选择不同文件名,如果更改文件名,后面步骤对应文件路径也要更改</p>
+</li>
+<li>
+<p>添加公钥到远程服务器</p>
+<p>id_rsa.pub(公钥)生成后,打开复制内容,打开远程主机 <code>/home/${user}/.ssh/authorized_keys</code> 文件,如果文件不存在就创建,然后粘贴复制的公钥内容,然后打开1.2.2 通过更新 ssh 配置文件连接中的 <code>C:\Users\${user}\.ssh\config</code> 配置文件,在你要连接的Host下配置 <code>IdentityFile</code> ,后面填写 <code>id_rsa</code> (私钥)路径,并保存:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Host xxx
+</span></span><span class="line"><span class="cl">  HostName xxx.xxx.xxx.xxx
+</span></span><span class="line"><span class="cl">  Port xx
+</span></span><span class="line"><span class="cl">  User xxx
+</span></span><span class="line"><span class="cl">  IdentityFile &#34;C:\Users\${user}\.ssh\id_rsa&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果手动创建 /home/${user}/.ssh/authorized_keys,需要更改其权限:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">chmod <span class="m">700</span> /home/<span class="si">${</span><span class="nv">user</span><span class="si">}</span>/.ssh
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> /home/<span class="si">${</span><span class="nv">user</span><span class="si">}</span>/.ssh/authorized_keys
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>设置允许通过密钥登录</p>
+<p>打开远程主机的 sshd_config 文件,一般在/etc/ssh/sshd_config文件,找到PubkeyAuthentication no这一行,将 no 改为 yes,然后保存退出.<br>
+然后重启 ssh 服务:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo systemctl restart sshd
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h3 id="qoder">Qoder
+</h3><h4 id="下载链接">下载链接
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">qoder</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">server</span><span class="o">/&lt;</span><span class="n">version</span><span class="o">&gt;/&lt;</span><span class="n">commitid</span><span class="o">&gt;/</span><span class="n">qoder</span><span class="o">-</span><span class="n">reh</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">x64</span><span class="o">-</span><span class="mf">0.14</span><span class="o">.</span><span class="mf">1.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</span></span><span class="line"><span class="cl"><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">qoder</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">server</span><span class="o">/</span><span class="mf">0.14</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="mi">43</span><span class="n">b08de523101082fc403d923ed12db5631cfe80</span><span class="o">/</span><span class="n">qoder</span><span class="o">-</span><span class="n">reh</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">x64</span><span class="o">-</span><span class="mf">0.14</span><span class="o">.</span><span class="mf">1.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="数据库">数据库
 </h2><h3 id="microsoft-sql-server">Microsoft SQL Server
 </h3><h4 id="本体-1">本体
 </h4><blockquote>
@@ -689,52 +1021,52 @@ E:\Program Files\MySQL\MySQL Server 8.0</p>
 </h4><h4 id="shell">Shell
 </h4><h2 id="异地组网">异地组网
 </h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th><strong>特性</strong></th>
-          <th><strong>Tailscale</strong></th>
-          <th><strong>ZeroTier</strong></th>
-          <th><strong>EasyTier</strong></th>
-          <th><strong>VNT</strong></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>底层协议</strong></td>
-          <td>WireGuard (现代/安全)</td>
-          <td>自研 ZT 协议</td>
-          <td>Rust 编写 (高性能)</td>
-          <td>C/Rust 编写 (轻量)</td>
-      </tr>
-      <tr>
-          <td><strong>账号体系</strong></td>
-          <td>必须登录 (Google/GitHub)</td>
-          <td>必须注册官方账号</td>
-          <td><strong>无需账号</strong> (共享密钥)</td>
-          <td><strong>无需账号</strong> (组名+密码)</td>
-      </tr>
-      <tr>
-          <td><strong>控制中心</strong></td>
-          <td>云端托管 (官方控制台)</td>
-          <td>云端托管 (官方控制台)</td>
-          <td><strong>完全去中心化</strong></td>
-          <td>需自建或使用公共服务端</td>
-      </tr>
-      <tr>
-          <td><strong>NAT 穿透</strong></td>
-          <td>极强 (DERP 中继)</td>
-          <td>强 (轨道服务器)</td>
-          <td><strong>极强 (针对国内优化)</strong></td>
-          <td>强 (混淆能力好)</td>
-      </tr>
-      <tr>
-          <td><strong>配置难度</strong></td>
-          <td>极低 (开箱即用)</td>
-          <td>较低 (需后台授权)</td>
-          <td>极低 (单文件运行)</td>
-          <td>中等 (命令行/配置文件)</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th><strong>特性</strong></th>
+					<th><strong>Tailscale</strong></th>
+					<th><strong>ZeroTier</strong></th>
+					<th><strong>EasyTier</strong></th>
+					<th><strong>VNT</strong></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>底层协议</strong></td>
+					<td>WireGuard (现代/安全)</td>
+					<td>自研 ZT 协议</td>
+					<td>Rust 编写 (高性能)</td>
+					<td>C/Rust 编写 (轻量)</td>
+			</tr>
+			<tr>
+					<td><strong>账号体系</strong></td>
+					<td>必须登录 (Google/GitHub)</td>
+					<td>必须注册官方账号</td>
+					<td><strong>无需账号</strong> (共享密钥)</td>
+					<td><strong>无需账号</strong> (组名+密码)</td>
+			</tr>
+			<tr>
+					<td><strong>控制中心</strong></td>
+					<td>云端托管 (官方控制台)</td>
+					<td>云端托管 (官方控制台)</td>
+					<td><strong>完全去中心化</strong></td>
+					<td>需自建或使用公共服务端</td>
+			</tr>
+			<tr>
+					<td><strong>NAT 穿透</strong></td>
+					<td>极强 (DERP 中继)</td>
+					<td>强 (轨道服务器)</td>
+					<td><strong>极强 (针对国内优化)</strong></td>
+					<td>强 (混淆能力好)</td>
+			</tr>
+			<tr>
+					<td><strong>配置难度</strong></td>
+					<td>极低 (开箱即用)</td>
+					<td>较低 (需后台授权)</td>
+					<td>极低 (单文件运行)</td>
+					<td>中等 (命令行/配置文件)</td>
+			</tr>
+	</tbody>
 </table></div>
 <h3 id="easytier">EasyTier
 </h3><ul>
@@ -817,7 +1149,1023 @@ E:\Program Files\MySQL\MySQL Server 8.0</p>
     >moonlight-vplus</a>（moonlight 威力加强版）
 </h4><h4 id="moonlight-androidmoonlight-皇冠版"><a class="link" href="https://github.com/WACrown/moonlight-android"  target="_blank" rel="noopener"
     >moonlight-android</a>（moonlight 皇冠版）
-</h4>
+</h4><h2 id="anaconda">Anaconda
+</h2><h3 id="安装">安装
+</h3><h5 id="conda-init-作用">conda init 作用
+</h5><ol>
+<li>自动修改你的 shell 配置文件（<code>.bashrc</code>/<code>.zshrc</code>）</li>
+<li>让终端<strong>每次打开自动加载 conda 环境</strong></li>
+<li>实现直接使用 <code>conda activate</code> 命令</li>
+<li>让终端显示 <code>(base)</code> 环境标识</li>
+<li>不需要手动执行 <code>eval</code> 激活 conda</li>
+<li>只修改用户个人配置，<strong>不需要 root 权限</strong></li>
+</ol>
+<h4 id="linux-miniconda">linux Miniconda
+</h4><ol>
+<li>
+<p>下载最新版本的 Miniconda</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>安装 Miniconda</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bash ~/Miniconda3-latest-Linux-x86_64.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查看 Miniconda 的最终用户许可协议（EULA）</p>
+</li>
+<li>
+<p>输入 <code>yes</code> 以同意 EULA。</p>
+</li>
+<li>
+<p>安装位置（ <code>PREFIX=/home/&lt;USER&gt;/miniconda3</code> ）</p>
+</li>
+<li>
+<p>是否要初始化 conda 时，选择 <code>yes</code> 。这将修改您的 shell 配置，以便每次打开新的 shell 时自动初始化 conda，并自动识别 conda 命令。</p>
+</li>
+<li>
+<p>安装器完成安装并显示“感谢您安装 Miniconda3！”</p>
+</li>
+<li>
+<p>关闭并重新打开您的终端窗口，以便安装完全生效，或根据您的 shell 使用以下命令刷新终端。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> ~/.bashrc
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<ul>
+<li>
+<p>手动激活</p>
+<blockquote>
+<p>Do you wish to update your shell profile to automatically initialize conda?<br>
+This will activate conda on startup and change the command prompt when activated.<br>
+If you&rsquo;d prefer that conda&rsquo;s base environment not be activated on startup,<br>
+run the following command when conda is activated:</p>
+<p><code>conda config --set auto_activate_base false</code></p>
+<p>Note: You can undo this later by running <code>conda init --reverse $SHELL</code></p>
+<p>Proceed with initialization? [yes|no]<br>
+[no] &raquo;&gt;</p>
+<p>You have chosen to not have conda modify your shell scripts at all.<br>
+To activate conda&rsquo;s base environment in your current shell session:</p>
+<p><code>eval &quot;$(/home/lwang/yhy/cha1p3ng/miniconda3/bin/conda shell.YOUR_SHELL_NAME hook)&quot;</code></p>
+<p>To install conda&rsquo;s shell functions for easier access, first activate, then:</p>
+<p><code>conda init</code></p>
+<p>Thank you for installing Miniconda3!</p>
+</blockquote>
+<ol>
+<li>
+<p>手动激活 Conda（当前终端立即生效）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>/home/lwang/yhy/cha1p3ng/miniconda3/bin/conda shell.bash hook<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>运行后，终端开头会出现 (base)，说明 Conda 激活成功 ✅</p>
+</li>
+<li>
+<p>第二步：永久初始化（以后打开终端自动激活）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">conda init
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>重启终端</p>
+</li>
+</ol>
+</li>
+<li>
+<p>取消激活</p>
+<blockquote>
+<p> RUOGE-LP    D:\Desktop\GraPro\U-Net  ➜ (   PPM)   126ms   4:53 PM   <br>
+⚡aoruoge ❯❯ E:/anaconda3/Scripts/activate<br>
+ RUOGE-LP    D:\Desktop\GraPro\U-Net  ➜ (   PPM)   73ms   4:53 PM   <br>
+⚡aoruoge ❯❯ conda activate myenv<br>
+ RUOGE-LP    D:\Desktop\GraPro\U-Net  ➜ (   PPM)   1.529s   4:53 PM   <br>
+⚡aoruoge ❯❯ conda init &ndash;reverse<br>
+no change     E:\anaconda3\Scripts\conda.exe<br>
+no change     E:\anaconda3\Scripts\conda-env.exe<br>
+no change     E:\anaconda3\Scripts\conda-script.py<br>
+no change     E:\anaconda3\Scripts\conda-env-script.py<br>
+no change     E:\anaconda3\condabin\conda.bat<br>
+no change     E:\anaconda3\Library\bin\conda.bat<br>
+no change     E:\anaconda3\condabin_conda_activate.bat<br>
+no change     E:\anaconda3\condabin\rename_tmp.bat<br>
+no change     E:\anaconda3\condabin\conda_auto_activate.bat<br>
+no change     E:\anaconda3\condabin\conda_hook.bat<br>
+no change     E:\anaconda3\Scripts\activate.bat<br>
+no change     E:\anaconda3\condabin\activate.bat<br>
+no change     E:\anaconda3\condabin\deactivate.bat<br>
+no change     E:\anaconda3\Scripts\activate<br>
+no change     E:\anaconda3\Scripts\deactivate<br>
+no change     E:\anaconda3\etc\profile.d\conda.sh<br>
+no change     E:\anaconda3\etc\fish\conf.d\conda.fish<br>
+no change     E:\anaconda3\shell\condabin\Conda.psm1<br>
+no change     E:\anaconda3\shell\condabin\conda-hook.ps1<br>
+no change     E:\anaconda3\Lib\site-packages\xontrib\conda.xsh<br>
+no change     E:\anaconda3\etc\profile.d\conda.csh<br>
+modified      E:\Users\Documents\PowerShell\profile.ps1<br>
+modified      E:\Users\Documents\WindowsPowerShell\profile.ps1<br>
+modified      HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun</p>
+<p><code>==&gt; For changes to take effect, close and re-open your current shell. &lt;==</code></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="使用">使用
+</h3><h4 id="安装软件包">安装软件包
+</h4><h5 id="在线">在线
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">conda install -c conda-forge tmux -y
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>参数</th>
+					<th>全称</th>
+					<th>通俗解释</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>conda</code></td>
+					<td>-</td>
+					<td>Conda 包管理器（你服务器自带的工具，用来装软件）</td>
+			</tr>
+			<tr>
+					<td><code>install</code></td>
+					<td>install</td>
+					<td>核心指令：<strong>安装软件包</strong></td>
+			</tr>
+			<tr>
+					<td><code>-c</code></td>
+					<td><code>--channel</code></td>
+					<td>指定<strong>下载源 / 频道</strong>（conda 默认源没有 tmux，必须加这个）</td>
+			</tr>
+			<tr>
+					<td><code>conda-forge</code></td>
+					<td>频道名</td>
+					<td>最大的开源社区源，<strong>里面有 tmux 安装包</strong></td>
+			</tr>
+			<tr>
+					<td><code>tmux</code></td>
+					<td>包名</td>
+					<td>你要安装的软件：<code>tmux</code>（终端保活工具）</td>
+			</tr>
+			<tr>
+					<td><code>-y</code></td>
+					<td><code>--yes</code></td>
+					<td><strong>自动确认</strong>所有安装选项，不用手动敲 <code>y</code> 确认</td>
+			</tr>
+	</tbody>
+</table></div>
+<h5 id="离线">离线
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">conda install --offline 离线包文件名.tar.bz2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="配置-1">配置
+</h3><h3 id="迁移">迁移
+</h3><h4 id="导出环境到一个-yml-文件">导出环境到一个 <code>yml</code> 文件：
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">env</span> <span class="k">export</span> <span class="o">&gt;</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="重建环境">重建环境
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">conda env create -f environment.yml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="刷新-conda-环境索引">刷新 conda 环境索引
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">conda info --envs
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="修复路径硬编码">修复路径硬编码
+</h4><p>离线拷贝的环境内部会写死原 Anaconda 绝对路径，不修复会报错、导入包失败。执行 conda 内置路径修复命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">conda activate my_env
+</span></span><span class="line"><span class="cl">conda-unpack
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>conda-unpack 会自动批量修正所有脚本、缓存、配置里的旧路径，适配 Miniconda 新路径。</p>
+<h2 id="python">Python
+</h2><h3 id="安装-1">安装
+</h3><h3 id="使用-1">使用
+</h3><h4 id="安装软件包-1">安装软件包
+</h4><h5 id="在线-1">在线
+</h5><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>参数</th>
+					<th>作用</th>
+					<th>适合</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>--index-url</code></td>
+					<td>指定完整 pip 源（包括索引 / 硬件匹配？）</td>
+					<td>安装 GPU 版 PyTorch</td>
+			</tr>
+			<tr>
+					<td><code>-f / --find-links</code></td>
+					<td>只在页面找包</td>
+					<td>旧版本、本地安装</td>
+			</tr>
+	</tbody>
+</table></div>
+<h5 id="离线-1">离线
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip install *.whl --no-index --find-links=.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>--no-index</code> 完全禁用网络，只读取本地文件</p>
+<h3 id="配置-2">配置
+</h3><h4 id="pip-安装位置">pip 安装位置
+</h4><h5 id="查看某个已安装包的安装位置">查看某个已安装包的安装位置
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip show numpy
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="查看当前-python-环境所有包的统一安装目录">查看当前 Python 环境所有包的统一安装目录
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python -m site
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="pip-缓存位置">pip 缓存位置
+</h4><h5 id="查询-pip-缓存位置">查询 pip 缓存位置
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip cache dir
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="列出所有缓存包">列出所有缓存包
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip cache list
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="清空所有-pip-缓存释放磁盘空间">清空所有 pip 缓存（释放磁盘空间）
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip cache purge
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="查看缓存统计">查看缓存统计
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip cache info
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="列出指定包的缓存">列出指定包的缓存
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip cache list numpy
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="删除指定包的缓存">删除指定包的缓存
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip cache remove numpy
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="清除孤儿依赖">清除孤儿依赖
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip autoremove
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip-autoremove
+</span></span><span class="line"><span class="cl">pip install pip-autoremove
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="迁移-1">迁移
+</h3><h4 id="导出环境要求">导出环境要求
+</h4><ul>
+<li>pip freeze &gt; lock_requirements.txt</li>
+</ul>
+<blockquote>
+<p><code>numpy==1.26.4 pandas==2.2.1 torch==2.4.1+cu121 pillow==10.2.0 ...</code></p>
+</blockquote>
+<ul>
+<li>
+<p>pip list</p>
+<p><code>--all</code>:   记录子依赖</p>
+</li>
+</ul>
+<blockquote>
+<p>Package    Version<br>
+<code>---------- -------</code><br>
+numpy      1.26.4<br>
+pip        24.0<br>
+torch      2.4.1<br>
+setuptools 68.0.0</p>
+</blockquote>
+<h4 id="软件包缺失检查">软件包缺失检查
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python3</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -*- coding: utf-8 -*-</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">requirements.txt 依赖检查工具
+</span></span></span><span class="line"><span class="cl"><span class="s2">对比本地已安装包，输出缺失/版本冲突，不下载不安装
+</span></span></span><span class="line"><span class="cl"><span class="s2">零第三方依赖，纯 Python 标准库
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">argparse</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">importlib.metadata</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ============================================================</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#  正则 &amp; 工具</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ============================================================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 匹配包名: requests&gt;=2.0 / flask[async] / numpy~=1.24</span>
+</span></span><span class="line"><span class="cl"><span class="n">_RE_PKG</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="sa">r</span><span class="s1">&#39;^([A-Za-z0-9]([A-Za-z0-9._-]*[A-Za-z0-9])?)&#39;</span>  <span class="c1"># 包名</span>
+</span></span><span class="line"><span class="cl">    <span class="sa">r</span><span class="s1">&#39;(\[.*?\])?&#39;</span>                                     <span class="c1"># [extras]</span>
+</span></span><span class="line"><span class="cl">    <span class="sa">r</span><span class="s1">&#39;(.*)$&#39;</span>                                           <span class="c1"># 版本约束</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;PEP 503: My_Package -&gt; my-package&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[-_.]+&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">parse_ver</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;&#39;2.28.0&#39; -&gt; (2, 28, 0) 用于大小比较&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parts</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">parts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="k">else</span> <span class="n">p</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">ver_ok</span><span class="p">(</span><span class="n">installed_ver</span><span class="p">,</span> <span class="n">specifier</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;检查已安装版本是否满足约束 (支持 == != &gt;= &lt;= &gt; &lt; ~=)&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="ow">not</span> <span class="n">specifier</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">specifier</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="k">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(~=|==|!=|&gt;=|&lt;=|&gt;|&lt;)(.+)$&#39;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="n">m</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">        <span class="n">op</span><span class="p">,</span> <span class="n">rv</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">iv</span><span class="p">,</span> <span class="n">rv</span> <span class="o">=</span> <span class="n">parse_ver</span><span class="p">(</span><span class="n">installed_ver</span><span class="p">),</span> <span class="n">parse_ver</span><span class="p">(</span><span class="n">rv</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;==&#39;</span> <span class="ow">and</span> <span class="n">iv</span> <span class="o">!=</span> <span class="n">rv</span><span class="p">:</span>  <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;!=&#39;</span> <span class="ow">and</span> <span class="n">iv</span> <span class="o">==</span> <span class="n">rv</span><span class="p">:</span>  <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;&gt;=&#39;</span> <span class="ow">and</span> <span class="n">iv</span> <span class="o">&lt;</span>  <span class="n">rv</span><span class="p">:</span>  <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;&lt;=&#39;</span> <span class="ow">and</span> <span class="n">iv</span> <span class="o">&gt;</span>  <span class="n">rv</span><span class="p">:</span>  <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;&gt;&#39;</span>  <span class="ow">and</span> <span class="n">iv</span> <span class="o">&lt;=</span> <span class="n">rv</span><span class="p">:</span>  <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;&lt;&#39;</span>  <span class="ow">and</span> <span class="n">iv</span> <span class="o">&gt;=</span> <span class="n">rv</span><span class="p">:</span>  <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;~=&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># ~=X.Y 等价于 &gt;=X.Y, &lt;(X+1).0</span>
+</span></span><span class="line"><span class="cl">            <span class="n">segs</span> <span class="o">=</span> <span class="n">rv</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">segs</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">upper</span> <span class="o">=</span> <span class="n">segs</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="n">upper</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">upper</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">iv</span> <span class="o">&lt;</span> <span class="n">rv</span> <span class="ow">or</span> <span class="n">iv</span> <span class="o">&gt;=</span> <span class="n">parse_ver</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">upper</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ============================================================</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#  核心: 解析 / 查询 / 检查</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ============================================================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">parse_requirements</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    解析 requirements.txt
+</span></span></span><span class="line"><span class="cl"><span class="s2">    返回: [{&#34;name&#34;, &#34;specifier&#34;, &#34;lineno&#34;, &#34;raw&#34;, &#34;skip&#34;}, ...]
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\033</span><span class="s2">[31m  ✗ 文件不存在: </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="se">\033</span><span class="s2">[0m&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">items</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">raw</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">raw</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="n">raw</span> <span class="ow">or</span> <span class="n">raw</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 跳过 git/http 引用、文件引用</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">raw</span><span class="o">.</span><span class="n">startswith</span><span class="p">((</span><span class="s1">&#39;git+&#39;</span><span class="p">,</span> <span class="s1">&#39;http://&#39;</span><span class="p">,</span> <span class="s1">&#39;https://&#39;</span><span class="p">,</span> <span class="s1">&#39;file:&#39;</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&#34;specifier&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;lineno&#34;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&#34;raw&#34;</span><span class="p">:</span> <span class="n">raw</span><span class="p">,</span> <span class="s2">&#34;skip&#34;</span><span class="p">:</span> <span class="s2">&#34;Git/URL&#34;</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">            <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">raw</span><span class="o">.</span><span class="n">startswith</span><span class="p">((</span><span class="s1">&#39;-r&#39;</span><span class="p">,</span> <span class="s1">&#39;-e&#39;</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&#34;specifier&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;lineno&#34;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&#34;raw&#34;</span><span class="p">:</span> <span class="n">raw</span><span class="p">,</span> <span class="s2">&#34;skip&#34;</span><span class="p">:</span> <span class="s2">&#34;引用指令&#34;</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">            <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span> <span class="o">=</span> <span class="n">_RE_PKG</span><span class="o">.</span><span class="k">match</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">m</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="n">normalize</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;specifier&#34;</span><span class="p">:</span> <span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&#34;&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;lineno&#34;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&#34;raw&#34;</span><span class="p">:</span> <span class="n">raw</span><span class="p">,</span> <span class="s2">&#34;skip&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="n">raw</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="s2">&#34;specifier&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;lineno&#34;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&#34;raw&#34;</span><span class="p">:</span> <span class="n">raw</span><span class="p">,</span> <span class="s2">&#34;skip&#34;</span><span class="p">:</span> <span class="s2">&#34;无法解析&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">items</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_installed</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;返回 {normalized_name: version}&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pkgs</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">dist</span> <span class="ow">in</span> <span class="n">importlib</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">distributions</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="n">name</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">dist</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;Name&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ver</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;Version&#34;</span><span class="p">,</span> <span class="s2">&#34;?&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">name</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pkgs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">ver</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">pkgs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;执行检查，返回三个列表: missing, mismatch, skipped&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reqs</span> <span class="o">=</span> <span class="n">parse_requirements</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">installed</span> <span class="o">=</span> <span class="n">get_installed</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">missing</span><span class="p">,</span> <span class="n">mismatch</span><span class="p">,</span> <span class="n">skipped</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">reqs</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&#34;skip&#34;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">skipped</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">        <span class="n">name</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">installed</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">missing</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elif</span> <span class="ow">not</span> <span class="n">ver_ok</span><span class="p">(</span><span class="n">installed</span><span class="p">[</span><span class="n">name</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&#34;specifier&#34;</span><span class="p">]):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mismatch</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="o">**</span><span class="n">r</span><span class="p">,</span> <span class="s2">&#34;installed_ver&#34;</span><span class="p">:</span> <span class="n">installed</span><span class="p">[</span><span class="n">name</span><span class="p">]})</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">missing</span><span class="p">,</span> <span class="n">mismatch</span><span class="p">,</span> <span class="n">skipped</span><span class="p">,</span> <span class="n">reqs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ============================================================</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#  输出</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ============================================================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">report</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">missing</span><span class="p">,</span> <span class="n">mismatch</span><span class="p">,</span> <span class="n">skipped</span><span class="p">,</span> <span class="n">reqs</span> <span class="o">=</span> <span class="n">check</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">valid</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">reqs</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">r</span><span class="p">[</span><span class="s2">&#34;skip&#34;</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\033</span><span class="s2">[1;36m  📋 </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="se">\033</span><span class="s2">[0m&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;  </span><span class="si">{</span><span class="s1">&#39;─&#39;</span> <span class="o">*</span> <span class="mi">52</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 汇总行</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ok_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">valid</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">missing</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">mismatch</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">summary</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;  共 </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">valid</span><span class="p">)</span><span class="si">}</span><span class="s2"> 个包  |  &#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">summary</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="se">\033</span><span class="s2">[32m✓ </span><span class="si">{</span><span class="n">ok_count</span><span class="si">}</span><span class="s2"> 满足</span><span class="se">\033</span><span class="s2">[0m  |  &#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">summary</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="se">\033</span><span class="s2">[31m✗ </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">missing</span><span class="p">)</span><span class="si">}</span><span class="s2"> 缺失</span><span class="se">\033</span><span class="s2">[0m  |  &#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">summary</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="se">\033</span><span class="s2">[33m△ </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">mismatch</span><span class="p">)</span><span class="si">}</span><span class="s2"> 冲突</span><span class="se">\033</span><span class="s2">[0m&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">skipped</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">summary</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&#34;  |  ○ </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">skipped</span><span class="p">)</span><span class="si">}</span><span class="s2"> 跳过&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">summary</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 缺失</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">missing</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">  </span><span class="se">\033</span><span class="s2">[31m✗ 缺失 (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">missing</span><span class="p">)</span><span class="si">}</span><span class="s2">)</span><span class="se">\033</span><span class="s2">[0m&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;  </span><span class="si">{</span><span class="s1">&#39;─&#39;</span> <span class="o">*</span> <span class="mi">52</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">names</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">missing</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">spec</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34; </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;specifier&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s1">&#39;specifier&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;    </span><span class="se">\033</span><span class="s2">[31m●</span><span class="se">\033</span><span class="s2">[0m </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}{</span><span class="n">spec</span><span class="si">:</span><span class="s2">&lt;20</span><span class="si">}</span><span class="s2">  第</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;lineno&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">行&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">  </span><span class="se">\033</span><span class="s2">[33m  pip install </span><span class="si">{</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">names</span><span class="p">)</span><span class="si">}</span><span class="se">\033</span><span class="s2">[0m&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 版本冲突</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">mismatch</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">  </span><span class="se">\033</span><span class="s2">[33m△ 版本冲突 (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">mismatch</span><span class="p">)</span><span class="si">}</span><span class="s2">)</span><span class="se">\033</span><span class="s2">[0m&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;  </span><span class="si">{</span><span class="s1">&#39;─&#39;</span> <span class="o">*</span> <span class="mi">52</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">mismatch</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;    </span><span class="se">\033</span><span class="s2">[33m▲</span><span class="se">\033</span><span class="s2">[0m </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;28</span><span class="si">}</span><span class="s2"> &#34;</span>
+</span></span><span class="line"><span class="cl">                  <span class="sa">f</span><span class="s2">&#34;需要 </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;specifier&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;16</span><span class="si">}</span><span class="s2"> 实际 </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;installed_ver&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 已安装 (verbose)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ok</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">valid</span> <span class="k">if</span> <span class="n">r</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">missing</span>
+</span></span><span class="line"><span class="cl">              <span class="ow">and</span> <span class="n">r</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mismatch</span>
+</span></span><span class="line"><span class="cl">              <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">{</span><span class="n">m</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">mismatch</span><span class="p">}]</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 重新算 ok 列表</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ok</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">missing_names</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">missing</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mismatch_names</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">mismatch</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">valid</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">missing_names</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mismatch_names</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ok</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">ok</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">inst</span> <span class="o">=</span> <span class="n">get_installed</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">  </span><span class="se">\033</span><span class="s2">[32m✓ 已满足 (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">ok</span><span class="p">)</span><span class="si">}</span><span class="s2">)</span><span class="se">\033</span><span class="s2">[0m&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;  </span><span class="si">{</span><span class="s1">&#39;─&#39;</span> <span class="o">*</span> <span class="mi">52</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ok</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ver</span> <span class="o">=</span> <span class="n">inst</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">],</span> <span class="s2">&#34;?&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">spec</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34; </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;specifier&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s1">&#39;specifier&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;    </span><span class="se">\033</span><span class="s2">[32m●</span><span class="se">\033</span><span class="s2">[0m </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;28</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">ver</span><span class="si">:</span><span class="s2">&lt;12</span><span class="si">}{</span><span class="n">spec</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 跳过 (verbose)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">verbose</span> <span class="ow">and</span> <span class="n">skipped</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">  </span><span class="se">\033</span><span class="s2">[90m○ 跳过 (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">skipped</span><span class="p">)</span><span class="si">}</span><span class="s2">)</span><span class="se">\033</span><span class="s2">[0m&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;  </span><span class="si">{</span><span class="s1">&#39;─&#39;</span> <span class="o">*</span> <span class="mi">52</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">skipped</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;    ○ </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;raw&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;40</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;skip&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">)&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 结论</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="ow">not</span> <span class="n">missing</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">mismatch</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">  </span><span class="se">\033</span><span class="s2">[1;32m  🎉 所有依赖均已满足</span><span class="se">\033</span><span class="s2">[0m&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">missing</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">mismatch</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ============================================================</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#  主函数</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ============================================================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">description</span><span class="o">=</span><span class="s2">&#34;对照 requirements.txt 检查依赖 (纯本地，不下载)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">formatter_class</span><span class="o">=</span><span class="n">argparse</span><span class="o">.</span><span class="n">RawDescriptionHelpFormatter</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">epilog</span><span class="o">=</span><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">示例:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  </span><span class="si">%(prog)s</span><span class="s2">                        # 默认检查 requirements.txt
+</span></span></span><span class="line"><span class="cl"><span class="s2">  </span><span class="si">%(prog)s</span><span class="s2"> requirements-dev.txt   # 指定文件
+</span></span></span><span class="line"><span class="cl"><span class="s2">  </span><span class="si">%(prog)s</span><span class="s2"> -f r1.txt -f r2.txt    # 检查多个文件
+</span></span></span><span class="line"><span class="cl"><span class="s2">  </span><span class="si">%(prog)s</span><span class="s2"> -v                     # 显示已安装包详情
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&#34;files&#34;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s2">&#34;*&#34;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;requirements.txt&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&#34;-f&#34;</span><span class="p">,</span> <span class="s2">&#34;--file&#34;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&#34;append&#34;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&#34;files&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&#34;-v&#34;</span><span class="p">,</span> <span class="s2">&#34;--verbose&#34;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&#34;store_true&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">help</span><span class="o">=</span><span class="s2">&#34;显示已安装包和跳过条目&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">files</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">errors</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">errors</span> <span class="o">+=</span> <span class="n">report</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span> <span class="k">if</span> <span class="n">errors</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">main</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="ai">AI
+</h2><h3 id="claude-code">Claude Code
+</h3><h4 id="安装-2">安装
+</h4><p><strong>macOS, Linux, WSL:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -fsSL https://claude.ai/install.sh <span class="p">|</span> bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Windows PowerShell:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">irm </span><span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">claude</span><span class="p">.</span><span class="n">ai</span><span class="p">/</span><span class="n">install</span><span class="p">.</span><span class="py">ps1</span> <span class="p">|</span> <span class="nb">iex
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Windows CMD:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">curl -fsSL https://claude.ai/install.cmd -o install.cmd <span class="p">&amp;&amp;</span> install.cmd <span class="p">&amp;&amp;</span> <span class="k">del</span> install.c
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="配置-3">配置
+</h4><h3 id="codex-cli">Codex CLI
+</h3><h4 id="安装-3">安装
+</h4><ol>
+<li>
+<p>Install the Codex CLI</p>
+<p>Install with npm:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">npm</span> <span class="n">install</span> <span class="n">-g</span> <span class="nv">@openai</span><span class="p">/</span><span class="n">codex</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Install with Homebrew:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">brew</span> <span class="n">install</span> <span class="n">codex</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Run <code>codex</code> and sign in</p>
+<p>Run <code>codex</code> in your terminal to get started. You’ll be prompted to sign in with your ChatGPT account or an API key.</p>
+</li>
+</ol>
+<h4 id="配置-4">配置
+</h4><h3 id="nodejs">Node.js
+</h3><p>获得适用于Windows且使用Docker和npm的 Node.js®v24.15.0LTS</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># Docker 对每个操作系统都有特定的安装指导。</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 请参考 https://docker.com/get-started/ 给出的官方文档</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 拉取 Node.js Docker 镜像：</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">pull</span> <span class="n">node</span><span class="err">:</span><span class="mf">24</span><span class="n">-alpine</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 创建 Node.js 容器并启动一个 Shell 会话：</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">run</span> <span class="n">-it</span> <span class="p">-</span><span class="n">-rm</span> <span class="p">-</span><span class="n">-entrypoint</span> <span class="n">sh</span> <span class="n">node</span><span class="err">:</span><span class="mf">24</span><span class="n">-alpine</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 验证 Node.js 版本：</span>
+</span></span><span class="line"><span class="cl"><span class="n">node</span> <span class="n">-v</span> <span class="c"># Should print &#34;v24.15.0&#34;.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 验证 npm 版本：</span>
+</span></span><span class="line"><span class="cl"><span class="n">npm</span> <span class="n">-v</span> <span class="c"># Should print &#34;11.12.1&#34;.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -846,7 +2194,7 @@ E:\Program Files\MySQL\MySQL Server 8.0</p>
 
 
         <span>
-            最后更新于 Apr 08, 2026 17:41 &#43;0800
+            最后更新于 Aug 23, 2026 01:41 &#43;0800
         </span>
     </section></footer>
 

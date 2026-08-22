@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://windovec.github.io/redeem/p/win-exp/'>
 
-<link rel="stylesheet" href="/redeem/scss/style.min.919e2d4f1e21cc10402f961910fcaa3b779273d37c0fab25eece88edcbd5e750.css"><meta property='og:title' content="Windows使用经验">
+<link rel="stylesheet" href="/redeem/scss/style.min.3183d6d145029ae49a232e9429a063dc77463de8d569146af8a611a9fdcc92b5.css"><meta property='og:title' content="Windows使用经验">
 <meta property='og:description' content="开启终端和命令行代理脚本 最终 1 2 3 4 5 6 @echo off echo 正在设置代理环境变量... setx http_proxy http://127.0.0.1:7897 setx https_proxy http://127.0.0.1:7897 setx all_proxy socks5://127.0.0.1:7897 pause 无效尝试 1 2 3 4 5 6 7 8 9 10 11 12 13 @echo off echo 当前环境变量： &amp; set http_proxy &amp; set https_proxy &amp; set all_proxy &amp; echo %http_proxy% &amp; echo %https_proxy% &amp; echo %all_proxy% &amp; echo. echo 正在设置代理环境变量... setx http_proxy http://127.0.0.1:7897 setx https_proxy http://127.0.0.1:7897 setx all_proxy socks5://127.0.0.1:7897 set http_proxy= set https_proxy= set all_proxy= timeout /t 1 /nobreak &gt;nul start &#34;Proxy Check&#34; /i cmd /c ^ &#34;echo 检查代理环境变量： &amp; set http_proxy &amp; set https_proxy &amp; set all_proxy &amp; echo %http_proxy% &amp; echo %https_proxy% &amp; echo %all_proxy% &amp; echo. &amp; pause&#34; pause 参数解释\n">
 <meta property='og:url' content='https://windovec.github.io/redeem/p/win-exp/'>
 <meta property='og:site_name' content='WindoveC'>
@@ -325,6 +325,20 @@
         </li>
       </ol>
     </li>
+    <li><a href="#文件占用统计">文件占用统计</a>
+      <ol>
+        <li><a href="#代码">代码</a></li>
+        <li><a href="#使用">使用</a>
+          <ol>
+            <li><a href="#前置">前置</a></li>
+            <li><a href="#用法">用法</a></li>
+            <li><a href="#场景">场景</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#wt-conda-激活函数">WT conda 激活函数</a></li>
+    <li><a href="#广电配置">广电配置</a></li>
   </ol>
 </nav>
         </div>
@@ -389,7 +403,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 4 分钟
+                    阅读时长: 11 分钟
                 </time>
             </div>
         
@@ -530,31 +544,31 @@
 <p>启用 <a class="link" href="https://support.microsoft.com/en-us/windows/use-your-pc-as-a-mobile-hotspot-c89b0fad-72d5-41e8-f7ea-406ad9036b85"  target="_blank" rel="noopener"
     >Microsoft Windows® 10 移动热点</a> 功能的步骤。</p>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>项目</th>
-          <th>内容</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>您看到了什么？</strong></td>
-          <td>Windows® 10 移动热点允许您配置热点运行所在的网络频段。在某些情况下，您可能会出现错误，或者看不到 5 GHz 频段的选项。</td>
-      </tr>
-      <tr>
-          <td><strong>注意</strong></td>
-          <td>网络频段选项不受支持，且不会与前代英特尔®无线适配器一起出现。特别是英特尔®无线 7265 家族（ <a class="link" href="https://www.intel.cn/content/www/cn/zh/support/articles/000026395/network-and-i-o/wireless-networking.html"  target="_blank" rel="noopener"
+	<thead>
+			<tr>
+					<th>项目</th>
+					<th>内容</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>您看到了什么？</strong></td>
+					<td>Windows® 10 移动热点允许您配置热点运行所在的网络频段。在某些情况下，您可能会出现错误，或者看不到 5 GHz 频段的选项。</td>
+			</tr>
+			<tr>
+					<td><strong>注意</strong></td>
+					<td>网络频段选项不受支持，且不会与前代英特尔®无线适配器一起出现。特别是英特尔®无线 7265 家族（ <a class="link" href="https://www.intel.cn/content/www/cn/zh/support/articles/000026395/network-and-i-o/wireless-networking.html"  target="_blank" rel="noopener"
     >修订版本 C</a> ）以及更早的版本。</td>
-      </tr>
-      <tr>
-          <td><strong>您为什么会看到它？</strong></td>
-          <td>某些国家/地区存在监管限制，不允许热点自行在 5 GHz 频段上运行。<strong>只有当 Windows® 10 电脑连接至位于特定（被动）的 5GHz 通道上的无线接入点 （AP） 时，您才能在 5GHz 上使用热点。</strong></td>
-      </tr>
-      <tr>
-          <td><strong>如何解决.</strong></td>
-          <td>这种表现是预料之中的，由于存在特定国家的监管限制。但是，对于这些国家/地区，您可以先连接至获批准的 5GHz（被动）通道，然后再启动热点，来使用 5GHz 上的热点。</td>
-      </tr>
-  </tbody>
+			</tr>
+			<tr>
+					<td><strong>您为什么会看到它？</strong></td>
+					<td>某些国家/地区存在监管限制，不允许热点自行在 5 GHz 频段上运行。<strong>只有当 Windows® 10 电脑连接至位于特定（被动）的 5GHz 通道上的无线接入点 （AP） 时，您才能在 5GHz 上使用热点。</strong></td>
+			</tr>
+			<tr>
+					<td><strong>如何解决.</strong></td>
+					<td>这种表现是预料之中的，由于存在特定国家的监管限制。但是，对于这些国家/地区，您可以先连接至获批准的 5GHz（被动）通道，然后再启动热点，来使用 5GHz 上的热点。</td>
+			</tr>
+	</tbody>
 </table></div>
 <h3 id="2-常用wifi信道与频段">2 常用WiFi信道与频段
 </h3><ul>
@@ -680,35 +694,35 @@
 <h2 id="电源计划">电源计划
 </h2><h3 id="guid">GUID
 </h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th><strong>电源计划名称</strong></th>
-          <th><strong>对应的 GUID (身份代码)</strong></th>
-          <th><strong>模式特点</strong></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>平衡 (Balanced)</strong></td>
-          <td><code>381b4222-f694-41f0-9685-ff5bb260df2e</code></td>
-          <td>自动平衡性能与能耗，系统默认。</td>
-      </tr>
-      <tr>
-          <td><strong>高性能 (High Performance)</strong></td>
-          <td><code>8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c</code></td>
-          <td>提高 CPU 频率，牺牲电池续航以换取响应速度。</td>
-      </tr>
-      <tr>
-          <td><strong>节能 (Power Saver)</strong></td>
-          <td><code>a1841308-3541-4fab-bc81-f71556f20b4a</code></td>
-          <td>限制 CPU 性能并降低屏幕亮度以延长续航。</td>
-      </tr>
-      <tr>
-          <td><strong>卓越性能 (Ultimate)</strong></td>
-          <td><code>e9a42b02-d5df-448d-aa00-03f14749eb61</code></td>
-          <td>仅限高端 PC，彻底消除微延迟（通常需手动开启）。</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th><strong>电源计划名称</strong></th>
+					<th><strong>对应的 GUID (身份代码)</strong></th>
+					<th><strong>模式特点</strong></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>平衡 (Balanced)</strong></td>
+					<td><code>381b4222-f694-41f0-9685-ff5bb260df2e</code></td>
+					<td>自动平衡性能与能耗，系统默认。</td>
+			</tr>
+			<tr>
+					<td><strong>高性能 (High Performance)</strong></td>
+					<td><code>8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c</code></td>
+					<td>提高 CPU 频率，牺牲电池续航以换取响应速度。</td>
+			</tr>
+			<tr>
+					<td><strong>节能 (Power Saver)</strong></td>
+					<td><code>a1841308-3541-4fab-bc81-f71556f20b4a</code></td>
+					<td>限制 CPU 性能并降低屏幕亮度以延长续航。</td>
+			</tr>
+			<tr>
+					<td><strong>卓越性能 (Ultimate)</strong></td>
+					<td><code>e9a42b02-d5df-448d-aa00-03f14749eb61</code></td>
+					<td>仅限高端 PC，彻底消除微延迟（通常需手动开启）。</td>
+			</tr>
+	</tbody>
 </table></div>
 <h3 id="powercfg">powercfg
 </h3><h4 id="1-方案查询与激活">1. 方案查询与激活
@@ -769,7 +783,1005 @@
 </ul>
 </li>
 </ul>
-
+<h2 id="文件占用统计">文件占用统计
+</h2><h3 id="代码">代码
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span><span class="lnt">317
+</span><span class="lnt">318
+</span><span class="lnt">319
+</span><span class="lnt">320
+</span><span class="lnt">321
+</span><span class="lnt">322
+</span><span class="lnt">323
+</span><span class="lnt">324
+</span><span class="lnt">325
+</span><span class="lnt">326
+</span><span class="lnt">327
+</span><span class="lnt">328
+</span><span class="lnt">329
+</span><span class="lnt">330
+</span><span class="lnt">331
+</span><span class="lnt">332
+</span><span class="lnt">333
+</span><span class="lnt">334
+</span><span class="lnt">335
+</span><span class="lnt">336
+</span><span class="lnt">337
+</span><span class="lnt">338
+</span><span class="lnt">339
+</span><span class="lnt">340
+</span><span class="lnt">341
+</span><span class="lnt">342
+</span><span class="lnt">343
+</span><span class="lnt">344
+</span><span class="lnt">345
+</span><span class="lnt">346
+</span><span class="lnt">347
+</span><span class="lnt">348
+</span><span class="lnt">349
+</span><span class="lnt">350
+</span><span class="lnt">351
+</span><span class="lnt">352
+</span><span class="lnt">353
+</span><span class="lnt">354
+</span><span class="lnt">355
+</span><span class="lnt">356
+</span><span class="lnt">357
+</span><span class="lnt">358
+</span><span class="lnt">359
+</span><span class="lnt">360
+</span><span class="lnt">361
+</span><span class="lnt">362
+</span><span class="lnt">363
+</span><span class="lnt">364
+</span><span class="lnt">365
+</span><span class="lnt">366
+</span><span class="lnt">367
+</span><span class="lnt">368
+</span><span class="lnt">369
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c">#</span><span class="k">Requires</span><span class="w"> </span><span class="kd">-Version</span><span class="na"> 5.1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">&lt;#
+</span></span></span><span class="line"><span class="cl"><span class="cm">.</span><span class="sd">SYNOPSIS</span><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">    目录树统计工具 v3.0 — 结合版
+</span></span></span><span class="line"><span class="cl"><span class="cm">.</span><span class="sd">DESCRIPTION</span><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">    融合两版优势的目录树工具。
+</span></span></span><span class="line"><span class="cl"><span class="cm">    性能层：一次性 I/O 采集 + 记忆化累计缓存，避免重复查询和重复计算。
+</span></span></span><span class="line"><span class="cl"><span class="cm">    功能层：通配符排除（连带子内容）、深度超限提示、隐藏过滤、彩色输出、纯文本导出。
+</span></span></span><span class="line"><span class="cl"><span class="cm">.PARAMETER Path
+</span></span></span><span class="line"><span class="cl"><span class="cm">    起始路径，默认当前目录。支持 Tab 补全。
+</span></span></span><span class="line"><span class="cl"><span class="cm">.PARAMETER MaxDepth
+</span></span></span><span class="line"><span class="cl"><span class="cm">    最大显示深度 (1~20)，默认 2。设为 0 仅显示根目录信息，-1 表示无限制。
+</span></span></span><span class="line"><span class="cl"><span class="cm">.PARAMETER Exclude
+</span></span></span><span class="line"><span class="cl"><span class="cm">    要排除的文件夹名称（支持通配符），例如 &#34;bin&#34;,&#34;obj&#34;,&#34;.git&#34;,&#34;node_modules&#34;。
+</span></span></span><span class="line"><span class="cl"><span class="cm">    排除的文件夹及其所有子内容均不会被采集和显示。
+</span></span></span><span class="line"><span class="cl"><span class="cm">.PARAMETER IncludeHidden
+</span></span></span><span class="line"><span class="cl"><span class="cm">    包含隐藏/系统文件夹及 &#34;.&#34; 前缀文件夹。默认排除。
+</span></span></span><span class="line"><span class="cl"><span class="cm">.PARAMETER ShowSize
+</span></span></span><span class="line"><span class="cl"><span class="cm">    显示每个文件夹的累计大小（自动转换 B/KB/MB/GB/TB）。
+</span></span></span><span class="line"><span class="cl"><span class="cm">.PARAMETER OutputFile
+</span></span></span><span class="line"><span class="cl"><span class="cm">    将纯文本结果导出到指定文件（不含 ANSI 颜色码）。
+</span></span></span><span class="line"><span class="cl"><span class="cm">.</span><span class="sd">EXAMPLE</span><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">    .\Show-Tree.ps1
+</span></span></span><span class="line"><span class="cl"><span class="cm">    当前目录，2 级深度，仅显示文件数。
+</span></span></span><span class="line"><span class="cl"><span class="cm">.</span><span class="sd">EXAMPLE</span><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">    .\Show-Tree.ps1 -MaxDepth 3 -ShowSize -Exclude &#34;node_modules&#34;,&#34;.git&#34;,&#34;bin&#34;,&#34;obj&#34;
+</span></span></span><span class="line"><span class="cl"><span class="cm">    3 级深度，显示大小，排除常见构建/依赖目录。
+</span></span></span><span class="line"><span class="cl"><span class="cm">.</span><span class="sd">EXAMPLE</span><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">    .\Show-Tree.ps1 -Path &#34;C:\Projects&#34; -MaxDepth 4 -ShowSize -OutputFile tree.txt
+</span></span></span><span class="line"><span class="cl"><span class="cm">    指定路径，4 级深度，导出到文件。
+</span></span></span><span class="line"><span class="cl"><span class="cm">.</span><span class="sd">EXAMPLE</span><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">    .\Show-Tree.ps1 -MaxDepth -1 -IncludeHidden -ShowSize
+</span></span></span><span class="line"><span class="cl"><span class="cm">    无限制深度，包含隐藏目录，显示大小。
+</span></span></span><span class="line"><span class="cl"><span class="cm">.</span><span class="sd">NOTES</span><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">    v3.0 结合版 — 性能优化 + 功能完善
+</span></span></span><span class="line"><span class="cl"><span class="cm">#&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nb">CmdletBinding</span><span class="p">()]</span>
+</span></span><span class="line"><span class="cl"><span class="k">param</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nb">Parameter</span><span class="p">(</span><span class="na">Position</span> <span class="p">=</span> <span class="mf">0</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="no">string</span><span class="p">]</span><span class="nv">$Path</span> <span class="p">=</span> <span class="s2">&#34;.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nb">ValidateRange</span><span class="p">(</span><span class="mf">-1</span><span class="p">,</span> <span class="mf">20</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="no">int</span><span class="p">]</span><span class="nv">$MaxDepth</span> <span class="p">=</span> <span class="mf">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="no">string[]</span><span class="p">]</span><span class="nv">$Exclude</span> <span class="p">=</span> <span class="vm">@</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="no">switch</span><span class="p">]</span><span class="nv">$IncludeHidden</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="no">switch</span><span class="p">]</span><span class="nv">$ShowSize</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="no">string</span><span class="p">]</span><span class="nv">$OutputFile</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># ═══════════════════════════════════════════════════════════════════</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  架构: 1.路径验证 → 2.工具函数 → 3.数据采集+过滤+缓存</span>
+</span></span><span class="line"><span class="cl"><span class="c">#        → 4.递归绘制 → 5.输出+摘要+导出</span>
+</span></span><span class="line"><span class="cl"><span class="c"># ═══════════════════════════════════════════════════════════════════</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># ───────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  1. 路径验证</span>
+</span></span><span class="line"><span class="cl"><span class="c"># ───────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$rootPath</span> <span class="p">=</span> <span class="p">(</span><span class="nb">Resolve-Path</span> <span class="n">-LiteralPath</span> <span class="nv">$Path</span> <span class="n">-ErrorAction</span> <span class="n">Stop</span><span class="p">).</span><span class="py">Path</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="p">(</span><span class="nb">Test-Path</span> <span class="n">-LiteralPath</span> <span class="nv">$rootPath</span> <span class="n">-PathType</span> <span class="n">Container</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">throw</span> <span class="s2">&#34;目标路径不是目录&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Host</span> <span class="s2">&#34;</span><span class="se">`n</span><span class="s2">  ✕ 路径无效: </span><span class="nv">$Path</span><span class="s2"> — </span><span class="p">$(</span><span class="nv">$_</span><span class="p">.</span><span class="py">Exception</span><span class="p">.</span><span class="n">Message</span><span class="p">)</span><span class="se">`n</span><span class="s2">&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Red</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exit</span> <span class="mf">1</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># ───────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  2. 工具函数</span>
+</span></span><span class="line"><span class="cl"><span class="c"># ───────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 纯文本导出缓冲（不含 ANSI 转义码）</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$exportBuf</span> <span class="p">=</span> <span class="p">[</span><span class="no">System.Collections.Generic.List[string]</span><span class="p">]::</span><span class="n">new</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Format-Size([long]$Bytes</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$Bytes</span> <span class="o">-ge</span> <span class="mf">1</span><span class="p">TB)</span> <span class="p">{</span> <span class="k">return</span> <span class="s2">&#34;{0:N2} TB&#34;</span> <span class="o">-f</span> <span class="p">(</span><span class="nv">$Bytes</span> <span class="p">/</span> <span class="mf">1</span><span class="p">TB)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$Bytes</span> <span class="o">-ge</span> <span class="mf">1</span><span class="p">GB)</span> <span class="p">{</span> <span class="k">return</span> <span class="s2">&#34;{0:N2} GB&#34;</span> <span class="o">-f</span> <span class="p">(</span><span class="nv">$Bytes</span> <span class="p">/</span> <span class="mf">1</span><span class="p">GB)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$Bytes</span> <span class="o">-ge</span> <span class="mf">1</span><span class="p">MB)</span> <span class="p">{</span> <span class="k">return</span> <span class="s2">&#34;{0:N2} MB&#34;</span> <span class="o">-f</span> <span class="p">(</span><span class="nv">$Bytes</span> <span class="p">/</span> <span class="mf">1</span><span class="p">MB)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$Bytes</span> <span class="o">-ge</span> <span class="mf">1</span><span class="p">KB)</span> <span class="p">{</span> <span class="k">return</span> <span class="s2">&#34;{0:N2} KB&#34;</span> <span class="o">-f</span> <span class="p">(</span><span class="nv">$Bytes</span> <span class="p">/</span> <span class="mf">1</span><span class="p">KB)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;</span><span class="nv">$Bytes</span><span class="s2"> B&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Write-TreeLine</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="cm">&lt;#
+</span></span></span><span class="line"><span class="cl"><span class="cm">    .</span><span class="sd">DESCRIPTION</span><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">        同时输出到控制台（彩色）和导出缓冲（纯文本）。
+</span></span></span><span class="line"><span class="cl"><span class="cm">        树形结构线用灰色，文件夹名用青色（可覆盖），统计信息用灰色。
+</span></span></span><span class="line"><span class="cl"><span class="cm">    #&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">param</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="no">string</span><span class="p">]</span><span class="nv">$Prefix</span>    <span class="p">=</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="no">string</span><span class="p">]</span><span class="nv">$Connector</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="no">string</span><span class="p">]</span><span class="nv">$Name</span>      <span class="p">=</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="no">string</span><span class="p">]</span><span class="nv">$Suffix</span>    <span class="p">=</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="no">ConsoleColor</span><span class="p">]</span><span class="nv">$NameColor</span> <span class="p">=</span> <span class="s2">&#34;Cyan&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$Prefix</span><span class="p">)</span>    <span class="p">{</span> <span class="nb">Write-Host</span> <span class="nv">$Prefix</span>    <span class="n">-ForegroundColor</span> <span class="n">DarkGray</span> <span class="n">-NoNewline</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$Connector</span><span class="p">)</span> <span class="p">{</span> <span class="nb">Write-Host</span> <span class="nv">$Connector</span> <span class="n">-ForegroundColor</span> <span class="n">DarkGray</span> <span class="n">-NoNewline</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Host</span> <span class="nv">$Name</span> <span class="n">-ForegroundColor</span> <span class="nv">$NameColor</span> <span class="n">-NoNewline</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$Suffix</span><span class="p">)</span>    <span class="p">{</span> <span class="nb">Write-Host</span> <span class="nv">$Suffix</span>    <span class="n">-ForegroundColor</span> <span class="n">DarkGray</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>            <span class="p">{</span> <span class="nb">Write-Host</span> <span class="s2">&#34;&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$exportBuf</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="s2">&#34;</span><span class="nv">${Prefix}${Connector}${Name}${Suffix}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Write-Info</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">param</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="no">string</span><span class="p">]</span><span class="nv">$Text</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="no">ConsoleColor</span><span class="p">]</span><span class="nv">$Color</span> <span class="p">=</span> <span class="s2">&#34;Gray&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Host</span> <span class="nv">$Text</span> <span class="n">-ForegroundColor</span> <span class="nv">$Color</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$exportBuf</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="nv">$Text</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># ───────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  3. 一次性数据采集（单次 I/O，后续纯内存操作）</span>
+</span></span><span class="line"><span class="cl"><span class="c"># ───────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$sw</span> <span class="p">=</span> <span class="p">[</span><span class="no">System.Diagnostics.Stopwatch</span><span class="p">]::</span><span class="n">StartNew</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 3a. 全量采集（-Force 包含隐藏项）</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$allFiles</span> <span class="p">=</span> <span class="vm">@</span><span class="p">(</span><span class="nb">Get-ChildItem</span> <span class="n">-LiteralPath</span> <span class="nv">$rootPath</span> <span class="o">-File</span>      <span class="n">-Recurse</span> <span class="n">-Force</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$allDirs</span>  <span class="p">=</span> <span class="vm">@</span><span class="p">(</span><span class="nb">Get-ChildItem</span> <span class="n">-LiteralPath</span> <span class="nv">$rootPath</span> <span class="n">-Directory</span> <span class="n">-Recurse</span> <span class="n">-Force</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 3b. 过滤：排除隐藏/系统（属性 + &#34;.&#34; 前缀）</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="nv">$IncludeHidden</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$isHidden</span> <span class="p">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="py">Attributes</span> <span class="o">-band</span> <span class="p">[</span><span class="no">IO.FileAttributes</span><span class="p">]::</span><span class="n">Hidden</span><span class="p">)</span> <span class="o">-or</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="py">Attributes</span> <span class="o">-band</span> <span class="p">[</span><span class="no">IO.FileAttributes</span><span class="p">]::</span><span class="n">System</span><span class="p">)</span> <span class="o">-or</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$_</span><span class="p">.</span><span class="py">Name</span><span class="p">.</span><span class="py">StartsWith</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$allDirs</span>  <span class="p">=</span> <span class="vm">@</span><span class="p">(</span><span class="nv">$allDirs</span>  <span class="p">|</span> <span class="nb">Where-Object</span> <span class="p">{</span> <span class="o">-not</span> <span class="p">(&amp;</span> <span class="nv">$isHidden</span><span class="p">)</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$allFiles</span> <span class="p">=</span> <span class="vm">@</span><span class="p">(</span><span class="nv">$allFiles</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="p">{</span> <span class="o">-not</span> <span class="p">(&amp;</span> <span class="nv">$isHidden</span><span class="p">)</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 3c. 过滤：通配符排除（连带排除所有子目录和子文件）</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$Exclude</span><span class="p">.</span><span class="py">Count</span> <span class="o">-gt</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 收集命中排除规则的目录完整路径</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$excludedRoots</span> <span class="p">=</span> <span class="p">[</span><span class="no">System.Collections.Generic.List[string]</span><span class="p">]::</span><span class="n">new</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$dir</span> <span class="k">in</span> <span class="nv">$allDirs</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$pattern</span> <span class="k">in</span> <span class="nv">$Exclude</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nv">$dir</span><span class="p">.</span><span class="py">Name</span> <span class="o">-like</span> <span class="nv">$pattern</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">$excludedRoots</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="nv">$dir</span><span class="p">.</span><span class="n">FullName</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$excludedRoots</span><span class="p">.</span><span class="py">Count</span> <span class="o">-gt</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c"># 判断路径是否在排除范围内（自身或子路径）</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$isUnderExcluded</span> <span class="p">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">param</span><span class="p">([</span><span class="no">string</span><span class="p">]</span><span class="nv">$FullPath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">foreach</span> <span class="p">(</span><span class="nv">$er</span> <span class="k">in</span> <span class="nv">$excludedRoots</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="nv">$FullPath</span><span class="p">.</span><span class="py">Equals</span><span class="p">(</span><span class="nv">$er</span><span class="p">,</span> <span class="p">[</span><span class="no">StringComparison</span><span class="p">]::</span><span class="n">OrdinalIgnoreCase</span><span class="p">)</span> <span class="o">-or</span>
+</span></span><span class="line"><span class="cl">                    <span class="nv">$FullPath</span><span class="p">.</span><span class="py">StartsWith</span><span class="p">(</span><span class="nv">$er</span> <span class="p">+</span> <span class="p">[</span><span class="no">IO.Path</span><span class="p">]::</span><span class="n">DirectorySeparatorChar</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                         <span class="p">[</span><span class="no">StringComparison</span><span class="p">]::</span><span class="n">OrdinalIgnoreCase</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="vm">$true</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="vm">$false</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$allDirs</span>  <span class="p">=</span> <span class="vm">@</span><span class="p">(</span><span class="nv">$allDirs</span>  <span class="p">|</span> <span class="nb">Where-Object</span> <span class="p">{</span> <span class="o">-not</span> <span class="p">(&amp;</span> <span class="nv">$isUnderExcluded</span> <span class="nv">$_</span><span class="p">.</span><span class="n">FullName</span><span class="p">)</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$allFiles</span> <span class="p">=</span> <span class="vm">@</span><span class="p">(</span><span class="nv">$allFiles</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="p">{</span> <span class="o">-not</span> <span class="p">(&amp;</span> <span class="nv">$isUnderExcluded</span> <span class="nv">$_</span><span class="p">.</span><span class="n">FullName</span><span class="p">)</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 3d. 构建数据结构</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 直属文件统计（按所在目录路径分组）</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$DirectStats</span> <span class="p">=</span> <span class="vm">@</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$f</span> <span class="k">in</span> <span class="nv">$allFiles</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$d</span> <span class="p">=</span> <span class="nv">$f</span><span class="p">.</span><span class="py">DirectoryName</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="nv">$DirectStats</span><span class="p">.</span><span class="py">ContainsKey</span><span class="p">(</span><span class="nv">$d</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$DirectStats</span><span class="p">[</span><span class="nv">$d</span><span class="p">]</span> <span class="p">=</span> <span class="vm">@</span><span class="p">{</span> <span class="n">Count</span> <span class="p">=</span> <span class="mf">0</span><span class="p">;</span> <span class="n">Size</span> <span class="p">=</span> <span class="p">[</span><span class="no">long</span><span class="p">]</span><span class="mf">0</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$DirectStats</span><span class="p">[</span><span class="nv">$d</span><span class="p">].</span><span class="n">Count</span><span class="p">++</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$DirectStats</span><span class="p">[</span><span class="nv">$d</span><span class="p">].</span><span class="py">Size</span> <span class="p">+=</span> <span class="nv">$f</span><span class="p">.</span><span class="py">Length</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 父目录 → 子目录列表 映射</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$ChildrenMap</span> <span class="p">=</span> <span class="vm">@</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$dir</span> <span class="k">in</span> <span class="nv">$allDirs</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$parent</span> <span class="p">=</span> <span class="nv">$dir</span><span class="p">.</span><span class="py">Parent</span><span class="p">.</span><span class="py">FullName</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="nv">$ChildrenMap</span><span class="p">.</span><span class="py">ContainsKey</span><span class="p">(</span><span class="nv">$parent</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$ChildrenMap</span><span class="p">[</span><span class="nv">$parent</span><span class="p">]</span> <span class="p">=</span> <span class="p">[</span><span class="no">System.Collections.Generic.List[IO.DirectoryInfo]</span><span class="p">]::</span><span class="n">new</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$ChildrenMap</span><span class="p">[</span><span class="nv">$parent</span><span class="p">].</span><span class="py">Add</span><span class="p">(</span><span class="nv">$dir</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 3e. 记忆化累计统计（每个目录仅计算一次，含所有子孙的文件数和大小）</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$_cumCache</span> <span class="p">=</span> <span class="vm">@</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Get-CumStats([string]$DirPath</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$_cumCache</span><span class="p">.</span><span class="py">ContainsKey</span><span class="p">(</span><span class="nv">$DirPath</span><span class="p">))</span> <span class="p">{</span> <span class="k">return</span> <span class="nv">$_cumCache</span><span class="p">[</span><span class="nv">$DirPath</span><span class="p">]</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$count</span> <span class="p">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nv">$size</span> <span class="p">=</span> <span class="p">[</span><span class="no">long</span><span class="p">]</span><span class="mf">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c"># 加上本目录直属文件</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$DirectStats</span><span class="p">.</span><span class="py">ContainsKey</span><span class="p">(</span><span class="nv">$DirPath</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$count</span> <span class="p">+=</span> <span class="nv">$DirectStats</span><span class="p">[</span><span class="nv">$DirPath</span><span class="p">].</span><span class="py">Count</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$size</span>  <span class="p">+=</span> <span class="nv">$DirectStats</span><span class="p">[</span><span class="nv">$DirPath</span><span class="p">].</span><span class="py">Size</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c"># 递归加上所有子目录</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$ChildrenMap</span><span class="p">.</span><span class="py">ContainsKey</span><span class="p">(</span><span class="nv">$DirPath</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$child</span> <span class="k">in</span> <span class="nv">$ChildrenMap</span><span class="p">[</span><span class="nv">$DirPath</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$r</span> <span class="p">=</span> <span class="nb">Get-CumStats</span> <span class="nv">$child</span><span class="p">.</span><span class="py">FullName</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$count</span> <span class="p">+=</span> <span class="nv">$r</span><span class="p">.</span><span class="py">Count</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$size</span>  <span class="p">+=</span> <span class="nv">$r</span><span class="p">.</span><span class="py">Size</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$result</span> <span class="p">=</span> <span class="vm">@</span><span class="p">{</span> <span class="n">Count</span> <span class="p">=</span> <span class="nv">$count</span><span class="p">;</span> <span class="n">Size</span> <span class="p">=</span> <span class="nv">$size</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$_cumCache</span><span class="p">[</span><span class="nv">$DirPath</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$result</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$result</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 预计算根目录统计（副作用：所有子孙目录的统计也一并缓存）</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$rootStats</span> <span class="p">=</span> <span class="nb">Get-CumStats</span> <span class="nv">$rootPath</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$sw</span><span class="p">.</span><span class="py">Stop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># ───────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  4. 树形递归绘制（前缀追踪法）</span>
+</span></span><span class="line"><span class="cl"><span class="c"># ───────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$script:ShownFolders</span> <span class="p">=</span> <span class="mf">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Show-Tree</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">param</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="no">string</span><span class="p">]</span><span class="nv">$DirPath</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="no">int</span><span class="p">]</span><span class="nv">$Level</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="no">string</span><span class="p">]</span><span class="nv">$Prefix</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c"># 深度限制</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$MaxDepth</span> <span class="o">-ne</span> <span class="mf">-1</span> <span class="o">-and</span> <span class="nv">$Level</span> <span class="o">-ge</span> <span class="nv">$MaxDepth</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="nv">$ChildrenMap</span><span class="p">.</span><span class="py">ContainsKey</span><span class="p">(</span><span class="nv">$DirPath</span><span class="p">))</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c"># 按名称排序子目录</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$children</span> <span class="p">=</span> <span class="vm">@</span><span class="p">(</span><span class="nv">$ChildrenMap</span><span class="p">[</span><span class="nv">$DirPath</span><span class="p">]</span> <span class="p">|</span> <span class="nb">Sort-Object</span> <span class="n">Name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$n</span> <span class="p">=</span> <span class="nv">$children</span><span class="p">.</span><span class="py">Count</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$n</span> <span class="o">-eq</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="p">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">-lt</span> <span class="nv">$n</span><span class="p">;</span> <span class="nv">$i</span><span class="p">++)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$child</span>  <span class="p">=</span> <span class="nv">$children</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$isLast</span> <span class="p">=</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">-eq</span> <span class="nv">$n</span> <span class="p">-</span> <span class="mf">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c"># 连接符：中间项 ├──，末尾项 └──</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$connector</span>   <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$isLast</span><span class="p">)</span> <span class="p">{</span> <span class="s2">&#34;└── &#34;</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="s2">&#34;├── &#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c"># 下一级前缀：末尾项不续竖线，非末尾项续竖线</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$childPrefix</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$isLast</span><span class="p">)</span> <span class="p">{</span> <span class="nv">$Prefix</span> <span class="p">+</span> <span class="s2">&#34;    &#34;</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="nv">$Prefix</span> <span class="p">+</span> <span class="s2">&#34;│   &#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c"># 累计统计标签（已缓存，O(1)）</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$stats</span> <span class="p">=</span> <span class="nb">Get-CumStats</span> <span class="nv">$child</span><span class="p">.</span><span class="py">FullName</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$suffix</span> <span class="p">=</span> <span class="s2">&#34;  [文件: </span><span class="p">$(</span><span class="nv">$stats</span><span class="p">.</span><span class="n">Count</span><span class="p">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nv">$ShowSize</span><span class="p">)</span> <span class="p">{</span> <span class="nv">$suffix</span> <span class="p">+=</span> <span class="s2">&#34; | </span><span class="p">$(</span><span class="nb">Format-Size</span> <span class="nv">$stats</span><span class="p">.</span><span class="n">Size</span><span class="p">)</span><span class="s2">&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$suffix</span> <span class="p">+=</span> <span class="s2">&#34;]&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nb">Write-TreeLine</span> <span class="n">-Prefix</span> <span class="nv">$Prefix</span> <span class="n">-Connector</span> <span class="nv">$connector</span> <span class="n">-Name</span> <span class="nv">$child</span><span class="p">.</span><span class="py">Name</span> <span class="n">-Suffix</span> <span class="nv">$suffix</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$script:ShownFolders</span><span class="p">++</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c"># 递归子级 或 深度超限提示</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$canRecurse</span>  <span class="p">=</span> <span class="p">(</span><span class="nv">$MaxDepth</span> <span class="o">-eq</span> <span class="mf">-1</span><span class="p">)</span> <span class="o">-or</span> <span class="p">(</span><span class="nv">$Level</span> <span class="p">+</span> <span class="mf">1</span> <span class="o">-lt</span> <span class="nv">$MaxDepth</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$hasChildren</span> <span class="p">=</span> <span class="nv">$ChildrenMap</span><span class="p">.</span><span class="py">ContainsKey</span><span class="p">(</span><span class="nv">$child</span><span class="p">.</span><span class="n">FullName</span><span class="p">)</span> <span class="o">-and</span>
+</span></span><span class="line"><span class="cl">                       <span class="nv">$ChildrenMap</span><span class="p">[</span><span class="nv">$child</span><span class="p">.</span><span class="n">FullName</span><span class="p">].</span><span class="py">Count</span> <span class="o">-gt</span> <span class="mf">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nv">$canRecurse</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">Show-Tree</span> <span class="n">-DirPath</span> <span class="nv">$child</span><span class="p">.</span><span class="py">FullName</span> <span class="n">-Level</span> <span class="p">(</span><span class="nv">$Level</span> <span class="p">+</span> <span class="mf">1</span><span class="p">)</span> <span class="n">-Prefix</span> <span class="nv">$childPrefix</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elseif</span> <span class="p">(</span><span class="nv">$hasChildren</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c"># 深度已达上限，提示被折叠的子文件夹数量</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$subCount</span> <span class="p">=</span> <span class="nv">$ChildrenMap</span><span class="p">[</span><span class="nv">$child</span><span class="p">.</span><span class="n">FullName</span><span class="p">].</span><span class="py">Count</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">Write-TreeLine</span> <span class="n">-Prefix</span> <span class="nv">$childPrefix</span> <span class="n">-Connector</span> <span class="s2">&#34;└── &#34;</span> <span class="p">`</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">-Name</span> <span class="s2">&#34;(··· 还有 </span><span class="nv">$subCount</span><span class="s2"> 个子文件夹)&#34;</span> <span class="n">-NameColor</span> <span class="n">DarkGray</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># ───────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  5. 输出</span>
+</span></span><span class="line"><span class="cl"><span class="c"># ───────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$line</span> <span class="p">=</span> <span class="s2">&#34;━&#34;</span> <span class="p">*</span> <span class="mf">52</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># ── 头部 ──</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;  </span><span class="nv">$line</span><span class="s2">&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">DarkYellow</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;   目录树统计工具  v3.0&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Yellow</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;  </span><span class="nv">$line</span><span class="s2">&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">DarkYellow</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$exportBuf</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="s2">&#34;  </span><span class="nv">$line</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$exportBuf</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="s2">&#34;   目录树统计工具  v3.0&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$exportBuf</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="s2">&#34;  </span><span class="nv">$line</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$exportBuf</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 参数信息</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$depthLabel</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$MaxDepth</span> <span class="o">-eq</span> <span class="mf">-1</span><span class="p">)</span> <span class="p">{</span> <span class="s2">&#34;无限制&#34;</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="s2">&#34;</span><span class="nv">${MaxDepth}</span><span class="s2"> 级&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Info</span> <span class="s2">&#34;  路径: </span><span class="nv">$rootPath</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Info</span> <span class="s2">&#34;  深度: </span><span class="nv">$depthLabel</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$Exclude</span><span class="p">.</span><span class="py">Count</span> <span class="o">-gt</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span> <span class="nb">Write-Info</span> <span class="s2">&#34;  排除: </span><span class="p">$(</span><span class="nv">$Exclude</span> <span class="n">-join</span> <span class="s1">&#39;, &#39;</span><span class="p">)</span><span class="s2">&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$IncludeHidden</span><span class="p">)</span>        <span class="p">{</span> <span class="nb">Write-Info</span> <span class="s2">&#34;  模式: 包含隐藏文件夹&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$exportBuf</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># ── 根节点 ──</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$rootName</span> <span class="p">=</span> <span class="nb">Split-Path</span> <span class="nv">$rootPath</span> <span class="n">-Leaf</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">([</span><span class="no">string</span><span class="p">]::</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="nv">$rootName</span><span class="p">))</span> <span class="p">{</span> <span class="nv">$rootName</span> <span class="p">=</span> <span class="nv">$rootPath</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$rootSuffix</span> <span class="p">=</span> <span class="s2">&#34;  [文件: </span><span class="p">$(</span><span class="nv">$rootStats</span><span class="p">.</span><span class="n">Count</span><span class="p">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$ShowSize</span><span class="p">)</span> <span class="p">{</span> <span class="nv">$rootSuffix</span> <span class="p">+=</span> <span class="s2">&#34; | </span><span class="p">$(</span><span class="nb">Format-Size</span> <span class="nv">$rootStats</span><span class="p">.</span><span class="n">Size</span><span class="p">)</span><span class="s2">&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$rootSuffix</span> <span class="p">+=</span> <span class="s2">&#34;]&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-TreeLine</span> <span class="n">-Name</span> <span class="nv">$rootName</span> <span class="n">-Suffix</span> <span class="nv">$rootSuffix</span> <span class="n">-NameColor</span> <span class="n">White</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># ── 树 ──</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Show-Tree</span> <span class="n">-DirPath</span> <span class="nv">$rootPath</span> <span class="n">-Level</span> <span class="mf">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$script:ShownFolders</span> <span class="o">-eq</span> <span class="mf">0</span> <span class="o">-and</span> <span class="nv">$MaxDepth</span> <span class="o">-ne</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Info</span> <span class="s2">&#34;  (无子文件夹)&#34;</span> <span class="n">-Color</span> <span class="n">DarkGray</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># ── 摘要 ──</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$elapsed</span> <span class="p">=</span> <span class="nv">$sw</span><span class="p">.</span><span class="py">Elapsed</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$timeStr</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$elapsed</span><span class="p">.</span><span class="py">TotalSeconds</span> <span class="o">-lt</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span> <span class="s2">&#34;&lt; 1 秒&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">           <span class="k">else</span> <span class="p">{</span> <span class="s2">&#34;{0:N1} 秒&#34;</span> <span class="o">-f</span> <span class="nv">$elapsed</span><span class="p">.</span><span class="py">TotalSeconds</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;  </span><span class="nv">$line</span><span class="s2">&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">DarkYellow</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;  文件夹: &#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Gray</span>   <span class="n">-NoNewline</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="nv">$script:ShownFolders</span>               <span class="n">-ForegroundColor</span> <span class="n">Cyan</span>   <span class="n">-NoNewline</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;  │  文件: &#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Gray</span>   <span class="n">-NoNewline</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="nv">$rootStats</span><span class="p">.</span><span class="py">Count</span>                   <span class="n">-ForegroundColor</span> <span class="n">Cyan</span>   <span class="n">-NoNewline</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$ShowSize</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Host</span> <span class="s2">&#34;  │  大小: &#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Gray</span>   <span class="n">-NoNewline</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Host</span> <span class="p">(</span><span class="nb">Format-Size</span> <span class="nv">$rootStats</span><span class="p">.</span><span class="n">Size</span><span class="p">)</span>  <span class="n">-ForegroundColor</span> <span class="n">Cyan</span>   <span class="n">-NoNewline</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;  │  耗时: &#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Gray</span>   <span class="n">-NoNewline</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="nv">$timeStr</span>                           <span class="n">-ForegroundColor</span> <span class="n">Cyan</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;  </span><span class="nv">$line</span><span class="s2">&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">DarkYellow</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 纯文本摘要（导出用）</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$summaryPlain</span> <span class="p">=</span> <span class="s2">&#34;  文件夹: </span><span class="p">$(</span><span class="nv">$script:ShownFolders</span><span class="p">)</span><span class="s2">  │  文件: </span><span class="p">$(</span><span class="nv">$rootStats</span><span class="p">.</span><span class="n">Count</span><span class="p">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$ShowSize</span><span class="p">)</span> <span class="p">{</span> <span class="nv">$summaryPlain</span> <span class="p">+=</span> <span class="s2">&#34;  │  大小: </span><span class="p">$(</span><span class="nb">Format-Size</span> <span class="nv">$rootStats</span><span class="p">.</span><span class="n">Size</span><span class="p">)</span><span class="s2">&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$summaryPlain</span> <span class="p">+=</span> <span class="s2">&#34;  │  耗时: </span><span class="nv">$timeStr</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$exportBuf</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$exportBuf</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="s2">&#34;  </span><span class="nv">$line</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$exportBuf</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="nv">$summaryPlain</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$exportBuf</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="s2">&#34;  </span><span class="nv">$line</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$exportBuf</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># ── 导出 ──</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$OutputFile</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$exportBuf</span> <span class="n">-join</span> <span class="s2">&#34;</span><span class="se">`r`n</span><span class="s2">&#34;</span> <span class="p">|</span> <span class="nb">Out-File</span> <span class="n">-FilePath</span> <span class="nv">$OutputFile</span> <span class="n">-Encoding</span> <span class="n">UTF8</span> <span class="n">-ErrorAction</span> <span class="n">Stop</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Write-Host</span> <span class="s2">&#34;  ✓ 已导出: </span><span class="nv">$OutputFile</span><span class="se">`n</span><span class="s2">&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Green</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Write-Host</span> <span class="s2">&#34;  ✕ 导出失败: </span><span class="p">$(</span><span class="nv">$_</span><span class="p">.</span><span class="py">Exception</span><span class="p">.</span><span class="n">Message</span><span class="p">)</span><span class="se">`n</span><span class="s2">&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Red</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="使用">使用
+</h3><h4 id="前置">前置
+</h4><ul>
+<li>
+<p>执行策略</p>
+<p>PowerShell 默认禁止运行脚本。首次使用前，需在<strong>管理员权限的 PowerShell</strong> 中执行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 查看当前策略</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Get-ExecutionPolicy</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 允许本地脚本运行（推荐）</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>策略</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>Restricted</code></td>
+					<td>禁止所有脚本（默认）</td>
+			</tr>
+			<tr>
+					<td><code>RemoteSigned</code></td>
+					<td>本地脚本可运行，网络下载的需签名（推荐）</td>
+			</tr>
+			<tr>
+					<td><code>Unrestricted</code></td>
+					<td>所有脚本均可运行（不推荐）</td>
+			</tr>
+	</tbody>
+</table></div>
+</li>
+</ul>
+<hr>
+<h4 id="用法">用法
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">.\</span><span class="nb">Show-Tree</span><span class="p">.</span><span class="py">ps1</span> <span class="p">[</span><span class="n">-Path</span> <span class="p">&lt;</span><span class="n">string</span><span class="p">&gt;]</span> <span class="p">[</span><span class="n">-MaxDepth</span> <span class="p">&lt;</span><span class="n">int</span><span class="p">&gt;]</span> <span class="p">[</span><span class="n">-Exclude</span> <span class="p">&lt;</span><span class="n">string</span><span class="p">[]&gt;]</span>
+</span></span><span class="line"><span class="cl">                <span class="p">[</span><span class="n">-IncludeHidden</span><span class="p">]</span> <span class="p">[</span><span class="n">-ShowSize</span><span class="p">]</span> <span class="p">[</span><span class="n">-OutputFile</span> <span class="p">&lt;</span><span class="n">string</span><span class="p">&gt;]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>
+<p><code>-Path</code></p>
+<p>位置参数，第 0 位（可省略参数名）</p>
+</li>
+<li>
+<p><code>-MaxDepth</code></p>
+<ul>
+<li>默认值：2</li>
+<li>范围：<code>-1</code> ~ <code>20</code></li>
+</ul>
+</li>
+<li>
+<p><code>-Exclude</code></p>
+<ul>
+<li>默认值：@()</li>
+<li>通配符：<code>*</code> <code>？</code> <code>[abc]</code></li>
+<li>示例：-Exclude &ldquo;<em>cache</em>&rdquo;,&quot;.*&quot;,&ldquo;tmp&rdquo;</li>
+<li>子文件连带排除</li>
+</ul>
+</li>
+<li>
+<p><code>-IncludeHidden</code></p>
+</li>
+<li>
+<p><code>-ShowSize</code></p>
+</li>
+<li>
+<p><code>-OutputFile</code></p>
+<ul>
+<li>示例：-OutputFile &ldquo;tree.txt&rdquo;</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="场景">场景
+</h4><ul>
+<li>快速了解项目结构</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">.\</span><span class="nb">Show-Tree</span><span class="p">.</span><span class="py">ps1</span> <span class="n">-MaxDepth</span> <span class="mf">2</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>前端项目（排除依赖目录）</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">.\</span><span class="nb">Show-Tree</span><span class="p">.</span><span class="py">ps1</span> <span class="n">-MaxDepth</span> <span class="mf">3</span> <span class="n">-ShowSize</span> <span class="n">-Exclude</span> <span class="s2">&#34;node_modules&#34;</span><span class="p">,</span><span class="s2">&#34;.next&#34;</span><span class="p">,</span><span class="s2">&#34;dist&#34;</span><span class="p">,</span><span class="s2">&#34;.git&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>NET 项目（排除构建产物）</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">.\</span><span class="nb">Show-Tree</span><span class="p">.</span><span class="py">ps1</span> <span class="n">-MaxDepth</span> <span class="mf">3</span> <span class="n">-ShowSize</span> <span class="n">-Exclude</span> <span class="s2">&#34;bin&#34;</span><span class="p">,</span><span class="s2">&#34;obj&#34;</span><span class="p">,</span><span class="s2">&#34;.vs&#34;</span><span class="p">,</span><span class="s2">&#34;packages&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Python 项目</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">.\</span><span class="nb">Show-Tree</span><span class="p">.</span><span class="py">ps1</span> <span class="n">-MaxDepth</span> <span class="mf">3</span> <span class="n">-ShowSize</span> <span class="n">-Exclude</span> <span class="s2">&#34;__pycache__&#34;</span><span class="p">,</span><span class="s2">&#34;.venv&#34;</span><span class="p">,</span><span class="s2">&#34;*.egg-info&#34;</span><span class="p">,</span><span class="s2">&#34;dist&#34;</span><span class="p">,</span><span class="s2">&#34;.git&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>全盘一级概览</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">.\</span><span class="nb">Show-Tree</span><span class="p">.</span><span class="py">ps1</span> <span class="n">-Path</span> <span class="s2">&#34;C:\&#34;</span> <span class="n">-MaxDepth</span> <span class="mf">1</span> <span class="n">-ShowSize</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>生成项目文档用的树形文本</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">.\</span><span class="nb">Show-Tree</span><span class="p">.</span><span class="py">ps1</span> <span class="n">-MaxDepth</span> <span class="mf">4</span> <span class="n">-ShowSize</span> <span class="n">-Exclude</span> <span class="s2">&#34;node_modules&#34;</span><span class="p">,</span><span class="s2">&#34;.git&#34;</span><span class="p">,</span><span class="s2">&#34;bin&#34;</span><span class="p">,</span><span class="s2">&#34;obj&#34;</span> <span class="n">-OutputFile</span> <span class="nb">project-structure</span><span class="p">.</span><span class="py">txt</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>查找占用空间大的目录</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">.\</span><span class="nb">Show-Tree</span><span class="p">.</span><span class="py">ps1</span> <span class="n">-Path</span> <span class="s2">&#34;D:\&#34;</span> <span class="n">-MaxDepth</span> <span class="mf">2</span> <span class="n">-ShowSize</span> <span class="n">-IncludeHidden</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>批量导出多个项目的目录树</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="vm">@</span><span class="p">(</span><span class="s2">&#34;ProjectA&#34;</span><span class="p">,</span> <span class="s2">&#34;ProjectB&#34;</span><span class="p">,</span> <span class="s2">&#34;ProjectC&#34;</span><span class="p">)</span> <span class="p">|</span> <span class="nb">ForEach-Object</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.\</span><span class="nb">Show-Tree</span><span class="p">.</span><span class="py">ps1</span> <span class="n">-Path</span> <span class="s2">&#34;D:\Projects\</span><span class="nv">$_</span><span class="s2">&#34;</span> <span class="n">-MaxDepth</span> <span class="mf">2</span> <span class="n">-ShowSize</span> <span class="n">-Exclude</span> <span class="s2">&#34;node_modules&#34;</span><span class="p">,</span><span class="s2">&#34;.git&#34;</span> <span class="n">-OutputFile</span> <span class="s2">&#34;</span><span class="nv">$_</span><span class="s2">-tree.txt&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="wt-conda-激活函数">WT conda 激活函数
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Conda_myenv-Init</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span> <span class="s2">&#34;E:\anaconda3\shell\condabin\conda-hook.ps1&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conda</span> <span class="n">activate</span> <span class="n">myenv</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Host</span> <span class="s2">&#34;conda myenv initialized ...&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Cyan</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Set-Alias</span> <span class="n">condai</span> <span class="nb">Conda_myenv-Init</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="广电配置">广电配置
+</h2><ul>
+<li>上网方式</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">拨号上网（PPPoE）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>上网账号</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">t532y40756003@qingdaomedia.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>上网密码</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">082728
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>MTU</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1480
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
